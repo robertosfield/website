@@ -1,3 +1,5 @@
 ## This is our initial cut of a website
 
-Nothing here yet...
+Nothing much here yet...
+
+* but we can quickly populate it with more info.
