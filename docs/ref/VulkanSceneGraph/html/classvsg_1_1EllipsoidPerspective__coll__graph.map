@@ -1,0 +1,9 @@
+<map id="vsg::EllipsoidPerspective" name="vsg::EllipsoidPerspective">
+<area shape="rect" id="node1" title=" " alt="" coords="931,78,1115,105"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="564,5,783,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ProjectionMatrix.html" title="ProjectionMatrix is a base class for specifying the Camera projection matrix and it&#39;s inverse." alt="" coords="355,13,515,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node6" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="602,71,745,112"/>
+<area shape="rect" id="node7" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="602,136,745,177"/>
+</map>

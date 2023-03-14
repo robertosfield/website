@@ -1,0 +1,15 @@
+<map id="vsg::Light" name="vsg::Light">
+<area shape="rect" id="node1" title=" " alt="" coords="683,111,768,138"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="816,5,963,47"/>
+<area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="816,71,963,112"/>
+<area shape="rect" id="node10" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="816,136,963,177"/>
+<area shape="rect" id="node12" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="816,201,963,243"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,104,635,145"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Node.html" title=" " alt="" coords="352,111,439,138"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="148,104,304,145"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,111,100,138"/>
+<area shape="rect" id="node7" href="$classvsg_1_1PointLight.html" title="PointLight represents a local point light source where all light radiants event from the light positi..." alt="" coords="1029,13,1148,39"/>
+<area shape="rect" id="node9" href="$classvsg_1_1SpotLight.html" title="SpotLight represents a local point light source which intensity varies as a spot light." alt="" coords="1031,78,1146,105"/>
+<area shape="rect" id="node11" href="$classvsg_1_1DirectionalLight.html" title="DirectionalLight represents a directional light source &#45; used for light sources that are treated as i..." alt="" coords="1011,143,1167,170"/>
+<area shape="rect" id="node13" href="$classvsg_1_1AmbientLight.html" title="AmbientLight represents an ambient light source." alt="" coords="1019,209,1159,235"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="vsg::GlyphMetrics" name="vsg::GlyphMetrics">
+<area shape="rect" id="node1" title="naming and meaning taken from FT_Glyph_Metrics, with dimensions normalized to fontHeight" alt="" coords="13,184,152,211"/>
+<area shape="rect" id="node2" href="$structvsg_1_1t__vec4.html" title=" " alt="" coords="5,95,160,121"/>
+<area shape="rect" id="node3" href="$structvsg_1_1t__vec3.html" title=" " alt="" coords="5,5,160,32"/>
+</map>

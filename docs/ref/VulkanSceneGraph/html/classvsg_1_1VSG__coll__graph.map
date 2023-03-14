@@ -1,0 +1,8 @@
+<map id="vsg::VSG" name="vsg::VSG">
+<area shape="rect" id="node1" title="ReaderWriter for reading and writing native VSG ascii and binary files." alt="" coords="211,352,291,379"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,248,205,289"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ReaderWriter.html" title="Base class from providing support for reading and/or writing various file formats and IO protocols." alt="" coords="36,172,175,199"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="27,81,183,123"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="58,5,153,32"/>
+<area shape="rect" id="node6" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="229,248,371,289"/>
+</map>

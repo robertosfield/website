@@ -1,0 +1,12 @@
+<map id="vsg::BindRayTracingPipeline" name="vsg::BindRayTracingPipeline">
+<area shape="rect" id="node1" title="BindRayTracingPipeline state command encapsulates vkCmdBindPipeline for a RayTracingPipeline." alt="" coords="1619,61,1824,87"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="1292,5,1507,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1StateCommand.html" title=" " alt="" coords="1088,13,1243,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="857,5,1039,47"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Command.html" title="Command base class from encapsualting vkCmd* calls and associated settings." alt="" coords="688,13,808,39"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="491,5,639,47"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Node.html" title=" " alt="" coords="355,13,441,39"/>
+<area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" id="node9" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node10" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="1319,71,1479,112"/>
+</map>

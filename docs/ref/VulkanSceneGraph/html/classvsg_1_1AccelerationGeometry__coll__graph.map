@@ -1,0 +1,13 @@
+<map id="vsg::AccelerationGeometry" name="vsg::AccelerationGeometry">
+<area shape="rect" id="node1" title="AccelerationGeometry encapsulates settings for acceleration geometries." alt="" coords="1524,106,1723,133"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="1157,5,1344,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="829,13,924,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="1179,71,1322,112"/>
+<area shape="rect" id="node5" href="$structVkAccelerationStructureGeometryKHR.html" title=" " alt="" coords="1115,137,1387,163"/>
+<area shape="rect" id="node6" href="$unionVkAccelerationStructureGeometryDataKHR.html" title=" " alt="" coords="755,129,999,171"/>
+<area shape="rect" id="node7" href="$structVkAccelerationStructureGeometryTrianglesDataKHR.html" title=" " alt="" coords="396,64,640,105"/>
+<area shape="rect" id="node8" href="$unionVkDeviceOrHostAddressConstKHR.html" title=" " alt="" coords="5,137,252,163"/>
+<area shape="rect" id="node9" href="$structVkAccelerationStructureGeometryInstancesDataKHR.html" title=" " alt="" coords="396,129,640,171"/>
+<area shape="rect" id="node10" href="$structVkAccelerationStructureGeometryAabbsDataKHR.html" title=" " alt="" coords="396,195,640,236"/>
+<area shape="rect" id="node11" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="1179,188,1322,229"/>
+</map>

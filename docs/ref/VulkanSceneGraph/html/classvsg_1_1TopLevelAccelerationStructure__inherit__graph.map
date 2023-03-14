@@ -1,0 +1,7 @@
+<map id="vsg::TopLevelAccelerationStructure" name="vsg::TopLevelAccelerationStructure">
+<area shape="rect" id="node1" title="TopLevelAccelerationStructure encapsulates the set up of the top level acceleration structure contain..." alt="" coords="23,348,214,389"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,244,232,300"/>
+<area shape="rect" id="node3" href="$classvsg_1_1AccelerationStructure.html" title="AccelerationStructure is a base class for top/bottom level acceleration structure classes." alt="" coords="22,169,215,196"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="28,80,209,121"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="71,5,166,32"/>
+</map>

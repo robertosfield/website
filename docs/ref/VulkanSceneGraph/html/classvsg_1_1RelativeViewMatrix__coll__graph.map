@@ -1,0 +1,9 @@
+<map id="vsg::RelativeViewMatrix" name="vsg::RelativeViewMatrix">
+<area shape="rect" id="node1" title="RelativeViewMatrix is a ViewMatrix that decorates another ViewMatrix and pre&#45;multiplies it&#39;s transfor..." alt="" coords="844,71,1025,98"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="531,5,719,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ViewMatrix.html" title="ViewMatrix is a base class for specifying the Camera view matrix and it&#39;s inverse." alt="" coords="355,13,481,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node6" href="$structvsg_1_1t__mat4.html" title=" " alt="" coords="538,71,711,98"/>
+<area shape="rect" id="node7" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="553,123,696,164"/>
+</map>

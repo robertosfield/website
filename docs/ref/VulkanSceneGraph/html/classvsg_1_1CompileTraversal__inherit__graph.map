@@ -1,0 +1,6 @@
+<map id="vsg::CompileTraversal" name="vsg::CompileTraversal">
+<area shape="rect" id="node1" title="CompileTraversal traverses a scene graph invoke all the StateCommand/Command::compile(...." alt="" coords="5,244,172,271"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="11,155,167,196"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Visitor.html" title=" " alt="" coords="41,80,136,107"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Object.html" title=" " alt="" coords="41,5,136,32"/>
+</map>

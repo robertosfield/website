@@ -1,0 +1,9 @@
+<map id="vsg::BuildAccelerationStructureCommand" name="vsg::BuildAccelerationStructureCommand">
+<area shape="rect" id="node1" title="Helper command for settings up RayTracing structures." alt="" coords="5,512,232,553"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="19,408,218,464"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class from encapsualting vkCmd* calls and associated settings." alt="" coords="59,333,179,360"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="45,244,193,285"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Node.html" title=" " alt="" coords="75,169,162,196"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="41,80,197,121"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="71,5,166,32"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="vsg::CopyImage" name="vsg::CopyImage">
+<area shape="rect" id="node1" title="CopyImage command encapsulates vkCmdCopyImage and associated settings." alt="" coords="126,533,253,560"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,415,187,456"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class from encapsualting vkCmd* calls and associated settings." alt="" coords="36,339,156,365"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="22,248,170,289"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Node.html" title=" " alt="" coords="53,172,139,199"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="18,81,174,123"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="49,5,143,32"/>
+<area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="211,415,354,456"/>
+</map>

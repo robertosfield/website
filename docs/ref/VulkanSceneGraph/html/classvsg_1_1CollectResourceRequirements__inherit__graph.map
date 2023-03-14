@@ -1,0 +1,6 @@
+<map id="vsg::CollectResourceRequirements" name="vsg::CollectResourceRequirements">
+<area shape="rect" id="node1" title="CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap..." alt="" coords="5,244,255,271"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="11,155,249,196"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ConstVisitor.html" title=" " alt="" coords="64,80,196,107"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Object.html" title=" " alt="" coords="83,5,177,32"/>
+</map>

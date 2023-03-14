@@ -1,0 +1,8 @@
+<map id="vsg::DatabaseQueue" name="vsg::DatabaseQueue">
+<area shape="rect" id="node1" title="Thread safe queue for tracking PagedLOD that needs to be loaded, compiled or merged by the DatabasePa..." alt="" coords="693,78,851,105"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="384,5,540,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="60,13,155,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="391,71,533,112"/>
+<area shape="rect" id="node5" href="$structvsg_1_1CompileResult.html" title=" " alt="" coords="388,137,536,163"/>
+<area shape="rect" id="node6" href="$structvsg_1_1ResourceRequirements_1_1DynamicData.html" title=" " alt="" coords="5,129,209,171"/>
+</map>

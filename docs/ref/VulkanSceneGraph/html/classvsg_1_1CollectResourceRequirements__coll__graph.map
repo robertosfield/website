@@ -1,0 +1,8 @@
+<map id="vsg::CollectResourceRequirements" name="vsg::CollectResourceRequirements">
+<area shape="rect" id="node1" title="CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap..." alt="" coords="905,42,1155,69"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="528,5,765,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ConstVisitor.html" title=" " alt="" coords="185,13,317,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node5" href="$classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that be used to he..." alt="" coords="545,71,749,98"/>
+<area shape="rect" id="node6" href="$structvsg_1_1ResourceRequirements_1_1DynamicData.html" title=" " alt="" coords="149,64,353,105"/>
+</map>

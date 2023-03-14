@@ -1,0 +1,10 @@
+<map id="vsg::DrawMeshTasksIndirect" name="vsg::DrawMeshTasksIndirect">
+<area shape="rect" id="node1" title="DrawMeshTasksIndirect command encapsulates vkCmdDrawMeshTasksIndirectEXT call and associated paramete..." alt="" coords="95,519,302,545"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,415,200,456"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class from encapsualting vkCmd* calls and associated settings." alt="" coords="43,339,163,365"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="29,248,177,289"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Node.html" title=" " alt="" coords="59,172,146,199"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="25,81,181,123"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="55,5,150,32"/>
+<area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="225,415,367,456"/>
+</map>

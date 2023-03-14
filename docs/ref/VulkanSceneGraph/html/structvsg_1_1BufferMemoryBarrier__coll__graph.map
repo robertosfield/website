@@ -1,0 +1,7 @@
+<map id="vsg::BufferMemoryBarrier" name="vsg::BufferMemoryBarrier">
+<area shape="rect" id="node1" title="BufferMemoryBarrier encapsulates VkBufferMemoryBarrier settings." alt="" coords="419,78,609,105"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,328,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="167,71,310,112"/>
+<area shape="rect" id="node5" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="167,136,310,177"/>
+</map>

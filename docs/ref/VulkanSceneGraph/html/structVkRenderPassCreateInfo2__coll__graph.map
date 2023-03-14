@@ -1,0 +1,7 @@
+<map id="VkRenderPassCreateInfo2" name="VkRenderPassCreateInfo2">
+<area shape="rect" id="node1" title=" " alt="" coords="219,228,410,255"/>
+<area shape="rect" id="node2" href="$structVkAttachmentDescription2.html" title=" " alt="" coords="5,139,203,165"/>
+<area shape="rect" id="node3" href="$structVkSubpassDescription2.html" title=" " alt="" coords="227,139,402,165"/>
+<area shape="rect" id="node4" href="$structVkAttachmentReference2.html" title=" " alt="" coords="220,5,409,32"/>
+<area shape="rect" id="node5" href="$structVkSubpassDependency2.html" title=" " alt="" coords="426,139,609,165"/>
+</map>

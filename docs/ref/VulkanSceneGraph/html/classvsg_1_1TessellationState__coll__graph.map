@@ -1,0 +1,7 @@
+<map id="vsg::TessellationState" name="vsg::TessellationState">
+<area shape="rect" id="node1" title="TessellationState encapsulates to VkPipelineTessellationStateCreateInfo settings passed when setting ..." alt="" coords="33,333,197,360"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,244,224,285"/>
+<area shape="rect" id="node3" href="$classvsg_1_1GraphicsPipelineState.html" title=" " alt="" coords="17,169,213,196"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="23,80,207,121"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="67,5,162,32"/>
+</map>

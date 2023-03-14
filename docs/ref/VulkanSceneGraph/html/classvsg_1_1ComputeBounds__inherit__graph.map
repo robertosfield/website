@@ -1,0 +1,6 @@
+<map id="vsg::ComputeBounds" name="vsg::ComputeBounds">
+<area shape="rect" id="node1" title="ComputeBounds traverses a scene graph computing an overall bounding box that encloses all the geometr..." alt="" coords="22,244,182,271"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,155,199,196"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ConstVisitor.html" title=" " alt="" coords="36,80,168,107"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Object.html" title=" " alt="" coords="55,5,149,32"/>
+</map>

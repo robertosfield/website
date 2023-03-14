@@ -1,0 +1,17 @@
+<map id="vsg::Window" name="vsg::Window">
+<area shape="rect" id="node1" title=" " alt="" coords="352,177,457,203"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="505,5,712,47"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="510,71,707,112"/>
+<area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="508,136,709,177"/>
+<area shape="rect" id="node10" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="525,201,692,243"/>
+<area shape="rect" id="node12" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="519,267,698,308"/>
+<area shape="rect" id="node14" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="519,332,699,373"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="148,169,304,211"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,177,100,203"/>
+<area shape="rect" id="node5" href="$classvsgAndroid_1_1Android__Window.html" title=" " alt="" coords="785,5,938,47"/>
+<area shape="rect" id="node7" href="$classvsgWin32_1_1Win32__Window.html" title="Win32_Window implements Win32 specific window creation, event handling and vulkan Surface setup." alt="" coords="764,78,959,105"/>
+<area shape="rect" id="node9" href="$classvsgMacOS_1_1MacOS__Window.html" title="MacOS_Window implements macOS specific window creation, event handling and vulkan Surface setup." alt="" coords="760,143,963,170"/>
+<area shape="rect" id="node11" href="$classvsg_1_1WindowAdapter.html" title=" " alt="" coords="783,209,939,235"/>
+<area shape="rect" id="node13" href="$classvsgiOS_1_1iOS__Window.html" title="iOS_Window implements iOS specific window creation, event handling and vulkan Surface setup." alt="" coords="783,274,939,301"/>
+<area shape="rect" id="node15" href="$classvsgXcb_1_1Xcb__Window.html" title="Xcb_Window implements Xcb specific window creation, event handling and vulkan Surface setup." alt="" coords="781,339,941,366"/>
+</map>

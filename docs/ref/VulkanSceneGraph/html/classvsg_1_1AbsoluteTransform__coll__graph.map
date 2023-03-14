@@ -1,0 +1,12 @@
+<map id="vsg::AbsoluteTransform" name="vsg::AbsoluteTransform">
+<area shape="rect" id="node1" title=" " alt="" coords="157,685,331,712"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,581,184,623"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Transform.html" title="Transform node is a pure virtual base class for positioning/scaling/rotation subgraphs." alt="" coords="35,505,154,532"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="18,415,171,456"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Group.html" title="Group node provides a list of children." alt="" coords="49,339,141,365"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="21,248,169,289"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Node.html" title=" " alt="" coords="51,172,138,199"/>
+<area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="17,81,173,123"/>
+<area shape="rect" id="node9" href="$classvsg_1_1Object.html" title=" " alt="" coords="47,5,142,32"/>
+<area shape="rect" id="node10" href="$structvsg_1_1t__mat4.html" title=" " alt="" coords="208,589,381,615"/>
+</map>

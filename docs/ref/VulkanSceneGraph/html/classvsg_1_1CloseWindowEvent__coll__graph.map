@@ -1,0 +1,10 @@
+<map id="vsg::CloseWindowEvent" name="vsg::CloseWindowEvent">
+<area shape="rect" id="node1" title="CloseWindowEvent represents a window close event." alt="" coords="133,519,312,545"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="121,428,324,469"/>
+<area shape="rect" id="node3" href="$classvsg_1_1WindowEvent.html" title="WindowEvent is the base class for events related to a window." alt="" coords="151,352,294,379"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,248,171,289"/>
+<area shape="rect" id="node5" href="$classvsg_1_1UIEvent.html" title="UIEvent is a base class for user interface events." alt="" coords="36,172,140,199"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="10,81,166,123"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="41,5,135,32"/>
+<area shape="rect" id="node8" href="$classvsg_1_1observer__ptr.html" title=" " alt="" coords="195,248,341,289"/>
+</map>

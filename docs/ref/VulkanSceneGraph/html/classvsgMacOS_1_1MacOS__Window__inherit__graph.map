@@ -1,0 +1,7 @@
+<map id="vsgMacOS::MacOS_Window" name="vsgMacOS::MacOS_Window">
+<area shape="rect" id="node1" title="MacOS_Window implements macOS specific window creation, event handling and vulkan Surface setup." alt="" coords="5,333,208,360"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="6,244,207,285"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Window.html" title=" " alt="" coords="54,169,159,196"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="29,80,185,121"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="59,5,154,32"/>
+</map>
