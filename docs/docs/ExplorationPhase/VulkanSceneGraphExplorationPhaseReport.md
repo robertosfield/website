@@ -1,7 +1,7 @@
 ---
 layout: page
 title: VulkanSceneGraph Exploration Phase Report
-permalink: /documentation/
+permalink: /documentation/docs/exploration_phase/report
 ---
 
 This document discusses the work carried out during the Exploration Phase and conclusions and results from this work.  Links to 3rd party resources used are included inline with this document, click on highlighted keywords to follow links.
