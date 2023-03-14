@@ -29,5 +29,6 @@ The following repositories are part of the VulkanScenGraph project provide more 
 The wider VulkanSceneGraph community have published libraries and applications
 
 * [vsgCs](https://github.com/timoore/vsgCs) 3D Tiles and Cesium ion integration
+* [vsgEarth](https://github.com/timoore/vsgEarth) osgEarth integration
 * [vsgSDL](https://github.com/ptrfun/vsgSDL) SDL integration
 * [vsgvr](https://github.com/geefr/vsgvr) OpenVR integration
