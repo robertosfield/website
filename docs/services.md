@@ -16,7 +16,7 @@ Professional Services are provided by project lead Robert Osfield's company _Ope
 
 Contact email : <mailto:robert.osfield@gmail.com>
 
-Github account: [http://githib.com/robertosfield](http://githib.com/robertosfield)
+Github account: [http://githib.com/robertosfield](https://github.com/robertosfield)
 
 ### Additional Companies/Contractors
 
