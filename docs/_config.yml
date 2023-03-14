@@ -28,8 +28,13 @@ theme: minima
 plugins:
   - jekyll-feed
 
-exclude:
-    - docs
+header_pages:
+  - features.md
+  - screenshots.md
+  - source.md
+  - documentation.md
+  - discussion.md
+  - services.md
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

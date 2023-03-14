@@ -10,7 +10,7 @@ permalink: /documentation/
 * [vsgXchange](ref/vsgXchange/html/annotated.html)
 * [vsgImGui](ref/vsgImGui/html/annotated.html)
 
-# Background design and development
+## Background design and development
 
 * Design : [Design Principles & Philosophy](docs/Design/DesignPrinciplesAndPhilosophy.md)
 * Design : [High Level Design Decisions](docs/Design/HighLevelDesignDecisions.md)
@@ -20,7 +20,7 @@ permalink: /documentation/
 * PrototypePhase : [Workplan](docs/PrototypePhase/Workplan.md)
 * PrototypePhase : [Report](docs/PrototypePhase/PrototypePhaseReport.md)
 
-# Useful 3rd party links to information on Vulkan
+## Useful 3rd party links to information on Vulkan
 
 * [Introduction to Vulkan, Algorithms for Real-Time Rendering Lecture, Summer Term 2020](https://www.youtube.com/watch?v=isbMMIwmZes)
 * [Vulkanised-2021 presentations](https://www.khronos.org/events/vulkanised-2021)
