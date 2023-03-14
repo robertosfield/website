@@ -22,4 +22,5 @@ Github account: [http://githib.com/robertosfield](http://githib.com/robertosfiel
 
 The VulkanSceneGraph community also contains companies/contractors that can provide services independently in collobration with OpenScenGraph Prof. Serv.:
 
-* Bricoworks SAL - contact [Tim Moore](https://github.com/timoore), contrbutor to the VulkanSceneGraph and developer of [vsgCs](https://github.com/timoore/vsgCs) and [vsgEarth](https://github.com/timoore/vsgEarth)
+* Bricoworks SAL - contact [Tim Moore](https://github.com/timoore),
+contrbutor to the VulkanSceneGraph and developer of [vsgCs](https://github.com/timoore/vsgCs) and [vsgEarth](https://github.com/timoore/vsgEarth)
