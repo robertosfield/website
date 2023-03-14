@@ -4,8 +4,6 @@ title: Screenshots
 permalink: /screenshots/
 ---
 
-[screenshots directory](screenshots/)
-
 Small town in the Trossachs, Scotland - where VulkanSceneGraph is developed, rendering using vsgCS
 ![](screenshots/Callander-Cesium.png)
 
