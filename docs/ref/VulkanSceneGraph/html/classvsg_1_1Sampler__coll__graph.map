@@ -1,0 +1,6 @@
+<map id="vsg::Sampler" name="vsg::Sampler">
+<area shape="rect" id="node1" title="Sampler encapsulates the VkSampler and the VkSamplerCreateInfo settings used to set it up." alt="" coords="487,69,593,95"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="158,5,314,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node4" href="$structvsg_1_1vk__buffer.html" title=" " alt="" coords="149,71,323,127"/>
+</map>

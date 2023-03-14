@@ -1,0 +1,6 @@
+<map id="vsg::PipelineLayout" name="vsg::PipelineLayout">
+<area shape="rect" id="node1" title="PipelineLayout encapsulates VkPipelineLayout and the VkPipelineLayoutCreateInfo settings used to set ..." alt="" coords="528,69,677,95"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="179,5,335,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node4" href="$structvsg_1_1vk__buffer.html" title=" " alt="" coords="149,71,364,127"/>
+</map>

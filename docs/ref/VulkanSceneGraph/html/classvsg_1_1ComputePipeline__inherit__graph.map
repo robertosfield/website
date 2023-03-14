@@ -1,0 +1,5 @@
+<map id="vsg::ComputePipeline" name="vsg::ComputePipeline">
+<area shape="rect" id="node1" title="ComputePipeline encapsulates compute VkPipeline and the VkComputePipelineCreateInfo settings used to ..." alt="" coords="5,169,169,196"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="9,80,165,121"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="40,5,135,32"/>
+</map>

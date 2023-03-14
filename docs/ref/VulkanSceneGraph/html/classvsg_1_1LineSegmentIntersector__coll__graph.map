@@ -1,0 +1,10 @@
+<map id="vsg::LineSegmentIntersector" name="vsg::LineSegmentIntersector">
+<area shape="rect" id="node1" title="LineSegmentIntersector is a Intersector subclass that provides support for computing intersections be..." alt="" coords="1088,78,1296,105"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="843,71,1039,112"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Intersector.html" title=" " alt="" coords="671,78,793,105"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="331,5,524,47"/>
+<area shape="rect" id="node5" href="$classvsg_1_1ConstVisitor.html" title=" " alt="" coords="149,13,281,39"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node7" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="354,71,501,112"/>
+<area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="354,136,501,177"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="vsg::Options" name="vsg::Options">
+<area shape="rect" id="node1" title="Class for passing IO related options to vsg::read/write calls." alt="" coords="472,101,575,127"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Path.html" title=" " alt="" coords="187,71,268,98"/>
+<area shape="rect" id="node5" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="151,123,304,164"/>
+<area shape="rect" id="node6" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,188,299,229"/>
+</map>

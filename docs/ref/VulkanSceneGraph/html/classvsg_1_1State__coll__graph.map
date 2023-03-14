@@ -1,0 +1,11 @@
+<map id="vsg::State" name="vsg::State">
+<area shape="rect" id="node1" title="vsg::State used by vsg::RecordTraversal to manage state stacks, projection, modelview matrix and frus..." alt="" coords="1043,109,1129,135"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="684,5,840,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="479,13,574,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="691,71,833,112"/>
+<area shape="rect" id="node5" href="$structvsg_1_1Frustum.html" title="Frustum used internally by vsg::State to manage view fustum culling during vsg::RecordTraversal." alt="" coords="709,138,815,165"/>
+<area shape="rect" id="node6" href="$structvsg_1_1t__vec4.html" title=" " alt="" coords="228,123,375,164"/>
+<area shape="rect" id="node8" href="$structvsg_1_1t__plane.html" title=" " alt="" coords="451,173,603,215"/>
+<area shape="rect" id="node7" href="$structvsg_1_1t__vec3.html" title=" " alt="" coords="5,161,152,203"/>
+<area shape="rect" id="node9" href="$classvsg_1_1MatrixStack.html" title="MatrixStack used internally by vsg::State to manage stack of project or modelview matrices." alt="" coords="697,198,827,225"/>
+</map>

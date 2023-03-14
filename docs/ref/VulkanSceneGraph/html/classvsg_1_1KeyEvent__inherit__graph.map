@@ -1,0 +1,13 @@
+<map id="vsg::KeyEvent" name="vsg::KeyEvent">
+<area shape="rect" id="node1" title="KeyEvent is a base class for key events." alt="" coords="134,497,249,524"/>
+<area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,572,180,613"/>
+<area shape="rect" id="node10" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="204,572,379,613"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="90,408,293,449"/>
+<area shape="rect" id="node3" href="$classvsg_1_1WindowEvent.html" title="WindowEvent is the base class for events related to a window." alt="" coords="120,333,263,360"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="109,244,274,285"/>
+<area shape="rect" id="node5" href="$classvsg_1_1UIEvent.html" title="UIEvent is a base class for user interface events." alt="" coords="139,169,243,196"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="113,80,269,121"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="144,5,239,32"/>
+<area shape="rect" id="node9" href="$classvsg_1_1KeyReleaseEvent.html" title="KeyReleaseEvent represents a key release event." alt="" coords="9,661,176,688"/>
+<area shape="rect" id="node11" href="$classvsg_1_1KeyPressEvent.html" title="KeyPressEvent represents a key press event." alt="" coords="217,661,366,688"/>
+</map>

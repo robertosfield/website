@@ -1,0 +1,10 @@
+<map id="ImPlotItemGroup" name="ImPlotItemGroup">
+<area shape="rect" id="node1" title=" " alt="" coords="185,288,318,315"/>
+<area shape="rect" id="node2" href="$structImPlotLegend.html" title=" " alt="" coords="113,199,224,225"/>
+<area shape="rect" id="node3" href="$structImRect.html" title=" " alt="" coords="9,109,77,136"/>
+<area shape="rect" id="node4" href="$structImVec2.html" title=" " alt="" coords="5,5,76,32"/>
+<area shape="rect" id="node5" href="$structImGuiTextBuffer.html" title=" " alt="" coords="105,109,232,136"/>
+<area shape="rect" id="node6" href="$structImVector.html" title=" " alt="" coords="101,5,239,32"/>
+<area shape="rect" id="node7" href="$structImVector.html" title=" " alt="" coords="256,109,383,136"/>
+<area shape="rect" id="node8" href="$structImPool.html" title=" " alt="" coords="248,199,417,225"/>
+</map>

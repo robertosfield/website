@@ -1,0 +1,12 @@
+<map id="vsg::tile" name="vsg::tile">
+<area shape="rect" id="node1" title="tile reader that is used by th vsg::TileDatabase node to implement the reading of external tiles" alt="" coords="977,177,1052,203"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="556,5,756,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ReaderWriter.html" title="Base class from providing support for reading and/or writing various file formats and IO protocols." alt="" coords="355,13,493,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node6" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="585,71,727,112"/>
+<area shape="rect" id="node7" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="543,136,769,177"/>
+<area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="585,201,727,243"/>
+<area shape="rect" id="node9" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="568,267,744,308"/>
+<area shape="rect" id="node10" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="585,332,727,373"/>
+</map>

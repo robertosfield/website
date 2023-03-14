@@ -1,0 +1,10 @@
+<map id="VkAccelerationStructureBuildGeometryInfoKHR" name="VkAccelerationStructureBuildGeometryInfoKHR">
+<area shape="rect" id="node1" title=" " alt="" coords="1528,41,1740,83"/>
+<area shape="rect" id="node2" href="$unionVkDeviceOrHostAddressKHR.html" title=" " alt="" coords="1146,18,1355,45"/>
+<area shape="rect" id="node3" href="$structVkAccelerationStructureGeometryKHR.html" title=" " alt="" coords="1115,78,1387,105"/>
+<area shape="rect" id="node4" href="$unionVkAccelerationStructureGeometryDataKHR.html" title=" " alt="" coords="755,71,999,112"/>
+<area shape="rect" id="node5" href="$structVkAccelerationStructureGeometryTrianglesDataKHR.html" title=" " alt="" coords="396,5,640,47"/>
+<area shape="rect" id="node6" href="$unionVkDeviceOrHostAddressConstKHR.html" title=" " alt="" coords="5,78,252,105"/>
+<area shape="rect" id="node7" href="$structVkAccelerationStructureGeometryInstancesDataKHR.html" title=" " alt="" coords="396,71,640,112"/>
+<area shape="rect" id="node8" href="$structVkAccelerationStructureGeometryAabbsDataKHR.html" title=" " alt="" coords="396,136,640,177"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="ImGuiTabBar" name="ImGuiTabBar">
+<area shape="rect" id="node1" title=" " alt="" coords="240,201,346,228"/>
+<area shape="rect" id="node2" href="$structImVec2.html" title=" " alt="" coords="23,5,94,32"/>
+<area shape="rect" id="node3" href="$structImRect.html" title=" " alt="" coords="144,111,212,137"/>
+<area shape="rect" id="node4" href="$structImVector.html" title=" " alt="" coords="236,111,438,137"/>
+<area shape="rect" id="node5" href="$structImGuiTextBuffer.html" title=" " alt="" coords="462,111,588,137"/>
+<area shape="rect" id="node6" href="$structImVector.html" title=" " alt="" coords="456,5,594,32"/>
+</map>

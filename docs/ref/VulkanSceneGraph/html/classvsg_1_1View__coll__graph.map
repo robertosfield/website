@@ -1,0 +1,11 @@
+<map id="vsg::View" name="vsg::View">
+<area shape="rect" id="node1" title="View class is Group class that pairs a Camera that defines the view with a subgraph that defines the ..." alt="" coords="1193,78,1279,105"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="840,5,993,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Group.html" title="Group node provides a list of children." alt="" coords="688,13,780,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="491,5,639,47"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Node.html" title=" " alt="" coords="355,13,441,39"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="845,71,988,112"/>
+<area shape="rect" id="node9" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="829,136,1004,177"/>
+</map>

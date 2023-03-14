@@ -1,0 +1,9 @@
+<map id="vsg::DirectionalLight" name="vsg::DirectionalLight">
+<area shape="rect" id="node1" title="DirectionalLight represents a directional light source &#45; used for light sources that are treated as i..." alt="" coords="5,497,161,524"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="10,408,157,449"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Light.html" title=" " alt="" coords="41,333,126,360"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="9,244,157,285"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Node.html" title=" " alt="" coords="40,169,127,196"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,80,161,121"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
+</map>

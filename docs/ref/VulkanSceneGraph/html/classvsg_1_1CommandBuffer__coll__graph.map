@@ -1,0 +1,15 @@
+<map id="vsg::CommandBuffer" name="vsg::CommandBuffer">
+<area shape="rect" id="node1" title="CommandBuffer encapsulates VkCommandBuffer." alt="" coords="925,238,1084,265"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="365,5,521,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,25,100,51"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="156,47,335,88"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="569,231,712,272"/>
+<area shape="rect" id="node5" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="569,296,712,337"/>
+<area shape="rect" id="node6" href="$classvsg_1_1ViewDependentState.html" title=" " alt="" coords="545,179,736,206"/>
+<area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="174,112,317,153"/>
+<area shape="rect" id="node9" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="149,178,341,205"/>
+<area shape="rect" id="node10" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="174,229,317,271"/>
+<area shape="rect" id="node11" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="161,295,330,336"/>
+<area shape="rect" id="node12" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="174,360,317,401"/>
+<area shape="rect" id="node13" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="569,361,712,403"/>
+</map>

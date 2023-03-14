@@ -1,0 +1,7 @@
+<map id="vsg::SampleLocations" name="vsg::SampleLocations">
+<area shape="rect" id="node1" title="SampleLocations encapsulates the VkSampleLocationsInfoEXT settings associated with VK_EXT_sample_loca..." alt="" coords="15,333,179,360"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,244,188,285"/>
+<area shape="rect" id="node3" href="$structvsg_1_1VulkanInfo.html" title="VulkanInfo is a base class for extensions assigned via next pointer in Vulkan structures." alt="" coords="36,169,157,196"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="19,80,175,121"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="49,5,144,32"/>
+</map>

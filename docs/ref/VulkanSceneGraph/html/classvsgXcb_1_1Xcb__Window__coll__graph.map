@@ -1,0 +1,18 @@
+<map id="vsgXcb::Xcb_Window" name="vsgXcb::Xcb_Window">
+<area shape="rect" id="node1" title="Xcb_Window implements Xcb specific window creation, event handling and vulkan Surface setup." alt="" coords="1009,378,1169,405"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="709,323,889,364"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Window.html" title=" " alt="" coords="555,330,660,357"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node6" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,71,299,112"/>
+<area shape="rect" id="node7" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,136,299,177"/>
+<area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,201,299,243"/>
+<area shape="rect" id="node9" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,267,299,308"/>
+<area shape="rect" id="node10" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,332,299,373"/>
+<area shape="rect" id="node11" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,397,299,439"/>
+<area shape="rect" id="node12" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,463,299,504"/>
+<area shape="rect" id="node13" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,528,299,569"/>
+<area shape="rect" id="node14" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,593,299,635"/>
+<area shape="rect" id="node15" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,659,299,700"/>
+<area shape="rect" id="node16" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="720,388,879,429"/>
+</map>

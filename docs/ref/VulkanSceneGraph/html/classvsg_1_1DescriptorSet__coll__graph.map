@@ -1,0 +1,7 @@
+<map id="vsg::DescriptorSet" name="vsg::DescriptorSet">
+<area shape="rect" id="node1" title="DescriptorSet encapsulates VkDescriptorSet and VkDescriptorSetAllocateInfo settings used to describe ..." alt="" coords="500,86,641,113"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="165,5,321,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node4" href="$structvsg_1_1vk__buffer.html" title=" " alt="" coords="149,71,336,127"/>
+<area shape="rect" id="node5" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="158,152,327,193"/>
+</map>

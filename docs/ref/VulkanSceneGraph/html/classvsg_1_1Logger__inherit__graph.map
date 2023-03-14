@@ -1,0 +1,10 @@
+<map id="vsg::Logger" name="vsg::Logger">
+<area shape="rect" id="node1" title="thread safe, pure virtual Logger base class that provides extensible message logging facilities" alt="" coords="148,78,245,105"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="303,5,462,47"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="303,71,462,112"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="293,136,472,177"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,78,100,105"/>
+<area shape="rect" id="node4" href="$classvsg_1_1NullLogger.html" title=" " alt="" coords="530,13,653,39"/>
+<area shape="rect" id="node6" href="$classvsg_1_1StdLogger.html" title="default Logger that sends debug and info messages to std:cout, and warn and error messages to std::ce..." alt="" coords="532,78,651,105"/>
+<area shape="rect" id="node8" href="$classvsg_1_1ThreadLogger.html" title=" " alt="" coords="520,143,663,170"/>
+</map>

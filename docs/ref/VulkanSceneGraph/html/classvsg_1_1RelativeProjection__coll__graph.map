@@ -1,0 +1,9 @@
+<map id="vsg::RelativeProjection" name="vsg::RelativeProjection">
+<area shape="rect" id="node1" title="RelativeViewMatrix is a ProjectionMatrix that decorates another ProjectionMatrix and pre&#45;multiplies i..." alt="" coords="931,71,1103,98"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="564,5,771,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ProjectionMatrix.html" title="ProjectionMatrix is a base class for specifying the Camera projection matrix and it&#39;s inverse." alt="" coords="355,13,515,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node6" href="$structvsg_1_1t__mat4.html" title=" " alt="" coords="581,71,754,98"/>
+<area shape="rect" id="node7" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="595,123,739,164"/>
+</map>

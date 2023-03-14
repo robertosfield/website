@@ -1,0 +1,9 @@
+<map id="vsg::TextTechnique" name="vsg::TextTechnique">
+<area shape="rect" id="node1" title=" " alt="" coords="352,46,497,73"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="545,5,752,47"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="545,71,752,112"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="148,39,304,80"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,46,100,73"/>
+<area shape="rect" id="node5" href="$classvsg_1_1GpuLayoutTechnique.html" title=" " alt="" coords="800,13,988,39"/>
+<area shape="rect" id="node7" href="$classvsg_1_1CpuLayoutTechnique.html" title=" " alt="" coords="801,78,987,105"/>
+</map>

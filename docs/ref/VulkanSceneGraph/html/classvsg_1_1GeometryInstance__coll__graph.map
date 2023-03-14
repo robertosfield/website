@@ -1,0 +1,7 @@
+<map id="vsg::GeometryInstance" name="vsg::GeometryInstance">
+<area shape="rect" id="node1" title="GeometryInstance is an instance of a bottom level acceleration structure reference by a top level acc..." alt="" coords="601,78,775,105"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="199,5,360,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="149,71,409,112"/>
+<area shape="rect" id="node5" href="$structvsg_1_1t__mat4.html" title=" " alt="" coords="200,137,359,163"/>
+</map>

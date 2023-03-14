@@ -1,0 +1,8 @@
+<map id="vsg::ImageInfo" name="vsg::ImageInfo">
+<area shape="rect" id="node1" title="ImageInfo class provides the VkDescriptorImageInfo settings used when setting up vsg::/vkDescriptorIm..." alt="" coords="503,111,621,138"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node4" href="$structvsg_1_1vk__buffer.html" title=" " alt="" coords="151,71,303,112"/>
+<area shape="rect" id="node5" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,136,299,177"/>
+<area shape="rect" id="node6" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,201,299,243"/>
+</map>

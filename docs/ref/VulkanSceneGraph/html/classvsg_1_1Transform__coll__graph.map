@@ -1,0 +1,9 @@
+<map id="vsg::Transform" name="vsg::Transform">
+<area shape="rect" id="node1" title="Transform node is a pure virtual base class for positioning/scaling/rotation subgraphs." alt="" coords="24,497,143,524"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="7,408,160,449"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Group.html" title="Group node provides a list of children." alt="" coords="37,333,129,360"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="9,244,157,285"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Node.html" title=" " alt="" coords="40,169,127,196"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,80,161,121"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
+</map>

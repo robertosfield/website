@@ -1,0 +1,6 @@
+<map id="vsg::CollectEvents" name="vsg::CollectEvents">
+<area shape="rect" id="node1" title="CollectEvents is a visitor that collects ui events into a list of events." alt="" coords="22,244,165,271"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,155,181,196"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Visitor.html" title=" " alt="" coords="46,80,141,107"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Object.html" title=" " alt="" coords="46,5,141,32"/>
+</map>

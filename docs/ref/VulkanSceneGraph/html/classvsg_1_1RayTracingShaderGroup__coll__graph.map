@@ -1,0 +1,6 @@
+<map id="vsg::RayTracingShaderGroup" name="vsg::RayTracingShaderGroup">
+<area shape="rect" id="node1" title="RayTracingShaderGroup encapsulates VkRayTracingShaderGroupCreateInfoKHR settings." alt="" coords="143,185,351,212"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,81,201,123"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="56,5,151,32"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="225,81,368,123"/>
+</map>

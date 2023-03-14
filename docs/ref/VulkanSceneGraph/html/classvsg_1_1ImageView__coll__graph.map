@@ -1,0 +1,7 @@
+<map id="vsg::ImageView" name="vsg::ImageView">
+<area shape="rect" id="node1" title="ImageView class encapsulates VkImageView and VkImageViewCreateInfo settings used to set it up." alt="" coords="481,78,608,105"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="171,5,327,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="177,71,320,112"/>
+<area shape="rect" id="node5" href="$structvsg_1_1vk__buffer.html" title=" " alt="" coords="149,136,348,177"/>
+</map>

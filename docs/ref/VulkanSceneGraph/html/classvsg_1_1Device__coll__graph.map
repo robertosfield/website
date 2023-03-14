@@ -1,0 +1,9 @@
+<map id="vsg::Device" name="vsg::Device">
+<area shape="rect" id="node1" title="Device encapsulate vkDeivce, a logical handle to the PhysicalDevice with capabilities specified durin..." alt="" coords="473,143,572,170"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="154,5,310,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="161,71,303,112"/>
+<area shape="rect" id="node5" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="161,136,303,177"/>
+<area shape="rect" id="node6" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="149,201,315,243"/>
+<area shape="rect" id="node7" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="161,267,303,308"/>
+</map>

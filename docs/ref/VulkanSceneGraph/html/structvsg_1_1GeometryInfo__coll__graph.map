@@ -1,0 +1,7 @@
+<map id="vsg::GeometryInfo" name="vsg::GeometryInfo">
+<area shape="rect" id="node1" title="GeometryInfo struct provides geometry related settings supported by Builder." alt="" coords="512,119,655,146"/>
+<area shape="rect" id="node2" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="244,5,387,47"/>
+<area shape="rect" id="node3" href="$structvsg_1_1t__mat4.html" title=" " alt="" coords="236,71,395,98"/>
+<area shape="rect" id="node4" href="$structvsg_1_1t__vec3.html" title=" " alt="" coords="5,198,160,225"/>
+<area shape="rect" id="node5" href="$structvsg_1_1t__vec4.html" title=" " alt="" coords="238,229,393,255"/>
+</map>

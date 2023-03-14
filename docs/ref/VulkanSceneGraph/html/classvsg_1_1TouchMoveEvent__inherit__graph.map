@@ -1,0 +1,11 @@
+<map id="vsg::TouchMoveEvent" name="vsg::TouchMoveEvent">
+<area shape="rect" id="node1" title="TouchMoveEvent represents a touch move event." alt="" coords="25,661,188,688"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="13,572,201,613"/>
+<area shape="rect" id="node3" href="$classvsg_1_1TouchEvent.html" title="TouchEvent is a base class touch events." alt="" coords="43,497,170,524"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,408,208,449"/>
+<area shape="rect" id="node5" href="$classvsg_1_1WindowEvent.html" title="WindowEvent is the base class for events related to a window." alt="" coords="35,333,178,360"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="24,244,189,285"/>
+<area shape="rect" id="node7" href="$classvsg_1_1UIEvent.html" title="UIEvent is a base class for user interface events." alt="" coords="55,169,159,196"/>
+<area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="29,80,185,121"/>
+<area shape="rect" id="node9" href="$classvsg_1_1Object.html" title=" " alt="" coords="59,5,154,32"/>
+</map>

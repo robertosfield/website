@@ -1,0 +1,7 @@
+<map id="vsg::ImageMemoryBarrier" name="vsg::ImageMemoryBarrier">
+<area shape="rect" id="node1" title="ImageMemoryBarrier encapsulates vkImageMemoryBarrier settings." alt="" coords="423,78,615,105"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,329,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="168,71,311,112"/>
+<area shape="rect" id="node5" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="168,136,311,177"/>
+</map>
