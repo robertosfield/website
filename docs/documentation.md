@@ -12,13 +12,13 @@ permalink: /documentation/
 
 # Background design and development
 
-* Design : [Design Principles & Philosophy]{documentation/Design/DesignPrinciplesAndPhilosophy.md)
-* Design : [High Level Design Decisions]{documentation/Design/HighLevelDesignDecisions.md)
-* Exploration Phase : [3rd Party Resources]{documentation/ExplorationPhase/3rdPartyResources.md)
-* Exploration Phase : [Areas of Interst]{documentation/ExplorationPhase/AreasOfInterest.md)
-* Exploration Phase : [Report]{documentation/ExplorationPhase/VulkanSceneGraphExplorationPhaseReport.md)
-* PrototypePhase : [Workplan]{documentation/PrototypePhase/Workplan.md)
-* PrototypePhase : [Report]{documentation/PrototypePhase/PrototypePhaseReport.md)
+* Design : [Design Principles & Philosophy](docs/Design/DesignPrinciplesAndPhilosophy.md)
+* Design : [High Level Design Decisions](docs/Design/HighLevelDesignDecisions.md)
+* Exploration Phase : [3rd Party Resources](docs/ExplorationPhase/3rdPartyResources.md)
+* Exploration Phase : [Areas of Interst](docs/ExplorationPhase/AreasOfInterest.md)
+* Exploration Phase : [Report](docs/ExplorationPhase/VulkanSceneGraphExplorationPhaseReport.md)
+* PrototypePhase : [Workplan](docs/PrototypePhase/Workplan.md)
+* PrototypePhase : [Report](docs/PrototypePhase/PrototypePhaseReport.md)
 
 # Useful 3rd party links to information on Vulkan
 
