@@ -1,2 +1,2 @@
-# website
-Experiments with github pages : https://robertosfield.github.io/website/
+# Official VulkanSceneGraph website
+github pages generated website : https://vsg-dev.github.io/
