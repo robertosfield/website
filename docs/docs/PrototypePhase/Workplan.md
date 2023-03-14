@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Prototype Phase Work Plan
-permalink: /documentation/
+permalink: /documentation/docs/prototype_phase/workplan
 ---
 
 The aim of the Prototype Phase, October-December 2018, is to fill out prototypes for main elements of the core VSG scene graph library, add-on libraries and test programs. These prototypes will help solidify the choices in supporting technologies used and the design and implementation approaches used.

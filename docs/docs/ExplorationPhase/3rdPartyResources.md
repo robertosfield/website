@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 3rd Party Resources of interest
-permalink: /documentation/
+permalink: /documentation/docs/exploration_phase/resources_of_interest
 ---
 
 

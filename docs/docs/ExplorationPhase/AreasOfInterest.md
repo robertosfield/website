@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Areas of Interest during Exploration Phase
-permalink: /documentation/
+permalink: /documentation/docs/exploration_phase/areas_of_interest
 ---
 
 

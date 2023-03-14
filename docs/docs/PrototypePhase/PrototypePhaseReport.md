@@ -1,7 +1,7 @@
 ---
 layout: page
 title: VulkanSceneGraph Prototype Phase Report
-permalink: /documentation/
+permalink: /documentation/docs/prototype_phase/report
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: High Level Design Decisions
-permalink: /documentation/
+permalink: /documentation/docs/design/high_level_design_decisions
 ---
 
 **Project name:** VulkanSceneGraph preferred, may need to use VkSceneGraph if permission from Khronos is not secured.

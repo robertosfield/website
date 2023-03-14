@@ -1,6 +1,6 @@
 ---
 layout: page
-title: VSG Exploration Phase Report
+title: VulkanSceneGraph Exploration Phase Report
 permalink: /documentation/
 ---
 
