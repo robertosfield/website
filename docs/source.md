@@ -4,7 +4,7 @@ title: Source
 permalink: /source/
 ---
 
-The [VulkanSceneGraph project](https://github.com/vsg-dev) is composed of main VulkanSceneGraph library and a series of additional projects that add additional capabilities.
+The [VulkanSceneGraph project](https://github.com/vsg-dev) is composed of main VulkanSceneGraph library and a series of additional projects that provide further capabilities.
 
 ## Main repositories hosted on vsg-dev
 
