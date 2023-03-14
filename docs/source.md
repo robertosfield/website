@@ -4,7 +4,7 @@ title: Source
 permalink: /source/
 ---
 
-The VulkanSceneGraph project is composed of main VulkanSceneGraph library and a series of additional projects that add additional capabilities.
+The [VulkanSceneGraph project](https://github.com/vsg-dev) is composed of main VulkanSceneGraph library and a series of additional projects that add additional capabilities.
 
 ## Main repositories hosted on vsg-dev
 
@@ -12,14 +12,14 @@ The three main reposititories that most users will use are VulkanSceneGraph, vsg
 
 * [VulkanSceneGraph](https://github.com/vsg-dev/VulkanSceneGraph.git) : the main scene graph library
 * [vsgXchange](https://github.com/vsg-dev/vsgXchange.git) Provides load a range of 3rd party image and 3d model files, and http/https support
-* [vsgExamples](https://github.com/vsg-dev/vsgExamples.git)
+* [vsgExamples](https://github.com/vsg-dev/vsgExamples.git) Collection of exmaple programs that are to test VSG features and illustrate how they are used.
 
 ## Secondary repositories hosted vsg-dev
 
 The following repositories are part of the VulkanScenGraph project provide more specialist functionality.
 
-* [vsgQt](http://vsg-dev/vsgQt) Qt5/6 integration
-* [vsgImGui](https://github.com/vsg-dev/vsgImGui.git) ImGui integrastion
+* [vsgQt](https://github.com/vsg-dev/vsgQt) Qt5/6 integration
+* [vsgImGui](https://github.com/vsg-dev/vsgImGui.git) ImGui + ImPlot integrastion
 * [osg2vsg](https://github.com/vsg-dev/osg2vsg.git) OpenSceneGraph integration
 * [vsgFramework](https://github.com/vsg-dev/vsgFramework.git) Framework project that uses CMake to compiles a suite of projects associated with VulkanScenegraph
 
