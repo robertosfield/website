@@ -18,7 +18,7 @@ The three main reposititories that most users will use are VulkanSceneGraph, vsg
 
 The following repositories are part of the VulkanScenGraph project provide more specialist functionality.
 
-* [MyFirstVsgApplication](https://github.com/vsg-dev/MyFirstVsgApplication) simple standalone VSG application that can be used as a template for your own applications.
+* [MyFirstVsgApplication](https://github.com/vsg-dev/MyFirstVsgApplication) simple standalone application that can be used as a template for your own applications.
 * [vsgQt](https://github.com/vsg-dev/vsgQt) Qt5/6 integration
 * [vsgImGui](https://github.com/vsg-dev/vsgImGui.git) ImGui + ImPlot integrastion
 * [osg2vsg](https://github.com/vsg-dev/osg2vsg.git) OpenSceneGraph integration
@@ -28,5 +28,6 @@ The following repositories are part of the VulkanScenGraph project provide more 
 
 The wider VulkanSceneGraph community have published libraries and applications
 
-* [vsgSDL](https://github.com/ptrfun/vsgSDL) SDL integration with VulkanSceneGraph.
-* [vsgvr](https://github.com/geefr/vsgvr) OpenVR integration with VulkanSceneGraph.
+* [vsgCs](https://github.com/timoore/vsgCs) 3D Tiles and Cesium ion integration
+* [vsgSDL](https://github.com/ptrfun/vsgSDL) SDL integration
+* [vsgvr](https://github.com/geefr/vsgvr) OpenVR integration
