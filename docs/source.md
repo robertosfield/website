@@ -32,3 +32,5 @@ The wider VulkanSceneGraph community have published libraries and applications
 * [vsgEarth](https://github.com/timoore/vsgEarth) osgEarth integration
 * [vsgSDL](https://github.com/ptrfun/vsgSDL) SDL integration
 * [vsgvr](https://github.com/geefr/vsgvr) OpenVR integration
+* [VulkanPBRT](https://github.com/Lachei/VulkanPBRT) Ray Tracing
+* [vsgPoints](https://github.com/robertosfield/vsgPoints) point cloud rendering
