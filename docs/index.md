@@ -5,5 +5,7 @@
 layout: home
 ---
 
+![VulkanSceneGraph](images/VSGlogo.png)
+
 This is the main page.
 
