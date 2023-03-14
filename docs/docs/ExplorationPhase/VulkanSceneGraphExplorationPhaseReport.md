@@ -1,4 +1,9 @@
-# VSG Exploration Phase Report
+---
+layout: page
+title: VSG Exploration Phase Report
+permalink: /documentation/
+---
+
 This document discusses the work carried out during the Exploration Phase and conclusions and results from this work.  Links to 3rd party resources used are included inline with this document, click on highlighted keywords to follow links.
 
 ## Original Plan for topics to be tackled during exploration phase:

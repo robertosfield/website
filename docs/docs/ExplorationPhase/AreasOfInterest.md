@@ -1,4 +1,9 @@
-# Areas of Interest during Exploration Phase
+---
+layout: page
+title: Areas of Interest during Exploration Phase
+permalink: /documentation/
+---
+
 
 ## General
 

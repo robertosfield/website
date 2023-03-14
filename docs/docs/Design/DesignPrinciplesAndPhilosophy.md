@@ -1,4 +1,8 @@
-# Design Principles and Philosophy
+---
+layout: page
+title: Design Principles and Philosophy
+permalink: /documentation/
+---
 
 > *"Successful Software Lives For Ever"*
 

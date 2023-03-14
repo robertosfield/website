@@ -1,4 +1,9 @@
-# 3rd Party Resources of interest
+---
+layout: page
+title: 3rd Party Resources of interest
+permalink: /documentation/
+---
+
 
 ## C++ Core Guidelines etc.
 
