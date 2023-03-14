@@ -4,7 +4,7 @@ title: Services
 permalink: /services/
 ---
 
-## VulkanSceneGraph/OpenSceneGraph Professional Services
+# Vulkan/OpenSceneGraph Professional Services
 
 Professional Services are provided by project lead Robert Osfield's company _OpenSceneGraph Professional Services_. Founded in 2001 to provided consulting services ontop of OpenSceneGraph, and since the inception of the VulkanSceneGraph project in 2018 have provided services for both open souce projects. Income from services enable the commitment to open source development and support of the VulkanSceneGraph project. Services provided:
 
@@ -18,7 +18,7 @@ Contact email : <mailto:robert.osfield@gmail.com>
 
 Github account: [http://githib.com/robertosfield](https://github.com/robertosfield)
 
-### Additional Companies/Contractors
+# Additional Companies/Contractors
 
 The VulkanSceneGraph community also contains companies/contractors that can provide services independently in collobration with OpenScenGraph Prof. Serv.:
 
