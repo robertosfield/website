@@ -17,6 +17,8 @@ title: VulkanSceneGraph
 #email: robert@openscenegraph.com
 description: >- # this means to ignore newlines until "baseurl:"
   Vulkan Made Easy
+#baseurl: "vsg-dev.io" # the subpath of your site, e.g. /blog
+#url: "https://vsg-dev.github.io/vsg-dev.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "vsg-dev.io" # the subpath of your site, e.g. /blog
 url: "https://vsg-dev.github.io/vsg-dev.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dev_vsg
@@ -32,6 +34,7 @@ header_pages:
   - features.md
   - screenshots.md
   - source.md
+  - tutorial.md
   - documentation.md
   - discussion.md
   - services.md
