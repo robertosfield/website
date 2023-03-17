@@ -9,7 +9,7 @@ permalink: /tutorials/
 Introduciton
 1. Introduction to Vulkan Scene Graphs
 2. Introduction to the VulkanSceneGraph project
-3. Building VulkanSceneGraph projects and exercises
+3. Building VulkanSceneGraph projects and vsgTutorial exercises
 
 Fundations
 2. Memory management - smart pointers, Objects and Allocators
