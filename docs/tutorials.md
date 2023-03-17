@@ -6,8 +6,10 @@ permalink: /tutorials/
 
 # vsgTutorial - multi-part tutorial COMMING SOON!
 
-Intorduciton
-1. Introduction to Scene Graphs, Vulkan and VulkanSceneGraph
+Introduciton
+1. Introduction to Vulkan Scene Graphs
+2. Introduction to the VulkanSceneGraph project
+3. Building VulkanSceneGraph projects and exercises
 
 Fundations
 2. Memory management - smart pointers, Objects and Allocators
