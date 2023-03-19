@@ -4,31 +4,15 @@ title: Tutorials
 permalink: /tutorials/
 ---
 
-# vsgTutorial - multi-part tutorial COMMING SOON!
+# vsgTutorial
 
-Introduciton
-1. Introduction to Vulkan Scene Graphs
-2. Introduction to the VulkanSceneGraph project
-3. Building VulkanSceneGraph projects and vsgTutorial exercises
+[vsgTutorial](https://vsg-dev.github.io/vsgTutorial), ***currently being written***, will be multi-part tutorial that teaches developers about how to use the main features of the VulkanSceneGraph.
 
-Fundations
-4. Memory management - smart pointers, Objects and Allocators
-5. Vector maths - GLSL style vectors, matrices
-6. IO - loading/saving images and nodes
-
-Scene Graph
-7. Nodes - internal nodes of the scene graph
-8. Geometry - meshes
-9. State - shaders, textures, uniforms
-
-Application
-10. Viewer - creating application viewer
-11. Utilizties - operating on the scene graph
-12. Threading - different ways of threading
-
-Developing Skills
-13. Trouble Shooting - debugging VulkanSceneGraph applications
-14. Optimizaton - how to improve performance & low power consumption
+* [Introduciton](https://vsg-dev.github.io/vsgTutorial/introduction) - tour of low and high level APIs and intro into Vulkan & VulkanSceneGraph
+* Fundations - bases classes, memory management, maths and IO.
+* Scene Graph - nodes, geometry and state
+* Application - viewers, utilities and threading
+* Developing Skills - trouble shooting and optimization
 
 # Community/3rd party Tutorials/Blog posts
 
