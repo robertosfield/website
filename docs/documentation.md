@@ -15,7 +15,7 @@ permalink: /documentation/
 * Design : [Design Principles & Philosophy](docs/Design/DesignPrinciplesAndPhilosophy.md)
 * Design : [High Level Design Decisions](docs/Design/HighLevelDesignDecisions.md)
 * Exploration Phase : [3rd Party Resources](docs/ExplorationPhase/3rdPartyResources.md)
-* Exploration Phase : [Areas of Interst](docs/ExplorationPhase/AreasOfInterest.md)
+* Exploration Phase : [Areas of Interest](docs/ExplorationPhase/AreasOfInterest.md)
 * Exploration Phase : [Report](docs/ExplorationPhase/VulkanSceneGraphExplorationPhaseReport.md)
 * PrototypePhase : [Workplan](docs/PrototypePhase/Workplan.md)
 * PrototypePhase : [Report](docs/PrototypePhase/PrototypePhaseReport.md)
