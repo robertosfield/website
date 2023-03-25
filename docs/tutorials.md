@@ -6,7 +6,7 @@ permalink: /tutorials/
 
 # Online book: vsgTutorial
 
-[vsgTutorial](https://vsg-dev.github.io/vsgTutorial), ***currently being written***, is a multi-part tutorial that teaches developers about how to use the VulkanSceneGraph to develop graphicss and compute applications.
+[vsgTutorial](https://vsg-dev.github.io/vsgTutorial), ***currently being written***, is a multi-part tutorial that teaches developers how to use the VulkanSceneGraph to develop graphicss and compute applications.
 
 1. [Setting the Scene](https://vsg-dev.github.io/vsgTutorial/SettingTheScene) - tour of low and high level APIs and intro into Vulkan & VulkanSceneGraph
 1. Fundations - bases classes, memory management, maths and IO.
