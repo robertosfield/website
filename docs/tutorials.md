@@ -4,7 +4,7 @@ title: Tutorials
 permalink: /tutorials/
 ---
 
-# Online book : vsgTutorial
+# Online book: vsgTutorial
 
 [vsgTutorial](https://vsg-dev.github.io/vsgTutorial), ***currently being written***, is a multi-part tutorial that teaches developers about how to use the VulkanSceneGraph to develop graphicss and compute applications.
 
