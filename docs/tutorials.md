@@ -9,7 +9,7 @@ permalink: /tutorials/
 [vsgTutorial](https://vsg-dev.github.io/vsgTutorial), ***currently being written***, will be multi-part tutorial that teaches developers about how to use the main features of the VulkanSceneGraph.
 
 * [Introduciton](https://vsg-dev.github.io/vsgTutorial/introduction) - tour of low and high level APIs and intro into Vulkan & VulkanSceneGraph
-* Fundations - bases classes, memory management, maths and IO.
+* [Foundations](2_Foundations/index.md) - bases classes, memory management, maths and IO.
 * Scene Graph - nodes, geometry and state
 * Application - viewers, utilities and threading
 * Developing Skills - trouble shooting and optimization
