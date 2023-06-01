@@ -22,6 +22,7 @@ The following repositories are part of the VulkanScenGraph project provide more 
 * [vsgQt](https://github.com/vsg-dev/vsgQt) Qt5/6 integration
 * [vsgImGui](https://github.com/vsg-dev/vsgImGui.git) ImGui + ImPlot integrastion
 * [osg2vsg](https://github.com/vsg-dev/osg2vsg.git) OpenSceneGraph integration
+* [vsgPoints](https://github.com/vsg-dev/vsgPoints) point cloud rendering
 * [vsgFramework](https://github.com/vsg-dev/vsgFramework.git) Framework project that uses CMake to compiles a suite of projects associated with VulkanScenegraph
 
 ## Community projects
@@ -33,4 +34,3 @@ The wider VulkanSceneGraph community have published libraries and applications
 * [vsgSDL](https://github.com/ptrfun/vsgSDL) SDL integration
 * [vsgvr](https://github.com/geefr/vsgvr) OpenVR integration
 * [VulkanPBRT](https://github.com/Lachei/VulkanPBRT) Ray Tracing
-* [vsgPoints](https://github.com/robertosfield/vsgPoints) point cloud rendering

@@ -41,7 +41,7 @@ Multi-pass rendering used to render an anaglyphic stereo effect
 Multi-pass rendering used to render stereo imagery
 ![](screenshots/stereo_images.png)
 
-Rendering of point data clound using [vsgPoints](https://github.com/robertosfield/vsgPoints)
+Rendering of point data clound using [vsgPoints](https://github.com/vsg-dev/vsgPoints)
 ![](screenshots/midsteeple.png)
 
 Illustrates of [vsgImGui](https://github.com/vsg-dev/vsgImGui.git) integration with ImGui with custom font
