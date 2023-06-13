@@ -10,7 +10,7 @@ permalink: /tutorials/
 
 1. [Setting the Scene](https://vsg-dev.github.io/vsgTutorial/SettingTheScene) - tour of low and high level APIs and intro into Vulkan & VulkanSceneGraph
 1. [Foundations](https://vsg-dev.github.io/vsgTutorial/foundations) - bases classes, memory management, maths and IO.
-1. Scene Graph - nodes, geometry and state
+1. [Scene Graph](https://vsg-dev.github.io/vsgTutorial/scenegraph) - nodes, geometry and state
 1. Application - viewers, utilities and threading
 1. Developing Skills - trouble shooting and optimization
 
