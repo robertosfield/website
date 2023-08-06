@@ -58,12 +58,12 @@ permalink: /documentation/docs/exploration_phase/areas_of_interest
 
 ## Scene Graph
 * Scope out the minimal set of Node classes required
-  * NullNode to avoiding the need for if (!node) doSomething
+  * NullNode to avoid the need for if (!node) doSomething
   * Fixed size vs variable size Containers in Groups etc.
   * Level of Detail
   * CullNode (shift bounding volumes from all nodes to specialized node?)
   * MaskNode (shift node mask checks from all nodes to specialized node?)
-  *Cameras
+  * Cameras
 * Traversal
   * Visitor Pattern
   * Possibilities for inlining vs virtual functions
@@ -92,6 +92,6 @@ permalink: /documentation/docs/exploration_phase/areas_of_interest
 * Single view vs multi view
 
 ## Interoperability
-* Converting scene graph data from OpenSceneGraph data to leverages loaders
-* Rendering Vulkan graphics within a OpenGL graphics context
+* Converting scene graph data from OpenSceneGraph data to VSG leverages loaders
+* Rendering Vulkan graphics within an OpenGL graphics context
 

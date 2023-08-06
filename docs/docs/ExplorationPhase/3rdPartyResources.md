@@ -40,7 +40,7 @@ permalink: /documentation/docs/exploration_phase/resources_of_interest
 ## Tutorials
 * [Vulkan Tutorial](https://vulkan-tutorial.com/)
 * [2017 Khronos UK Vulkanised  presentations](https://www.khronos.org/developers/library/2017-khronos-uk-vulkanised)
-* [Multi-threading in Vulcan](https://community.arm.com/graphics/b/blog/posts/multi-threading-in-vulkan)
+* [Multi-threading in Vulkan](https://community.arm.com/graphics/b/blog/posts/multi-threading-in-vulkan)
 
 ## Vulkan Presentations
 * [Keeping-your-GPU-fed](https://www.khronos.org/assets/uploads/developers/library/2016-vulkan-devday-uk/7-Keeping-your-GPU-fed.pdf)
@@ -105,7 +105,7 @@ implement certain features :
 
 * [Vulkan Demos](https://github.com/SaschaWillems/Vulkan)
 * [Sascha Willems website](https://www.saschawillems.de/)
-* [JHerico's Vukan examples](https://github.com/jherico/Vulkan)
+* [JHerico's Vulkan examples](https://github.com/jherico/Vulkan)
 * [gliterop example](https://github.com/jherico/Vulkan/tree/cpp/examples/glinterop)
 
 Vulkan Compute examples:

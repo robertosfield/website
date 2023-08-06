@@ -10,7 +10,7 @@ permalink: /documentation/
 * [vsgXchange](ref/vsgXchange/html/annotated.html)
 * [vsgImGui](ref/vsgImGui/html/annotated.html)
 
-## Background design and development
+## Background of design and development
 
 * Design : [Design Principles & Philosophy](docs/Design/DesignPrinciplesAndPhilosophy.md)
 * Design : [High Level Design Decisions](docs/Design/HighLevelDesignDecisions.md)

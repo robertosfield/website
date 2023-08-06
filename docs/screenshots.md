@@ -17,19 +17,19 @@ BingMaps imagery rendered using vsg::TileDatabase node
 ![](screenshots/BingMaps.png)
 ![](screenshots/Bocachica.png)
 
-GLTF model loading provide by by [vsgXchange::assimp]((https://github.com/vsg-dev/osg2vsg)) loader with the VulkanSceneGrpah's builtin Physics Based Rendering shaders
+GLTF model loading provided by [vsgXchange::assimp]((https://github.com/vsg-dev/osg2vsg)) loader with the VulkanSceneGraph's builtin Physics Based Rendering shaders
 ![](screenshots/FlightHelmet.png)
 
 Multi-thread loading example illustrates loading & rendering of the [glTF-Sample-Models](https://github.com/KhronosGroup/glTF-Sample-Models) sample set
 ![](screenshots/vsgdyanmicload.png)
 
-Simple OpenSceneGraph lanading zone model loaded using [osg2vsg](https://github.com/vsg-dev/osg2vsg)/vsgXchange and rendering in a Qt window using vsgQt
+Simple OpenSceneGraph landing zone model loaded using [osg2vsg](https://github.com/vsg-dev/osg2vsg)/vsgXchange and rendering in a Qt window using vsgQt
 ![](screenshots/vsgQt.png)
 
-Rendering of an OpenFlight model concunrrently in both OpenSceneGraph and VulkanSceneGraph within the same test application provided by [osg2vsg](https://github.com/vsg-dev/osg2vsg)
+Rendering of an OpenFlight model concurrently in both OpenSceneGraph and VulkanSceneGraph within the same test application provided by [osg2vsg](https://github.com/vsg-dev/osg2vsg)
 ![](screenshots/vsgwithosg.png)
 
-Multi CPU supported illustrated on 3 Geforce 1650 cards rendering an OpenFlight model of Umea, Sweeden
+Multi GPU support illustrated on 3 Geforce 1650 cards rendering an OpenFlight model of Umea, Sweeden
 ![](screenshots/MultiGPU.jpg)
 
 Example of rendering high quality SDF text
@@ -44,7 +44,7 @@ Multi-pass rendering used to render stereo imagery
 Rendering of point data clound using [vsgPoints](https://github.com/vsg-dev/vsgPoints)
 ![](screenshots/midsteeple.png)
 
-Illustrates of [vsgImGui](https://github.com/vsg-dev/vsgImGui.git) integration with ImGui with custom font
+Illustration of [vsgImGui](https://github.com/vsg-dev/vsgImGui.git) integration with ImGui with custom font
 ![](screenshots/vsgImGuiCustomFonts.png)
 
 Screenshot from [VulkanPBRT](https://github.com/Lachei/VulkanPBRT) - implementation of Ray Tracing using VulkanSceneGraph
