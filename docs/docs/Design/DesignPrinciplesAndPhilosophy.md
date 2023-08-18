@@ -4,11 +4,11 @@ title: Design Principles and Philosophy
 permalink: /documentation/docs/design/design_principles_and_philosophy
 ---
 
-> *"Successful Software Lives For Ever"*
+> ***"Successful Software Lives For Ever"***
 
-This document introduces the design principles/philosophy of the project lead Robert Osfield.  The principles draw upon the experience of being project lead of the [OpenSceneGraph](https://www.openscenegraph.org) and lessons learned from the real-time compute graphics, C++, and open source/free software communities.
+This document introduces the design principles/philosophy of the project lead Robert Osfield. The principles draw upon the experience of being project lead of the [OpenSceneGraph](https://www.openscenegraph.org) and lessons learned from the real-time compute graphics, C++, and open source/free software communities.
 
-First lets break down the opening phrase, *"Successful Software Lives For Ever"*, one I coined for a training course over a decade ago:
+First let's break down the opening phrase, *"Successful Software Lives For Ever"*, one I coined for a training course over a decade ago:
 
 * What is *"Successful Software"* : Software that is useful and reliable enough for developers and/or users to adopt it as a part of their work or personal lives and rely upon it to live for as long as they need it.
 
@@ -17,9 +17,9 @@ First lets break down the opening phrase, *"Successful Software Lives For Ever"*
 
 For the OpenSceneGraph project what made it a success was it achieved *performance* levels that competed well with the best proprietary and open source scene graphs, and was well designed enough to help developers be *Productive* over long term application development and deployment. Responsiveness of contributors to support the community has also been crucial for the OpenSceneGraph remaining relevant to real-time graphics application developers for nearly two decades.
 
-Technology moves on, Vulkan is displacing OpenGL as the graphics API of choice for high performance cross platform graphics development.  C++ has begun evolving more rapidly and now C++17 offers many features that make applications faster, more robust and easier to develop and maintain. Ideas on scene graphs have also advanced, a well designed clean room scene graph has the potential for improving graphics and compute performance and developer productivity beyond the previous state of art.  The VulkanSceneGraph project goal is to embody the potential of Vulkan and modern C++ and create middle-ware for the next generation of graphics applications, and for it to remain a valued tool for the next decade and beyond.
+Technology moves on, Vulkan is displacing OpenGL as the graphics API of choice for high performance cross platform graphics development. C++ has begun evolving more rapidly and now C++17 offers many features that make applications faster, more robust and easier to develop and maintain. Ideas on scene graphs have also advanced, a well designed clean room scene graph has the potential for improving graphics and compute performance and developer productivity beyond the previous state of art. The VulkanSceneGraph project goal is to embody the potential of Vulkan and modern C++ and create middle-ware for the next generation of graphics applications, and for it to remain a valued tool for the next decade and beyond.
 
-There are two broad areas that will determine the success of the VulkanSceneGraph : [***Performance***](#performance) and [***Productivity***](#productivity).  The rest of this document will break these areas down and discuss the design principles that will aim to deliver in these areas. I'll coin another phrase to emphasise how both are equally crucial to success:
+There are two broad areas that will determine the success of the VulkanSceneGraph : [***Performance***](#performance) and [***Productivity***](#productivity). The rest of this document will break these areas down and discuss the design principles that will aim to deliver in these areas. I'll coin another phrase to emphasise how both are equally crucial to success:
 
 > ***"You live for Performance, but die a slow, painful death without Productivity"***
 
@@ -53,13 +53,13 @@ The principles used as a guide to achieving efficiency include:
 * Avoid non essential conditionals
 * Choose coding techniques that are friendly to compiler optimization and CPU parallelism
 
-An example of minimizing footprint, non essential conditions and data storage has already impacted the design and the implementation can be seen in minimizing the size of the core [vsg::Object](../../include/vsg/core/Object.h) that is the backbone of the scene graph by moving all optional data out into an optional [vsg::Auxiliary](../../include/vsg/core/Auxiliary.h) class.  This change reduces the size of vsg::Object to 24 bytes, compared to the OpenSceneGraph's osg::Object class that is 72 bytes.  The vsg::Node class adds no extra data members so remains at 24 bytes, while the OpenSceneGraph's osg::Node class footprint is an extra 20 bytes.  These memory footprint reductions are carried over to all objects in the scene graph.
+An example of minimizing footprint, non essential conditions and data storage that has already impacted the design and the implementation can be seen in minimizing the size of the core [vsg::Object](../../include/vsg/core/Object.h) that is the backbone of the scene graph by moving all optional data out into an optional [vsg::Auxiliary](../../include/vsg/core/Auxiliary.h) class. This change reduces the size of vsg::Object to 24 bytes, compared to the OpenSceneGraph's osg::Object class that is 72 bytes. The vsg::Node class adds no extra data members so remains at 24 bytes, while the OpenSceneGraph's osg::Node class footprint is an extra 20 bytes. These memory footprint reductions are carried over to all objects in the scene graph.
 
-Scene graphs are fundamentally a graph of objects connected by pointers between those objects.  The size of those objects is inextricably connected to the size of pointers. C++11 onwards provides the std::shared_ptr<> which on 64-bit systems has a size of 16 bytes, while the VSG's intrusive reference counting enables the vsg::ref_ptr<> to have a size of 8 bytes.  In experiments with creation of a quad tree scene graph using std::shared_ptr<> vs vsg::ref_ptr<>, the shared_ptr<> results in a 75% more memory used overall, and 65% slower traversal speeds. This significant difference illustrates that one should not assume that C++ core features are always the most efficient tool.
+Scene graphs are fundamentally a graph of objects connected by pointers between those objects. The size of those objects is inextricably connected to the size of pointers. C++11 onwards provides the std::shared_ptr<> which on 64-bit systems has a size of 16 bytes, while the VSG's intrusive reference counting enables the vsg::ref_ptr<> to have a size of 8 bytes. In experiments with creation of a quad tree scene graph using std::shared_ptr<> vs vsg::ref_ptr<>, the shared_ptr<> results in a 75% more memory used overall, and 65% slower traversal speeds. This significant difference illustrates that one should not assume that C++ core features are always the most efficient tool.
 
-Traversals of a scene graph and dispatch graphs are the main operations that a scene graph undertakes each frame, cache misses and lowering the cycle overhead per object visited is key to reducing traversal times.  The memory footprint reduction immediately reduces the number of page faults that occur and avoiding non essential conditionals provides a second improvement as it reduces the number of cycles required per object visited.
+Traversals of a scene graph and dispatch graphs are the main operations that a scene graph undertakes each frame, cache misses and lowering the cycle overhead per object visited is key to reducing traversal times. The memory footprint reduction immediately reduces the number of page faults that occur and avoiding non essential conditionals provides a second improvement as it reduces the number of cycles required per object visited.
 
-The way that avoiding non essential conditionals has been addressed is to drop the NodeMask and TraversalMode parameters that are found in the OpenSceneGraph's osg::Node and osg::NodeVisitor respectively.  When NodeMask functionality is required in a scene graph the task will fall to a MaskGroup that will have a local mask and undertake the conditional during traversals as required, so that only scene graphs that require a mask will pay the penalty for it.  Decision of what type of traversal to undertake is also moved to the Visitor subclass rather than the Visitor base class.  Finally the NodePath that is automatically accumulated by the OpenSceneGraph's NodeVisitor is also dispensed with, if Visitor implementations require this functionality then they are left to implement it.
+The way that avoiding non essential conditionals has been addressed is to drop the NodeMask and TraversalMode parameters that are found in the OpenSceneGraph's osg::Node and osg::NodeVisitor respectively. When NodeMask functionality is required in a scene graph the task will fall to a MaskGroup that will have a local mask and undertake the conditional during traversals as required, so that only scene graphs that require a mask will pay the penalty for it. Decision of what type of traversal to undertake is also moved to the Visitor subclass rather than the Visitor base class. Finally the NodePath that is automatically accumulated by the OpenSceneGraph's NodeVisitor is also dispensed with, if Visitor implementations require this functionality then they are left to implement it.
 
 To test the effectiveness of these design differences a test program, vsggroups (found in vsgFrameworks project) was used. The results of these seemingly small design changes over the OpenSceneGraph have a dramatic impact on performance.
 
@@ -72,7 +72,7 @@ The reason for this dramatic improvement is due to:
 * reduction in conditionals, reducing number of instructions per object visited and improving CPU ability to prefetch and speculatively execute
 * improvement in number of instructions per cycle that the CPU can sustain
 
-These are benefits even before we compared Vulkan vs OpenGL improvements, it's still too early in the project's life to be able to compare on realistic scenes, as things progress we'll provide more results.  We can be confident that the improvements in efficiency of the scene graph traversals combined with the efficiency of Vulkan will substantially improve the ability to have large and complex worlds, and reduce the power over-head required to achieve a specific level of visual quality.
+These are benefits even before we compared Vulkan vs OpenGL improvements, it's still too early in the project's life to be able to compare on realistic scenes, as things progress we'll provide more results. We can be confident that the improvements in efficiency of the scene graph traversals combined with the efficiency of Vulkan will substantially improve the ability to have large and complex worlds, and reduce the power overhead required to achieve a specific level of visual quality.
 
 
 ## Productivity
@@ -82,7 +82,7 @@ The tools and middle-ware you choose for your projects are key determinants of t
 ### General project development principles that aid Productivity:
 
 * Use Best Practices that have been established in the wider industry:
-    * [FOSS Best Practices](https://github.com/coreinfrastructure/best-practices-badge/blob/master/doc/criteria.md) are used as a guide of how to organize and maintain the project
+    * [FOSS Best Practices](https://bestpractices.coreinfrastructure.org/en/criteria) are used as a guide of how to organize and maintain the project
     * [CppCoreGuidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) are used as a guide to design and implementation
 * Use C++17 to benefit from the improvements in C++ that result in cleaner and more maintainable code
     * Use features and idioms that make sense for a scene graph

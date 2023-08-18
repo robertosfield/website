@@ -12,7 +12,7 @@ permalink: /documentation/docs/exploration_phase/resources_of_interest
 * [GNU Reserved-Names](https://www.gnu.org/software/libc/manual/html_node/Reserved-Names.html)
 
 ## Best Practices
-* [Best Practices Criteria for Free/Libre and Open Source Software (FLOSS)](https://github.com/coreinfrastructure/best-practices-badge/blob/master/doc/criteria.md)
+* [Best Practices Criteria for Free/Libre and Open Source Software (FLOSS)](https://bestpractices.coreinfrastructure.org/en/criteria)
 * [include-what-you-use tool](https://include-what-you-use.org/)
 * [clang address sanitizer](https://clang.llvm.org/docs/AddressSanitizer.html)
 * [clang thread sanitizer](https://clang.llvm.org/docs/ThreadSanitizer.html)
@@ -20,7 +20,7 @@ permalink: /documentation/docs/exploration_phase/resources_of_interest
 
 ## Package managers
 * [conan](https://conan.io/), [github](https://github.com/conan-io/conan)
-* [hunter](https://docs.hunter.sh/en/latest/), [github](https://github.com/ruslo/hunter)
+* [hunter](https://hunter.readthedocs.io/en/latest/), [github](https://github.com/ruslo/hunter)
 * [vcpkg](https://github.com/Microsoft/vcpkg)
 
 ## Documentation tools
@@ -67,7 +67,7 @@ permalink: /documentation/docs/exploration_phase/resources_of_interest
 * [GLI](http://gli.g-truc.net) Loading/manipulating images/textures
 * [STB](https://github.com/nothings/stb) stb_image.h etc.
 * [DevIL](http://openil.sourceforge.net/) DevIL image library, [repo](https://github.com/DentonW/DevIL)
-* [FreeImage] (http://freeimage.sourceforge.net/) FreeImage image library (GPLv2/GPLv3/FreeImage License), [repo] (https://sourceforge.net/p/freeimage/code/) 
+* [FreeImage](http://freeimage.sourceforge.net/) FreeImage image library (GPLv2/GPLv3/FreeImage License), [repo](https://sourceforge.net/p/freeimage/code/) 
 
 ## Introspection
 * [Cereal](https://github.com/USCiLab/cereal)
