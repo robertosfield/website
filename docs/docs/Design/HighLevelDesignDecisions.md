@@ -12,7 +12,7 @@ permalink: /documentation/docs/design/high_level_design_decisions
 
 **Source code control:** git hosted on github.
 
-**Maths :** local GLSL style [maths](../../include/vsg/maths/) classes, inspired by GLSL, GLM and the Vulkan conventions.
+**Maths:** local GLSL style [maths](../../include/vsg/maths/) classes, inspired by GLSL, GLM and the Vulkan conventions.
 
 **Windowing:** local native Windowing integrated with core VSG library, with ability to use 3rd party Windowing (short term use GLFW to get started quickly.)
 
