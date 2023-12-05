@@ -29,10 +29,10 @@ Simple OpenSceneGraph landing zone model loaded using [osg2vsg](https://github.c
 Rendering of an OpenFlight model concurrently in both OpenSceneGraph and VulkanSceneGraph within the same test application provided by [osg2vsg](https://github.com/vsg-dev/osg2vsg)
 ![](screenshots/vsgwithosg.png)
 
-Multi GPU support illustrated on 3 Geforce 1650 cards rendering an OpenFlight model of Umea, Sweeden
+Multi GPU support illustrated on 3 Geforce 1650 cards rendering an OpenFlight model of Umea, Sweden
 ![](screenshots/MultiGPU.jpg)
 
-Example of rendering high quality SDF text
+Example of rendering high-quality SDF text
 ![](screenshots/vsgtext.png)
 
 Multi-pass rendering used to render an anaglyphic stereo effect
@@ -41,7 +41,7 @@ Multi-pass rendering used to render an anaglyphic stereo effect
 Multi-pass rendering used to render stereo imagery
 ![](screenshots/stereo_images.png)
 
-Rendering of point data clound using [vsgPoints](https://github.com/vsg-dev/vsgPoints)
+Rendering of point data cloud using [vsgPoints](https://github.com/vsg-dev/vsgPoints)
 ![](screenshots/midsteeple.png)
 
 Illustration of [vsgImGui](https://github.com/vsg-dev/vsgImGui.git) integration with ImGui with custom font
