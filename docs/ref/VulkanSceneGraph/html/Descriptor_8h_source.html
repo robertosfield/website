@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -92,42 +92,40 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// forward declare</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">class </span>Context;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">using</span> DescriptorBufferInfos = std::vector&lt;VkDescriptorBufferInfo&gt;;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classvsg_1_1Descriptor.html">   27</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1Descriptor.html">Descriptor</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Object, Descriptor&gt;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classvsg_1_1Descriptor.html">Descriptor</a>(uint32_t in_dstBinding, uint32_t in_dstArrayElement, VkDescriptorType in_descriptorType);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classvsg_1_1Descriptor.html#a26113c491b8b2c56c6debf6cd9c32a2e">   33</a></span>&#160;        uint32_t <a class="code" href="classvsg_1_1Descriptor.html#a26113c491b8b2c56c6debf6cd9c32a2e">dstBinding</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        uint32_t dstArrayElement;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        VkDescriptorType descriptorType;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classvsg_1_1Descriptor.html">   25</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1Descriptor.html">Descriptor</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Object, Descriptor&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classvsg_1_1Descriptor.html">Descriptor</a>(uint32_t in_dstBinding, uint32_t in_dstArrayElement, VkDescriptorType in_descriptorType);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classvsg_1_1Descriptor.html#a26113c491b8b2c56c6debf6cd9c32a2e">   31</a></span>&#160;        uint32_t <a class="code" href="classvsg_1_1Descriptor.html#a26113c491b8b2c56c6debf6cd9c32a2e">dstBinding</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        uint32_t dstArrayElement;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        VkDescriptorType descriptorType;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classvsg_1_1Descriptor.html#a4fd2096b042e49b212e0607489885846">   35</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classvsg_1_1Descriptor.html#a4fd2096b042e49b212e0607489885846">compare</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; rhs_object) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classvsg_1_1Descriptor.html#a4fd2096b042e49b212e0607489885846">   37</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classvsg_1_1Descriptor.html#a4fd2096b042e49b212e0607489885846">compare</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; rhs_object) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">void</span> read(<a class="code" href="classvsg_1_1Input.html">Input</a>&amp; input) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> write(<a class="code" href="classvsg_1_1Output.html">Output</a>&amp; output) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// compile the Vulkan object, context parameter used for Device</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> compile(<a class="code" href="classvsg_1_1Context.html">Context</a>&amp; <span class="comment">/*context*/</span>) {}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> read(<a class="code" href="classvsg_1_1Input.html">Input</a>&amp; input) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> write(<a class="code" href="classvsg_1_1Output.html">Output</a>&amp; output) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// compile the Vulkan object, context parameter used for Device</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> compile(<a class="code" href="classvsg_1_1Context.html">Context</a>&amp; <span class="comment">/*context*/</span>) {}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> assignTo(<a class="code" href="classvsg_1_1Context.html">Context</a>&amp; context, VkWriteDescriptorSet&amp; wds) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> assignTo(<a class="code" href="classvsg_1_1Context.html">Context</a>&amp; context, VkWriteDescriptorSet&amp; wds) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">virtual</span> uint32_t getNumDescriptors()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1; }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    };</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1Descriptor.html">vsg::Descriptor</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">virtual</span> uint32_t getNumDescriptors()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1; }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1Descriptor.html">vsg::Descriptor</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">using</span> Descriptors = std::vector&lt;vsg::ref_ptr&lt;vsg::Descriptor&gt;&gt;;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">using</span> Descriptors = std::vector&lt;vsg::ref_ptr&lt;vsg::Descriptor&gt;&gt;;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;} <span class="comment">// namespace vsg</span></div>
 <div class="ttc" id="aclassvsg_1_1Context_html"><div class="ttname"><a href="classvsg_1_1Context.html">vsg::Context</a></div><div class="ttdef"><b>Definition:</b> Context.h:67</div></div>
-<div class="ttc" id="aclassvsg_1_1Descriptor_html"><div class="ttname"><a href="classvsg_1_1Descriptor.html">vsg::Descriptor</a></div><div class="ttdef"><b>Definition:</b> Descriptor.h:28</div></div>
-<div class="ttc" id="aclassvsg_1_1Descriptor_html_a26113c491b8b2c56c6debf6cd9c32a2e"><div class="ttname"><a href="classvsg_1_1Descriptor.html#a26113c491b8b2c56c6debf6cd9c32a2e">vsg::Descriptor::dstBinding</a></div><div class="ttdeci">uint32_t dstBinding</div><div class="ttdoc">Common VkWriteDescriptorSet settings.</div><div class="ttdef"><b>Definition:</b> Descriptor.h:33</div></div>
+<div class="ttc" id="aclassvsg_1_1Descriptor_html"><div class="ttname"><a href="classvsg_1_1Descriptor.html">vsg::Descriptor</a></div><div class="ttdef"><b>Definition:</b> Descriptor.h:26</div></div>
+<div class="ttc" id="aclassvsg_1_1Descriptor_html_a26113c491b8b2c56c6debf6cd9c32a2e"><div class="ttname"><a href="classvsg_1_1Descriptor.html#a26113c491b8b2c56c6debf6cd9c32a2e">vsg::Descriptor::dstBinding</a></div><div class="ttdeci">uint32_t dstBinding</div><div class="ttdoc">Common VkWriteDescriptorSet settings.</div><div class="ttdef"><b>Definition:</b> Descriptor.h:31</div></div>
 <div class="ttc" id="aclassvsg_1_1Descriptor_html_a4fd2096b042e49b212e0607489885846"><div class="ttname"><a href="classvsg_1_1Descriptor.html#a4fd2096b042e49b212e0607489885846">vsg::Descriptor::compare</a></div><div class="ttdeci">int compare(const Object &amp;rhs_object) const override</div><div class="ttdoc">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal,...</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
-<div class="ttc" id="aclassvsg_1_1Input_html"><div class="ttname"><a href="classvsg_1_1Input.html">vsg::Input</a></div><div class="ttdef"><b>Definition:</b> Input.h:43</div></div>
+<div class="ttc" id="aclassvsg_1_1Input_html"><div class="ttname"><a href="classvsg_1_1Input.html">vsg::Input</a></div><div class="ttdef"><b>Definition:</b> Input.h:44</div></div>
 <div class="ttc" id="aclassvsg_1_1Object_html"><div class="ttname"><a href="classvsg_1_1Object.html">vsg::Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:42</div></div>
-<div class="ttc" id="aclassvsg_1_1Output_html"><div class="ttname"><a href="classvsg_1_1Output.html">vsg::Output</a></div><div class="ttdef"><b>Definition:</b> Output.h:40</div></div>
+<div class="ttc" id="aclassvsg_1_1Output_html"><div class="ttname"><a href="classvsg_1_1Output.html">vsg::Output</a></div><div class="ttdef"><b>Definition:</b> Output.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

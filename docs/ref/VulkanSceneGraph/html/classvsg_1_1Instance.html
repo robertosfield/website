@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -78,7 +78,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classvsg_1_1Instance.html" title="Instance encapsulate the vkInstance.">Instance</a> encapsulate the vkInstance.  
+<p><a class="el" href="classvsg_1_1Instance.html" title="Instance encapsulates the VkInstance.">Instance</a> encapsulates the VkInstance.  
  <a href="classvsg_1_1Instance.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Instance_8h_source.html">Instance.h</a>&gt;</code></p>
@@ -87,7 +87,7 @@ Inheritance diagram for vsg::Instance:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1Instance__inherit__graph.png" border="0" usemap="#avsg_1_1Instance_inherit__map" alt="Inheritance graph"/></div>
 <map name="avsg_1_1Instance_inherit__map" id="avsg_1_1Instance_inherit__map">
-<area shape="rect" title="Instance encapsulate the vkInstance." alt="" coords="29,169,137,196"/>
+<area shape="rect" title="Instance encapsulates the VkInstance." alt="" coords="29,169,137,196"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="5,80,161,121"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
 </map>
@@ -97,10 +97,11 @@ Collaboration diagram for vsg::Instance:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1Instance__coll__graph.png" border="0" usemap="#avsg_1_1Instance_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1Instance_coll__map" id="avsg_1_1Instance_coll__map">
-<area shape="rect" title="Instance encapsulate the vkInstance." alt="" coords="121,185,229,212"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="5,81,161,123"/>
-<area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="186,81,351,123"/>
+<area shape="rect" title="Instance encapsulates the VkInstance." alt="" coords="445,78,553,105"/>
+<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="154,5,310,47"/>
+<area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="149,71,315,112"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="151,136,313,177"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -149,6 +150,10 @@ std::pair&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a 
 std::tuple&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1PhysicalDevice.html">PhysicalDevice</a> &gt;, int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Instance.html#a25aed3aae537308e59412e0fdd40e96d">getPhysicalDeviceAndQueueFamily</a> (VkQueueFlags queueFlags, <a class="el" href="classvsg_1_1Surface.html">Surface</a> *surface, const PhysicalDeviceTypes &amp;deviceTypePreferences={}) const</td></tr>
 <tr class="memdesc:a25aed3aae537308e59412e0fdd40e96d"><td class="mdescLeft">&#160;</td><td class="mdescRight">get a <a class="el" href="classvsg_1_1PhysicalDevice.html">PhysicalDevice</a> and queue family index that supports the specified queueFlags, and presentation of specified surface if one is provided. <br /></td></tr>
 <tr class="separator:a25aed3aae537308e59412e0fdd40e96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d8d532fb84675d0a998121f5860e4ef"><td class="memItemLeft" align="right" valign="top"><a id="a4d8d532fb84675d0a998121f5860e4ef"></a>
+const <a class="el" href="classvsg_1_1InstanceExtensions.html">InstanceExtensions</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Instance.html#a4d8d532fb84675d0a998121f5860e4ef">getExtensions</a> () const</td></tr>
+<tr class="memdesc:a4d8d532fb84675d0a998121f5860e4ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the extensions structure that holds a range of function pointers to vkInstance extensions <br /></td></tr>
+<tr class="separator:a4d8d532fb84675d0a998121f5860e4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b05dbdd25fe4db0cc236617dd53bded"><td class="memTemplParams" colspan="2"><a id="a1b05dbdd25fe4db0cc236617dd53bded"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1b05dbdd25fe4db0cc236617dd53bded"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvsg_1_1Instance.html#a1b05dbdd25fe4db0cc236617dd53bded">getProcAddr</a> (T &amp;procAddress, const char *pName, const char *pNameFallback=nullptr) const</td></tr>
@@ -229,7 +234,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -294,7 +299,7 @@ const <a class="el" href="classvsg_1_1Auxiliary.html">Auxiliary</a> *&#160;</td>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ada971808bdb1097d899ecf527012358e"><td class="memItemLeft" align="right" valign="top"><a id="ada971808bdb1097d899ecf527012358e"></a>
 const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Instance.html#ada971808bdb1097d899ecf527012358e">apiVersion</a> = VK_API_VERSION_1_0</td></tr>
-<tr class="memdesc:ada971808bdb1097d899ecf527012358e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vulkan apiVersion used when creating the VkInstaance. <br /></td></tr>
+<tr class="memdesc:ada971808bdb1097d899ecf527012358e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vulkan apiVersion used when creating the VkInstance. <br /></td></tr>
 <tr class="separator:ada971808bdb1097d899ecf527012358e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -308,6 +313,9 @@ VkInstance&#160;</td><td class="memItemRight" valign="bottom"><b>_instance</b></
 <tr class="memitem:a10b2974f8a8d2bc1beb1222607a6546c"><td class="memItemLeft" align="right" valign="top"><a id="a10b2974f8a8d2bc1beb1222607a6546c"></a>
 PhysicalDevices&#160;</td><td class="memItemRight" valign="bottom"><b>_physicalDevices</b></td></tr>
 <tr class="separator:a10b2974f8a8d2bc1beb1222607a6546c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e34a44850729874d5694cec1443920f"><td class="memItemLeft" align="right" valign="top"><a id="a4e34a44850729874d5694cec1443920f"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1InstanceExtensions.html">InstanceExtensions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_extensions</b></td></tr>
+<tr class="separator:a4e34a44850729874d5694cec1443920f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -341,7 +349,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1Instance.html" title="Instance encapsulate the vkInstance.">Instance</a> encapsulate the vkInstance. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1Instance.html" title="Instance encapsulates the VkInstance.">Instance</a> encapsulates the VkInstance. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/vk/<a class="el" href="Instance_8h_source.html">Instance.h</a></li>
 </ul>

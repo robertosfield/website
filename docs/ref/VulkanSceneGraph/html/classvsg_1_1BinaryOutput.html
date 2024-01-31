@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -105,11 +105,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ade0ef9c1015a485fe2028274185ff06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a5afc291b4c0b31689a315295348f24"><td class="memItemLeft" align="right" valign="top"><a id="a8a5afc291b4c0b31689a315295348f24"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1BinaryOutput.html#a8a5afc291b4c0b31689a315295348f24">writePropertyName</a> (const char *) override</td></tr>
-<tr class="memdesc:a8a5afc291b4c0b31689a315295348f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">write property name an non op for binary <br /></td></tr>
+<tr class="memdesc:a8a5afc291b4c0b31689a315295348f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">write property name is a non op for binary <br /></td></tr>
 <tr class="separator:a8a5afc291b4c0b31689a315295348f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56d541f2a5f7218965e8f1580a02d062"><td class="memItemLeft" align="right" valign="top"><a id="a56d541f2a5f7218965e8f1580a02d062"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1BinaryOutput.html#a56d541f2a5f7218965e8f1580a02d062">writeEndOfLine</a> () override</td></tr>
-<tr class="memdesc:a56d541f2a5f7218965e8f1580a02d062"><td class="mdescLeft">&#160;</td><td class="mdescRight">write end of line a non op for binary <br /></td></tr>
+<tr class="memdesc:a56d541f2a5f7218965e8f1580a02d062"><td class="mdescLeft">&#160;</td><td class="mdescRight">write end of line is a non op for binary <br /></td></tr>
 <tr class="separator:a56d541f2a5f7218965e8f1580a02d062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0902b7dde7df2148591712c0e48a75c0"><td class="memTemplParams" colspan="2"><a id="a0902b7dde7df2148591712c0e48a75c0"></a>
 template&lt;typename T &gt; </td></tr>
@@ -149,9 +149,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num
 <tr class="memitem:a00521050a6c820547c6448caf9036f93"><td class="memItemLeft" align="right" valign="top"><a id="a00521050a6c820547c6448caf9036f93"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>_write</b> (const std::string &amp;str)</td></tr>
 <tr class="separator:a00521050a6c820547c6448caf9036f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a450bc95ab7bc35cd9c08a3ed13bcb320"><td class="memItemLeft" align="right" valign="top"><a id="a450bc95ab7bc35cd9c08a3ed13bcb320"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_write</b> (const std::wstring &amp;str)</td></tr>
+<tr class="separator:a450bc95ab7bc35cd9c08a3ed13bcb320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3767cc1c17c112a5ba95b93b01b4afb"><td class="memItemLeft" align="right" valign="top"><a id="ae3767cc1c17c112a5ba95b93b01b4afb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const std::string *value) override</td></tr>
 <tr class="separator:ae3767cc1c17c112a5ba95b93b01b4afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88a8b7850d49bcde0cfc996580e5414f"><td class="memItemLeft" align="right" valign="top"><a id="a88a8b7850d49bcde0cfc996580e5414f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const std::wstring *value) override</td></tr>
+<tr class="separator:a88a8b7850d49bcde0cfc996580e5414f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f3df0ae8caa8210a37785f61ccc77ea"><td class="memItemLeft" align="right" valign="top"><a id="a7f3df0ae8caa8210a37785f61ccc77ea"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const <a class="el" href="classvsg_1_1Path.html">Path</a> *value) override</td></tr>
 <tr class="separator:a7f3df0ae8caa8210a37785f61ccc77ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -251,6 +257,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num
 <tr class="memitem:a0ab1e2e3f9aea992e81839ae6a64d9ff inherit pub_methods_classvsg_1_1Output"><td class="memItemLeft" align="right" valign="top"><a id="a0ab1e2e3f9aea992e81839ae6a64d9ff"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const <a class="el" href="structvsg_1_1t__quat.html">dquat</a> *value)</td></tr>
 <tr class="separator:a0ab1e2e3f9aea992e81839ae6a64d9ff inherit pub_methods_classvsg_1_1Output"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a44214bfa944b0f6bf6ef38fea17ecc inherit pub_methods_classvsg_1_1Output"><td class="memItemLeft" align="right" valign="top"><a id="a2a44214bfa944b0f6bf6ef38fea17ecc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const <a class="el" href="structvsg_1_1t__mat3.html">mat3</a> *value)</td></tr>
+<tr class="separator:a2a44214bfa944b0f6bf6ef38fea17ecc inherit pub_methods_classvsg_1_1Output"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390601b6f36cf3a81520e7e1ba8042e9 inherit pub_methods_classvsg_1_1Output"><td class="memItemLeft" align="right" valign="top"><a id="a390601b6f36cf3a81520e7e1ba8042e9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const <a class="el" href="structvsg_1_1t__mat3.html">dmat3</a> *value)</td></tr>
+<tr class="separator:a390601b6f36cf3a81520e7e1ba8042e9 inherit pub_methods_classvsg_1_1Output"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e294a358aad40bc80ccdfebdd18b329 inherit pub_methods_classvsg_1_1Output"><td class="memItemLeft" align="right" valign="top"><a id="a2e294a358aad40bc80ccdfebdd18b329"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const <a class="el" href="structvsg_1_1t__mat4.html">mat4</a> *value)</td></tr>
 <tr class="separator:a2e294a358aad40bc80ccdfebdd18b329 inherit pub_methods_classvsg_1_1Output"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -306,7 +318,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeObject</b> (cons
 <tr class="memitem:a2f43503d0d29bd9e200656f681ab7165 inherit pub_methods_classvsg_1_1Output"><td class="memTemplParams" colspan="2"><a id="a2f43503d0d29bd9e200656f681ab7165"></a>
 template&lt;typename W , typename T &gt; </td></tr>
 <tr class="memitem:a2f43503d0d29bd9e200656f681ab7165 inherit pub_methods_classvsg_1_1Output"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvsg_1_1Output.html#a2f43503d0d29bd9e200656f681ab7165">writeValue</a> (const char *propertyName, T value)</td></tr>
-<tr class="memdesc:a2f43503d0d29bd9e200656f681ab7165 inherit pub_methods_classvsg_1_1Output"><td class="mdescLeft">&#160;</td><td class="mdescRight">write a value casting it specified type i.e. output.write&lt;uint32_t&gt;("Value", value); <br /></td></tr>
+<tr class="memdesc:a2f43503d0d29bd9e200656f681ab7165 inherit pub_methods_classvsg_1_1Output"><td class="mdescLeft">&#160;</td><td class="mdescRight">write a value casting it to specified type i.e. output.write&lt;uint32_t&gt;("Value", value); <br /></td></tr>
 <tr class="separator:a2f43503d0d29bd9e200656f681ab7165 inherit pub_methods_classvsg_1_1Output"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a103bc8f9eab5342dc87672d679242d40 inherit pub_methods_classvsg_1_1Output"><td class="memItemLeft" align="right" valign="top"><a id="a103bc8f9eab5342dc87672d679242d40"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>version_less</b> (uint32_t major, uint32_t minor, uint32_t patch, uint32_t soversion=0) const</td></tr>
@@ -345,7 +357,7 @@ ObjectIDMap&#160;</td><td class="memItemRight" valign="bottom"><b>objectIDMap</b
 <tr class="separator:a472ac7f68ae66aa227b87fe17effd430 inherit pub_attribs_classvsg_1_1Output"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1Output.html">vsg::Output</a> subclass that implements writing objects as binary data to an output stream. Used by <a class="el" href="classvsg_1_1VSG.html" title="ReaderWriter for reading and writing native VSG ascii and binary files.">VSG</a> <a class="el" href="classvsg_1_1ReaderWriter.html" title="Base class from providing support for reading and/or writing various file formats and IO protocols.">ReaderWriter</a> when writing objects to native .vsgb binary files. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1Output.html">vsg::Output</a> subclass that implements writing objects as binary data to an output stream. Used by <a class="el" href="classvsg_1_1VSG.html" title="ReaderWriter for reading and writing native VSG ascii and binary files.">VSG</a> <a class="el" href="classvsg_1_1ReaderWriter.html" title="Base class for providing support for reading and/or writing various file formats and IO protocols.">ReaderWriter</a> when writing objects to native .vsgb binary files. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/io/<a class="el" href="BinaryOutput_8h_source.html">BinaryOutput.h</a></li>
 </ul>

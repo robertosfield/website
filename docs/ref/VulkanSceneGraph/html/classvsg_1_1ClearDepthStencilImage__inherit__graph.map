@@ -1,0 +1,11 @@
+<map id="vsg::ClearDepthStencilImage" name="vsg::ClearDepthStencilImage">
+<area shape="rect" id="node1" title="ClearDepthStencilImage command encapsulates vkCmdClearDepthStencilImage functionality and associated ..." alt="" coords="5,661,216,688"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="11,572,210,613"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class for encapsulating vkCmd* calls and associated settings." alt="" coords="51,497,171,524"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="17,408,205,449"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Compilable.html" title="Base class for encapsulating nodes that have Vulkan objects associated with them that will need compi..." alt="" coords="47,333,174,360"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="37,244,185,285"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Node.html" title=" " alt="" coords="67,169,154,196"/>
+<area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="33,80,189,121"/>
+<area shape="rect" id="node9" href="$classvsg_1_1Object.html" title=" " alt="" coords="63,5,158,32"/>
+</map>

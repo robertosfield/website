@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -153,12 +153,33 @@ $(function() {
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">using</span> CommandBuffers = std::vector&lt;ref_ptr&lt;CommandBuffer&gt;&gt;;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classvsg_1_1RecordedCommandBuffers.html">   86</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classvsg_1_1RecordedCommandBuffers.html">RecordedCommandBuffers</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Object, RecordedCommandBuffers&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;RecordedCommandBuffers&gt;</a> getOrCreateRecordedCommandBuffers(<span class="keywordtype">int</span> submitOrder);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> add(<span class="keywordtype">int</span> order, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;CommandBuffer&gt;</a> commandGraph);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">bool</span> empty() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        CommandBuffers buffers() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1RecordedCommandBuffers.html">RecordedCommandBuffers</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">mutable</span> std::mutex _mutex;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        std::map&lt;int, ref_ptr&lt;RecordedCommandBuffers&gt;&gt; _orderedCommandBuffers;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        CommandBuffers _commandBuffers;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    };</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1RecordedCommandBuffers.html">vsg::RecordedCommandBuffers</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;} <span class="comment">// namespace vsg</span></div>
 <div class="ttc" id="aclassvsg_1_1CommandBuffer_html"><div class="ttname"><a href="classvsg_1_1CommandBuffer.html">vsg::CommandBuffer</a></div><div class="ttdoc">CommandBuffer encapsulates VkCommandBuffer.</div><div class="ttdef"><b>Definition:</b> CommandBuffer.h:27</div></div>
 <div class="ttc" id="aclassvsg_1_1CommandBuffer_html_a4942f7a9355fe60bba190f26cca520e7"><div class="ttname"><a href="classvsg_1_1CommandBuffer.html#a4942f7a9355fe60bba190f26cca520e7">vsg::CommandBuffer::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">reset the CommandBuffer for the new frame.</div></div>
-<div class="ttc" id="aclassvsg_1_1Device_html"><div class="ttname"><a href="classvsg_1_1Device.html">vsg::Device</a></div><div class="ttdoc">Device encapsulate vkDeivce, a logical handle to the PhysicalDevice with capabilities specified durin...</div><div class="ttdef"><b>Definition:</b> Device.h:37</div></div>
+<div class="ttc" id="aclassvsg_1_1Device_html"><div class="ttname"><a href="classvsg_1_1Device.html">vsg::Device</a></div><div class="ttdoc">Device encapsulates VkDevice, a logical handle to the PhysicalDevice with capabilities specified duri...</div><div class="ttdef"><b>Definition:</b> Device.h:37</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
-<div class="ttc" id="aclassvsg_1_1ViewDependentState_html"><div class="ttname"><a href="classvsg_1_1ViewDependentState.html">vsg::ViewDependentState</a></div><div class="ttdef"><b>Definition:</b> ViewDependentState.h:97</div></div>
+<div class="ttc" id="aclassvsg_1_1RecordedCommandBuffers_html"><div class="ttname"><a href="classvsg_1_1RecordedCommandBuffers.html">vsg::RecordedCommandBuffers</a></div><div class="ttdoc">Thread safe container class.</div><div class="ttdef"><b>Definition:</b> CommandBuffer.h:87</div></div>
+<div class="ttc" id="aclassvsg_1_1ViewDependentState_html"><div class="ttname"><a href="classvsg_1_1ViewDependentState.html">vsg::ViewDependentState</a></div><div class="ttdef"><b>Definition:</b> ViewDependentState.h:105</div></div>
+<div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

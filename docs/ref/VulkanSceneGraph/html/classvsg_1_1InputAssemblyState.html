@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classvsg_1_1InputAssemblyState.html" title="InputAssemblyState encapsulates to VkPipelineInputAssemblyStateCreateInfo settings passed when settin...">InputAssemblyState</a> encapsulates to VkPipelineInputAssemblyStateCreateInfo settings passed when setting up <a class="el" href="classvsg_1_1GraphicsPipeline.html" title="GraphicsPipeline encapsulates graphics VkPipeline and the VkGraphicsPipelineCreateInfo settings used ...">GraphicsPipeline</a>.  
+<p><a class="el" href="classvsg_1_1InputAssemblyState.html" title="InputAssemblyState encapsulates VkPipelineInputAssemblyStateCreateInfo settings passed when setting u...">InputAssemblyState</a> encapsulates VkPipelineInputAssemblyStateCreateInfo settings passed when setting up <a class="el" href="classvsg_1_1GraphicsPipeline.html" title="GraphicsPipeline encapsulates graphics VkPipeline and the VkGraphicsPipelineCreateInfo settings used ...">GraphicsPipeline</a>.  
  <a href="classvsg_1_1InputAssemblyState.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="InputAssemblyState_8h_source.html">InputAssemblyState.h</a>&gt;</code></p>
@@ -85,7 +85,7 @@ Inheritance diagram for vsg::InputAssemblyState:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1InputAssemblyState__inherit__graph.png" border="0" usemap="#avsg_1_1InputAssemblyState_inherit__map" alt="Inheritance graph"/></div>
 <map name="avsg_1_1InputAssemblyState_inherit__map" id="avsg_1_1InputAssemblyState_inherit__map">
-<area shape="rect" title="InputAssemblyState encapsulates to VkPipelineInputAssemblyStateCreateInfo settings passed when settin..." alt="" coords="23,333,207,360"/>
+<area shape="rect" title="InputAssemblyState encapsulates VkPipelineInputAssemblyStateCreateInfo settings passed when setting u..." alt="" coords="23,333,207,360"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="5,244,224,285"/>
 <area shape="rect" href="classvsg_1_1GraphicsPipelineState.html" title=" " alt="" coords="17,169,213,196"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="23,80,207,121"/>
@@ -97,7 +97,7 @@ Collaboration diagram for vsg::InputAssemblyState:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1InputAssemblyState__coll__graph.png" border="0" usemap="#avsg_1_1InputAssemblyState_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1InputAssemblyState_coll__map" id="avsg_1_1InputAssemblyState_coll__map">
-<area shape="rect" title="InputAssemblyState encapsulates to VkPipelineInputAssemblyStateCreateInfo settings passed when settin..." alt="" coords="23,333,207,360"/>
+<area shape="rect" title="InputAssemblyState encapsulates VkPipelineInputAssemblyStateCreateInfo settings passed when setting u..." alt="" coords="23,333,207,360"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="5,244,224,285"/>
 <area shape="rect" href="classvsg_1_1GraphicsPipelineState.html" title=" " alt="" coords="17,169,213,196"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="23,80,207,121"/>
@@ -113,6 +113,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b0e2d1a20c123b36ef1f9d06e9689ac"><td class="memItemLeft" align="right" valign="top"><a id="a8b0e2d1a20c123b36ef1f9d06e9689ac"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>InputAssemblyState</b> (VkPrimitiveTopology primitiveTopology, VkBool32 primitiveRestart=VK_FALSE)</td></tr>
 <tr class="separator:a8b0e2d1a20c123b36ef1f9d06e9689ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d65eb96e3984aed2afbfd660ed8927e"><td class="memItemLeft" align="right" valign="top"><a id="a5d65eb96e3984aed2afbfd660ed8927e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1InputAssemblyState.html#a5d65eb96e3984aed2afbfd660ed8927e">compare</a> (const <a class="el" href="classvsg_1_1Object.html">Object</a> &amp;rhs) const override</td></tr>
+<tr class="memdesc:a5d65eb96e3984aed2afbfd660ed8927e"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal, return 1 if rhs is greater, <br /></td></tr>
+<tr class="separator:a5d65eb96e3984aed2afbfd660ed8927e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a703fa419aeb4e7a60ba8faa6c6122cc1"><td class="memItemLeft" align="right" valign="top"><a id="a703fa419aeb4e7a60ba8faa6c6122cc1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (<a class="el" href="classvsg_1_1Input.html">Input</a> &amp;input) override</td></tr>
 <tr class="separator:a703fa419aeb4e7a60ba8faa6c6122cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,6 +154,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class=
 <tr class="memitem:aebdcb9d53746660ef0b4a268ab2d1a9f inherit pub_methods_classvsg_1_1Inherit"><td class="memItemLeft" align="right" valign="top"><a id="aebdcb9d53746660ef0b4a268ab2d1a9f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class="el" href="classvsg_1_1RecordTraversal.html">RecordTraversal</a> &amp;visitor) const override</td></tr>
 <tr class="separator:aebdcb9d53746660ef0b4a268ab2d1a9f inherit pub_methods_classvsg_1_1Inherit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classvsg_1_1GraphicsPipelineState"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvsg_1_1GraphicsPipelineState')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvsg_1_1GraphicsPipelineState.html">vsg::GraphicsPipelineState</a></td></tr>
+<tr class="memitem:a856e07de190d985e03d44383e60d220a inherit pub_methods_classvsg_1_1GraphicsPipelineState"><td class="memItemLeft" align="right" valign="top"><a id="a856e07de190d985e03d44383e60d220a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GraphicsPipelineState</b> (const <a class="el" href="classvsg_1_1GraphicsPipelineState.html">GraphicsPipelineState</a> &amp;gp)</td></tr>
+<tr class="separator:a856e07de190d985e03d44383e60d220a inherit pub_methods_classvsg_1_1GraphicsPipelineState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvsg_1_1Inherit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvsg_1_1Inherit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvsg_1_1Inherit.html">vsg::Inherit&lt; Object, GraphicsPipelineState &gt;</a></td></tr>
 <tr class="memitem:a24550cd9c037afd7d161ff391b1ceac7 inherit pub_methods_classvsg_1_1Inherit"><td class="memItemLeft" align="right" valign="top"><a id="a24550cd9c037afd7d161ff391b1ceac7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Inherit</b> (Args &amp;&amp;... args)</td></tr>
@@ -195,7 +203,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -265,6 +273,11 @@ VkPrimitiveTopology&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <tr class="memitem:a2f625d57545f5678d3fb705665a5e50f"><td class="memItemLeft" align="right" valign="top"><a id="a2f625d57545f5678d3fb705665a5e50f"></a>
 VkBool32&#160;</td><td class="memItemRight" valign="bottom"><b>primitiveRestartEnable</b> = VK_FALSE</td></tr>
 <tr class="separator:a2f625d57545f5678d3fb705665a5e50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classvsg_1_1GraphicsPipelineState"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classvsg_1_1GraphicsPipelineState')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classvsg_1_1GraphicsPipelineState.html">vsg::GraphicsPipelineState</a></td></tr>
+<tr class="memitem:a57560e8e0e34c55f7bfb4877b56663e6 inherit pub_attribs_classvsg_1_1GraphicsPipelineState"><td class="memItemLeft" align="right" valign="top"><a id="a57560e8e0e34c55f7bfb4877b56663e6"></a>
+Mask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1GraphicsPipelineState.html#a57560e8e0e34c55f7bfb4877b56663e6">mask</a> = MASK_ALL</td></tr>
+<tr class="memdesc:a57560e8e0e34c55f7bfb4877b56663e6 inherit pub_attribs_classvsg_1_1GraphicsPipelineState"><td class="mdescLeft">&#160;</td><td class="mdescRight">apply <a class="el" href="classvsg_1_1GraphicsPipelineState.html">GraphicsPipelineState</a> when (mask &amp; view.mask) is non zero <br /></td></tr>
+<tr class="separator:a57560e8e0e34c55f7bfb4877b56663e6 inherit pub_attribs_classvsg_1_1GraphicsPipelineState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -305,7 +318,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1InputAssemblyState.html" title="InputAssemblyState encapsulates to VkPipelineInputAssemblyStateCreateInfo settings passed when settin...">InputAssemblyState</a> encapsulates to VkPipelineInputAssemblyStateCreateInfo settings passed when setting up <a class="el" href="classvsg_1_1GraphicsPipeline.html" title="GraphicsPipeline encapsulates graphics VkPipeline and the VkGraphicsPipelineCreateInfo settings used ...">GraphicsPipeline</a>. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1InputAssemblyState.html" title="InputAssemblyState encapsulates VkPipelineInputAssemblyStateCreateInfo settings passed when setting u...">InputAssemblyState</a> encapsulates VkPipelineInputAssemblyStateCreateInfo settings passed when setting up <a class="el" href="classvsg_1_1GraphicsPipeline.html" title="GraphicsPipeline encapsulates graphics VkPipeline and the VkGraphicsPipelineCreateInfo settings used ...">GraphicsPipeline</a>. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/state/<a class="el" href="InputAssemblyState_8h_source.html">InputAssemblyState.h</a></li>
 </ul>

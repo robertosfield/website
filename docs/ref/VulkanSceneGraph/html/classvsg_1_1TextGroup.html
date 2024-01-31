@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -203,7 +203,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -333,7 +333,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1TextGroup.html">TextGroup</a> node provides high performance rendering of large numbers of text labels batched rendering of <a class="el" href="classvsg_1_1Text.html">Text</a>. In order to achieve batching all <a class="el" href="classvsg_1_1Text.html">Text</a> children of <a class="el" href="classvsg_1_1TextGroup.html">TextGroup</a> node use the same <a class="el" href="classvsg_1_1Font.html">Font</a>, <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> and <a class="el" href="classvsg_1_1TextTechnique.html">TextTechnique</a> provided by the <a class="el" href="classvsg_1_1TextGroup.html">TextGroup</a> node, any local <a class="el" href="classvsg_1_1Text.html">Text</a> entries for these are discarded. The individual <a class="el" href="classvsg_1_1Text.html">Text</a>'s are positioned by their local TextLayout.TextGroup does not provide view frustum culling or level of detail, but you can add this if require it by decorating the <a class="el" href="classvsg_1_1TextGroup.html">TextGroup</a> with a CullNode/LOD and after <a class="el" href="classvsg_1_1TextGroup.html#a6e2409f7b6e0739e9bbf91a2ecbc06ca">TextGroup::setup()</a> is called to initialize the rendering component you can use the TextGroup-&gt;technique-&gt;extents() value to help set the CullNode/LOD.bounds value. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1TextGroup.html">TextGroup</a> node provides high performance rendering of large numbers of text labels, i.e. batched rendering of <a class="el" href="classvsg_1_1Text.html">Text</a>. In order to achieve batching all <a class="el" href="classvsg_1_1Text.html">Text</a> children of a <a class="el" href="classvsg_1_1TextGroup.html">TextGroup</a> node use the same <a class="el" href="classvsg_1_1Font.html">Font</a>, <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> and <a class="el" href="classvsg_1_1TextTechnique.html">TextTechnique</a> provided by the <a class="el" href="classvsg_1_1TextGroup.html">TextGroup</a> node, any local <a class="el" href="classvsg_1_1Text.html">Text</a> entries for these are discarded. The individual Texts are positioned by their local <a class="el" href="classvsg_1_1TextLayout.html">TextLayout</a>. <a class="el" href="classvsg_1_1TextGroup.html">TextGroup</a> does not provide view frustum culling or level of detail, but you can add this if required by decorating the <a class="el" href="classvsg_1_1TextGroup.html">TextGroup</a> with a CullNode/LOD and after <a class="el" href="classvsg_1_1TextGroup.html#a6e2409f7b6e0739e9bbf91a2ecbc06ca">TextGroup::setup()</a> is called to initialize the rendering component, you can use the TextGroup-&gt;technique-&gt;extents() value to help set the CullNode/LOD.bounds value. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6e2409f7b6e0739e9bbf91a2ecbc06ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e2409f7b6e0739e9bbf91a2ecbc06ca">&#9670;&nbsp;</a></span>setup()</h2>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -102,8 +102,8 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">bool</span> greyscale = <span class="keyword">false</span>; </div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structvsg_1_1StateInfo.html#a4c291a4a3017ee988dbe84b5d1656d20">   31</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structvsg_1_1StateInfo.html#a4c291a4a3017ee988dbe84b5d1656d20">wireframe</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">bool</span> instance_colors_vec4 = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">bool</span> instance_positions_vec3 = <span class="keyword">false</span>; <span class="comment">// user must assign GeometyInfo.position with vec3Array containing positions</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">bool</span> billboard = <span class="keyword">false</span>;               <span class="comment">// user must assign GeometyInfo.position with vec4Array containing position_scaleDistance, overrides instance_positions_vec3 setting</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">bool</span> instance_positions_vec3 = <span class="keyword">false</span>; <span class="comment">// user must assign GeometryInfo::positions with vec3Array containing positions</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">bool</span> billboard = <span class="keyword">false</span>;               <span class="comment">// user must assign GeometryInfo::positions with vec4Array containing position_scaleDistance, overrides instance_positions_vec3 setting</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> image;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> displacementMap;</div>
@@ -128,91 +128,99 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="structvsg_1_1t__vec4.html">vec4</a> color = {1.0f, 1.0f, 1.0f, 1.0f};</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="structvsg_1_1t__mat4.html">mat4</a> transform;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> set(<span class="keyword">const</span> <a class="code" href="structvsg_1_1t__box.html">t_box&lt;T&gt;</a>&amp; bb)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            position = (bb.min + bb.max) * 0.5f;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            dx.set(bb.max.x - bb.min.x, 0.0f, 0.0f);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            dy.set(0.0f, bb.max.y - bb.min.y, 0.0f);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            dz.set(0.0f, 0.0f, bb.max.z - bb.min.z);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> set(<span class="keyword">const</span> <a class="code" href="structvsg_1_1t__sphere.html">t_sphere&lt;T&gt;</a>&amp; sp)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            position = sp.center;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            dx.set(sp.radius * 2.0f, 0.0f, 0.0f);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            dy.set(0.0f, sp.radius * 2.0f, 0.0f);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            dz.set(0.0f, 0.0f, sp.radius * 2.0f);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="structvsg_1_1GeometryInfo.html#a0a22773e7aea6e0de2b9d98a726ca75d">   79</a></span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> <a class="code" href="structvsg_1_1GeometryInfo.html#a0a22773e7aea6e0de2b9d98a726ca75d">positions</a>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> colors;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; rhs)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordtype">int</span> result = compare_region(position, transform, rhs.position);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">if</span> (result) <span class="keywordflow">return</span> result &lt; 0;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">if</span> ((result = compare_pointer(<a class="code" href="structvsg_1_1GeometryInfo.html#a0a22773e7aea6e0de2b9d98a726ca75d">positions</a>, rhs.<a class="code" href="structvsg_1_1GeometryInfo.html#a0a22773e7aea6e0de2b9d98a726ca75d">positions</a>))) <span class="keywordflow">return</span> result &lt; 0;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> compare_pointer(colors, rhs.colors) &lt; 0;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    };</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    VSG_type_name(<a class="code" href="structvsg_1_1GeometryInfo.html">vsg::GeometryInfo</a>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classvsg_1_1Builder.html">   96</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1Builder.html">Builder</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Object, Builder&gt;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">bool</span> verbose = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Options&gt;</a> options;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;SharedObjects&gt;</a> sharedObjects;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> shaderSet;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createBox(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createCapsule(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createCone(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createCylinder(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createDisk(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createQuad(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createSphere(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createHeightField(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;StateGroup&gt;</a> createStateGroup(<span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classvsg_1_1Builder.html#a93021c8525ef877c2032e969cdb0274b">  116</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classvsg_1_1Builder.html#a93021c8525ef877c2032e969cdb0274b">assignCompileTraversal</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;CompileTraversal&gt;</a> ct);</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structvsg_1_1GeometryInfo.html#a76f212f519d0334ec282a11578240a7b">   61</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structvsg_1_1GeometryInfo.html#a76f212f519d0334ec282a11578240a7b">cullNode</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">void</span> set(<span class="keyword">const</span> <a class="code" href="structvsg_1_1t__box.html">t_box&lt;T&gt;</a>&amp; bb)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            position = (bb.min + bb.max) * 0.5f;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            dx.set(bb.max.x - bb.min.x, 0.0f, 0.0f);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            dy.set(0.0f, bb.max.y - bb.min.y, 0.0f);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            dz.set(0.0f, 0.0f, bb.max.z - bb.min.z);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">void</span> set(<span class="keyword">const</span> <a class="code" href="structvsg_1_1t__sphere.html">t_sphere&lt;T&gt;</a>&amp; sp)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            position = sp.center;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            dx.set(sp.radius * 2.0f, 0.0f, 0.0f);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            dy.set(0.0f, sp.radius * 2.0f, 0.0f);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            dz.set(0.0f, 0.0f, sp.radius * 2.0f);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structvsg_1_1GeometryInfo.html#a0a22773e7aea6e0de2b9d98a726ca75d">   82</a></span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> <a class="code" href="structvsg_1_1GeometryInfo.html#a0a22773e7aea6e0de2b9d98a726ca75d">positions</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> colors;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; rhs)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordtype">int</span> result = compare_region(position, transform, rhs.position);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span> (result) <span class="keywordflow">return</span> result &lt; 0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">if</span> ((result = compare_pointer(<a class="code" href="structvsg_1_1GeometryInfo.html#a0a22773e7aea6e0de2b9d98a726ca75d">positions</a>, rhs.<a class="code" href="structvsg_1_1GeometryInfo.html#a0a22773e7aea6e0de2b9d98a726ca75d">positions</a>))) <span class="keywordflow">return</span> result &lt; 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">return</span> compare_pointer(colors, rhs.colors) &lt; 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    };</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    VSG_type_name(<a class="code" href="structvsg_1_1GeometryInfo.html">vsg::GeometryInfo</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classvsg_1_1Builder.html">   99</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1Builder.html">Builder</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Object, Builder&gt;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">bool</span> verbose = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Options&gt;</a> options;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;SharedObjects&gt;</a> sharedObjects;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> shaderSet;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createBox(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createCapsule(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createCone(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createCylinder(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createDisk(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createQuad(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createSphere(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> createHeightField(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info = {}, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;StateGroup&gt;</a> createStateGroup(<span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo = {});</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;CompileTraversal&gt;</a> compileTraversal;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordtype">void</span> transform(<span class="keyword">const</span> <a class="code" href="structvsg_1_1t__mat4.html">mat4</a>&amp; matrix, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;vec3Array&gt;</a> vertices, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;vec3Array&gt;</a> normals);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> instancePositions(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info, uint32_t&amp; instanceCount);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> instanceColors(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info, uint32_t instanceCount);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="structvsg_1_1t__vec3.html">vec3</a> y_texcoord(<span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; info) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">using</span> GeometryMap = std::map&lt;GeometryInfo, ref_ptr&lt;Node&gt;&gt;;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        GeometryMap _boxes;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        GeometryMap _capsules;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        GeometryMap _cones;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        GeometryMap _cylinders;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        GeometryMap _quads;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        GeometryMap _spheres;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        GeometryMap _heightfields;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="comment">// used for comparisons</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="structvsg_1_1t__mat4.html">mat4</a> identity;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    };</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1Builder.html">vsg::Builder</a>);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;} <span class="comment">// namespace vsg</span></div>
-<div class="ttc" id="aclassvsg_1_1Builder_html"><div class="ttname"><a href="classvsg_1_1Builder.html">vsg::Builder</a></div><div class="ttdef"><b>Definition:</b> Builder.h:97</div></div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classvsg_1_1Builder.html#a93021c8525ef877c2032e969cdb0274b">  119</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classvsg_1_1Builder.html#a93021c8525ef877c2032e969cdb0274b">assignCompileTraversal</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;CompileTraversal&gt;</a> ct);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;CompileTraversal&gt;</a> compileTraversal;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> transform(<span class="keyword">const</span> <a class="code" href="structvsg_1_1t__mat4.html">mat4</a>&amp; matrix, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;vec3Array&gt;</a> vertices, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;vec3Array&gt;</a> normals);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> instancePositions(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info, uint32_t&amp; instanceCount);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> instanceColors(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info, uint32_t instanceCount);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="structvsg_1_1t__vec3.html">vec3</a> y_texcoord(<span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; info) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> decorateAndCompileIfRequired(<span class="keyword">const</span> <a class="code" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>&amp; info, <span class="keyword">const</span> <a class="code" href="structvsg_1_1StateInfo.html">StateInfo</a>&amp; stateInfo, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> node);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> _flatShadedShaderSet;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> _phongShaderSet;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">using</span> GeometryMap = std::map&lt;GeometryInfo, ref_ptr&lt;Node&gt;&gt;;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        GeometryMap _boxes;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        GeometryMap _capsules;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        GeometryMap _cones;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        GeometryMap _cylinders;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        GeometryMap _quads;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        GeometryMap _spheres;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        GeometryMap _heightfields;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="comment">// used for comparisons</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="structvsg_1_1t__mat4.html">mat4</a> identity;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    };</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1Builder.html">vsg::Builder</a>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="ttc" id="aclassvsg_1_1Builder_html"><div class="ttname"><a href="classvsg_1_1Builder.html">vsg::Builder</a></div><div class="ttdef"><b>Definition:</b> Builder.h:100</div></div>
 <div class="ttc" id="aclassvsg_1_1Builder_html_a93021c8525ef877c2032e969cdb0274b"><div class="ttname"><a href="classvsg_1_1Builder.html#a93021c8525ef877c2032e969cdb0274b">vsg::Builder::assignCompileTraversal</a></div><div class="ttdeci">void assignCompileTraversal(ref_ptr&lt; CompileTraversal &gt; ct)</div><div class="ttdoc">assign compile traversal to enable compilation.</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>
 <div class="ttc" id="astructvsg_1_1GeometryInfo_html"><div class="ttname"><a href="structvsg_1_1GeometryInfo.html">vsg::GeometryInfo</a></div><div class="ttdoc">GeometryInfo struct provides geometry related settings supported by Builder.</div><div class="ttdef"><b>Definition:</b> Builder.h:44</div></div>
-<div class="ttc" id="astructvsg_1_1GeometryInfo_html_a0a22773e7aea6e0de2b9d98a726ca75d"><div class="ttname"><a href="structvsg_1_1GeometryInfo.html#a0a22773e7aea6e0de2b9d98a726ca75d">vsg::GeometryInfo::positions</a></div><div class="ttdeci">ref_ptr&lt; Data &gt; positions</div><div class="ttdoc">when using geometry instancing use vec3Array with vec3{x,y,z} and for billboard use vec4Array with ve...</div><div class="ttdef"><b>Definition:</b> Builder.h:79</div></div>
+<div class="ttc" id="astructvsg_1_1GeometryInfo_html_a0a22773e7aea6e0de2b9d98a726ca75d"><div class="ttname"><a href="structvsg_1_1GeometryInfo.html#a0a22773e7aea6e0de2b9d98a726ca75d">vsg::GeometryInfo::positions</a></div><div class="ttdeci">ref_ptr&lt; Data &gt; positions</div><div class="ttdoc">when using geometry instancing use vec3Array with vec3{x,y,z} and for billboards use vec4Array with v...</div><div class="ttdef"><b>Definition:</b> Builder.h:82</div></div>
+<div class="ttc" id="astructvsg_1_1GeometryInfo_html_a76f212f519d0334ec282a11578240a7b"><div class="ttname"><a href="structvsg_1_1GeometryInfo.html#a76f212f519d0334ec282a11578240a7b">vsg::GeometryInfo::cullNode</a></div><div class="ttdeci">bool cullNode</div><div class="ttdoc">cullNode flag indicates whether a CullNode should decorate the creted subgraph</div><div class="ttdef"><b>Definition:</b> Builder.h:61</div></div>
 <div class="ttc" id="astructvsg_1_1StateInfo_html"><div class="ttname"><a href="structvsg_1_1StateInfo.html">vsg::StateInfo</a></div><div class="ttdoc">StateInfo struct provides state related settings supported by Builder.</div><div class="ttdef"><b>Definition:</b> Builder.h:26</div></div>
 <div class="ttc" id="astructvsg_1_1StateInfo_html_a4c291a4a3017ee988dbe84b5d1656d20"><div class="ttname"><a href="structvsg_1_1StateInfo.html#a4c291a4a3017ee988dbe84b5d1656d20">vsg::StateInfo::wireframe</a></div><div class="ttdeci">bool wireframe</div><div class="ttdoc">greyscale image</div><div class="ttdef"><b>Definition:</b> Builder.h:31</div></div>
-<div class="ttc" id="astructvsg_1_1t__box_html"><div class="ttname"><a href="structvsg_1_1t__box.html">vsg::t_box</a></div><div class="ttdoc">t_box template class that represent a axis aligned bounding box</div><div class="ttdef"><b>Definition:</b> box.h:24</div></div>
+<div class="ttc" id="astructvsg_1_1t__box_html"><div class="ttname"><a href="structvsg_1_1t__box.html">vsg::t_box</a></div><div class="ttdoc">t_box template class that represents an axis aligned bounding box</div><div class="ttdef"><b>Definition:</b> box.h:24</div></div>
 <div class="ttc" id="astructvsg_1_1t__mat4_html"><div class="ttname"><a href="structvsg_1_1t__mat4.html">vsg::t_mat4&lt; float &gt;</a></div></div>
 <div class="ttc" id="astructvsg_1_1t__sphere_html"><div class="ttname"><a href="structvsg_1_1t__sphere.html">vsg::t_sphere</a></div><div class="ttdoc">template sphere class</div><div class="ttdef"><b>Definition:</b> sphere.h:34</div></div>
 <div class="ttc" id="astructvsg_1_1t__vec3_html"><div class="ttname"><a href="structvsg_1_1t__vec3.html">vsg::t_vec3&lt; float &gt;</a></div></div>

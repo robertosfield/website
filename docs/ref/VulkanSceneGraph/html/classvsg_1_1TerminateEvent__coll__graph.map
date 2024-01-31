@@ -1,5 +1,5 @@
 <map id="vsg::TerminateEvent" name="vsg::TerminateEvent">
-<area shape="rect" id="node1" title="TerminateEvent represents a application terminate event." alt="" coords="11,333,165,360"/>
+<area shape="rect" id="node1" title="TerminateEvent represents an application termination event." alt="" coords="11,333,165,360"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,244,171,285"/>
 <area shape="rect" id="node3" href="$classvsg_1_1UIEvent.html" title="UIEvent is a base class for user interface events." alt="" coords="36,169,140,196"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="10,80,166,121"/>

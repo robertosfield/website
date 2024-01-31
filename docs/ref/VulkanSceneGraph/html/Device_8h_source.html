@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -85,8 +85,8 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">&lt;/editor-fold&gt; */</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vsg/vk/DeviceFeatures.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vsg/vk/Extensions.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vsg/vk/DeviceExtensions.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vsg/vk/DeviceFeatures.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vsg/vk/Queue.h&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
@@ -125,42 +125,48 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classvsg_1_1AllocationCallbacks.html">AllocationCallbacks</a>* getAllocationCallbacks() { <span class="keywordflow">return</span> _allocator.get(); }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">const</span> <a class="code" href="classvsg_1_1AllocationCallbacks.html">AllocationCallbacks</a>* getAllocationCallbacks()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _allocator.get(); }</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Queue&gt;</a> getQueue(uint32_t queueFamilyIndex, uint32_t queueIndex = 0);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">const</span> Queues&amp; getQueues()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _queues; }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">const</span> <a class="code" href="classvsg_1_1Extensions.html">Extensions</a>* getExtensions()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _extensions.get(); }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Queue&gt;</a> getQueue(uint32_t queueFamilyIndex, uint32_t queueIndex = 0);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classvsg_1_1Device.html#a44b35ab6b9ec37d816fd82b4078f0d7c">   62</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1Device.html#a44b35ab6b9ec37d816fd82b4078f0d7c">getProcAddr</a>(T&amp; procAddress, <span class="keyword">const</span> <span class="keywordtype">char</span>* pName, <span class="keyword">const</span> <span class="keywordtype">char</span>* pNameFallback = <span class="keyword">nullptr</span>)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            procAddress = <span class="keyword">reinterpret_cast&lt;</span>T<span class="keyword">&gt;</span>(vkGetDeviceProcAddr(_device, pName));</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">if</span> (procAddress) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span> (pNameFallback) procAddress = <span class="keyword">reinterpret_cast&lt;</span>T<span class="keyword">&gt;</span>(vkGetDeviceProcAddr(_device, pNameFallback));</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> (procAddress);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1Device.html">Device</a>();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        VkDevice _device;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classvsg_1_1Device.html#abff71fe23c9de39e5a3de625502ff099">   61</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="classvsg_1_1DeviceExtensions.html">DeviceExtensions</a>* <a class="code" href="classvsg_1_1Device.html#abff71fe23c9de39e5a3de625502ff099">getExtensions</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _extensions.get(); }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classvsg_1_1Device.html#a44b35ab6b9ec37d816fd82b4078f0d7c">   67</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1Device.html#a44b35ab6b9ec37d816fd82b4078f0d7c">getProcAddr</a>(T&amp; procAddress, <span class="keyword">const</span> <span class="keywordtype">char</span>* pName, <span class="keyword">const</span> <span class="keywordtype">char</span>* pNameFallback = <span class="keyword">nullptr</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            procAddress = <span class="keyword">reinterpret_cast&lt;</span>T<span class="keyword">&gt;</span>(vkGetDeviceProcAddr(_device, pName));</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">if</span> (procAddress) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (pNameFallback) procAddress = <span class="keyword">reinterpret_cast&lt;</span>T<span class="keyword">&gt;</span>(vkGetDeviceProcAddr(_device, pNameFallback));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">return</span> (procAddress);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Instance&gt;</a> _instance;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;PhysicalDevice&gt;</a> _physicalDevice;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;AllocationCallbacks&gt;</a> _allocator;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Extensions&gt;</a> _extensions;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        std::list&lt;ref_ptr&lt;Queue&gt;&gt; _queues;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    };</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1Device.html">vsg::Device</a>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classvsg_1_1Device.html#aaa4249d5ed8c1ed877a240a1ec04a110">   77</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1Device.html#aaa4249d5ed8c1ed877a240a1ec04a110">supportsApiVersion</a>(uint32_t version) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1Device.html">Device</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        VkDevice _device;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Instance&gt;</a> _instance;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;PhysicalDevice&gt;</a> _physicalDevice;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;AllocationCallbacks&gt;</a> _allocator;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;DeviceExtensions&gt;</a> _extensions;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        Queues _queues;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    };</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1Device.html">vsg::Device</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">// namespace vsg</span></div>
 <div class="ttc" id="aclassvsg_1_1AllocationCallbacks_html"><div class="ttname"><a href="classvsg_1_1AllocationCallbacks.html">vsg::AllocationCallbacks</a></div><div class="ttdoc">Adapter class that provides a means of managing the lifetime of VkAllocationCallbacks.</div><div class="ttdef"><b>Definition:</b> AllocationCallbacks.h:24</div></div>
+<div class="ttc" id="aclassvsg_1_1DeviceExtensions_html"><div class="ttname"><a href="classvsg_1_1DeviceExtensions.html">vsg::DeviceExtensions</a></div><div class="ttdef"><b>Definition:</b> DeviceExtensions.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1DeviceFeatures_html"><div class="ttname"><a href="classvsg_1_1DeviceFeatures.html">vsg::DeviceFeatures</a></div><div class="ttdef"><b>Definition:</b> DeviceFeatures.h:24</div></div>
-<div class="ttc" id="aclassvsg_1_1Device_html"><div class="ttname"><a href="classvsg_1_1Device.html">vsg::Device</a></div><div class="ttdoc">Device encapsulate vkDeivce, a logical handle to the PhysicalDevice with capabilities specified durin...</div><div class="ttdef"><b>Definition:</b> Device.h:37</div></div>
-<div class="ttc" id="aclassvsg_1_1Device_html_a44b35ab6b9ec37d816fd82b4078f0d7c"><div class="ttname"><a href="classvsg_1_1Device.html#a44b35ab6b9ec37d816fd82b4078f0d7c">vsg::Device::getProcAddr</a></div><div class="ttdeci">bool getProcAddr(T &amp;procAddress, const char *pName, const char *pNameFallback=nullptr) const</div><div class="ttdoc">get the address of specified function using vkGetDeviceProcAddr</div><div class="ttdef"><b>Definition:</b> Device.h:62</div></div>
-<div class="ttc" id="aclassvsg_1_1Extensions_html"><div class="ttname"><a href="classvsg_1_1Extensions.html">vsg::Extensions</a></div><div class="ttdef"><b>Definition:</b> Extensions.h:28</div></div>
+<div class="ttc" id="aclassvsg_1_1Device_html"><div class="ttname"><a href="classvsg_1_1Device.html">vsg::Device</a></div><div class="ttdoc">Device encapsulates VkDevice, a logical handle to the PhysicalDevice with capabilities specified duri...</div><div class="ttdef"><b>Definition:</b> Device.h:37</div></div>
+<div class="ttc" id="aclassvsg_1_1Device_html_a44b35ab6b9ec37d816fd82b4078f0d7c"><div class="ttname"><a href="classvsg_1_1Device.html#a44b35ab6b9ec37d816fd82b4078f0d7c">vsg::Device::getProcAddr</a></div><div class="ttdeci">bool getProcAddr(T &amp;procAddress, const char *pName, const char *pNameFallback=nullptr) const</div><div class="ttdef"><b>Definition:</b> Device.h:67</div></div>
+<div class="ttc" id="aclassvsg_1_1Device_html_aaa4249d5ed8c1ed877a240a1ec04a110"><div class="ttname"><a href="classvsg_1_1Device.html#aaa4249d5ed8c1ed877a240a1ec04a110">vsg::Device::supportsApiVersion</a></div><div class="ttdeci">bool supportsApiVersion(uint32_t version) const</div><div class="ttdoc">device-level core functionality can be used if both VkInstance and VkPhysicalDevice support the Vulka...</div></div>
+<div class="ttc" id="aclassvsg_1_1Device_html_abff71fe23c9de39e5a3de625502ff099"><div class="ttname"><a href="classvsg_1_1Device.html#abff71fe23c9de39e5a3de625502ff099">vsg::Device::getExtensions</a></div><div class="ttdeci">const DeviceExtensions * getExtensions() const</div><div class="ttdoc">get the extensions structure that holds a range of function pointers to vkInstance extensions</div><div class="ttdef"><b>Definition:</b> Device.h:61</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
-<div class="ttc" id="aclassvsg_1_1Instance_html"><div class="ttname"><a href="classvsg_1_1Instance.html">vsg::Instance</a></div><div class="ttdoc">Instance encapsulate the vkInstance.</div><div class="ttdef"><b>Definition:</b> Instance.h:42</div></div>
+<div class="ttc" id="aclassvsg_1_1Instance_html"><div class="ttname"><a href="classvsg_1_1Instance.html">vsg::Instance</a></div><div class="ttdoc">Instance encapsulates the VkInstance.</div><div class="ttdef"><b>Definition:</b> Instance.h:43</div></div>
 <div class="ttc" id="aclassvsg_1_1PhysicalDevice_html"><div class="ttname"><a href="classvsg_1_1PhysicalDevice.html">vsg::PhysicalDevice</a></div><div class="ttdef"><b>Definition:</b> PhysicalDevice.h:23</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>
 <div class="ttc" id="astructvsg_1_1QueueSetting_html"><div class="ttname"><a href="structvsg_1_1QueueSetting.html">vsg::QueueSetting</a></div><div class="ttdef"><b>Definition:</b> Device.h:28</div></div>

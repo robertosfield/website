@@ -1,7 +1,7 @@
 <map id="vsg::SecondaryCommandGraph" name="vsg::SecondaryCommandGraph">
 <area shape="rect" id="node1" title="SecondaryCommandGraph is a specialization of CommandGraph that provides Vulkan secondary command buff..." alt="" coords="5,661,232,688"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="9,572,229,613"/>
-<area shape="rect" id="node3" href="$classvsg_1_1CommandGraph.html" title="CommandGraph is a group node that sits at the top of the scene graph and manages the recording of it&#39;..." alt="" coords="39,497,198,524"/>
+<area shape="rect" id="node3" href="$classvsg_1_1CommandGraph.html" title="CommandGraph is a group node that sits at the top of the scene graph and manages the recording of its..." alt="" coords="39,497,198,524"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="42,408,195,449"/>
 <area shape="rect" id="node5" href="$classvsg_1_1Group.html" title="Group node provides a list of children." alt="" coords="73,333,165,360"/>
 <area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="45,244,193,285"/>

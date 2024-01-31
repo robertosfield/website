@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -94,45 +94,63 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>vsg</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classvsg_1_1WindowResizeHandler.html">   26</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1WindowResizeHandler.html">WindowResizeHandler</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Visitor, WindowResizeHandler&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classvsg_1_1UpdateGraphicsPipelines.html">   26</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1UpdateGraphicsPipelines.html">UpdateGraphicsPipelines</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Visitor, UpdateGraphicsPipelines&gt;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Context&gt;</a> context;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        VkRect2D renderArea;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        VkExtent2D previous_extent;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        VkExtent2D new_extent;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        std::set&lt;std::pair&lt;const Object*, uint32_t&gt;&gt; visited;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="classvsg_1_1WindowResizeHandler.html">WindowResizeHandler</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> R&gt;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        T scale_parameter(T original, R extentOriginal, R extentNew)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span> (original == <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(extentOriginal)) <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(extentNew);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(original) * <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(extentNew) / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(extentOriginal) + 0.5f);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> scale_rect(VkRect2D&amp; rect);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classvsg_1_1WindowResizeHandler.html#a95b3bfe967236e4545f8facf7fe35083">   47</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1WindowResizeHandler.html#a95b3bfe967236e4545f8facf7fe35083">visit</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>* <span class="keywordtype">object</span>, uint32_t index = 0);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1BindGraphicsPipeline.html">BindGraphicsPipeline</a>&amp; bindPipeline) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1Object.html">Object</a>&amp; <span class="keywordtype">object</span>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1StateGroup.html">StateGroup</a>&amp; sg) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1ClearAttachments.html">ClearAttachments</a>&amp; clearAttachments) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1View.html">View</a>&amp; view) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1WindowResizeHandler.html">vsg::WindowResizeHandler</a>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;} <span class="comment">// namespace vsg</span></div>
-<div class="ttc" id="aclassvsg_1_1BindGraphicsPipeline_html"><div class="ttname"><a href="classvsg_1_1BindGraphicsPipeline.html">vsg::BindGraphicsPipeline</a></div><div class="ttdoc">BindGraphicsPipeline state command encapsulates the vkCmdBindPipeline call for a GraphicsPipeline.</div><div class="ttdef"><b>Definition:</b> GraphicsPipeline.h:93</div></div>
-<div class="ttc" id="aclassvsg_1_1ClearAttachments_html"><div class="ttname"><a href="classvsg_1_1ClearAttachments.html">vsg::ClearAttachments</a></div><div class="ttdoc">ClearAttachments command encapsulates vkCmdCopyAttachments functionality and associated settings.</div><div class="ttdef"><b>Definition:</b> ClearAttachments.h:22</div></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classvsg_1_1UpdateGraphicsPipelines.html">UpdateGraphicsPipelines</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Context&gt;</a> context;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::set&lt;std::pair&lt;const Object*, uint32_t&gt;&gt; visited;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">bool</span> visit(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>* <span class="keywordtype">object</span>, uint32_t index);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1Object.html">Object</a>&amp; <span class="keywordtype">object</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1BindGraphicsPipeline.html">BindGraphicsPipeline</a>&amp; bindPipeline) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1StateGroup.html">StateGroup</a>&amp; sg) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1View.html">View</a>&amp; view) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1UpdateGraphicsPipelines.html">UpdateGraphicsPipelines</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classvsg_1_1WindowResizeHandler.html">   44</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1WindowResizeHandler.html">WindowResizeHandler</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Visitor, WindowResizeHandler&gt;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Context&gt;</a> context;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        VkRect2D renderArea;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        VkExtent2D previous_extent;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        VkExtent2D new_extent;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::set&lt;std::pair&lt;const Object*, uint32_t&gt;&gt; visited;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classvsg_1_1WindowResizeHandler.html">WindowResizeHandler</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> R&gt;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        T scale_parameter(T original, R extentOriginal, R extentNew)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> (original == <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(extentOriginal)) <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(extentNew);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(original) * <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(extentNew) / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(extentOriginal) + 0.5f);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">void</span> scale_rect(VkRect2D&amp; rect);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classvsg_1_1WindowResizeHandler.html#a95b3bfe967236e4545f8facf7fe35083">   65</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1WindowResizeHandler.html#a95b3bfe967236e4545f8facf7fe35083">visit</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>* <span class="keywordtype">object</span>, uint32_t index = 0);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1BindGraphicsPipeline.html">BindGraphicsPipeline</a>&amp; bindPipeline) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1Object.html">Object</a>&amp; <span class="keywordtype">object</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1StateGroup.html">StateGroup</a>&amp; sg) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1ClearAttachments.html">ClearAttachments</a>&amp; clearAttachments) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1View.html">View</a>&amp; view) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1WindowResizeHandler.html">WindowResizeHandler</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="ttc" id="aclassvsg_1_1BindGraphicsPipeline_html"><div class="ttname"><a href="classvsg_1_1BindGraphicsPipeline.html">vsg::BindGraphicsPipeline</a></div><div class="ttdoc">BindGraphicsPipeline state command encapsulates the vkCmdBindPipeline call for a GraphicsPipeline.</div><div class="ttdef"><b>Definition:</b> GraphicsPipeline.h:105</div></div>
+<div class="ttc" id="aclassvsg_1_1ClearAttachments_html"><div class="ttname"><a href="classvsg_1_1ClearAttachments.html">vsg::ClearAttachments</a></div><div class="ttdoc">ClearAttachments command encapsulates vkCmdClearAttachments functionality and associated settings.</div><div class="ttdef"><b>Definition:</b> ClearAttachments.h:22</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1Object_html"><div class="ttname"><a href="classvsg_1_1Object.html">vsg::Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:42</div></div>
 <div class="ttc" id="aclassvsg_1_1StateGroup_html"><div class="ttname"><a href="classvsg_1_1StateGroup.html">vsg::StateGroup</a></div><div class="ttdef"><b>Definition:</b> StateGroup.h:32</div></div>
-<div class="ttc" id="aclassvsg_1_1View_html"><div class="ttname"><a href="classvsg_1_1View.html">vsg::View</a></div><div class="ttdoc">View class is Group class that pairs a Camera that defines the view with a subgraph that defines the ...</div><div class="ttdef"><b>Definition:</b> View.h:25</div></div>
-<div class="ttc" id="aclassvsg_1_1WindowResizeHandler_html"><div class="ttname"><a href="classvsg_1_1WindowResizeHandler.html">vsg::WindowResizeHandler</a></div><div class="ttdef"><b>Definition:</b> WindowResizeHandler.h:27</div></div>
-<div class="ttc" id="aclassvsg_1_1WindowResizeHandler_html_a95b3bfe967236e4545f8facf7fe35083"><div class="ttname"><a href="classvsg_1_1WindowResizeHandler.html#a95b3bfe967236e4545f8facf7fe35083">vsg::WindowResizeHandler::visit</a></div><div class="ttdeci">bool visit(const Object *object, uint32_t index=0)</div><div class="ttdoc">return true if the object visited</div></div>
+<div class="ttc" id="aclassvsg_1_1UpdateGraphicsPipelines_html"><div class="ttname"><a href="classvsg_1_1UpdateGraphicsPipelines.html">vsg::UpdateGraphicsPipelines</a></div><div class="ttdef"><b>Definition:</b> WindowResizeHandler.h:27</div></div>
+<div class="ttc" id="aclassvsg_1_1View_html"><div class="ttname"><a href="classvsg_1_1View.html">vsg::View</a></div><div class="ttdoc">View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen...</div><div class="ttdef"><b>Definition:</b> View.h:36</div></div>
+<div class="ttc" id="aclassvsg_1_1WindowResizeHandler_html"><div class="ttname"><a href="classvsg_1_1WindowResizeHandler.html">vsg::WindowResizeHandler</a></div><div class="ttdoc">WindowResizeHandler class for updating viewport/scissor and attachments to fit with new window dimens...</div><div class="ttdef"><b>Definition:</b> WindowResizeHandler.h:45</div></div>
+<div class="ttc" id="aclassvsg_1_1WindowResizeHandler_html_a95b3bfe967236e4545f8facf7fe35083"><div class="ttname"><a href="classvsg_1_1WindowResizeHandler.html#a95b3bfe967236e4545f8facf7fe35083">vsg::WindowResizeHandler::visit</a></div><div class="ttdeci">bool visit(const Object *object, uint32_t index=0)</div><div class="ttdoc">return true if the object was visited</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

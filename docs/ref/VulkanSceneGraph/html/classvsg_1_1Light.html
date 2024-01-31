@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -92,7 +92,7 @@ Inheritance diagram for vsg::Light:</div>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="148,104,304,145"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="5,111,100,138"/>
 <area shape="rect" href="classvsg_1_1PointLight.html" title="PointLight represents a local point light source where all light radiants event from the light positi..." alt="" coords="1029,13,1148,39"/>
-<area shape="rect" href="classvsg_1_1SpotLight.html" title="SpotLight represents a local point light source which intensity varies as a spot light." alt="" coords="1031,78,1146,105"/>
+<area shape="rect" href="classvsg_1_1SpotLight.html" title="SpotLight represents a local point light source whose intensity varies as a spot light." alt="" coords="1031,78,1146,105"/>
 <area shape="rect" href="classvsg_1_1DirectionalLight.html" title="DirectionalLight represents a directional light source &#45; used for light sources that are treated as i..." alt="" coords="1011,143,1167,170"/>
 <area shape="rect" href="classvsg_1_1AmbientLight.html" title="AmbientLight represents an ambient light source." alt="" coords="1019,209,1159,235"/>
 </map>
@@ -192,7 +192,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -264,6 +264,9 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 <tr class="memitem:ae3ff8e638f3c074116f87896adf7c2a8"><td class="memItemLeft" align="right" valign="top"><a id="ae3ff8e638f3c074116f87896adf7c2a8"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>intensity</b> = 1.0f</td></tr>
 <tr class="separator:ae3ff8e638f3c074116f87896adf7c2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f48ccbb27a2c2e11f3c0ca4a548c92"><td class="memItemLeft" align="right" valign="top"><a id="aa9f48ccbb27a2c2e11f3c0ca4a548c92"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>shadowMaps</b> = 0</td></tr>
+<tr class="separator:aa9f48ccbb27a2c2e11f3c0ca4a548c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -312,7 +315,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1Light.html">Light</a> node a base class for different light types - <a class="el" href="classvsg_1_1AmbientLight.html" title="AmbientLight represents an ambient light source.">AmbientLight</a>, <a class="el" href="classvsg_1_1DirectionalLight.html" title="DirectionalLight represents a directional light source - used for light sources that are treated as i...">DirectionalLight</a>, <a class="el" href="classvsg_1_1PointLight.html" title="PointLight represents a local point light source where all light radiants event from the light positi...">PointLight</a> and <a class="el" href="classvsg_1_1SpotLight.html" title="SpotLight represents a local point light source which intensity varies as a spot light.">SpotLight</a>. Used to by the <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> to represent a light source that is placed in the LightData uniform used by the shaders when implementing lighting. Provides name, color and intensity settings common to all <a class="el" href="classvsg_1_1Light.html">Light</a> types. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1Light.html">Light</a> is a base node class for different light types - <a class="el" href="classvsg_1_1AmbientLight.html" title="AmbientLight represents an ambient light source.">AmbientLight</a>, <a class="el" href="classvsg_1_1DirectionalLight.html" title="DirectionalLight represents a directional light source - used for light sources that are treated as i...">DirectionalLight</a>, <a class="el" href="classvsg_1_1PointLight.html" title="PointLight represents a local point light source where all light radiants event from the light positi...">PointLight</a> and <a class="el" href="classvsg_1_1SpotLight.html" title="SpotLight represents a local point light source whose intensity varies as a spot light.">SpotLight</a>. Used by the <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> to represent a light source that is placed in the LightData uniform used by the shaders when implementing lighting. Provides name, color and intensity settings common to all <a class="el" href="classvsg_1_1Light.html">Light</a> types. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/nodes/<a class="el" href="Light_8h_source.html">Light.h</a></li>
 </ul>

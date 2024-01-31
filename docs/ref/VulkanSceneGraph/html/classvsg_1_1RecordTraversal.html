@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -78,7 +78,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> traverses a scene graph doing view frustum culling and invoking state/commands to record them to Vulkan command buffer.  
+<p><a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> traverses a scene graph doing view frustum culling and invoking state/commands to record them to a Vulkan command buffer.  
  <a href="classvsg_1_1RecordTraversal.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="RecordTraversal_8h_source.html">RecordTraversal.h</a>&gt;</code></p>
@@ -96,37 +96,22 @@ Collaboration diagram for vsg::RecordTraversal:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1RecordTraversal__coll__graph.png" border="0" usemap="#avsg_1_1RecordTraversal_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1RecordTraversal_coll__map" id="avsg_1_1RecordTraversal_coll__map">
-<area shape="rect" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec..." alt="" coords="1424,242,1581,269"/>
-<area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="479,130,574,157"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="689,580,845,621"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="689,123,845,164"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="689,645,845,687"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="689,5,845,47"/>
-<area shape="rect" href="classvsg_1_1DatabasePager.html" title=" " alt="" coords="1065,385,1216,411"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="696,253,839,295"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="693,319,841,360"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="696,384,839,425"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="684,449,851,491"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="694,515,841,556"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="692,188,843,229"/>
-<area shape="rect" href="classvsg_1_1CulledPagedLODs.html" title="Class used by the DatabasePager to keep track of PagedLOD nodes." alt="" coords="1057,170,1224,197"/>
-<area shape="rect" href="classvsg_1_1State.html" title="vsg::State used by vsg::RecordTraversal to manage state stacks, projection, modelview matrix and frus..." alt="" coords="1097,686,1184,713"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="696,763,839,804"/>
-<area shape="rect" href="structvsg_1_1Frustum.html" title="Frustum used internally by vsg::State to manage view fustum culling during vsg::RecordTraversal." alt="" coords="714,829,821,855"/>
-<area shape="rect" href="structvsg_1_1t__vec4.html" title=" " alt="" coords="228,813,375,855"/>
-<area shape="rect" href="structvsg_1_1t__plane.html" title=" " alt="" coords="451,864,603,905"/>
-<area shape="rect" href="structvsg_1_1t__vec3.html" title=" " alt="" coords="5,852,152,893"/>
-<area shape="rect" href="classvsg_1_1MatrixStack.html" title="MatrixStack used internally by vsg::State to manage stack of project or modelview matrices." alt="" coords="702,711,833,738"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="1053,737,1228,779"/>
-<area shape="rect" href="classvsg_1_1FrameStamp.html" title="FrameStamp represents the time and frame count of a specific frame." alt="" coords="1073,19,1209,46"/>
+<area shape="rect" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec..." alt="" coords="439,195,596,221"/>
+<area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="63,5,158,32"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="39,57,182,98"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="39,122,182,163"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="39,187,182,229"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="5,253,216,294"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="23,318,198,359"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="35,383,186,425"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa135e02e2f525c3ae8709780c7403260"><td class="memItemLeft" align="right" valign="top"><a id="aa135e02e2f525c3ae8709780c7403260"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RecordTraversal</b> (<a class="el" href="classvsg_1_1CommandBuffer.html">CommandBuffer</a> *in_commandBuffer=nullptr, uint32_t in_maxSlot=2, std::set&lt; <a class="el" href="classvsg_1_1Bin.html">Bin</a> * &gt; in_bins={})</td></tr>
-<tr class="separator:aa135e02e2f525c3ae8709780c7403260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad643820322e7ce5805e20d2f74f448f7"><td class="memItemLeft" align="right" valign="top"><a id="ad643820322e7ce5805e20d2f74f448f7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RecordTraversal</b> (uint32_t in_maxSlot=2, std::set&lt; <a class="el" href="classvsg_1_1Bin.html">Bin</a> * &gt; in_bins={})</td></tr>
+<tr class="separator:ad643820322e7ce5805e20d2f74f448f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53eefcf8b422a4be984cc63b7a449b98"><td class="memItemLeft" align="right" valign="top"><a id="a53eefcf8b422a4be984cc63b7a449b98"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>RecordTraversal</b> (const <a class="el" href="classvsg_1_1RecordTraversal.html">RecordTraversal</a> &amp;)=delete</td></tr>
 <tr class="separator:a53eefcf8b422a4be984cc63b7a449b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,15 +126,15 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>className</b>
 <tr class="separator:a51637ff16ebb2a5cf8a5d6a6fff38f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a114d24f39b5c0a09b1a0aa4aa0b6476b"><td class="memItemLeft" align="right" valign="top"><a id="a114d24f39b5c0a09b1a0aa4aa0b6476b"></a>
 <a class="el" href="classvsg_1_1State.html">State</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RecordTraversal.html#a114d24f39b5c0a09b1a0aa4aa0b6476b">getState</a> ()</td></tr>
-<tr class="memdesc:a114d24f39b5c0a09b1a0aa4aa0b6476b"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the current <a class="el" href="classvsg_1_1State.html" title="vsg::State used by vsg::RecordTraversal to manage state stacks, projection, modelview matrix and frus...">State</a> object used to track state and projection/modelview matrices for current subgraph being traversed <br /></td></tr>
+<tr class="memdesc:a114d24f39b5c0a09b1a0aa4aa0b6476b"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the current <a class="el" href="classvsg_1_1State.html" title="vsg::State is used by vsg::RecordTraversal to manage state stacks, projection and modelview matrices ...">State</a> object used to track state and projection/modelview matrices for the current subgraph being traversed <br /></td></tr>
 <tr class="separator:a114d24f39b5c0a09b1a0aa4aa0b6476b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe2f7f301f74ce71bea4c9b2bbbc5e95"><td class="memItemLeft" align="right" valign="top"><a id="abe2f7f301f74ce71bea4c9b2bbbc5e95"></a>
 <a class="el" href="classvsg_1_1CommandBuffer.html">CommandBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RecordTraversal.html#abe2f7f301f74ce71bea4c9b2bbbc5e95">getCommandBuffer</a> ()</td></tr>
-<tr class="memdesc:abe2f7f301f74ce71bea4c9b2bbbc5e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the current <a class="el" href="classvsg_1_1CommandBuffer.html" title="CommandBuffer encapsulates VkCommandBuffer.">CommandBuffer</a> for current subgraph being traversed <br /></td></tr>
+<tr class="memdesc:abe2f7f301f74ce71bea4c9b2bbbc5e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the current <a class="el" href="classvsg_1_1CommandBuffer.html" title="CommandBuffer encapsulates VkCommandBuffer.">CommandBuffer</a> for the current subgraph being traversed <br /></td></tr>
 <tr class="separator:abe2f7f301f74ce71bea4c9b2bbbc5e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87cf268dd8d615f1acba5ec1ee19b06d"><td class="memItemLeft" align="right" valign="top"><a id="a87cf268dd8d615f1acba5ec1ee19b06d"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RecordTraversal.html#a87cf268dd8d615f1acba5ec1ee19b06d">deviceID</a> () const</td></tr>
-<tr class="memdesc:a87cf268dd8d615f1acba5ec1ee19b06d"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the current DeviceID for current subgraph being traversed <br /></td></tr>
+<tr class="memdesc:a87cf268dd8d615f1acba5ec1ee19b06d"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the current DeviceID for the current subgraph being traversed <br /></td></tr>
 <tr class="separator:a87cf268dd8d615f1acba5ec1ee19b06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd30cfd766df32ec31743e0661f52533"><td class="memItemLeft" align="right" valign="top"><a id="afd30cfd766df32ec31743e0661f52533"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setFrameStamp</b> (<a class="el" href="classvsg_1_1FrameStamp.html">FrameStamp</a> *fs)</td></tr>
@@ -163,9 +148,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setDatabasePager</b> 
 <tr class="memitem:aeb750d601503d3015f03369ef85d7f9e"><td class="memItemLeft" align="right" valign="top"><a id="aeb750d601503d3015f03369ef85d7f9e"></a>
 <a class="el" href="classvsg_1_1DatabasePager.html">DatabasePager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getDatabasePager</b> ()</td></tr>
 <tr class="separator:aeb750d601503d3015f03369ef85d7f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab49637e4d09824398db3f3c5682c7794"><td class="memItemLeft" align="right" valign="top"><a id="ab49637e4d09824398db3f3c5682c7794"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setProjectionAndViewMatrix</b> (const <a class="el" href="structvsg_1_1t__mat4.html">dmat4</a> &amp;projMatrix, const <a class="el" href="structvsg_1_1t__mat4.html">dmat4</a> &amp;viewMatrix)</td></tr>
-<tr class="separator:ab49637e4d09824398db3f3c5682c7794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae438f15260512630ea432c676ae0f30d"><td class="memItemLeft" align="right" valign="top"><a id="ae438f15260512630ea432c676ae0f30d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Object.html">Object</a> &amp;object)</td></tr>
 <tr class="separator:ae438f15260512630ea432c676ae0f30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,6 +208,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a c
 <tr class="memitem:a4a1ccaaf2e1e530e36aa6e4a17650812"><td class="memItemLeft" align="right" valign="top"><a id="a4a1ccaaf2e1e530e36aa6e4a17650812"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1View.html">View</a> &amp;view)</td></tr>
 <tr class="separator:a4a1ccaaf2e1e530e36aa6e4a17650812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0183bcb614ac19c098a03fe49a28420e"><td class="memItemLeft" align="right" valign="top"><a id="a0183bcb614ac19c098a03fe49a28420e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1CommandGraph.html">CommandGraph</a> &amp;commandGraph)</td></tr>
+<tr class="separator:a0183bcb614ac19c098a03fe49a28420e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad86d69217f02a73182cccb9bff9fcf96"><td class="memItemLeft" align="right" valign="top"><a id="ad86d69217f02a73182cccb9bff9fcf96"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clearBins</b> ()</td></tr>
 <tr class="separator:ad86d69217f02a73182cccb9bff9fcf96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,7 +281,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -386,21 +371,25 @@ Mask&#160;</td><td class="memItemRight" valign="bottom"><b>traversalMask</b> = M
 <tr class="memitem:aeb21b844831da470a9f82fc708b74abc"><td class="memItemLeft" align="right" valign="top"><a id="aeb21b844831da470a9f82fc708b74abc"></a>
 Mask&#160;</td><td class="memItemRight" valign="bottom"><b>overrideMask</b> = MASK_OFF</td></tr>
 <tr class="separator:aeb21b844831da470a9f82fc708b74abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ffb5f178bff2b4d95deef8609983f8"><td class="memItemLeft" align="right" valign="top"><a id="af5ffb5f178bff2b4d95deef8609983f8"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1RecordedCommandBuffers.html">RecordedCommandBuffers</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RecordTraversal.html#af5ffb5f178bff2b4d95deef8609983f8">recordedCommandBuffers</a></td></tr>
+<tr class="memdesc:af5ffb5f178bff2b4d95deef8609983f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for CommandBuffers that have been recorded in current frame. <br /></td></tr>
+<tr class="separator:af5ffb5f178bff2b4d95deef8609983f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a47bd6970be765599baec0b7414751f46"><td class="memItemLeft" align="right" valign="top"><a id="a47bd6970be765599baec0b7414751f46"></a>
-<a class="el" href="classvsg_1_1FrameStamp.html">FrameStamp</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_frameStamp</b> = nullptr</td></tr>
-<tr class="separator:a47bd6970be765599baec0b7414751f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a954914968d5cd59fee3feb14a3d151eb"><td class="memItemLeft" align="right" valign="top"><a id="a954914968d5cd59fee3feb14a3d151eb"></a>
-<a class="el" href="classvsg_1_1State.html">State</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_state</b> = nullptr</td></tr>
-<tr class="separator:a954914968d5cd59fee3feb14a3d151eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae1e351de0fafed9c2ee462eb40d7917"><td class="memItemLeft" align="right" valign="top"><a id="aae1e351de0fafed9c2ee462eb40d7917"></a>
-<a class="el" href="classvsg_1_1DatabasePager.html">DatabasePager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_databasePager</b> = nullptr</td></tr>
-<tr class="separator:aae1e351de0fafed9c2ee462eb40d7917"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bc6439ff527be76dcb6c5600a9ffdca"><td class="memItemLeft" align="right" valign="top"><a id="a3bc6439ff527be76dcb6c5600a9ffdca"></a>
-<a class="el" href="classvsg_1_1CulledPagedLODs.html">CulledPagedLODs</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_culledPagedLODs</b> = nullptr</td></tr>
-<tr class="separator:a3bc6439ff527be76dcb6c5600a9ffdca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c91bed98a04746fd093b5aa82a928d0"><td class="memItemLeft" align="right" valign="top"><a id="a7c91bed98a04746fd093b5aa82a928d0"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1FrameStamp.html">FrameStamp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_frameStamp</b></td></tr>
+<tr class="separator:a7c91bed98a04746fd093b5aa82a928d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a604d184732ad37764b0d271d12fb3b3b"><td class="memItemLeft" align="right" valign="top"><a id="a604d184732ad37764b0d271d12fb3b3b"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1State.html">State</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_state</b></td></tr>
+<tr class="separator:a604d184732ad37764b0d271d12fb3b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17f89f0b8e42af687648a4ee1f24159c"><td class="memItemLeft" align="right" valign="top"><a id="a17f89f0b8e42af687648a4ee1f24159c"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1DatabasePager.html">DatabasePager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_databasePager</b></td></tr>
+<tr class="separator:a17f89f0b8e42af687648a4ee1f24159c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359a2283e2db98b2acefff4476bab000"><td class="memItemLeft" align="right" valign="top"><a id="a359a2283e2db98b2acefff4476bab000"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1CulledPagedLODs.html">CulledPagedLODs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_culledPagedLODs</b></td></tr>
+<tr class="separator:a359a2283e2db98b2acefff4476bab000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab757143c923a90b178b8b60dc8284140"><td class="memItemLeft" align="right" valign="top"><a id="ab757143c923a90b178b8b60dc8284140"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>_minimumBinNumber</b> = 0</td></tr>
 <tr class="separator:ab757143c923a90b178b8b60dc8284140"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -422,7 +411,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> traverses a scene graph doing view frustum culling and invoking state/commands to record them to Vulkan command buffer. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> traverses a scene graph doing view frustum culling and invoking state/commands to record them to a Vulkan command buffer. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/app/<a class="el" href="RecordTraversal_8h_source.html">RecordTraversal.h</a></li>
 </ul>

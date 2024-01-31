@@ -1,7 +1,7 @@
 <map id="vsg::MatrixTransform" name="vsg::MatrixTransform">
 <area shape="rect" id="node1" title=" " alt="" coords="164,685,324,712"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,581,184,623"/>
-<area shape="rect" id="node3" href="$classvsg_1_1Transform.html" title="Transform node is a pure virtual base class for positioning/scaling/rotation subgraphs." alt="" coords="35,505,154,532"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Transform.html" title="Transform node is a pure virtual base class for positioning/scaling/rotating subgraphs." alt="" coords="35,505,154,532"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="18,415,171,456"/>
 <area shape="rect" id="node5" href="$classvsg_1_1Group.html" title="Group node provides a list of children." alt="" coords="49,339,141,365"/>
 <area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="21,248,169,289"/>

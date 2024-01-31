@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -78,7 +78,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classvsg_1_1Device.html" title="Device encapsulate vkDeivce, a logical handle to the PhysicalDevice with capabilities specified durin...">Device</a> encapsulate vkDeivce, a logical handle to the <a class="el" href="classvsg_1_1PhysicalDevice.html">PhysicalDevice</a> with capabilities specified during construction.  
+<p><a class="el" href="classvsg_1_1Device.html" title="Device encapsulates VkDevice, a logical handle to the PhysicalDevice with capabilities specified duri...">Device</a> encapsulates VkDevice, a logical handle to the <a class="el" href="classvsg_1_1PhysicalDevice.html">PhysicalDevice</a> with capabilities specified during construction.  
  <a href="classvsg_1_1Device.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Device_8h_source.html">Device.h</a>&gt;</code></p>
@@ -87,7 +87,7 @@ Inheritance diagram for vsg::Device:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1Device__inherit__graph.png" border="0" usemap="#avsg_1_1Device_inherit__map" alt="Inheritance graph"/></div>
 <map name="avsg_1_1Device_inherit__map" id="avsg_1_1Device_inherit__map">
-<area shape="rect" title="Device encapsulate vkDeivce, a logical handle to the PhysicalDevice with capabilities specified durin..." alt="" coords="34,169,133,196"/>
+<area shape="rect" title="Device encapsulates VkDevice, a logical handle to the PhysicalDevice with capabilities specified duri..." alt="" coords="34,169,133,196"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="5,80,161,121"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
 </map>
@@ -97,13 +97,13 @@ Collaboration diagram for vsg::Device:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1Device__coll__graph.png" border="0" usemap="#avsg_1_1Device_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1Device_coll__map" id="avsg_1_1Device_coll__map">
-<area shape="rect" title="Device encapsulate vkDeivce, a logical handle to the PhysicalDevice with capabilities specified durin..." alt="" coords="473,143,572,170"/>
+<area shape="rect" title="Device encapsulates VkDevice, a logical handle to the PhysicalDevice with capabilities specified duri..." alt="" coords="473,143,572,170"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="154,5,310,47"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="161,71,303,112"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="161,136,303,177"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="149,201,315,243"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="161,267,303,308"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="155,267,309,308"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -136,17 +136,23 @@ const <a class="el" href="classvsg_1_1PhysicalDevice.html">PhysicalDevice</a> *&
 <tr class="memitem:adf257a26288e51cdfd23d463b6f4897d"><td class="memItemLeft" align="right" valign="top"><a id="adf257a26288e51cdfd23d463b6f4897d"></a>
 const <a class="el" href="classvsg_1_1AllocationCallbacks.html">AllocationCallbacks</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getAllocationCallbacks</b> () const</td></tr>
 <tr class="separator:adf257a26288e51cdfd23d463b6f4897d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a897448455f1c5fc8a11ac66090a4fd85"><td class="memItemLeft" align="right" valign="top"><a id="a897448455f1c5fc8a11ac66090a4fd85"></a>
+const Queues &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getQueues</b> () const</td></tr>
+<tr class="separator:a897448455f1c5fc8a11ac66090a4fd85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a7ade638b8d5a4f298cfe75efabe3ef"><td class="memItemLeft" align="right" valign="top"><a id="a7a7ade638b8d5a4f298cfe75efabe3ef"></a>
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Queue.html">Queue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getQueue</b> (uint32_t queueFamilyIndex, uint32_t queueIndex=0)</td></tr>
 <tr class="separator:a7a7ade638b8d5a4f298cfe75efabe3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26b3aaa2e77b255fd28735671db936db"><td class="memItemLeft" align="right" valign="top"><a id="a26b3aaa2e77b255fd28735671db936db"></a>
-const <a class="el" href="classvsg_1_1Extensions.html">Extensions</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getExtensions</b> () const</td></tr>
-<tr class="separator:a26b3aaa2e77b255fd28735671db936db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44b35ab6b9ec37d816fd82b4078f0d7c"><td class="memTemplParams" colspan="2"><a id="a44b35ab6b9ec37d816fd82b4078f0d7c"></a>
-template&lt;typename T &gt; </td></tr>
+<tr class="memitem:abff71fe23c9de39e5a3de625502ff099"><td class="memItemLeft" align="right" valign="top"><a id="abff71fe23c9de39e5a3de625502ff099"></a>
+const <a class="el" href="classvsg_1_1DeviceExtensions.html">DeviceExtensions</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Device.html#abff71fe23c9de39e5a3de625502ff099">getExtensions</a> () const</td></tr>
+<tr class="memdesc:abff71fe23c9de39e5a3de625502ff099"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the extensions structure that holds a range of function pointers to vkInstance extensions <br /></td></tr>
+<tr class="separator:abff71fe23c9de39e5a3de625502ff099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b35ab6b9ec37d816fd82b4078f0d7c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a44b35ab6b9ec37d816fd82b4078f0d7c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvsg_1_1Device.html#a44b35ab6b9ec37d816fd82b4078f0d7c">getProcAddr</a> (T &amp;procAddress, const char *pName, const char *pNameFallback=nullptr) const</td></tr>
-<tr class="memdesc:a44b35ab6b9ec37d816fd82b4078f0d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the address of specified function using vkGetDeviceProcAddr <br /></td></tr>
 <tr class="separator:a44b35ab6b9ec37d816fd82b4078f0d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4249d5ed8c1ed877a240a1ec04a110"><td class="memItemLeft" align="right" valign="top"><a id="aaa4249d5ed8c1ed877a240a1ec04a110"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Device.html#aaa4249d5ed8c1ed877a240a1ec04a110">supportsApiVersion</a> (uint32_t version) const</td></tr>
+<tr class="memdesc:aaa4249d5ed8c1ed877a240a1ec04a110"><td class="mdescLeft">&#160;</td><td class="mdescRight">device-level core functionality can be used if both VkInstance and VkPhysicalDevice support the Vulkan version that provides it. <br /></td></tr>
+<tr class="separator:aaa4249d5ed8c1ed877a240a1ec04a110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvsg_1_1Inherit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvsg_1_1Inherit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvsg_1_1Inherit.html">vsg::Inherit&lt; Object, Device &gt;</a></td></tr>
 <tr class="memitem:a24550cd9c037afd7d161ff391b1ceac7 inherit pub_methods_classvsg_1_1Inherit"><td class="memItemLeft" align="right" valign="top"><a id="a24550cd9c037afd7d161ff391b1ceac7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Inherit</b> (Args &amp;&amp;... args)</td></tr>
@@ -222,7 +228,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -330,12 +336,12 @@ VkDevice&#160;</td><td class="memItemRight" valign="bottom"><b>_device</b></td><
 <tr class="memitem:a519afb22b2bfafa32802412369ffe323"><td class="memItemLeft" align="right" valign="top"><a id="a519afb22b2bfafa32802412369ffe323"></a>
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1AllocationCallbacks.html">AllocationCallbacks</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_allocator</b></td></tr>
 <tr class="separator:a519afb22b2bfafa32802412369ffe323"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18d2458b613a386312a444b44dca101f"><td class="memItemLeft" align="right" valign="top"><a id="a18d2458b613a386312a444b44dca101f"></a>
-<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Extensions.html">Extensions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_extensions</b></td></tr>
-<tr class="separator:a18d2458b613a386312a444b44dca101f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67d3ccc1b380b7cdbe2f736e99e0eabd"><td class="memItemLeft" align="right" valign="top"><a id="a67d3ccc1b380b7cdbe2f736e99e0eabd"></a>
-std::list&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Queue.html">Queue</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_queues</b></td></tr>
-<tr class="separator:a67d3ccc1b380b7cdbe2f736e99e0eabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5757f793cc9e8ac6804da2aef9fe4da2"><td class="memItemLeft" align="right" valign="top"><a id="a5757f793cc9e8ac6804da2aef9fe4da2"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1DeviceExtensions.html">DeviceExtensions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_extensions</b></td></tr>
+<tr class="separator:a5757f793cc9e8ac6804da2aef9fe4da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7933c45c369fb4d3204f4b0af68859f3"><td class="memItemLeft" align="right" valign="top"><a id="a7933c45c369fb4d3204f4b0af68859f3"></a>
+Queues&#160;</td><td class="memItemRight" valign="bottom"><b>_queues</b></td></tr>
+<tr class="separator:a7933c45c369fb4d3204f4b0af68859f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -348,8 +354,54 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1Device.html" title="Device encapsulate vkDeivce, a logical handle to the PhysicalDevice with capabilities specified durin...">Device</a> encapsulate vkDeivce, a logical handle to the <a class="el" href="classvsg_1_1PhysicalDevice.html">PhysicalDevice</a> with capabilities specified during construction. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p><a class="el" href="classvsg_1_1Device.html" title="Device encapsulates VkDevice, a logical handle to the PhysicalDevice with capabilities specified duri...">Device</a> encapsulates VkDevice, a logical handle to the <a class="el" href="classvsg_1_1PhysicalDevice.html">PhysicalDevice</a> with capabilities specified during construction. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a44b35ab6b9ec37d816fd82b4078f0d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b35ab6b9ec37d816fd82b4078f0d7c">&#9670;&nbsp;</a></span>getProcAddr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vsg::Device::getProcAddr </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>procAddress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pNameFallback</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>get the address of specified function using vkGetDeviceProcAddr for core commands beyond the apiVersion specified in <a class="el" href="classvsg_1_1Instance.html" title="Instance encapsulates the VkInstance.">vsg::Instance</a> creation, vkGetDeviceProcAddr may return a non-nullptr function pointer, though the function pointer must not be called. for extension commands, vkGetDeviceProcAddr will always return nullptr if the extension is not enabled in <a class="el" href="classvsg_1_1Device.html" title="Device encapsulates VkDevice, a logical handle to the PhysicalDevice with capabilities specified duri...">vsg::Device</a> creation. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/vk/<a class="el" href="Device_8h_source.html">Device.h</a></li>
 </ul>
 </div><!-- contents -->

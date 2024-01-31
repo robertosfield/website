@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -97,11 +97,10 @@ Collaboration diagram for vsg::GraphicsPipeline:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1GraphicsPipeline__coll__graph.png" border="0" usemap="#avsg_1_1GraphicsPipeline_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1GraphicsPipeline_coll__map" id="avsg_1_1GraphicsPipeline_coll__map">
-<area shape="rect" title="GraphicsPipeline encapsulates graphics VkPipeline and the VkGraphicsPipelineCreateInfo settings used ..." alt="" coords="429,78,592,105"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
-<area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,71,299,112"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,136,299,177"/>
+<area shape="rect" title="GraphicsPipeline encapsulates graphics VkPipeline and the VkGraphicsPipelineCreateInfo settings used ..." alt="" coords="131,185,294,212"/>
+<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="5,81,161,123"/>
+<area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="185,81,328,123"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -115,9 +114,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af107833ed4321692e2b1cd00c7a3a22d"><td class="memItemLeft" align="right" valign="top"><a id="af107833ed4321692e2b1cd00c7a3a22d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>GraphicsPipeline</b> (<a class="el" href="classvsg_1_1PipelineLayout.html">PipelineLayout</a> *pipelineLayout, const ShaderStages &amp;shaderStages, const GraphicsPipelineStates &amp;pipelineStates, uint32_t subpass=0)</td></tr>
 <tr class="separator:af107833ed4321692e2b1cd00c7a3a22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527fc1bc675bab00ee6521580327aabc"><td class="memItemLeft" align="right" valign="top"><a id="a527fc1bc675bab00ee6521580327aabc"></a>
-VkPipeline&#160;</td><td class="memItemRight" valign="bottom"><b>vk</b> (uint32_t deviceID) const</td></tr>
-<tr class="separator:a527fc1bc675bab00ee6521580327aabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac978ec06c14767bd3b6e3a9137595f18"><td class="memItemLeft" align="right" valign="top"><a id="ac978ec06c14767bd3b6e3a9137595f18"></a>
+VkPipeline&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1GraphicsPipeline.html#ac978ec06c14767bd3b6e3a9137595f18">vk</a> (uint32_t viewID) const</td></tr>
+<tr class="memdesc:ac978ec06c14767bd3b6e3a9137595f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the Vulkan Pipeline for specified viewID. <br /></td></tr>
+<tr class="separator:ac978ec06c14767bd3b6e3a9137595f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d78a478729526b6bb58a5a6e978a9d"><td class="memItemLeft" align="right" valign="top"><a id="a15d78a478729526b6bb58a5a6e978a9d"></a>
+VkPipeline&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1GraphicsPipeline.html#a15d78a478729526b6bb58a5a6e978a9d">validated_vk</a> (uint32_t viewID) const</td></tr>
+<tr class="memdesc:a15d78a478729526b6bb58a5a6e978a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">variant of vk(viewID) method that is slower but adds validation of the viewID parameter <br /></td></tr>
+<tr class="separator:a15d78a478729526b6bb58a5a6e978a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01da05deefee50ba090e5f66a6f33c19"><td class="memItemLeft" align="right" valign="top"><a id="a01da05deefee50ba090e5f66a6f33c19"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1GraphicsPipeline.html#a01da05deefee50ba090e5f66a6f33c19">compare</a> (const <a class="el" href="classvsg_1_1Object.html">Object</a> &amp;rhs_object) const override</td></tr>
 <tr class="memdesc:a01da05deefee50ba090e5f66a6f33c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal, return 1 if rhs is greater, <br /></td></tr>
@@ -206,7 +210,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -279,9 +283,6 @@ GraphicsPipelineStates&#160;</td><td class="memItemRight" valign="bottom"><b>pip
 <tr class="memitem:af7006ffb8ec5c86789619d95fa5de2ce"><td class="memItemLeft" align="right" valign="top"><a id="af7006ffb8ec5c86789619d95fa5de2ce"></a>
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1PipelineLayout.html">PipelineLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>layout</b></td></tr>
 <tr class="separator:af7006ffb8ec5c86789619d95fa5de2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1654a73c64f124f547b90dbaa1d93605"><td class="memItemLeft" align="right" valign="top"><a id="a1654a73c64f124f547b90dbaa1d93605"></a>
-<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1RenderPass.html">RenderPass</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>renderPass</b></td></tr>
-<tr class="separator:a1654a73c64f124f547b90dbaa1d93605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae39f175ada23f2ad39a4779007c5a53e"><td class="memItemLeft" align="right" valign="top"><a id="ae39f175ada23f2ad39a4779007c5a53e"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>subpass</b></td></tr>
 <tr class="separator:ae39f175ada23f2ad39a4779007c5a53e"><td class="memSeparator" colspan="2">&#160;</td></tr>

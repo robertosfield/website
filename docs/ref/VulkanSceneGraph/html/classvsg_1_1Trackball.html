@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -99,7 +99,7 @@ Collaboration diagram for vsg::Trackball:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1Trackball__coll__graph.png" border="0" usemap="#avsg_1_1Trackball_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1Trackball_coll__map" id="avsg_1_1Trackball_coll__map">
-<area shape="rect" title="Trackball is an event handler that provides mouse and touch controlled 3d trackball camera view manip..." alt="" coords="663,218,773,245"/>
+<area shape="rect" title="Trackball is an event handler that provides mouse and touch controlled 3d trackball camera view manip..." alt="" coords="663,243,773,270"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="301,5,457,47"/>
 <area shape="rect" href="classvsg_1_1Visitor.html" title=" " alt="" coords="149,13,244,39"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
@@ -109,6 +109,7 @@ Collaboration diagram for vsg::Trackball:</div>
 <area shape="rect" href="structvsg_1_1t__vec3.html" title=" " alt="" coords="293,267,464,294"/>
 <area shape="rect" href="structvsg_1_1t__vec2.html" title=" " alt="" coords="293,318,464,345"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="307,369,450,411"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="307,435,450,476"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -133,6 +134,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aef4ef622232ff343f1a6c42c6683bef3"><td class="memItemLeft" align="right" valign="top"><a id="aef4ef622232ff343f1a6c42c6683bef3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1KeyPressEvent.html">KeyPressEvent</a> &amp;keyPress) override</td></tr>
 <tr class="separator:aef4ef622232ff343f1a6c42c6683bef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a037446b62674c56623c5b38586414885"><td class="memItemLeft" align="right" valign="top"><a id="a037446b62674c56623c5b38586414885"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1KeyReleaseEvent.html">KeyReleaseEvent</a> &amp;keyRelease) override</td></tr>
+<tr class="separator:a037446b62674c56623c5b38586414885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb8c8a72b5efac254e2d2387d986539a"><td class="memItemLeft" align="right" valign="top"><a id="aeb8c8a72b5efac254e2d2387d986539a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1FocusInEvent.html">FocusInEvent</a> &amp;focusIn) override</td></tr>
+<tr class="separator:aeb8c8a72b5efac254e2d2387d986539a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5355efb890d3f5b067e6303cce75ed95"><td class="memItemLeft" align="right" valign="top"><a id="a5355efb890d3f5b067e6303cce75ed95"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1FocusOutEvent.html">FocusOutEvent</a> &amp;focusOut) override</td></tr>
+<tr class="separator:a5355efb890d3f5b067e6303cce75ed95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7316c27579c954151876eda7c2774d3"><td class="memItemLeft" align="right" valign="top"><a id="ad7316c27579c954151876eda7c2774d3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1ButtonPressEvent.html">ButtonPressEvent</a> &amp;buttonPress) override</td></tr>
 <tr class="separator:ad7316c27579c954151876eda7c2774d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +182,9 @@ std::pair&lt; int32_t, int32_t &gt;&#160;</td><td class="memItemRight" valign="b
 <tr class="memitem:a93cc4dde01406ce4955884502cec0ad7"><td class="memItemLeft" align="right" valign="top"><a id="a93cc4dde01406ce4955884502cec0ad7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>withinRenderArea</b> (const <a class="el" href="classvsg_1_1PointerEvent.html">PointerEvent</a> &amp;pointerEvent) const</td></tr>
 <tr class="separator:a93cc4dde01406ce4955884502cec0ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1d2d89f319b225cadf25fb7b63bf19"><td class="memItemLeft" align="right" valign="top"><a id="a5d1d2d89f319b225cadf25fb7b63bf19"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>eventRelevant</b> (const <a class="el" href="classvsg_1_1WindowEvent.html">WindowEvent</a> &amp;event) const</td></tr>
+<tr class="separator:a5d1d2d89f319b225cadf25fb7b63bf19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf55acb20150f2f34cddfe93714fe574"><td class="memItemLeft" align="right" valign="top"><a id="abf55acb20150f2f34cddfe93714fe574"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clampToGlobe</b> ()</td></tr>
 <tr class="separator:abf55acb20150f2f34cddfe93714fe574"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,7 +194,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a3b465f772b034dde59f4efb0e9705e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d527cd0570311904c30f0ed3a62784b"><td class="memItemLeft" align="right" valign="top"><a id="a3d527cd0570311904c30f0ed3a62784b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a3d527cd0570311904c30f0ed3a62784b">addKeyViewpoint</a> (KeySymbol key, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1LookAt.html">LookAt</a> &gt; lookAt, double duration=1.0)</td></tr>
-<tr class="memdesc:a3d527cd0570311904c30f0ed3a62784b"><td class="mdescLeft">&#160;</td><td class="mdescRight">add Key to <a class="el" href="structvsg_1_1Trackball_1_1Viewpoint.html">Viewpoint</a> binding using a <a class="el" href="classvsg_1_1LookAt.html" title="LookAt is a ViewMatrix that implements gluLookAt model for specify the view matrix.">LookAt</a> to define the viewpoint <br /></td></tr>
+<tr class="memdesc:a3d527cd0570311904c30f0ed3a62784b"><td class="mdescLeft">&#160;</td><td class="mdescRight">add Key to <a class="el" href="structvsg_1_1Trackball_1_1Viewpoint.html">Viewpoint</a> binding using a <a class="el" href="classvsg_1_1LookAt.html" title="LookAt is a ViewMatrix that implements the gluLookAt model for specifying the view matrix.">LookAt</a> to define the viewpoint <br /></td></tr>
 <tr class="separator:a3d527cd0570311904c30f0ed3a62784b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a705c29beb0f7d30a3968b9ce56eea5cf"><td class="memItemLeft" align="right" valign="top"><a id="a705c29beb0f7d30a3968b9ce56eea5cf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a705c29beb0f7d30a3968b9ce56eea5cf">addKeyViewpoint</a> (KeySymbol key, double latitude, double longitude, double altitude, double duration=1.0)</td></tr>
@@ -233,6 +246,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a
 <tr class="memitem:a0c5b31b2d1a3a5d1f756eacb1dab9246 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a0c5b31b2d1a3a5d1f756eacb1dab9246"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (stringValue &amp;)</td></tr>
 <tr class="separator:a0c5b31b2d1a3a5d1f756eacb1dab9246 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d9fa427e0daabdcbdfd5fb799a81f89 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a9d9fa427e0daabdcbdfd5fb799a81f89"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (wstringValue &amp;)</td></tr>
+<tr class="separator:a9d9fa427e0daabdcbdfd5fb799a81f89 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7f5e09190d2c548bab2ea7090c01670 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="af7f5e09190d2c548bab2ea7090c01670"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (boolValue &amp;)</td></tr>
 <tr class="separator:af7f5e09190d2c548bab2ea7090c01670 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -251,12 +267,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (do
 <tr class="memitem:ae363d9eff5634f7182dd2386aedd9182 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="ae363d9eff5634f7182dd2386aedd9182"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (vec2Value &amp;)</td></tr>
 <tr class="separator:ae363d9eff5634f7182dd2386aedd9182 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff6174787a2f0a918fcfc46da390c35c inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="aff6174787a2f0a918fcfc46da390c35c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (vec4Value &amp;)</td></tr>
-<tr class="separator:aff6174787a2f0a918fcfc46da390c35c inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43dd5a90f264811770e5f0151d88eacf inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a43dd5a90f264811770e5f0151d88eacf"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (vec3Value &amp;)</td></tr>
 <tr class="separator:a43dd5a90f264811770e5f0151d88eacf inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6174787a2f0a918fcfc46da390c35c inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="aff6174787a2f0a918fcfc46da390c35c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (vec4Value &amp;)</td></tr>
+<tr class="separator:aff6174787a2f0a918fcfc46da390c35c inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64fb99378b10eadbed27f9571bed6728 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a64fb99378b10eadbed27f9571bed6728"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (dvec2Value &amp;)</td></tr>
 <tr class="separator:a64fb99378b10eadbed27f9571bed6728 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -572,6 +588,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (bl
 <tr class="memitem:aee86383ee91766f398db923cfaf1ae51 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="aee86383ee91766f398db923cfaf1ae51"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1Node.html">Node</a> &amp;)</td></tr>
 <tr class="separator:aee86383ee91766f398db923cfaf1ae51 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90154d9c6beb369ea6e2cabaeb33d11 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="ab90154d9c6beb369ea6e2cabaeb33d11"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1Compilable.html">Compilable</a> &amp;)</td></tr>
+<tr class="separator:ab90154d9c6beb369ea6e2cabaeb33d11 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47538504b745ba973db9d53382f32168 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a47538504b745ba973db9d53382f32168"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1Commands.html">Commands</a> &amp;)</td></tr>
 <tr class="separator:a47538504b745ba973db9d53382f32168 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -671,6 +690,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a
 <tr class="memitem:a4865999a972cf0a03aab2cc08be04237 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a4865999a972cf0a03aab2cc08be04237"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1BindDescriptorSets.html">BindDescriptorSets</a> &amp;)</td></tr>
 <tr class="separator:a4865999a972cf0a03aab2cc08be04237 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad878cec3d2ba0d0b51c844ee4f9d1018 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="ad878cec3d2ba0d0b51c844ee4f9d1018"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1BindViewDescriptorSets.html">BindViewDescriptorSets</a> &amp;)</td></tr>
+<tr class="separator:ad878cec3d2ba0d0b51c844ee4f9d1018 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab749eef93f99b2acab631c6baf2fc4e7 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="ab749eef93f99b2acab631c6baf2fc4e7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1Descriptor.html">Descriptor</a> &amp;)</td></tr>
 <tr class="separator:ab749eef93f99b2acab631c6baf2fc4e7 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -752,6 +774,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a
 <tr class="memitem:a8c594d9b3f3a0949ddb810190375123f inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a8c594d9b3f3a0949ddb810190375123f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1ClearAttachments.html">ClearAttachments</a> &amp;)</td></tr>
 <tr class="separator:a8c594d9b3f3a0949ddb810190375123f inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690177a86309044d84c8de01bea07b40 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a690177a86309044d84c8de01bea07b40"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1ClearColorImage.html">ClearColorImage</a> &amp;)</td></tr>
+<tr class="separator:a690177a86309044d84c8de01bea07b40 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1308b9a44a2f21a51cc5f63e558b175b inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a1308b9a44a2f21a51cc5f63e558b175b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1ClearDepthStencilImage.html">ClearDepthStencilImage</a> &amp;)</td></tr>
+<tr class="separator:a1308b9a44a2f21a51cc5f63e558b175b inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7130da961421ba258d9d3aed381b0eda inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a7130da961421ba258d9d3aed381b0eda"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1QueryPool.html">QueryPool</a> &amp;)</td></tr>
 <tr class="separator:a7130da961421ba258d9d3aed381b0eda inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -797,9 +825,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a
 <tr class="memitem:afeaecd602ad97eacfe8c3e0b3faece2a inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="afeaecd602ad97eacfe8c3e0b3faece2a"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1KeyEvent.html">KeyEvent</a> &amp;)</td></tr>
 <tr class="separator:afeaecd602ad97eacfe8c3e0b3faece2a inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0deb0c70f7012cb0474b984d7df5df82 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a0deb0c70f7012cb0474b984d7df5df82"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1KeyReleaseEvent.html">KeyReleaseEvent</a> &amp;)</td></tr>
-<tr class="separator:a0deb0c70f7012cb0474b984d7df5df82 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fb7531525e614ed353d3f46e4d049a4 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a9fb7531525e614ed353d3f46e4d049a4"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1PointerEvent.html">PointerEvent</a> &amp;)</td></tr>
 <tr class="separator:a9fb7531525e614ed353d3f46e4d049a4 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -812,6 +837,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a
 <tr class="memitem:a8877d3ee5d430631b55b31380e8034e9 inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a8877d3ee5d430631b55b31380e8034e9"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1AnimationPath.html">AnimationPath</a> &amp;)</td></tr>
 <tr class="separator:a8877d3ee5d430631b55b31380e8034e9 inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0122daa07eb9135145ddefda37022d5f inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a0122daa07eb9135145ddefda37022d5f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1ShaderCompileSettings.html">ShaderCompileSettings</a> &amp;)</td></tr>
+<tr class="separator:a0122daa07eb9135145ddefda37022d5f inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e3746a9418cea6d0caeaee914574bfb inherit pub_methods_classvsg_1_1Visitor"><td class="memItemLeft" align="right" valign="top"><a id="a9e3746a9418cea6d0caeaee914574bfb"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1Camera.html">Camera</a> &amp;)</td></tr>
 <tr class="separator:a9e3746a9418cea6d0caeaee914574bfb inherit pub_methods_classvsg_1_1Visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -877,7 +905,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -946,8 +974,56 @@ std::map&lt; <a class="el" href="classvsg_1_1observer__ptr.html">observer_ptr</a
 <tr class="separator:a8024bff0c4f1c1153c4592a481845ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d974ea98aab4a18f7b1510e9627a96a"><td class="memItemLeft" align="right" valign="top"><a id="a4d974ea98aab4a18f7b1510e9627a96a"></a>
 std::map&lt; KeySymbol, <a class="el" href="structvsg_1_1Trackball_1_1Viewpoint.html">Viewpoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a4d974ea98aab4a18f7b1510e9627a96a">keyViewpointMap</a></td></tr>
-<tr class="memdesc:a4d974ea98aab4a18f7b1510e9627a96a"><td class="mdescLeft">&#160;</td><td class="mdescRight">container that maps key symbol bindings with the <a class="el" href="structvsg_1_1Trackball_1_1Viewpoint.html">Viewpoint</a> that should move the <a class="el" href="classvsg_1_1LookAt.html" title="LookAt is a ViewMatrix that implements gluLookAt model for specify the view matrix.">LookAt</a> to when pressed. <br /></td></tr>
+<tr class="memdesc:a4d974ea98aab4a18f7b1510e9627a96a"><td class="mdescLeft">&#160;</td><td class="mdescRight">container that maps key symbol bindings with the <a class="el" href="structvsg_1_1Trackball_1_1Viewpoint.html">Viewpoint</a> that should move the <a class="el" href="classvsg_1_1LookAt.html" title="LookAt is a ViewMatrix that implements the gluLookAt model for specifying the view matrix.">LookAt</a> to when pressed. <br /></td></tr>
 <tr class="separator:a4d974ea98aab4a18f7b1510e9627a96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec4bc1d26a7a87c3ba8a60ed20fcf08"><td class="memItemLeft" align="right" valign="top"><a id="aeec4bc1d26a7a87c3ba8a60ed20fcf08"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#aeec4bc1d26a7a87c3ba8a60ed20fcf08">turnLeftKey</a> = KEY_a</td></tr>
+<tr class="memdesc:aeec4bc1d26a7a87c3ba8a60ed20fcf08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that turns the view left around the eye points. <br /></td></tr>
+<tr class="separator:aeec4bc1d26a7a87c3ba8a60ed20fcf08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eefa40359ff98f5cd3952fadc9abc6e"><td class="memItemLeft" align="right" valign="top"><a id="a8eefa40359ff98f5cd3952fadc9abc6e"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a8eefa40359ff98f5cd3952fadc9abc6e">turnRightKey</a> = KEY_d</td></tr>
+<tr class="memdesc:a8eefa40359ff98f5cd3952fadc9abc6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that turns the view right around the eye points. <br /></td></tr>
+<tr class="separator:a8eefa40359ff98f5cd3952fadc9abc6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a773fd0db8ba55d8263ff8bcdc1cc08ad"><td class="memItemLeft" align="right" valign="top"><a id="a773fd0db8ba55d8263ff8bcdc1cc08ad"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a773fd0db8ba55d8263ff8bcdc1cc08ad">pitchUpKey</a> = KEY_w</td></tr>
+<tr class="memdesc:a773fd0db8ba55d8263ff8bcdc1cc08ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that pitches up the view around the eye point. <br /></td></tr>
+<tr class="separator:a773fd0db8ba55d8263ff8bcdc1cc08ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae12c9cb5b893f6cc3f780fccf9bb1694"><td class="memItemLeft" align="right" valign="top"><a id="ae12c9cb5b893f6cc3f780fccf9bb1694"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#ae12c9cb5b893f6cc3f780fccf9bb1694">pitchDownKey</a> = KEY_s</td></tr>
+<tr class="memdesc:ae12c9cb5b893f6cc3f780fccf9bb1694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that pitches down the view around the eye point. <br /></td></tr>
+<tr class="separator:ae12c9cb5b893f6cc3f780fccf9bb1694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89dec9e52839ef9f8f5bea0abb79e2be"><td class="memItemLeft" align="right" valign="top"><a id="a89dec9e52839ef9f8f5bea0abb79e2be"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a89dec9e52839ef9f8f5bea0abb79e2be">rollLeftKey</a> = KEY_q</td></tr>
+<tr class="memdesc:a89dec9e52839ef9f8f5bea0abb79e2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that rools the view anti-clockwise/left. <br /></td></tr>
+<tr class="separator:a89dec9e52839ef9f8f5bea0abb79e2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59477467f42741f40faeeeea52f691ff"><td class="memItemLeft" align="right" valign="top"><a id="a59477467f42741f40faeeeea52f691ff"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a59477467f42741f40faeeeea52f691ff">rollRightKey</a> = KEY_e</td></tr>
+<tr class="memdesc:a59477467f42741f40faeeeea52f691ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that rolls the view clockwise/right. <br /></td></tr>
+<tr class="separator:a59477467f42741f40faeeeea52f691ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35901383164a0daf763632f1b86f079d"><td class="memItemLeft" align="right" valign="top"><a id="a35901383164a0daf763632f1b86f079d"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a35901383164a0daf763632f1b86f079d">moveForwardKey</a> = KEY_o</td></tr>
+<tr class="memdesc:a35901383164a0daf763632f1b86f079d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that moves the view forward. <br /></td></tr>
+<tr class="separator:a35901383164a0daf763632f1b86f079d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d7df7efdaced15f762b4b0e91d2de0"><td class="memItemLeft" align="right" valign="top"><a id="a85d7df7efdaced15f762b4b0e91d2de0"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a85d7df7efdaced15f762b4b0e91d2de0">moveBackwardKey</a> = KEY_i</td></tr>
+<tr class="memdesc:a85d7df7efdaced15f762b4b0e91d2de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that moves the view backwards. <br /></td></tr>
+<tr class="separator:a85d7df7efdaced15f762b4b0e91d2de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f092d2e6110f161a5b9748f91d4e956"><td class="memItemLeft" align="right" valign="top"><a id="a6f092d2e6110f161a5b9748f91d4e956"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a6f092d2e6110f161a5b9748f91d4e956">moveLeftKey</a> = KEY_Left</td></tr>
+<tr class="memdesc:a6f092d2e6110f161a5b9748f91d4e956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that moves the view left. <br /></td></tr>
+<tr class="separator:a6f092d2e6110f161a5b9748f91d4e956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6ee0d78ad367a3a31283f7ae924bcd2"><td class="memItemLeft" align="right" valign="top"><a id="ac6ee0d78ad367a3a31283f7ae924bcd2"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#ac6ee0d78ad367a3a31283f7ae924bcd2">moveRightKey</a> = KEY_Right</td></tr>
+<tr class="memdesc:ac6ee0d78ad367a3a31283f7ae924bcd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that moves the view right. <br /></td></tr>
+<tr class="separator:ac6ee0d78ad367a3a31283f7ae924bcd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a986fadc21a8f5dc38501108f5b5e5963"><td class="memItemLeft" align="right" valign="top"><a id="a986fadc21a8f5dc38501108f5b5e5963"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a986fadc21a8f5dc38501108f5b5e5963">moveUpKey</a> = KEY_Up</td></tr>
+<tr class="memdesc:a986fadc21a8f5dc38501108f5b5e5963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that moves the view upward. <br /></td></tr>
+<tr class="separator:a986fadc21a8f5dc38501108f5b5e5963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace437cc46ac72e46b5c7f4d9cf505c1b"><td class="memItemLeft" align="right" valign="top"><a id="ace437cc46ac72e46b5c7f4d9cf505c1b"></a>
+KeySymbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#ace437cc46ac72e46b5c7f4d9cf505c1b">moveDownKey</a> = KEY_Down</td></tr>
+<tr class="memdesc:ace437cc46ac72e46b5c7f4d9cf505c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key that moves the view downward. <br /></td></tr>
+<tr class="separator:ace437cc46ac72e46b5c7f4d9cf505c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59c885b238c0565d3ed08c1a4916f7ab"><td class="memItemLeft" align="right" valign="top"><a id="a59c885b238c0565d3ed08c1a4916f7ab"></a>
 ButtonMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a59c885b238c0565d3ed08c1a4916f7ab">rotateButtonMask</a> = BUTTON_MASK_1</td></tr>
 <tr class="memdesc:a59c885b238c0565d3ed08c1a4916f7ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button mask value used to enable panning of the view, defaults to left mouse button. <br /></td></tr>
@@ -960,9 +1036,13 @@ ButtonMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 ButtonMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a86f7ca4a984d0be54b07e3eb21829331">zoomButtonMask</a> = BUTTON_MASK_3</td></tr>
 <tr class="memdesc:a86f7ca4a984d0be54b07e3eb21829331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button mask value used to enable zooming of the view, defaults to right mouse button. <br /></td></tr>
 <tr class="separator:a86f7ca4a984d0be54b07e3eb21829331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25f2d7e769763fbd1e1f5dbc672a2a0a"><td class="memItemLeft" align="right" valign="top"><a id="a25f2d7e769763fbd1e1f5dbc672a2a0a"></a>
+ButtonMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a25f2d7e769763fbd1e1f5dbc672a2a0a">touchMappedToButtonMask</a> = BUTTON_MASK_1</td></tr>
+<tr class="memdesc:a25f2d7e769763fbd1e1f5dbc672a2a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button mask value used used for touch events. <br /></td></tr>
+<tr class="separator:a25f2d7e769763fbd1e1f5dbc672a2a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fbd38502b39b5b67d2b3f0da5d16fb4"><td class="memItemLeft" align="right" valign="top"><a id="a6fbd38502b39b5b67d2b3f0da5d16fb4"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a6fbd38502b39b5b67d2b3f0da5d16fb4">zoomScale</a> = 1.0</td></tr>
-<tr class="memdesc:a6fbd38502b39b5b67d2b3f0da5d16fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale for control how rapidly the view zooms in/out. Positive value zooms in when mouse moved downwards. <br /></td></tr>
+<tr class="memdesc:a6fbd38502b39b5b67d2b3f0da5d16fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale for controlling how rapidly the view zooms in/out. Positive value zooms in when mouse moves downwards. <br /></td></tr>
 <tr class="separator:a6fbd38502b39b5b67d2b3f0da5d16fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b8e3ca6061b3aec51ef0bcf3d2fb704"><td class="memItemLeft" align="right" valign="top"><a id="a2b8e3ca6061b3aec51ef0bcf3d2fb704"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Trackball.html#a2b8e3ca6061b3aec51ef0bcf3d2fb704">supportsThrow</a> = true</td></tr>
@@ -996,9 +1076,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a6c5616fc617388da4bc5348365966850"><td class="memItemLeft" align="right" valign="top"><a id="a6c5616fc617388da4bc5348365966850"></a>
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1EllipsoidModel.html">EllipsoidModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_ellipsoidModel</b></td></tr>
 <tr class="separator:a6c5616fc617388da4bc5348365966850"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad30bbd7c18eb4aa234115810967e47c8"><td class="memItemLeft" align="right" valign="top"><a id="ad30bbd7c18eb4aa234115810967e47c8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>_hasFocus</b> = false</td></tr>
-<tr class="separator:ad30bbd7c18eb4aa234115810967e47c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e1e12943d1d60647d3bc91567b06d8a"><td class="memItemLeft" align="right" valign="top"><a id="a6e1e12943d1d60647d3bc91567b06d8a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_hasKeyboardFocus</b> = false</td></tr>
+<tr class="separator:a6e1e12943d1d60647d3bc91567b06d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ef853a44b4ebb23aeddf1265d0a101c"><td class="memItemLeft" align="right" valign="top"><a id="a5ef853a44b4ebb23aeddf1265d0a101c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_hasPointerFocus</b> = false</td></tr>
+<tr class="separator:a5ef853a44b4ebb23aeddf1265d0a101c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa048a6b476892ccb9f8a940fc20fe30c"><td class="memItemLeft" align="right" valign="top"><a id="aa048a6b476892ccb9f8a940fc20fe30c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_lastPointerEventWithinRenderArea</b> = false</td></tr>
 <tr class="separator:aa048a6b476892ccb9f8a940fc20fe30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1044,6 +1127,9 @@ time_point&#160;</td><td class="memItemRight" valign="bottom"><b>_startTime</b><
 <tr class="memitem:a689842c294b1a4010e2ee767e97535d0"><td class="memItemLeft" align="right" valign="top"><a id="a689842c294b1a4010e2ee767e97535d0"></a>
 std::map&lt; uint32_t, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1TouchEvent.html">TouchEvent</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_previousTouches</b></td></tr>
 <tr class="separator:a689842c294b1a4010e2ee767e97535d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46115946966c4cd87969b7eda63427fd"><td class="memItemLeft" align="right" valign="top"><a id="a46115946966c4cd87969b7eda63427fd"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Keyboard.html">Keyboard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_keyboard</b></td></tr>
+<tr class="separator:a46115946966c4cd87969b7eda63427fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8daf7e6b83192ae7b861533fdf462dc4"><td class="memItemLeft" align="right" valign="top"><a id="a8daf7e6b83192ae7b861533fdf462dc4"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>_animationDuration</b> = 0.0</td></tr>
 <tr class="separator:a8daf7e6b83192ae7b861533fdf462dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1107,7 +1193,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>set the <a class="el" href="classvsg_1_1LookAt.html" title="LookAt is a ViewMatrix that implements gluLookAt model for specify the view matrix.">LookAt</a> viewport to the specified lookAt, animating the movements from the current lookAt to the new one. A value of 0.0 instantly moves the lookAt to the new value. </p>
+<p>set the <a class="el" href="classvsg_1_1LookAt.html" title="LookAt is a ViewMatrix that implements the gluLookAt model for specifying the view matrix.">LookAt</a> viewport to the specified lookAt, animating the movements from the current lookAt to the new one. A value of 0.0 instantly moves the lookAt to the new value. </p>
 
 </div>
 </div>

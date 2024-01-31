@@ -1,5 +1,5 @@
 <map id="vsg::DescriptorPool" name="vsg::DescriptorPool">
-<area shape="rect" id="node1" title="DesctiporPool encapsulates management of VkDescriptorPool." alt="" coords="139,185,287,212"/>
+<area shape="rect" id="node1" title="DescriptorPool encapsulates management of VkDescriptorPool." alt="" coords="139,185,287,212"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,81,161,123"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
 <area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="185,81,328,123"/>

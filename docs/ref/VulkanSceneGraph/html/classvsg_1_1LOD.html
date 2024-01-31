@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -130,6 +130,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>traverse</b> (<a clas
 <tr class="memitem:a2f5828da1e887c9110e0fa202464b733"><td class="memItemLeft" align="right" valign="top"><a id="a2f5828da1e887c9110e0fa202464b733"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>traverse</b> (<a class="el" href="classvsg_1_1RecordTraversal.html">RecordTraversal</a> &amp;visitor) const override</td></tr>
 <tr class="separator:a2f5828da1e887c9110e0fa202464b733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b013529b4a7a2092eefdecd4ecab9af"><td class="memItemLeft" align="right" valign="top"><a id="a3b013529b4a7a2092eefdecd4ecab9af"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1LOD.html#a3b013529b4a7a2092eefdecd4ecab9af">compare</a> (const <a class="el" href="classvsg_1_1Object.html">Object</a> &amp;rhs) const override</td></tr>
+<tr class="memdesc:a3b013529b4a7a2092eefdecd4ecab9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal, return 1 if rhs is greater, <br /></td></tr>
+<tr class="separator:a3b013529b4a7a2092eefdecd4ecab9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16dcdf2778aa6b24c05f49ce09f1cc36"><td class="memItemLeft" align="right" valign="top"><a id="a16dcdf2778aa6b24c05f49ce09f1cc36"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (<a class="el" href="classvsg_1_1Input.html">Input</a> &amp;input) override</td></tr>
 <tr class="separator:a16dcdf2778aa6b24c05f49ce09f1cc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -227,7 +231,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -351,7 +355,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Level of Detail <a class="el" href="classvsg_1_1Node.html">Node</a>, Children should be ordered with the highest resolution <a class="el" href="structvsg_1_1LOD_1_1Child.html">Child</a> first, thought to lowest resolution <a class="el" href="classvsg_1_1LOD.html">LOD</a> child last. The <a class="el" href="structvsg_1_1LOD_1_1Child.html">Child</a> struct stores the visibleHeightRatio and child that it's associated with. During culling tHe visibleHeightRatio is used as a ratio of screen height that Bound sphere occupies on screen needs to be at least in order for the associated child to be traversed. Once on child passes this test no more children are checked, so that no more than on child will ever being traversed in a record traversal. If no <a class="el" href="structvsg_1_1LOD_1_1Child.html">Child</a> pass the visible height test then none of the <a class="el" href="classvsg_1_1LOD.html">LOD</a>'s children will be visible. During the record traversals the Bound sphere is also checked against the view frustum so that <a class="el" href="classvsg_1_1LOD.html">LOD</a>'s also enable view frustum culling for subgraphs so there is no need for a separate CullNode/CullGroup to decorate it. </p>
+<div class="textblock"><p>Level of Detail <a class="el" href="classvsg_1_1Node.html">Node</a>, Children should be ordered with the highest resolution child first, through to lowest resolution <a class="el" href="classvsg_1_1LOD.html">LOD</a> child last. The <a class="el" href="structvsg_1_1LOD_1_1Child.html">Child</a> struct stores the minimumScreenHeightRatio and child that it's associated with. During culling the minimumScreenHeightRatio is used as a minimum ratio of screen height that a bounding sphere needs to occupy in order for the associated child to be traversed. Once one child passes this test no more children are checked, so that no more than one child will ever be traversed in a record traversal. If no child passes the visible height test then none of the <a class="el" href="classvsg_1_1LOD.html">LOD</a>'s children will be visible. During the record traversals the Bound sphere is also checked against the view frustum so that <a class="el" href="classvsg_1_1LOD.html">LOD</a>'s also enable view frustum culling for subgraphs so there is no need for a separate CullNode/CullGroup to decorate it. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/nodes/<a class="el" href="LOD_8h_source.html">LOD.h</a></li>
 </ul>

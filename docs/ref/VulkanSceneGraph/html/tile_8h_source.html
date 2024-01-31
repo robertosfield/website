@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -129,16 +129,17 @@ $(function() {
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        ref_ptr&lt;ShaderSet&gt; _shaderSet;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        ref_ptr&lt;GraphicsPipelineConfigurator&gt; _graphicsPipelineConfig;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        ref_ptr&lt;Sampler&gt; _sampler;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        ref_ptr&lt;DescriptorBuffer&gt; _material;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    };</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1tile.html">vsg::tile</a>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        uint32_t _materialSetIndex = 1;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        ref_ptr&lt;Sampler&gt; _sampler;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        ref_ptr&lt;DescriptorBuffer&gt; _material;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    };</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1tile.html">vsg::tile</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;} <span class="comment">// namespace vsg</span></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1Path_html"><div class="ttname"><a href="classvsg_1_1Path.html">vsg::Path</a></div><div class="ttdef"><b>Definition:</b> Path.h:32</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>
-<div class="ttc" id="aclassvsg_1_1tile_html"><div class="ttname"><a href="classvsg_1_1tile.html">vsg::tile</a></div><div class="ttdoc">tile reader that is used by th vsg::TileDatabase node to implement the reading of external tiles</div><div class="ttdef"><b>Definition:</b> tile.h:26</div></div>
+<div class="ttc" id="aclassvsg_1_1tile_html"><div class="ttname"><a href="classvsg_1_1tile.html">vsg::tile</a></div><div class="ttdoc">tile reader that is used by the vsg::TileDatabase node to implement the reading of external tiles</div><div class="ttdef"><b>Definition:</b> tile.h:26</div></div>
 <div class="ttc" id="aclassvsg_1_1tile_html_a2bbc857fb58b7b8afc7b77be00d2973b"><div class="ttname"><a href="classvsg_1_1tile.html#a2bbc857fb58b7b8afc7b77be00d2973b">vsg::tile::init</a></div><div class="ttdeci">void init(ref_ptr&lt; const Options &gt; options)</div><div class="ttdoc">initialize internal data structures</div></div>
 <div class="ttc" id="aclassvsg_1_1tile_html_a3275e7856dc13b48cfe3755bc9c450f6"><div class="ttname"><a href="classvsg_1_1tile.html#a3275e7856dc13b48cfe3755bc9c450f6">vsg::tile::read</a></div><div class="ttdeci">ref_ptr&lt; Object &gt; read(const Path &amp;filename, ref_ptr&lt; const Options &gt; options={}) const override</div><div class="ttdoc">read the tile</div></div>
 <div class="ttc" id="aclassvsg_1_1tile_html_acaaccb953c48597e87f0250fb06fcf1d"><div class="ttname"><a href="classvsg_1_1tile.html#acaaccb953c48597e87f0250fb06fcf1d">vsg::tile::settings</a></div><div class="ttdeci">ref_ptr&lt; TileDatabaseSettings &gt; settings</div><div class="ttdoc">settings provided by the vsg::TileDatabase node</div><div class="ttdef"><b>Definition:</b> tile.h:34</div></div>

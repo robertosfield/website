@@ -1,5 +1,5 @@
 <map id="vsg::RenderGraph" name="vsg::RenderGraph">
-<area shape="rect" id="node1" title=" " alt="" coords="1209,111,1348,138"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1209,143,1348,170"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="844,5,997,47"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Group.html" title="Group node provides a list of children." alt="" coords="688,13,780,39"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="491,5,639,47"/>
@@ -9,4 +9,5 @@
 <area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="829,71,1012,112"/>
 <area shape="rect" id="node9" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="849,136,992,177"/>
 <area shape="rect" id="node10" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="849,201,992,243"/>
+<area shape="rect" id="node11" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="849,267,992,308"/>
 </map>

@@ -1,10 +1,12 @@
 <map id="vsg::DrawMeshTasksIndirectCount" name="vsg::DrawMeshTasksIndirectCount">
-<area shape="rect" id="node1" title="DrawMeshTasksIndirectCount command encapsulates vkCmdDrawMeshTasksIndirectCountEXT call and associate..." alt="" coords="1245,47,1452,88"/>
-<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="857,5,1091,47"/>
-<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class from encapsualting vkCmd* calls and associated settings." alt="" coords="688,13,808,39"/>
-<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="491,5,639,47"/>
-<area shape="rect" id="node5" href="$classvsg_1_1Node.html" title=" " alt="" coords="355,13,441,39"/>
-<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
-<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
-<area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="903,71,1045,112"/>
+<area shape="rect" id="node1" title="DrawMeshTasksIndirectCount command encapsulates vkCmdDrawMeshTasksIndirectCountEXT call and associate..." alt="" coords="1659,47,1865,88"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="1271,5,1504,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class for encapsulating vkCmd* calls and associated settings." alt="" coords="1101,13,1221,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="864,5,1052,47"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Compilable.html" title="Base class for encapsulating nodes that have Vulkan objects associated with them that will need compi..." alt="" coords="688,13,815,39"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="491,5,639,47"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Node.html" title=" " alt="" coords="355,13,441,39"/>
+<area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" id="node9" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node10" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="1316,71,1459,112"/>
 </map>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -120,9 +120,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 <tr class="memitem:a18a2f35d040100dc170a5bee7ee90050"><td class="memItemLeft" align="right" valign="top"><a id="a18a2f35d040100dc170a5bee7ee90050"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>blockSize</b> = 0</td></tr>
 <tr class="separator:a18a2f35d040100dc170a5bee7ee90050"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6316ada6b2329feadec80a48ae49c78e"><td class="memItemLeft" align="right" valign="top"><a id="a6316ada6b2329feadec80a48ae49c78e"></a>
-std::list&lt; std::unique_ptr&lt; <a class="el" href="structvsg_1_1Allocator_1_1MemoryBlock.html">MemoryBlock</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>memoryBlocks</b></td></tr>
-<tr class="separator:a6316ada6b2329feadec80a48ae49c78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ee5fb353e3a3ef2267644eb20033bdf"><td class="memItemLeft" align="right" valign="top"><a id="a4ee5fb353e3a3ef2267644eb20033bdf"></a>
+std::map&lt; void *, std::shared_ptr&lt; <a class="el" href="structvsg_1_1Allocator_1_1MemoryBlock.html">MemoryBlock</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>memoryBlocks</b></td></tr>
+<tr class="separator:a4ee5fb353e3a3ef2267644eb20033bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01f865843fb3731d362dfb41e56d934"><td class="memItemLeft" align="right" valign="top"><a id="af01f865843fb3731d362dfb41e56d934"></a>
+std::shared_ptr&lt; <a class="el" href="structvsg_1_1Allocator_1_1MemoryBlock.html">MemoryBlock</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>latestMemoryBlock</b></td></tr>
+<tr class="separator:af01f865843fb3731d362dfb41e56d934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/vsg/core/<a class="el" href="Allocator_8h_source.html">Allocator.h</a></li>

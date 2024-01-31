@@ -1,5 +1,5 @@
 <map id="vsg::SpotLight" name="vsg::SpotLight">
-<area shape="rect" id="node1" title="SpotLight represents a local point light source which intensity varies as a spot light." alt="" coords="26,497,141,524"/>
+<area shape="rect" id="node1" title="SpotLight represents a local point light source whose intensity varies as a spot light." alt="" coords="26,497,141,524"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="10,408,157,449"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Light.html" title=" " alt="" coords="41,333,126,360"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="9,244,157,285"/>

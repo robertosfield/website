@@ -1,0 +1,6 @@
+<map id="vsg::Keyboard" name="vsg::Keyboard">
+<area shape="rect" id="node1" title="Keyboard tracks keyboard events to enable the querying of the key pressed state and how long the key ..." alt="" coords="26,244,141,271"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,155,161,196"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Visitor.html" title=" " alt="" coords="36,80,131,107"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
+</map>

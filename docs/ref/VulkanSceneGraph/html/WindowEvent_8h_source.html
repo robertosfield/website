@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -162,13 +162,35 @@ $(function() {
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    };</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1CloseWindowEvent.html">vsg::CloseWindowEvent</a>);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classvsg_1_1FocusInEvent.html">   97</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classvsg_1_1FocusInEvent.html">FocusInEvent</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;WindowEvent, FocusInEvent&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classvsg_1_1FocusInEvent.html">FocusInEvent</a>() {}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="classvsg_1_1FocusInEvent.html">FocusInEvent</a>(<a class="code" href="classvsg_1_1Window.html">Window</a>* in_window, time_point in_time) :</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>(in_window, in_time) {}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    };</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1FocusInEvent.html">vsg::FocusInEvent</a>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classvsg_1_1FocusOutEvent.html">  108</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classvsg_1_1FocusOutEvent.html">FocusOutEvent</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;WindowEvent, FocusOutEvent&gt;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="classvsg_1_1FocusOutEvent.html">FocusOutEvent</a>() {}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="classvsg_1_1FocusOutEvent.html">FocusOutEvent</a>(<a class="code" href="classvsg_1_1Window.html">Window</a>* in_window, time_point in_time) :</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>(in_window, in_time) {}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    };</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1FocusOutEvent.html">vsg::FocusOutEvent</a>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;} <span class="comment">// namespace vsg</span></div>
 <div class="ttc" id="aclassvsg_1_1CloseWindowEvent_html"><div class="ttname"><a href="classvsg_1_1CloseWindowEvent.html">vsg::CloseWindowEvent</a></div><div class="ttdoc">CloseWindowEvent represents a window close event.</div><div class="ttdef"><b>Definition:</b> WindowEvent.h:87</div></div>
-<div class="ttc" id="aclassvsg_1_1ConfigureWindowEvent_html"><div class="ttname"><a href="classvsg_1_1ConfigureWindowEvent.html">vsg::ConfigureWindowEvent</a></div><div class="ttdoc">ExposeWindowEvent represents a window configure event - such as changes to the size of the window.</div><div class="ttdef"><b>Definition:</b> WindowEvent.h:64</div></div>
+<div class="ttc" id="aclassvsg_1_1ConfigureWindowEvent_html"><div class="ttname"><a href="classvsg_1_1ConfigureWindowEvent.html">vsg::ConfigureWindowEvent</a></div><div class="ttdoc">ConfigureWindowEvent represents a window configure event - such as changes to the size of the window.</div><div class="ttdef"><b>Definition:</b> WindowEvent.h:64</div></div>
 <div class="ttc" id="aclassvsg_1_1ExposeWindowEvent_html"><div class="ttname"><a href="classvsg_1_1ExposeWindowEvent.html">vsg::ExposeWindowEvent</a></div><div class="ttdoc">ExposeWindowEvent represents a window expose event.</div><div class="ttdef"><b>Definition:</b> WindowEvent.h:41</div></div>
+<div class="ttc" id="aclassvsg_1_1FocusInEvent_html"><div class="ttname"><a href="classvsg_1_1FocusInEvent.html">vsg::FocusInEvent</a></div><div class="ttdoc">FocusInEvent represents a window acquiring focus event.</div><div class="ttdef"><b>Definition:</b> WindowEvent.h:98</div></div>
+<div class="ttc" id="aclassvsg_1_1FocusOutEvent_html"><div class="ttname"><a href="classvsg_1_1FocusOutEvent.html">vsg::FocusOutEvent</a></div><div class="ttdoc">FocusOutEvent represents a window losing focus event.</div><div class="ttdef"><b>Definition:</b> WindowEvent.h:109</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
-<div class="ttc" id="aclassvsg_1_1Input_html"><div class="ttname"><a href="classvsg_1_1Input.html">vsg::Input</a></div><div class="ttdef"><b>Definition:</b> Input.h:43</div></div>
-<div class="ttc" id="aclassvsg_1_1Output_html"><div class="ttname"><a href="classvsg_1_1Output.html">vsg::Output</a></div><div class="ttdef"><b>Definition:</b> Output.h:40</div></div>
+<div class="ttc" id="aclassvsg_1_1Input_html"><div class="ttname"><a href="classvsg_1_1Input.html">vsg::Input</a></div><div class="ttdef"><b>Definition:</b> Input.h:44</div></div>
+<div class="ttc" id="aclassvsg_1_1Output_html"><div class="ttname"><a href="classvsg_1_1Output.html">vsg::Output</a></div><div class="ttdef"><b>Definition:</b> Output.h:41</div></div>
 <div class="ttc" id="aclassvsg_1_1WindowEvent_html"><div class="ttname"><a href="classvsg_1_1WindowEvent.html">vsg::WindowEvent</a></div><div class="ttdoc">WindowEvent is the base class for events related to a window.</div><div class="ttdef"><b>Definition:</b> WindowEvent.h:24</div></div>
 <div class="ttc" id="aclassvsg_1_1Window_html"><div class="ttname"><a href="classvsg_1_1Window.html">vsg::Window</a></div><div class="ttdef"><b>Definition:</b> Window.h:31</div></div>
 <div class="ttc" id="aclassvsg_1_1observer__ptr_html"><div class="ttname"><a href="classvsg_1_1observer__ptr.html">vsg::observer_ptr</a></div><div class="ttdef"><b>Definition:</b> observer_ptr.h:24</div></div>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -117,7 +117,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7d31510706c6ae9d51dfe0abf101df0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6af9dd54db678df26ba99e004f2dbfe"><td class="memItemLeft" align="right" valign="top"><a id="af6af9dd54db678df26ba99e004f2dbfe"></a>
 virtual VkResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1TransferTask.html#af6af9dd54db678df26ba99e004f2dbfe">transferDynamicData</a> ()</td></tr>
-<tr class="memdesc:af6af9dd54db678df26ba99e004f2dbfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">transfer any <a class="el" href="classvsg_1_1Data.html">vsg::Data</a> entries, that have been updated, to have the associated GPU memory. <br /></td></tr>
+<tr class="memdesc:af6af9dd54db678df26ba99e004f2dbfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">transfer any <a class="el" href="classvsg_1_1Data.html">vsg::Data</a> entries that have been updated to the associated GPU memory. <br /></td></tr>
 <tr class="separator:af6af9dd54db678df26ba99e004f2dbfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a377945a59b859ea5e7be518ee99697b3"><td class="memItemLeft" align="right" valign="top"><a id="a377945a59b859ea5e7be518ee99697b3"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>containsDataToTransfer</b> () const</td></tr>
@@ -126,14 +126,6 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>containsDataT
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1TransferTask.html#af9063b543f036eb590a4a61eca59b76e">advance</a> ()</td></tr>
 <tr class="memdesc:af9063b543f036eb590a4a61eca59b76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">advance the currentFrameIndex <br /></td></tr>
 <tr class="separator:af9063b543f036eb590a4a61eca59b76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d231401d5643f3cbc319f6aba1e2f2e"><td class="memItemLeft" align="right" valign="top"><a id="a5d231401d5643f3cbc319f6aba1e2f2e"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1TransferTask.html#a5d231401d5643f3cbc319f6aba1e2f2e">index</a> (size_t relativeFrameIndex=0) const</td></tr>
-<tr class="memdesc:a5d231401d5643f3cbc319f6aba1e2f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the fence index value for relativeFrameIndex where 0 is current frame, 1 is previous frame etc. <br /></td></tr>
-<tr class="separator:a5d231401d5643f3cbc319f6aba1e2f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa45e3e654bcc3150df43f3f7a82c69b9"><td class="memItemLeft" align="right" valign="top"><a id="aa45e3e654bcc3150df43f3f7a82c69b9"></a>
-<a class="el" href="classvsg_1_1Fence.html">Fence</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1TransferTask.html#aa45e3e654bcc3150df43f3f7a82c69b9">fence</a> (size_t relativeFrameIndex=0)</td></tr>
-<tr class="memdesc:aa45e3e654bcc3150df43f3f7a82c69b9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classvsg_1_1TransferTask.html#aa45e3e654bcc3150df43f3f7a82c69b9" title="fence() and fence(0) return the Fence for the frame currently being rendered, fence(1) return the pre...">fence()</a> and fence(0) return the <a class="el" href="classvsg_1_1Fence.html">Fence</a> for the frame currently being rendered, fence(1) return the previous frame's <a class="el" href="classvsg_1_1Fence.html">Fence</a> etc. <br /></td></tr>
-<tr class="separator:aa45e3e654bcc3150df43f3f7a82c69b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b1bd5e18b41fbb2edf68dabf5090293"><td class="memItemLeft" align="right" valign="top"><a id="a7b1bd5e18b41fbb2edf68dabf5090293"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>assign</b> (const <a class="el" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">ResourceRequirements::DynamicData</a> &amp;dynamicData)</td></tr>
 <tr class="separator:a7b1bd5e18b41fbb2edf68dabf5090293"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,7 +210,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -308,6 +300,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>BufferMap</b> = std:
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5d231401d5643f3cbc319f6aba1e2f2e"><td class="memItemLeft" align="right" valign="top"><a id="a5d231401d5643f3cbc319f6aba1e2f2e"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>index</b> (size_t relativeFrameIndex=0) const</td></tr>
+<tr class="separator:a5d231401d5643f3cbc319f6aba1e2f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa20b43e00829898315de9e8675b69642"><td class="memItemLeft" align="right" valign="top"><a id="aa20b43e00829898315de9e8675b69642"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>_transferBufferInfos</b> (VkCommandBuffer vk_commandBuffer, <a class="el" href="structvsg_1_1TransferTask_1_1Frame.html">Frame</a> &amp;frame, VkDeviceSize &amp;offset)</td></tr>
 <tr class="separator:aa20b43e00829898315de9e8675b69642"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -377,7 +372,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>operator delet
 <tr class="separator:a1c92fe24ceb719dd228ee06363e79d09 inherit pub_static_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1TransferTask.html">TransferTask</a> manages a collection of dynamically updated <a class="el" href="classvsg_1_1Data.html">vsg::Data</a> associated with GPU memory associated <a class="el" href="classvsg_1_1BufferInfo.html" title="BufferInfo encapsulates the settings that map to VkDescriptorBufferInfo.">vsg::BufferInfo</a> and <a class="el" href="classvsg_1_1ImageInfo.html" title="ImageInfo class provides the VkDescriptorImageInfo settings used when setting up vsg::/vkDescriptorIm...">vsg::ImageInfo</a>. During the viewer.compile(..) traversal the collection of dynamic data that has dataVariance of DYNAMIC_DATA* is assigned to the appropriate <a class="el" href="classvsg_1_1TransferTask.html">TransferTask</a> and then each new frame that collection of data is checked to see if the modification count has changed, if it has that data is copied to the associated BufferInfo/ImageInfo. <a class="el" href="classvsg_1_1Data.html">vsg::Data</a> that are orphaned so the <a class="el" href="classvsg_1_1TransferTask.html">TransferTask</a> has the only remaining reference to them are automatically removed. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1TransferTask.html">TransferTask</a> manages a collection of dynamically updated <a class="el" href="classvsg_1_1Data.html">vsg::Data</a> associated with GPU memory of <a class="el" href="classvsg_1_1BufferInfo.html" title="BufferInfo encapsulates the settings that map to VkDescriptorBufferInfo.">vsg::BufferInfo</a> and <a class="el" href="classvsg_1_1ImageInfo.html" title="ImageInfo class provides the VkDescriptorImageInfo settings used when setting up vsg::/vkDescriptorIm...">vsg::ImageInfo</a>. During the viewer.compile(..) traversal the collection of dynamic data that has dataVariance of DYNAMIC_DATA* is assigned to the appropriate <a class="el" href="classvsg_1_1TransferTask.html">TransferTask</a> and then each new frame that collection of data is checked to see if the modification count has changed, if it has that data is copied to the associated BufferInfo/ImageInfo. <a class="el" href="classvsg_1_1Data.html">vsg::Data</a> that are orphaned so the <a class="el" href="classvsg_1_1TransferTask.html">TransferTask</a> has the only remaining reference to them are automatically removed. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/app/<a class="el" href="TransferTask_8h_source.html">TransferTask.h</a></li>
 </ul>

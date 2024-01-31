@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -159,21 +159,21 @@ $(function() {
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">// namespace vsg</span></div>
 <div class="ttc" id="aclassvsg_1_1Context_html"><div class="ttname"><a href="classvsg_1_1Context.html">vsg::Context</a></div><div class="ttdef"><b>Definition:</b> Context.h:67</div></div>
 <div class="ttc" id="aclassvsg_1_1DeviceMemory_html"><div class="ttname"><a href="classvsg_1_1DeviceMemory.html">vsg::DeviceMemory</a></div><div class="ttdef"><b>Definition:</b> DeviceMemory.h:28</div></div>
-<div class="ttc" id="aclassvsg_1_1Device_html"><div class="ttname"><a href="classvsg_1_1Device.html">vsg::Device</a></div><div class="ttdoc">Device encapsulate vkDeivce, a logical handle to the PhysicalDevice with capabilities specified durin...</div><div class="ttdef"><b>Definition:</b> Device.h:37</div></div>
-<div class="ttc" id="aclassvsg_1_1Image_html"><div class="ttname"><a href="classvsg_1_1Image.html">vsg::Image</a></div><div class="ttdoc">Image class encapsulates VkImage and VkImageCreateInfo settings used to it up.</div><div class="ttdef"><b>Definition:</b> Image.h:25</div></div>
+<div class="ttc" id="aclassvsg_1_1Device_html"><div class="ttname"><a href="classvsg_1_1Device.html">vsg::Device</a></div><div class="ttdoc">Device encapsulates VkDevice, a logical handle to the PhysicalDevice with capabilities specified duri...</div><div class="ttdef"><b>Definition:</b> Device.h:37</div></div>
+<div class="ttc" id="aclassvsg_1_1Image_html"><div class="ttname"><a href="classvsg_1_1Image.html">vsg::Image</a></div><div class="ttdoc">Image class encapsulates VkImage and VkImageCreateInfo settings used to set it up.</div><div class="ttdef"><b>Definition:</b> Image.h:25</div></div>
 <div class="ttc" id="aclassvsg_1_1Image_html_a3f251ddfefbed10defa40f8a99c46d81"><div class="ttname"><a href="classvsg_1_1Image.html#a3f251ddfefbed10defa40f8a99c46d81">vsg::Image::Image</a></div><div class="ttdeci">Image(VkImage image, Device *device)</div><div class="ttdoc">create a vsg::Image wrapper for specified VkImage</div></div>
 <div class="ttc" id="aclassvsg_1_1Image_html_a619d248aca2034ef30a93c0ce8905a8a"><div class="ttname"><a href="classvsg_1_1Image.html#a619d248aca2034ef30a93c0ce8905a8a">vsg::Image::vk</a></div><div class="ttdeci">VkImage vk(uint32_t deviceID) const</div><div class="ttdoc">Vulkan VkImage handle.</div><div class="ttdef"><b>Definition:</b> Image.h:34</div></div>
 <div class="ttc" id="aclassvsg_1_1Image_html_a82b9a3cedf9f0b50c5db6234b498cc10"><div class="ttname"><a href="classvsg_1_1Image.html#a82b9a3cedf9f0b50c5db6234b498cc10">vsg::Image::requiresCopy</a></div><div class="ttdeci">bool requiresCopy(uint32_t deviceID) const</div><div class="ttdoc">return true if the Image's data has been modified and should be copied to the buffer.</div><div class="ttdef"><b>Definition:</b> Image.h:65</div></div>
 <div class="ttc" id="aclassvsg_1_1Image_html_ab3983e13bb8a2ef414b7017ed5defa6c"><div class="ttname"><a href="classvsg_1_1Image.html#ab3983e13bb8a2ef414b7017ed5defa6c">vsg::Image::data</a></div><div class="ttdeci">ref_ptr&lt; Data &gt; data</div><div class="ttdoc">VkImageCreateInfo settings.</div><div class="ttdef"><b>Definition:</b> Image.h:37</div></div>
 <div class="ttc" id="aclassvsg_1_1Image_html_ac5b280c4b13c0afeb518daad335ccc82"><div class="ttname"><a href="classvsg_1_1Image.html#ac5b280c4b13c0afeb518daad335ccc82">vsg::Image::compare</a></div><div class="ttdeci">int compare(const Object &amp;rhs_object) const override</div><div class="ttdoc">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal,...</div></div>
 <div class="ttc" id="aclassvsg_1_1Image_html_acbce390e614df2a9fd17c9bac018d86f"><div class="ttname"><a href="classvsg_1_1Image.html#acbce390e614df2a9fd17c9bac018d86f">vsg::Image::syncModifiedCount</a></div><div class="ttdeci">bool syncModifiedCount(uint32_t deviceID)</div><div class="ttdoc">return true if the Image's data has been modified and should be copied to the buffer,...</div><div class="ttdef"><b>Definition:</b> Image.h:68</div></div>
-<div class="ttc" id="aclassvsg_1_1Image_html_ad98232a42a8f48e17eba5eeff50a2dfa"><div class="ttname"><a href="classvsg_1_1Image.html#ad98232a42a8f48e17eba5eeff50a2dfa">vsg::Image::Image</a></div><div class="ttdeci">Image(ref_ptr&lt; Data &gt; in_data={})</div><div class="ttdoc">create a vsg::Image with optional CreateInfo, delay VkUmage creation to compile</div></div>
+<div class="ttc" id="aclassvsg_1_1Image_html_ad98232a42a8f48e17eba5eeff50a2dfa"><div class="ttname"><a href="classvsg_1_1Image.html#ad98232a42a8f48e17eba5eeff50a2dfa">vsg::Image::Image</a></div><div class="ttdeci">Image(ref_ptr&lt; Data &gt; in_data={})</div><div class="ttdoc">create a vsg::Image, optional Data is used to initialize createInfo, delay VkImage creation to compil...</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1Object_html"><div class="ttname"><a href="classvsg_1_1Object.html">vsg::Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:42</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>
 <div class="ttc" id="astructvsg_1_1Image_1_1VulkanData_html"><div class="ttname"><a href="structvsg_1_1Image_1_1VulkanData.html">vsg::Image::VulkanData</a></div><div class="ttdef"><b>Definition:</b> Image.h:77</div></div>
 <div class="ttc" id="astructvsg_1_1ModifiedCount_html"><div class="ttname"><a href="structvsg_1_1ModifiedCount.html">vsg::ModifiedCount</a></div><div class="ttdoc">ModifiedCount provides a count value to keep track of modifications to data.</div><div class="ttdef"><b>Definition:</b> Data.h:29</div></div>
-<div class="ttc" id="astructvsg_1_1vk__buffer_html"><div class="ttname"><a href="structvsg_1_1vk__buffer.html">vsg::vk_buffer</a></div><div class="ttdoc">vk_buffer that manages a single logical device support.</div><div class="ttdef"><b>Definition:</b> vk_buffer.h:28</div></div>
+<div class="ttc" id="astructvsg_1_1vk__buffer_html"><div class="ttname"><a href="structvsg_1_1vk__buffer.html">vsg::vk_buffer</a></div><div class="ttdoc">vk_buffer that manages a single logical device supported.</div><div class="ttdef"><b>Definition:</b> vk_buffer.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

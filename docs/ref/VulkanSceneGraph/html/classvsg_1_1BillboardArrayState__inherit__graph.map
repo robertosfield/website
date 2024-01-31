@@ -1,5 +1,5 @@
 <map id="vsg::BillboardArrayState" name="vsg::BillboardArrayState">
-<area shape="rect" id="node1" title="BillboardArrayState is ArrayState subclass for mapping vertex array data for billboard instanced geom..." alt="" coords="12,408,192,435"/>
+<area shape="rect" id="node1" title="BillboardArrayState is an ArrayState subclass for mapping vertex array data for billboard instanced g..." alt="" coords="12,408,192,435"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="11,319,193,360"/>
 <area shape="rect" id="node3" href="$classvsg_1_1ArrayState.html" title=" " alt="" coords="41,244,163,271"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,155,199,196"/>

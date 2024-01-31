@@ -1,5 +1,5 @@
 <map id="vsg::ReaderWriter" name="vsg::ReaderWriter">
-<area shape="rect" id="node1" title="Base class from providing support for reading and/or writing various file formats and IO protocols." alt="" coords="352,177,491,203"/>
+<area shape="rect" id="node1" title="Base class for providing support for reading and/or writing various file formats and IO protocols." alt="" coords="352,177,491,203"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="539,5,739,47"/>
 <area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="561,71,716,112"/>
 <area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="539,136,739,177"/>
@@ -11,7 +11,7 @@
 <area shape="rect" id="node5" href="$classvsg_1_1spirv.html" title="ReaderWriter for reading and writing spirv shader files." alt="" coords="849,13,934,39"/>
 <area shape="rect" id="node7" href="$classvsg_1_1glsl.html" title="glsl ReaderWriter supports reading and writing GLSL shader files." alt="" coords="853,78,929,105"/>
 <area shape="rect" id="node9" href="$classvsg_1_1txt.html" title="ReaderWriter for reading and writing text files of different types such as .txt, ,..." alt="" coords="856,143,927,170"/>
-<area shape="rect" id="node11" href="$classvsg_1_1tile.html" title="tile reader that is used by th vsg::TileDatabase node to implement the reading of external tiles" alt="" coords="854,209,929,235"/>
+<area shape="rect" id="node11" href="$classvsg_1_1tile.html" title="tile reader that is used by the vsg::TileDatabase node to implement the reading of external tiles" alt="" coords="854,209,929,235"/>
 <area shape="rect" id="node13" href="$classvsg_1_1VSG.html" title="ReaderWriter for reading and writing native VSG ascii and binary files." alt="" coords="851,274,931,301"/>
-<area shape="rect" id="node15" href="$classvsg_1_1CompositeReaderWriter.html" title="Class for managing a list of ReaderWriter, providing a single read/write call to invoke each RaderWri..." alt="" coords="787,339,996,366"/>
+<area shape="rect" id="node15" href="$classvsg_1_1CompositeReaderWriter.html" title="Class for managing a list of ReaderWriter, providing a single read/write call to invoke each ReaderWr..." alt="" coords="787,339,996,366"/>
 </map>

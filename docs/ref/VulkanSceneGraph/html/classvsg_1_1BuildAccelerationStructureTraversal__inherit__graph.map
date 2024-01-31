@@ -1,5 +1,5 @@
 <map id="vsg::BuildAccelerationStructureTraversal" name="vsg::BuildAccelerationStructureTraversal">
-<area shape="rect" id="node1" title="BuildAccelerationStructureTraversal is helper class for traversal of a scene graph to required accele..." alt="" coords="5,155,232,196"/>
+<area shape="rect" id="node1" title="BuildAccelerationStructureTraversal is a helper class for traversal of a scene graph to build require..." alt="" coords="5,155,232,196"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Visitor.html" title=" " alt="" coords="71,80,166,107"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="71,5,166,32"/>
 </map>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -77,7 +77,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="structvsg_1_1t__vec4.html" title="t_vec4 template class that a represents a 4D vector">t_vec4</a> template class that a represents a 4D vector  
+<p><a class="el" href="structvsg_1_1t__vec4.html" title="t_vec4 template class that represents a 4D vector">t_vec4</a> template class that represents a 4D vector  
  <a href="structvsg_1_1t__vec4.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="vec4_8h_source.html">vec4.h</a>&gt;</code></p>
@@ -99,6 +99,9 @@ constexpr <a class="el" href="structvsg_1_1t__vec4.html">t_vec4</a> &amp;&#160;<
 <tr class="memitem:a610038c13fcb0749f31e640a379038d7"><td class="memItemLeft" align="right" valign="top"><a id="a610038c13fcb0749f31e640a379038d7"></a>
 constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>t_vec4</b> (value_type in_x, value_type in_y, value_type in_z, value_type in_w)</td></tr>
 <tr class="separator:a610038c13fcb0749f31e640a379038d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc05ba68b18da7280fb9c980bb5120f9"><td class="memItemLeft" align="right" valign="top"><a id="afc05ba68b18da7280fb9c980bb5120f9"></a>
+constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>t_vec4</b> (const VkClearColorValue &amp;v)</td></tr>
+<tr class="separator:afc05ba68b18da7280fb9c980bb5120f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adccc97b306965fb027742013502f68ea"><td class="memTemplParams" colspan="2"><a id="adccc97b306965fb027742013502f68ea"></a>
 template&lt;typename R &gt; </td></tr>
 <tr class="memitem:adccc97b306965fb027742013502f68ea"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><b>t_vec4</b> (const <a class="el" href="structvsg_1_1t__vec4.html">t_vec4</a>&lt; R &gt; &amp;v)</td></tr>
@@ -124,6 +127,9 @@ value_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> 
 template&lt;typename R &gt; </td></tr>
 <tr class="memitem:a8fa1e97a7ec61a769f66610c0c2fb636"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structvsg_1_1t__vec4.html">t_vec4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="structvsg_1_1t__vec4.html">t_vec4</a>&lt; R &gt; &amp;rhs)</td></tr>
 <tr class="separator:a8fa1e97a7ec61a769f66610c0c2fb636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f509d5fc1fec3c6f2526392ee4bcb9"><td class="memItemLeft" align="right" valign="top"><a id="a37f509d5fc1fec3c6f2526392ee4bcb9"></a>
+<a class="el" href="structvsg_1_1t__vec4.html">t_vec4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const VkClearColorValue &amp;v)</td></tr>
+<tr class="separator:a37f509d5fc1fec3c6f2526392ee4bcb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff63885d36374bfc15a17dcd2e12baf1"><td class="memItemLeft" align="right" valign="top"><a id="aff63885d36374bfc15a17dcd2e12baf1"></a>
 T *&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> ()</td></tr>
 <tr class="separator:aff63885d36374bfc15a17dcd2e12baf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,6 +154,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (value_type i
 <tr class="memitem:a11b258743bf159a8d75ae62a04304711"><td class="memItemLeft" align="right" valign="top"><a id="a11b258743bf159a8d75ae62a04304711"></a>
 <a class="el" href="structvsg_1_1t__vec4.html">t_vec4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator/=</b> (value_type rhs)</td></tr>
 <tr class="separator:a11b258743bf159a8d75ae62a04304711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa08223e141a395a622e7349967968f9e"><td class="memItemLeft" align="right" valign="top"><a id="aa08223e141a395a622e7349967968f9e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator VkClearColorValue</b> () const noexcept</td></tr>
+<tr class="separator:aa08223e141a395a622e7349967968f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c5afb3bc88342ed950ed06c2d7b617"><td class="memItemLeft" align="right" valign="top"><a id="a32c5afb3bc88342ed950ed06c2d7b617"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator bool</b> () const noexcept</td></tr>
+<tr class="separator:a32c5afb3bc88342ed950ed06c2d7b617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -214,7 +226,7 @@ union {</td></tr>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 struct vsg::t_vec4&lt; T &gt;</h3>
 
-<p><a class="el" href="structvsg_1_1t__vec4.html" title="t_vec4 template class that a represents a 4D vector">t_vec4</a> template class that a represents a 4D vector </p>
+<p><a class="el" href="structvsg_1_1t__vec4.html" title="t_vec4 template class that represents a 4D vector">t_vec4</a> template class that represents a 4D vector </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/vsg/maths/<a class="el" href="vec4_8h_source.html">vec4.h</a></li>
 </ul>

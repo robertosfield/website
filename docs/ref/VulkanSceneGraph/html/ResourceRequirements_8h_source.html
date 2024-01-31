@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -111,155 +111,132 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        uint32_t computeNumDescriptorSets() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        DescriptorPoolSizes computeDescriptorPoolSizes() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structvsg_1_1ResourceRequirements_1_1BinDetails.html">   42</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structvsg_1_1ResourceRequirements_1_1BinDetails.html">BinDetails</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structvsg_1_1ResourceRequirements_1_1ViewDetails.html">   42</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structvsg_1_1ResourceRequirements_1_1ViewDetails.html">ViewDetails</a></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            std::set&lt;int32_t&gt; indices;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            std::set&lt;const Bin*&gt; bins;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        };</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">using</span> Descriptors = std::set&lt;const Descriptor*&gt;;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">using</span> DescriptorSets = std::set&lt;const DescriptorSet*&gt;;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">using</span> DescriptorTypeMap = std::map&lt;VkDescriptorType, uint32_t&gt;;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">using</span> Views = std::map&lt;const View*, BinDetails&gt;;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">using</span> BinStack = std::stack&lt;BinDetails&gt;;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">   54</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">DynamicData</a></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            BufferInfoList bufferInfos;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            ImageInfoList imageInfos;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() <span class="keyword">const</span> noexcept { <span class="keywordflow">return</span> !bufferInfos.empty() || !imageInfos.empty(); }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordtype">void</span> clear()</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                bufferInfos.clear();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                imageInfos.clear();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordtype">void</span> add(<span class="keyword">const</span> <a class="code" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">DynamicData</a>&amp; dd)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                bufferInfos.insert(bufferInfos.end(), dd.bufferInfos.begin(), dd.bufferInfos.end());</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                imageInfos.insert(imageInfos.end(), dd.imageInfos.begin(), dd.imageInfos.end());</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        };</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">DynamicData</a> earlyDynamicData;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">DynamicData</a> lateDynamicData;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        Descriptors descriptors;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        DescriptorSets descriptorSets;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        DescriptorTypeMap descriptorTypeMap;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        Views views;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        BinStack binStack;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        uint32_t maxSlot = 0;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        uint32_t externalNumDescriptorSets = 0;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">bool</span> containsPagedLOD = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        VkDeviceSize minimumBufferSize = 16 * 1024 * 1024;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        VkDeviceSize minimumDeviceMemorySize = 16 * 1024 * 1024;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1ResourceRequirements.html">vsg::ResourceRequirements</a>);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classvsg_1_1CollectResourceRequirements.html">   93</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1CollectResourceRequirements.html">CollectResourceRequirements</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;ConstVisitor, CollectResourceRequirements&gt;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classvsg_1_1CollectResourceRequirements.html">CollectResourceRequirements</a>() { overrideMask = vsg::MASK_ALL; }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="classvsg_1_1ResourceRequirements.html">ResourceRequirements</a> requirements;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classvsg_1_1CollectResourceRequirements.html#a9a3f1eb7da3dafe3455775e23e9e102a">  101</a></span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ResourceHints&gt;</a> <a class="code" href="classvsg_1_1CollectResourceRequirements.html#a9a3f1eb7da3dafe3455775e23e9e102a">createResourceHints</a>(uint32_t tileMultiplier = 1) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            std::set&lt;const Light*&gt; lights;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">using</span> Descriptors = std::set&lt;const Descriptor*&gt;;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">using</span> DescriptorSets = std::set&lt;const DescriptorSet*&gt;;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">using</span> DescriptorTypeMap = std::map&lt;VkDescriptorType, uint32_t&gt;;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">using</span> Views = std::map&lt;const View*, ViewDetails&gt;;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">using</span> ViewDetailStack = std::stack&lt;ViewDetails&gt;;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">   55</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">DynamicData</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            BufferInfoList bufferInfos;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            ImageInfoList imageInfos;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() <span class="keyword">const</span> noexcept { <span class="keywordflow">return</span> !bufferInfos.empty() || !imageInfos.empty(); }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordtype">void</span> clear()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                bufferInfos.clear();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                imageInfos.clear();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordtype">void</span> add(<span class="keyword">const</span> <a class="code" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">DynamicData</a>&amp; dd)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                bufferInfos.insert(bufferInfos.end(), dd.bufferInfos.begin(), dd.bufferInfos.end());</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                imageInfos.insert(imageInfos.end(), dd.imageInfos.begin(), dd.imageInfos.end());</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">DynamicData</a> earlyDynamicData;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">DynamicData</a> lateDynamicData;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        Descriptors descriptors;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        DescriptorSets descriptorSets;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        DescriptorTypeMap descriptorTypeMap;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        Views views;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        ViewDetailStack viewDetailsStack;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        uint32_t maxSlot = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        uint32_t externalNumDescriptorSets = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">bool</span> containsPagedLOD = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        VkDeviceSize minimumBufferSize = 16 * 1024 * 1024;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        VkDeviceSize minimumDeviceMemorySize = 16 * 1024 * 1024;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="structvsg_1_1t__vec2.html">uivec2</a> numLightsRange = {8, 1024};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="structvsg_1_1t__vec2.html">uivec2</a> numShadowMapsRange = {0, 64};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        uivec2 shadowMapSize = {2048, 2048};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    };</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1ResourceRequirements.html">vsg::ResourceRequirements</a>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classvsg_1_1CollectResourceRequirements.html">   98</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1CollectResourceRequirements.html">CollectResourceRequirements</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;ConstVisitor, CollectResourceRequirements&gt;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="classvsg_1_1CollectResourceRequirements.html">CollectResourceRequirements</a>() { overrideMask = vsg::MASK_ALL; }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">using</span> ConstVisitor::apply;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="classvsg_1_1ResourceRequirements.html">ResourceRequirements</a> requirements;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">bool</span> checkForResourceHints(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; <span class="keywordtype">object</span>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1ResourceHints.html">ResourceHints</a>&amp; resourceHints) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Node.html">Node</a>&amp; node) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1StateGroup.html">StateGroup</a>&amp; stategroup) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1StateCommand.html">StateCommand</a>&amp; stateCommand) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1DescriptorSet.html">DescriptorSet</a>&amp; descriptorSet) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Descriptor.html">Descriptor</a>&amp; descriptor) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1DescriptorBuffer.html">DescriptorBuffer</a>&amp; descriptorBuffer) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1DescriptorImage.html">DescriptorImage</a>&amp; descriptorImage) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1PagedLOD.html">PagedLOD</a>&amp; plod) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1View.html">View</a>&amp; view) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1DepthSorted.html">DepthSorted</a>&amp; depthSorted) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Bin.html">Bin</a>&amp; bin) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Geometry.html">Geometry</a>&amp; geometry) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1VertexDraw.html">VertexDraw</a>&amp; vid) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1VertexIndexDraw.html">VertexIndexDraw</a>&amp; vid) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1BindVertexBuffers.html">BindVertexBuffers</a>&amp; bvb) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1BindIndexBuffer.html">BindIndexBuffer</a>&amp; bib) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;BufferInfo&gt;</a> bufferInfo)</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">if</span> (bufferInfo &amp;&amp; bufferInfo-&gt;data &amp;&amp; bufferInfo-&gt;data-&gt;dynamic())</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <span class="keywordflow">if</span> (bufferInfo-&gt;data-&gt;properties.dataVariance == DYNAMIC_DATA)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                    requirements.earlyDynamicData.bufferInfos.push_back(bufferInfo);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keywordflow">else</span> <span class="comment">// DYNAMIC_DATA_TRANSFER_AFTER_RECORD)</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                    requirements.lateDynamicData.bufferInfos.push_back(bufferInfo);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                }</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            }</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> apply(ref_ptr&lt;ImageInfo&gt; imageInfo)</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">if</span> (imageInfo &amp;&amp; imageInfo-&gt;imageView &amp;&amp; imageInfo-&gt;imageView-&gt;image)</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="keyword">auto</span>&amp; data = imageInfo-&gt;imageView-&gt;image-&gt;data;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <span class="keywordflow">if</span> (data &amp;&amp; data-&gt;dynamic())</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    <span class="keywordflow">if</span> (data-&gt;properties.dataVariance == DYNAMIC_DATA)</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                        requirements.earlyDynamicData.imageInfos.push_back(imageInfo);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    <span class="keywordflow">else</span> <span class="comment">// DYNAMIC_DATA_TRANSFER_AFTER_RECORD)</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                    {</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                        requirements.lateDynamicData.imageInfos.push_back(imageInfo);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        uint32_t _numResourceHintsAbove = 0;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">bool</span> registerDescriptor(<span class="keyword">const</span> Descriptor&amp; descriptor);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    };</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1CollectResourceRequirements.html">vsg::CollectResourceRequirements</a>);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classvsg_1_1CollectResourceRequirements.html#a9a3f1eb7da3dafe3455775e23e9e102a">  106</a></span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ResourceHints&gt;</a> <a class="code" href="classvsg_1_1CollectResourceRequirements.html#a9a3f1eb7da3dafe3455775e23e9e102a">createResourceHints</a>(uint32_t tileMultiplier = 1) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">using</span> ConstVisitor::apply;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordtype">bool</span> checkForResourceHints(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; <span class="keywordtype">object</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1ResourceHints.html">ResourceHints</a>&amp; resourceHints) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Node.html">Node</a>&amp; node) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1StateGroup.html">StateGroup</a>&amp; stategroup) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1StateCommand.html">StateCommand</a>&amp; stateCommand) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1DescriptorSet.html">DescriptorSet</a>&amp; descriptorSet) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Descriptor.html">Descriptor</a>&amp; descriptor) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1DescriptorBuffer.html">DescriptorBuffer</a>&amp; descriptorBuffer) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1DescriptorImage.html">DescriptorImage</a>&amp; descriptorImage) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1PagedLOD.html">PagedLOD</a>&amp; plod) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Light.html">Light</a>&amp; light) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1View.html">View</a>&amp; view) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1DepthSorted.html">DepthSorted</a>&amp; depthSorted) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Bin.html">Bin</a>&amp; bin) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Geometry.html">Geometry</a>&amp; geometry) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1VertexDraw.html">VertexDraw</a>&amp; vid) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1VertexIndexDraw.html">VertexIndexDraw</a>&amp; vid) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1BindVertexBuffers.html">BindVertexBuffers</a>&amp; bvb) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordtype">void</span> apply(<span class="keyword">const</span> <a class="code" href="classvsg_1_1BindIndexBuffer.html">BindIndexBuffer</a>&amp; bib) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;BufferInfo&gt;</a> bufferInfo);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> apply(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ImageInfo&gt;</a> imageInfo);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        uint32_t _numResourceHintsAbove = 0;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">bool</span> registerDescriptor(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Descriptor.html">Descriptor</a>&amp; descriptor);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    };</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1CollectResourceRequirements.html">vsg::CollectResourceRequirements</a>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;} <span class="comment">// namespace vsg</span></div>
 <div class="ttc" id="aclassvsg_1_1Bin_html"><div class="ttname"><a href="classvsg_1_1Bin.html">vsg::Bin</a></div><div class="ttdef"><b>Definition:</b> Bin.h:24</div></div>
-<div class="ttc" id="aclassvsg_1_1BindIndexBuffer_html"><div class="ttname"><a href="classvsg_1_1BindIndexBuffer.html">vsg::BindIndexBuffer</a></div><div class="ttdoc">BindIndexBuffer command encapsulates vkBindIndexBuffer call and associated settings.</div><div class="ttdef"><b>Definition:</b> BindIndexBuffer.h:28</div></div>
-<div class="ttc" id="aclassvsg_1_1BindVertexBuffers_html"><div class="ttname"><a href="classvsg_1_1BindVertexBuffers.html">vsg::BindVertexBuffers</a></div><div class="ttdoc">BindVertexBuffers command encapsulates vkBindVertexBuffers call and associated settings.</div><div class="ttdef"><b>Definition:</b> BindVertexBuffers.h:25</div></div>
-<div class="ttc" id="aclassvsg_1_1CollectResourceRequirements_html"><div class="ttname"><a href="classvsg_1_1CollectResourceRequirements.html">vsg::CollectResourceRequirements</a></div><div class="ttdoc">CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap...</div><div class="ttdef"><b>Definition:</b> ResourceRequirements.h:94</div></div>
+<div class="ttc" id="aclassvsg_1_1BindIndexBuffer_html"><div class="ttname"><a href="classvsg_1_1BindIndexBuffer.html">vsg::BindIndexBuffer</a></div><div class="ttdoc">BindIndexBuffer command encapsulates vkCmdBindIndexBuffer call and associated settings.</div><div class="ttdef"><b>Definition:</b> BindIndexBuffer.h:28</div></div>
+<div class="ttc" id="aclassvsg_1_1BindVertexBuffers_html"><div class="ttname"><a href="classvsg_1_1BindVertexBuffers.html">vsg::BindVertexBuffers</a></div><div class="ttdoc">BindVertexBuffers command encapsulates vkCmdBindVertexBuffers call and associated settings.</div><div class="ttdef"><b>Definition:</b> BindVertexBuffers.h:25</div></div>
+<div class="ttc" id="aclassvsg_1_1CollectResourceRequirements_html"><div class="ttname"><a href="classvsg_1_1CollectResourceRequirements.html">vsg::CollectResourceRequirements</a></div><div class="ttdoc">CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap...</div><div class="ttdef"><b>Definition:</b> ResourceRequirements.h:99</div></div>
 <div class="ttc" id="aclassvsg_1_1CollectResourceRequirements_html_a9a3f1eb7da3dafe3455775e23e9e102a"><div class="ttname"><a href="classvsg_1_1CollectResourceRequirements.html#a9a3f1eb7da3dafe3455775e23e9e102a">vsg::CollectResourceRequirements::createResourceHints</a></div><div class="ttdeci">ref_ptr&lt; ResourceHints &gt; createResourceHints(uint32_t tileMultiplier=1) const</div><div class="ttdoc">create ResouceHints that capture the collected ResourceRequirements. Note, call after the CollectReso...</div></div>
 <div class="ttc" id="aclassvsg_1_1DepthSorted_html"><div class="ttname"><a href="classvsg_1_1DepthSorted.html">vsg::DepthSorted</a></div><div class="ttdef"><b>Definition:</b> DepthSorted.h:27</div></div>
 <div class="ttc" id="aclassvsg_1_1DescriptorBuffer_html"><div class="ttname"><a href="classvsg_1_1DescriptorBuffer.html">vsg::DescriptorBuffer</a></div><div class="ttdef"><b>Definition:</b> DescriptorBuffer.h:24</div></div>
 <div class="ttc" id="aclassvsg_1_1DescriptorImage_html"><div class="ttname"><a href="classvsg_1_1DescriptorImage.html">vsg::DescriptorImage</a></div><div class="ttdef"><b>Definition:</b> DescriptorImage.h:24</div></div>
 <div class="ttc" id="aclassvsg_1_1DescriptorSet_html"><div class="ttname"><a href="classvsg_1_1DescriptorSet.html">vsg::DescriptorSet</a></div><div class="ttdoc">DescriptorSet encapsulates VkDescriptorSet and VkDescriptorSetAllocateInfo settings used to describe ...</div><div class="ttdef"><b>Definition:</b> DescriptorSet.h:26</div></div>
-<div class="ttc" id="aclassvsg_1_1Descriptor_html"><div class="ttname"><a href="classvsg_1_1Descriptor.html">vsg::Descriptor</a></div><div class="ttdef"><b>Definition:</b> Descriptor.h:28</div></div>
+<div class="ttc" id="aclassvsg_1_1Descriptor_html"><div class="ttname"><a href="classvsg_1_1Descriptor.html">vsg::Descriptor</a></div><div class="ttdef"><b>Definition:</b> Descriptor.h:26</div></div>
 <div class="ttc" id="aclassvsg_1_1Geometry_html"><div class="ttname"><a href="classvsg_1_1Geometry.html">vsg::Geometry</a></div><div class="ttdef"><b>Definition:</b> Geometry.h:30</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
+<div class="ttc" id="aclassvsg_1_1Light_html"><div class="ttname"><a href="classvsg_1_1Light.html">vsg::Light</a></div><div class="ttdef"><b>Definition:</b> Light.h:25</div></div>
 <div class="ttc" id="aclassvsg_1_1Node_html"><div class="ttname"><a href="classvsg_1_1Node.html">vsg::Node</a></div><div class="ttdef"><b>Definition:</b> Node.h:24</div></div>
 <div class="ttc" id="aclassvsg_1_1Object_html"><div class="ttname"><a href="classvsg_1_1Object.html">vsg::Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:42</div></div>
 <div class="ttc" id="aclassvsg_1_1PagedLOD_html"><div class="ttname"><a href="classvsg_1_1PagedLOD.html">vsg::PagedLOD</a></div><div class="ttdef"><b>Definition:</b> PagedLOD.h:36</div></div>
-<div class="ttc" id="aclassvsg_1_1ResourceHints_html"><div class="ttname"><a href="classvsg_1_1ResourceHints.html">vsg::ResourceHints</a></div><div class="ttdoc">ResourceHints provides settings that help preallocation of Vulkan resources and memory.</div><div class="ttdef"><b>Definition:</b> ResourceHints.h:22</div></div>
-<div class="ttc" id="aclassvsg_1_1ResourceRequirements_html"><div class="ttname"><a href="classvsg_1_1ResourceRequirements.html">vsg::ResourceRequirements</a></div><div class="ttdoc">ResourceRequirements provides a container for various Vulkan resource requirements that be used to he...</div><div class="ttdef"><b>Definition:</b> ResourceRequirements.h:30</div></div>
-<div class="ttc" id="aclassvsg_1_1StateCommand_html"><div class="ttname"><a href="classvsg_1_1StateCommand.html">vsg::StateCommand</a></div><div class="ttdef"><b>Definition:</b> StateCommand.h:23</div></div>
+<div class="ttc" id="aclassvsg_1_1ResourceHints_html"><div class="ttname"><a href="classvsg_1_1ResourceHints.html">vsg::ResourceHints</a></div><div class="ttdoc">ResourceHints provides settings that help preallocation of Vulkan resources and memory.</div><div class="ttdef"><b>Definition:</b> ResourceHints.h:23</div></div>
+<div class="ttc" id="aclassvsg_1_1ResourceRequirements_html"><div class="ttname"><a href="classvsg_1_1ResourceRequirements.html">vsg::ResourceRequirements</a></div><div class="ttdoc">ResourceRequirements provides a container for various Vulkan resource requirements that can be used t...</div><div class="ttdef"><b>Definition:</b> ResourceRequirements.h:30</div></div>
+<div class="ttc" id="aclassvsg_1_1StateCommand_html"><div class="ttname"><a href="classvsg_1_1StateCommand.html">vsg::StateCommand</a></div><div class="ttdef"><b>Definition:</b> StateCommand.h:24</div></div>
 <div class="ttc" id="aclassvsg_1_1StateGroup_html"><div class="ttname"><a href="classvsg_1_1StateGroup.html">vsg::StateGroup</a></div><div class="ttdef"><b>Definition:</b> StateGroup.h:32</div></div>
 <div class="ttc" id="aclassvsg_1_1VertexDraw_html"><div class="ttname"><a href="classvsg_1_1VertexDraw.html">vsg::VertexDraw</a></div><div class="ttdef"><b>Definition:</b> VertexDraw.h:25</div></div>
 <div class="ttc" id="aclassvsg_1_1VertexIndexDraw_html"><div class="ttname"><a href="classvsg_1_1VertexIndexDraw.html">vsg::VertexIndexDraw</a></div><div class="ttdef"><b>Definition:</b> VertexIndexDraw.h:25</div></div>
-<div class="ttc" id="aclassvsg_1_1View_html"><div class="ttname"><a href="classvsg_1_1View.html">vsg::View</a></div><div class="ttdoc">View class is Group class that pairs a Camera that defines the view with a subgraph that defines the ...</div><div class="ttdef"><b>Definition:</b> View.h:25</div></div>
+<div class="ttc" id="aclassvsg_1_1View_html"><div class="ttname"><a href="classvsg_1_1View.html">vsg::View</a></div><div class="ttdoc">View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen...</div><div class="ttdef"><b>Definition:</b> View.h:36</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>
-<div class="ttc" id="astructvsg_1_1ResourceRequirements_1_1BinDetails_html"><div class="ttname"><a href="structvsg_1_1ResourceRequirements_1_1BinDetails.html">vsg::ResourceRequirements::BinDetails</a></div><div class="ttdef"><b>Definition:</b> ResourceRequirements.h:43</div></div>
-<div class="ttc" id="astructvsg_1_1ResourceRequirements_1_1DynamicData_html"><div class="ttname"><a href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">vsg::ResourceRequirements::DynamicData</a></div><div class="ttdef"><b>Definition:</b> ResourceRequirements.h:55</div></div>
+<div class="ttc" id="astructvsg_1_1ResourceRequirements_1_1DynamicData_html"><div class="ttname"><a href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">vsg::ResourceRequirements::DynamicData</a></div><div class="ttdef"><b>Definition:</b> ResourceRequirements.h:56</div></div>
+<div class="ttc" id="astructvsg_1_1ResourceRequirements_1_1ViewDetails_html"><div class="ttname"><a href="structvsg_1_1ResourceRequirements_1_1ViewDetails.html">vsg::ResourceRequirements::ViewDetails</a></div><div class="ttdef"><b>Definition:</b> ResourceRequirements.h:43</div></div>
+<div class="ttc" id="astructvsg_1_1t__vec2_html"><div class="ttname"><a href="structvsg_1_1t__vec2.html">vsg::t_vec2&lt; uint32_t &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

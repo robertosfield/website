@@ -1,7 +1,7 @@
 <map id="vsg::PositionAndDisplacementMapArrayState" name="vsg::PositionAndDisplacementMapArrayState">
-<area shape="rect" id="node1" title="PositionAndDisplacementMapArrayState is ArrayState subclass for mapping vertex array data for instanc..." alt="" coords="1845,169,2065,211"/>
+<area shape="rect" id="node1" title="PositionAndDisplacementMapArrayState is an ArrayState subclass for mapping vertex array data for inst..." alt="" coords="1845,169,2065,211"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="1501,162,1796,218"/>
-<area shape="rect" id="node3" href="$classvsg_1_1DisplacementMapArrayState.html" title="DisplacementMapArrayState is ArrayState subclass for mapping vertex array data for displacement mappe..." alt="" coords="1245,169,1452,211"/>
+<area shape="rect" id="node3" href="$classvsg_1_1DisplacementMapArrayState.html" title="DisplacementMapArrayState is an ArrayState subclass for mapping vertex array data for displacement ma..." alt="" coords="1245,169,1452,211"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="848,104,1076,145"/>
 <area shape="rect" id="node5" href="$classvsg_1_1ArrayState.html" title=" " alt="" coords="676,111,799,138"/>
 <area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="331,5,524,47"/>

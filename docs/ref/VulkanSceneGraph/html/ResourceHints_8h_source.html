@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -85,38 +85,44 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">&lt;/editor-fold&gt; */</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vsg/vk/DescriptorPool.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>vsg</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classvsg_1_1ResourceHints.html">   21</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1ResourceHints.html">ResourceHints</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Object, ResourceHints&gt;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classvsg_1_1ResourceHints.html">ResourceHints</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">bool</span> empty() <span class="keyword">const</span> noexcept { <span class="keywordflow">return</span> maxSlot == 0 &amp;&amp; numDescriptorSets == 0 &amp;&amp; descriptorPoolSizes.empty(); }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        uint32_t maxSlot = 0;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        uint32_t numDescriptorSets = 0;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        DescriptorPoolSizes descriptorPoolSizes;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        VkDeviceSize minimumBufferSize = 16 * 1024 * 1024;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        VkDeviceSize minimumDeviceMemorySize = 16 * 1024 * 1024;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> read(<a class="code" href="classvsg_1_1Input.html">Input</a>&amp; input) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> write(<a class="code" href="classvsg_1_1Output.html">Output</a>&amp; output) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1ResourceHints.html">ResourceHints</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1ResourceHints.html">vsg::ResourceHints</a>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vsg/maths/vec2.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vsg/vk/DescriptorPool.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>vsg</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classvsg_1_1ResourceHints.html">   22</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1ResourceHints.html">ResourceHints</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Object, ResourceHints&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classvsg_1_1ResourceHints.html">ResourceHints</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">bool</span> empty() <span class="keyword">const</span> noexcept { <span class="keywordflow">return</span> maxSlot == 0 &amp;&amp; numDescriptorSets == 0 &amp;&amp; descriptorPoolSizes.empty(); }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        uint32_t maxSlot = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        uint32_t numDescriptorSets = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        DescriptorPoolSizes descriptorPoolSizes;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        VkDeviceSize minimumBufferSize = 16 * 1024 * 1024;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        VkDeviceSize minimumDeviceMemorySize = 16 * 1024 * 1024;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="structvsg_1_1t__vec2.html">uivec2</a> numLightsRange = {8, 1024};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="structvsg_1_1t__vec2.html">uivec2</a> numShadowMapsRange = {0, 64};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="structvsg_1_1t__vec2.html">uivec2</a> shadowMapSize = {2048, 2028};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> read(<a class="code" href="classvsg_1_1Input.html">Input</a>&amp; input) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> write(<a class="code" href="classvsg_1_1Output.html">Output</a>&amp; output) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1ResourceHints.html">ResourceHints</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1ResourceHints.html">vsg::ResourceHints</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">// namespace vsg</span></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
-<div class="ttc" id="aclassvsg_1_1Input_html"><div class="ttname"><a href="classvsg_1_1Input.html">vsg::Input</a></div><div class="ttdef"><b>Definition:</b> Input.h:43</div></div>
-<div class="ttc" id="aclassvsg_1_1Output_html"><div class="ttname"><a href="classvsg_1_1Output.html">vsg::Output</a></div><div class="ttdef"><b>Definition:</b> Output.h:40</div></div>
-<div class="ttc" id="aclassvsg_1_1ResourceHints_html"><div class="ttname"><a href="classvsg_1_1ResourceHints.html">vsg::ResourceHints</a></div><div class="ttdoc">ResourceHints provides settings that help preallocation of Vulkan resources and memory.</div><div class="ttdef"><b>Definition:</b> ResourceHints.h:22</div></div>
+<div class="ttc" id="aclassvsg_1_1Input_html"><div class="ttname"><a href="classvsg_1_1Input.html">vsg::Input</a></div><div class="ttdef"><b>Definition:</b> Input.h:44</div></div>
+<div class="ttc" id="aclassvsg_1_1Output_html"><div class="ttname"><a href="classvsg_1_1Output.html">vsg::Output</a></div><div class="ttdef"><b>Definition:</b> Output.h:41</div></div>
+<div class="ttc" id="aclassvsg_1_1ResourceHints_html"><div class="ttname"><a href="classvsg_1_1ResourceHints.html">vsg::ResourceHints</a></div><div class="ttdoc">ResourceHints provides settings that help preallocation of Vulkan resources and memory.</div><div class="ttdef"><b>Definition:</b> ResourceHints.h:23</div></div>
+<div class="ttc" id="astructvsg_1_1t__vec2_html"><div class="ttname"><a href="structvsg_1_1t__vec2.html">vsg::t_vec2&lt; uint32_t &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,5 +1,5 @@
 <map id="vsg::TileDatabaseSettings" name="vsg::TileDatabaseSettings">
-<area shape="rect" id="node1" title="TileDatabaseSettings provides the settings used by vsg::TileDatabase &amp; vsg::tile ReaderWriter to guid..." alt="" coords="477,138,669,165"/>
+<area shape="rect" id="node1" title="TileDatabaseSettings provides the settings used by vsg::TileDatabase and vsg::tile ReaderWriter to gu..." alt="" coords="477,138,669,165"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,329,47"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
 <area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="168,71,311,112"/>

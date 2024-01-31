@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -100,91 +100,149 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;vsg/state/VertexInputState.h&gt;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;vsg/state/ViewportState.h&gt;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;vsg/utils/ShaderSet.h&gt;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>vsg</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classvsg_1_1GraphicsPipelineConfigurator.html">   35</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html">GraphicsPipelineConfigurator</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">vsg::Inherit</a>&lt;Object, GraphicsPipelineConfigurator&gt;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html">GraphicsPipelineConfigurator</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> in_shaderSet = {});</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// inputs to setup of GraphicsPipeline, the default sets are taken from any provided by ShaderSet::defaultGraphicsPipelineStates</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ColorBlendState&gt;</a> colorBlendState;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;DepthStencilState&gt;</a> depthStencilState;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;DynamicState&gt;</a> dynamicState;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;InputAssemblyState&gt;</a> inputAssemblyState;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;MultisampleState&gt;</a> multisampleState; <span class="comment">// typically leave unset as compile traversal with provide MultisampleState</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;RasterizationState&gt;</a> rasterizationState;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;TessellationState&gt;</a> tessellationState;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;VertexInputState&gt;</a> vertexInputState; <span class="comment">// set by assignArray(..) methods.</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ViewportState&gt;</a> viewportState;       <span class="comment">// typically leave unset as compile traversal with provide ViewportState</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        uint32_t subpass = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        uint32_t baseAttributeBinding = 0;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> shaderSet;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;DescriptorSetLayout&gt;</a> additionalDescriptorSetLayout;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> reset();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">bool</span> enableArray(<span class="keyword">const</span> std::string&amp; name, VkVertexInputRate vertexInputRate, uint32_t stride, VkFormat format = VK_FORMAT_UNDEFINED);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">bool</span> enableTexture(<span class="keyword">const</span> std::string&amp; name);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">bool</span> enableUniform(<span class="keyword">const</span> std::string&amp; name);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">bool</span> assignArray(DataList&amp; arrays, <span class="keyword">const</span> std::string&amp; name, VkVertexInputRate vertexInputRate, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> array);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">bool</span> assignTexture(Descriptors&amp; descriptors, <span class="keyword">const</span> std::string&amp; name, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> textureData = {}, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Sampler&gt;</a> sampler = {});</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">bool</span> assignUniform(Descriptors&amp; descriptors, <span class="keyword">const</span> std::string&amp; name, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> data = {});</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// setup by assign calls</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderCompileSettings&gt;</a> shaderHints;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        vsg::DescriptorSetLayoutBindings descriptorBindings;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classvsg_1_1GraphicsPipelineConfigurator.html#a4739dd04c95fa2172df2c9093ff63c0d">   70</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html#a4739dd04c95fa2172df2c9093ff63c0d">compare</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; rhs) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">void</span> init();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;vsg/utils/SharedObjects.h&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>vsg</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classvsg_1_1DescriptorConfigurator.html">   36</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1DescriptorConfigurator.html">DescriptorConfigurator</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">vsg::Inherit</a>&lt;Object, DescriptorConfigurator&gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classvsg_1_1DescriptorConfigurator.html">DescriptorConfigurator</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> in_shaderSet = {});</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> shaderSet;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">bool</span> blending = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">bool</span> two_sided = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classvsg_1_1DescriptorConfigurator.html#a3ccc236ee50f216c1cbbbc292ea8d462">   45</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classvsg_1_1DescriptorConfigurator.html#a3ccc236ee50f216c1cbbbc292ea8d462">compare</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; rhs) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> reset();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">bool</span> enableTexture(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">bool</span> assignTexture(<span class="keyword">const</span> std::string&amp; name, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> textureData = {}, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Sampler&gt;</a> sampler = {}, uint32_t dstArrayElement = 0);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">bool</span> assignTexture(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> ImageInfoList&amp; imageInfoList, uint32_t dstArrayElement = 0);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">bool</span> enableDescriptor(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">bool</span> assignDescriptor(<span class="keyword">const</span> std::string&amp; name, ref_ptr&lt;Data&gt; data = {}, uint32_t dstArrayElement = 0);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">bool</span> assignDescriptor(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> BufferInfoList&amp; bufferInfoList, uint32_t dstArrayElement = 0);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        [[deprecated(<span class="stringliteral">&quot;use enableDescriptor(..)&quot;</span>)]] <span class="keywordtype">bool</span> enableUniform(<span class="keyword">const</span> std::string&amp; name) { <span class="keywordflow">return</span> enableDescriptor(name); }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        [[deprecated(<span class="stringliteral">&quot;use assignDescriptor(..)&quot;</span>)]] <span class="keywordtype">bool</span> assignUniform(<span class="keyword">const</span> std::string&amp; name, ref_ptr&lt;Data&gt; data = {}, uint32_t dstArrayElement = 0) { <span class="keywordflow">return</span> assignDescriptor(name, data, dstArrayElement); }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        [[deprecated(<span class="stringliteral">&quot;use assignDescriptor(..)&quot;</span>)]] <span class="keywordtype">bool</span> assignUniform(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> BufferInfoList&amp; bufferInfoList, uint32_t dstArrayElement = 0) { <span class="keywordflow">return</span> assignDescriptor(name, bufferInfoList, dstArrayElement); }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">bool</span> assignDescriptor(uint32_t set, uint32_t binding, VkDescriptorType descriptorType, uint32_t descriptorCount, VkShaderStageFlags stageFlags, ref_ptr&lt;Descriptor&gt; descriptor);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classvsg_1_1DescriptorConfigurator.html#a05b3c60fe76858ab677e2a4e70877a4a">   66</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1DescriptorConfigurator.html#a05b3c60fe76858ab677e2a4e70877a4a">assignDefaults</a>(<span class="keyword">const</span> std::set&lt;uint32_t&gt;&amp; inheritedSets = {});</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::set&lt;std::string&gt; assigned;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        std::set&lt;std::string&gt; defines;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        std::vector&lt;ref_ptr&lt;DescriptorSet&gt;&gt; descriptorSets;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1DescriptorConfigurator.html">vsg::DescriptorConfigurator</a>);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">// setup by init()</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;DescriptorSetLayout&gt;</a> descriptorSetLayout;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;PipelineLayout&gt;</a> layout;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;GraphicsPipeline&gt;</a> graphicsPipeline;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;BindGraphicsPipeline&gt;</a> bindGraphicsPipeline;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    };</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html">vsg::GraphicsPipelineConfigurator</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classvsg_1_1ArrayConfigurator.html">   75</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1ArrayConfigurator.html">ArrayConfigurator</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">vsg::Inherit</a>&lt;Object, ArrayConfigurator&gt;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classvsg_1_1ArrayConfigurator.html">ArrayConfigurator</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> in_shaderSet = {});</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> shaderSet;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classvsg_1_1DescriptorConfigurator.html">   83</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1DescriptorConfigurator.html">DescriptorConfigurator</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">vsg::Inherit</a>&lt;Object, DescriptorConfigurator&gt;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="classvsg_1_1DescriptorConfigurator.html">DescriptorConfigurator</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> in_shaderSet = {});</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> shaderSet;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">bool</span> blending = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">bool</span> two_sided = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classvsg_1_1ArrayConfigurator.html#a2e89c7b1c01a9faac87ba359c8ce5777">   82</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classvsg_1_1ArrayConfigurator.html#a2e89c7b1c01a9faac87ba359c8ce5777">compare</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; rhs) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">bool</span> assignArray(<span class="keyword">const</span> std::string&amp; name, VkVertexInputRate vertexInputRate, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> array);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        uint32_t baseAttributeBinding = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::set&lt;std::string&gt; assigned;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        std::set&lt;std::string&gt; defines;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classvsg_1_1ArrayConfigurator.html#a27efbc690d2d774c34904fb34add7d4d">   89</a></span>&#160;        VertexInputState::Bindings <a class="code" href="classvsg_1_1ArrayConfigurator.html#a27efbc690d2d774c34904fb34add7d4d">vertexBindingDescriptions</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        VertexInputState::Attributes vertexAttributeDescriptions;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">bool</span> assignTexture(<span class="keyword">const</span> std::string&amp; name, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> textureData = {}, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Sampler&gt;</a> sampler = {});</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">bool</span> assignUniform(<span class="keyword">const</span> std::string&amp; name, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> data = {});</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="comment">// assign Descriptors to a DescriptorSet</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">void</span> init();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">// filled in by assignTexture(..) and assignUniform(..)</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        Descriptors descriptors;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        std::set&lt;std::string&gt; defines;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        DescriptorSetLayoutBindings descriptorBindings;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">// filled in by init()</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;DescriptorSet&gt;</a> descriptorSet;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    };</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1DescriptorConfigurator.html">vsg::DescriptorConfigurator</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        DataList arrays;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    };</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1ArrayConfigurator.html">vsg::ArrayConfigurator</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classvsg_1_1GraphicsPipelineConfigurator.html">   97</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html">GraphicsPipelineConfigurator</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">vsg::Inherit</a>&lt;Object, GraphicsPipelineConfigurator&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html">GraphicsPipelineConfigurator</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> in_shaderSet = {});</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">void</span> traverse(<a class="code" href="classvsg_1_1Visitor.html">Visitor</a>&amp; visitor) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">void</span> traverse(<a class="code" href="classvsg_1_1ConstVisitor.html">ConstVisitor</a>&amp; visitor) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">// inputs to setup of GraphicsPipeline, the default sets are taken from any provided by ShaderSet::defaultGraphicsPipelineStates</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        GraphicsPipelineStates pipelineStates;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">using</span> <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html">GraphicsPipelineConfig</a> = <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html">GraphicsPipelineConfigurator</a>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">using</span> <a class="code" href="classvsg_1_1DescriptorConfigurator.html">DescriptorConfig</a> = <a class="code" href="classvsg_1_1DescriptorConfigurator.html">DescriptorConfigurator</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        uint32_t subpass = 0;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        uint32_t baseAttributeBinding = 0;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ShaderSet&gt;</a> shaderSet;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;} <span class="comment">// namespace vsg</span></div>
-<div class="ttc" id="aclassvsg_1_1DescriptorConfigurator_html"><div class="ttname"><a href="classvsg_1_1DescriptorConfigurator.html">vsg::DescriptorConfigurator</a></div><div class="ttdoc">DescriptorConfigurator utility provides a means of setting up descriptors using ShaderSet as a guide ...</div><div class="ttdef"><b>Definition:</b> GraphicsPipelineConfigurator.h:84</div></div>
-<div class="ttc" id="aclassvsg_1_1GraphicsPipelineConfigurator_html"><div class="ttname"><a href="classvsg_1_1GraphicsPipelineConfigurator.html">vsg::GraphicsPipelineConfigurator</a></div><div class="ttdoc">GraphicsPipelineConfigurator utility provides a means of setting up state and geometry using ShaderSe...</div><div class="ttdef"><b>Definition:</b> GraphicsPipelineConfigurator.h:36</div></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">void</span> reset();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">bool</span> enableArray(<span class="keyword">const</span> std::string&amp; name, VkVertexInputRate vertexInputRate, uint32_t stride, VkFormat format = VK_FORMAT_UNDEFINED);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">bool</span> enableDescriptor(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordtype">bool</span> enableTexture(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">bool</span> assignArray(DataList&amp; arrays, <span class="keyword">const</span> std::string&amp; name, VkVertexInputRate vertexInputRate, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> array);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">bool</span> assignDescriptor(<span class="keyword">const</span> std::string&amp; name, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> data = {}, uint32_t dstArrayElement = 0);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">bool</span> assignDescriptor(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> BufferInfoList&amp; bufferInfoList, uint32_t dstArrayElement = 0);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordtype">bool</span> assignTexture(<span class="keyword">const</span> std::string&amp; name, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> textureData = {}, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Sampler&gt;</a> sampler = {}, uint32_t dstArrayElement = 0);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">bool</span> assignTexture(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> ImageInfoList&amp; imageInfoList, uint32_t dstArrayElement = 0);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classvsg_1_1GraphicsPipelineConfigurator.html#ae1f498a9397efd164905db1337068a01">  125</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html#ae1f498a9397efd164905db1337068a01">assignInheritedState</a>(<span class="keyword">const</span> StateCommands&amp; stateCommands);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        [[deprecated(<span class="stringliteral">&quot;use enableDescriptor(..)&quot;</span>)]] <span class="keywordtype">bool</span> enableUniform(<span class="keyword">const</span> std::string&amp; name) { <span class="keywordflow">return</span> enableDescriptor(name); }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        [[deprecated(<span class="stringliteral">&quot;use assignDescriptor(..)&quot;</span>)]] <span class="keywordtype">bool</span> assignUniform(<span class="keyword">const</span> std::string&amp; name, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Data&gt;</a> data = {}) { <span class="keywordflow">return</span> assignDescriptor(name, data); }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="comment">// setup by assign calls</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        ref_ptr&lt;ShaderCompileSettings&gt; shaderHints;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        ref_ptr&lt;DescriptorConfigurator&gt; descriptorConfigurator;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        StateCommands inheritedState;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classvsg_1_1GraphicsPipelineConfigurator.html#a4739dd04c95fa2172df2c9093ff63c0d">  136</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html#a4739dd04c95fa2172df2c9093ff63c0d">compare</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; rhs) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classvsg_1_1GraphicsPipelineConfigurator.html#a7bea7e49f27e9f5ab9fbaed306e85aa4">  139</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html#a7bea7e49f27e9f5ab9fbaed306e85aa4">init</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classvsg_1_1GraphicsPipelineConfigurator.html#af817452a5bda40061f8d878593af08a8">  142</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ArrayState&gt;</a> <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html#af817452a5bda40061f8d878593af08a8">getSuitableArrayState</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classvsg_1_1GraphicsPipelineConfigurator.html#ab7476e40628754bee67beb7efc77a20c">  145</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html#ab7476e40628754bee67beb7efc77a20c">copyTo</a>(StateCommands&amp; stateCommands, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;SharedObjects&gt;</a> sharedObjects = {});</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classvsg_1_1GraphicsPipelineConfigurator.html#a6d5dae78dc719d6feb8ce4dc84fd547b">  148</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html#a6d5dae78dc719d6feb8ce4dc84fd547b">copyTo</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;StateGroup&gt;</a> stateGroup, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;SharedObjects&gt;</a> sharedObjects = {});</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="comment">// setup by init()</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        std::set&lt;uint32_t&gt; inheritedSets;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;PipelineLayout&gt;</a> layout;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;GraphicsPipeline&gt;</a> graphicsPipeline;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;BindGraphicsPipeline&gt;</a> bindGraphicsPipeline;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordtype">void</span> _assignShaderSetSettings();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">void</span> _assignInheritedSets();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    };</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1GraphicsPipelineConfigurator.html">vsg::GraphicsPipelineConfigurator</a>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">using</span> GraphicsPipelineConfig = GraphicsPipelineConfigurator;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">using</span> DescriptorConfig = DescriptorConfigurator;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="ttc" id="aclassvsg_1_1ArrayConfigurator_html"><div class="ttname"><a href="classvsg_1_1ArrayConfigurator.html">vsg::ArrayConfigurator</a></div><div class="ttdoc">ArrayConfigurator utility provides a means of setting up arrays using ShaderSet as a guide for requir...</div><div class="ttdef"><b>Definition:</b> GraphicsPipelineConfigurator.h:76</div></div>
+<div class="ttc" id="aclassvsg_1_1ArrayConfigurator_html_a27efbc690d2d774c34904fb34add7d4d"><div class="ttname"><a href="classvsg_1_1ArrayConfigurator.html#a27efbc690d2d774c34904fb34add7d4d">vsg::ArrayConfigurator::vertexBindingDescriptions</a></div><div class="ttdeci">VertexInputState::Bindings vertexBindingDescriptions</div><div class="ttdoc">VkPipelineVertexInputStateCreateInfo settings.</div><div class="ttdef"><b>Definition:</b> GraphicsPipelineConfigurator.h:89</div></div>
+<div class="ttc" id="aclassvsg_1_1ArrayConfigurator_html_a2e89c7b1c01a9faac87ba359c8ce5777"><div class="ttname"><a href="classvsg_1_1ArrayConfigurator.html#a2e89c7b1c01a9faac87ba359c8ce5777">vsg::ArrayConfigurator::compare</a></div><div class="ttdeci">int compare(const Object &amp;rhs) const override</div><div class="ttdoc">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal,...</div></div>
+<div class="ttc" id="aclassvsg_1_1ConstVisitor_html"><div class="ttname"><a href="classvsg_1_1ConstVisitor.html">vsg::ConstVisitor</a></div><div class="ttdef"><b>Definition:</b> ConstVisitor.h:147</div></div>
+<div class="ttc" id="aclassvsg_1_1DescriptorConfigurator_html"><div class="ttname"><a href="classvsg_1_1DescriptorConfigurator.html">vsg::DescriptorConfigurator</a></div><div class="ttdoc">DescriptorConfigurator utility provides a means of setting up descriptors using ShaderSet as a guide ...</div><div class="ttdef"><b>Definition:</b> GraphicsPipelineConfigurator.h:37</div></div>
+<div class="ttc" id="aclassvsg_1_1DescriptorConfigurator_html_a05b3c60fe76858ab677e2a4e70877a4a"><div class="ttname"><a href="classvsg_1_1DescriptorConfigurator.html#a05b3c60fe76858ab677e2a4e70877a4a">vsg::DescriptorConfigurator::assignDefaults</a></div><div class="ttdeci">bool assignDefaults(const std::set&lt; uint32_t &gt; &amp;inheritedSets={})</div><div class="ttdoc">call after all the textures/uniforms have been explictly assigned to add in textures/uniforms descrip...</div></div>
+<div class="ttc" id="aclassvsg_1_1DescriptorConfigurator_html_a3ccc236ee50f216c1cbbbc292ea8d462"><div class="ttname"><a href="classvsg_1_1DescriptorConfigurator.html#a3ccc236ee50f216c1cbbbc292ea8d462">vsg::DescriptorConfigurator::compare</a></div><div class="ttdeci">int compare(const Object &amp;rhs) const override</div><div class="ttdoc">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal,...</div></div>
+<div class="ttc" id="aclassvsg_1_1GraphicsPipelineConfigurator_html"><div class="ttname"><a href="classvsg_1_1GraphicsPipelineConfigurator.html">vsg::GraphicsPipelineConfigurator</a></div><div class="ttdoc">GraphicsPipelineConfigurator utility provides a means of setting up state and geometry using ShaderSe...</div><div class="ttdef"><b>Definition:</b> GraphicsPipelineConfigurator.h:98</div></div>
 <div class="ttc" id="aclassvsg_1_1GraphicsPipelineConfigurator_html_a4739dd04c95fa2172df2c9093ff63c0d"><div class="ttname"><a href="classvsg_1_1GraphicsPipelineConfigurator.html#a4739dd04c95fa2172df2c9093ff63c0d">vsg::GraphicsPipelineConfigurator::compare</a></div><div class="ttdeci">int compare(const Object &amp;rhs) const override</div><div class="ttdoc">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal,...</div></div>
+<div class="ttc" id="aclassvsg_1_1GraphicsPipelineConfigurator_html_a6d5dae78dc719d6feb8ce4dc84fd547b"><div class="ttname"><a href="classvsg_1_1GraphicsPipelineConfigurator.html#a6d5dae78dc719d6feb8ce4dc84fd547b">vsg::GraphicsPipelineConfigurator::copyTo</a></div><div class="ttdeci">virtual bool copyTo(ref_ptr&lt; StateGroup &gt; stateGroup, ref_ptr&lt; SharedObjects &gt; sharedObjects={})</div><div class="ttdoc">copy state objects to StateGroup, return true if state is added.</div></div>
+<div class="ttc" id="aclassvsg_1_1GraphicsPipelineConfigurator_html_a7bea7e49f27e9f5ab9fbaed306e85aa4"><div class="ttname"><a href="classvsg_1_1GraphicsPipelineConfigurator.html#a7bea7e49f27e9f5ab9fbaed306e85aa4">vsg::GraphicsPipelineConfigurator::init</a></div><div class="ttdeci">virtual void init()</div><div class="ttdoc">initialize state objects</div></div>
+<div class="ttc" id="aclassvsg_1_1GraphicsPipelineConfigurator_html_ab7476e40628754bee67beb7efc77a20c"><div class="ttname"><a href="classvsg_1_1GraphicsPipelineConfigurator.html#ab7476e40628754bee67beb7efc77a20c">vsg::GraphicsPipelineConfigurator::copyTo</a></div><div class="ttdeci">virtual bool copyTo(StateCommands &amp;stateCommands, ref_ptr&lt; SharedObjects &gt; sharedObjects={})</div><div class="ttdoc">copy state objects to StateCommands list, return true if is add added.</div></div>
+<div class="ttc" id="aclassvsg_1_1GraphicsPipelineConfigurator_html_ae1f498a9397efd164905db1337068a01"><div class="ttname"><a href="classvsg_1_1GraphicsPipelineConfigurator.html#ae1f498a9397efd164905db1337068a01">vsg::GraphicsPipelineConfigurator::assignInheritedState</a></div><div class="ttdeci">void assignInheritedState(const StateCommands &amp;stateCommands)</div><div class="ttdoc">set the inherited state which if compatible can hint the the state setup and copying to avoid setting...</div></div>
+<div class="ttc" id="aclassvsg_1_1GraphicsPipelineConfigurator_html_af817452a5bda40061f8d878593af08a8"><div class="ttname"><a href="classvsg_1_1GraphicsPipelineConfigurator.html#af817452a5bda40061f8d878593af08a8">vsg::GraphicsPipelineConfigurator::getSuitableArrayState</a></div><div class="ttdeci">virtual ref_ptr&lt; ArrayState &gt; getSuitableArrayState() const</div><div class="ttdoc">convinience function for calling shaderSet-&gt;getSuitableArrayState(shaderHints-&gt;defines) to return the...</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1Object_html"><div class="ttname"><a href="classvsg_1_1Object.html">vsg::Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:42</div></div>
+<div class="ttc" id="aclassvsg_1_1Visitor_html"><div class="ttname"><a href="classvsg_1_1Visitor.html">vsg::Visitor</a></div><div class="ttdef"><b>Definition:</b> Visitor.h:147</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

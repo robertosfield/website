@@ -1,19 +1,8 @@
 <map id="vsg::WindowTraits" name="vsg::WindowTraits">
-<area shape="rect" id="node1" title="WindowTraits specifies the settings required when creating windows/vulkan instance/device." alt="" coords="953,373,1093,399"/>
-<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="352,5,508,47"/>
-<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,25,100,51"/>
-<area shape="rect" id="node7" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,47,305,88"/>
-<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="583,395,726,436"/>
-<area shape="rect" id="node5" href="$structvsg_1_1SwapchainPreferences.html" title="Swapchain preferences passed via WindowTraits::swapchainPreferences to guide swapchain creation assoc..." alt="" coords="555,461,755,487"/>
-<area shape="rect" id="node6" href="$classvsg_1_1Window.html" title=" " alt="" coords="602,343,707,370"/>
-<area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,112,299,153"/>
-<area shape="rect" id="node9" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,177,299,219"/>
-<area shape="rect" id="node10" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,243,299,284"/>
-<area shape="rect" id="node11" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,308,299,349"/>
-<area shape="rect" id="node12" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,373,299,415"/>
-<area shape="rect" id="node13" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,439,299,480"/>
-<area shape="rect" id="node14" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,504,299,545"/>
-<area shape="rect" id="node15" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,569,299,611"/>
-<area shape="rect" id="node16" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,635,299,676"/>
-<area shape="rect" id="node17" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,700,299,741"/>
+<area shape="rect" id="node1" title="WindowTraits specifies the settings required when creating windows/vulkan instance/device." alt="" coords="548,107,688,134"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="171,5,327,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="178,71,321,112"/>
+<area shape="rect" id="node5" href="$structvsg_1_1SwapchainPreferences.html" title="Swapchain preferences passed via WindowTraits::swapchainPreferences to guide swapchain creation assoc..." alt="" coords="149,137,349,163"/>
+<area shape="rect" id="node6" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="178,188,321,229"/>
 </map>

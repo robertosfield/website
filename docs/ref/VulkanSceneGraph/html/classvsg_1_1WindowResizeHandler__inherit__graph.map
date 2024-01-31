@@ -1,5 +1,5 @@
 <map id="vsg::WindowResizeHandler" name="vsg::WindowResizeHandler">
-<area shape="rect" id="node1" title=" " alt="" coords="5,244,204,271"/>
+<area shape="rect" id="node1" title="WindowResizeHandler class for updating viewport/scissor and attachments to fit with new window dimens..." alt="" coords="5,244,204,271"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="11,155,198,196"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Visitor.html" title=" " alt="" coords="57,80,152,107"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Object.html" title=" " alt="" coords="57,5,152,32"/>

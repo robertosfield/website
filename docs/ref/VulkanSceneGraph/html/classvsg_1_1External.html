@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -186,7 +186,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -279,7 +279,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>operator delet
 Public Attributes</h2></td></tr>
 <tr class="memitem:a2cf3ba2b855759b016736021d8c11d1e"><td class="memItemLeft" align="right" valign="top"><a id="a2cf3ba2b855759b016736021d8c11d1e"></a>
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Options.html">Options</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1External.html#a2cf3ba2b855759b016736021d8c11d1e">options</a></td></tr>
-<tr class="memdesc:a2cf3ba2b855759b016736021d8c11d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">custom readwriter/writer options <br /></td></tr>
+<tr class="memdesc:a2cf3ba2b855759b016736021d8c11d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">custom reader/writer options <br /></td></tr>
 <tr class="separator:a2cf3ba2b855759b016736021d8c11d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac58aa9732ed8ee15a12229aa8718edff"><td class="memItemLeft" align="right" valign="top"><a id="ac58aa9732ed8ee15a12229aa8718edff"></a>
 PathObjects&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1External.html#ac58aa9732ed8ee15a12229aa8718edff">entries</a></td></tr>
@@ -297,7 +297,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1External.html">External</a> provides a means to loading objects from external files, such as shaders, textures or models To use set up the <a class="el" href="classvsg_1_1External.html">External</a> object with all the pairs of [filename, object] that should be managed externally then assign the <a class="el" href="classvsg_1_1External.html">External</a> object, as use value, to root node of the scene graph that you wish to use external objects with so that when serializing the <a class="el" href="classvsg_1_1External.html">External</a> object is initialized and external objects are loaded before they are needed by the rest of the subgraph i.e. auto external = vsg::External::create("mytexture.png", texture); scene-&gt;setObject("external", external); // scene uses the texture object somewhere within it. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1External.html">External</a> provides a means to loading objects from external files, such as shaders, textures or models To use, set up the <a class="el" href="classvsg_1_1External.html">External</a> object with all the pairs of [filename, object] that should be managed externally, then assign the <a class="el" href="classvsg_1_1External.html">External</a> object, as a value, to the root node of the scene graph that you wish to use external objects with so that when serializing, the <a class="el" href="classvsg_1_1External.html">External</a> object is initialized and external objects are loaded before they are needed by the rest of the subgraph i.e. auto external = vsg::External::create("mytexture.png", texture); scene-&gt;setObject("external", external); // scene uses the texture object somewhere within it. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/core/<a class="el" href="External_8h_source.html">External.h</a></li>
 </ul>

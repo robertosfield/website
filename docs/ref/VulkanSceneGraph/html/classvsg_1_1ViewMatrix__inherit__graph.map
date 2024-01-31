@@ -1,11 +1,11 @@
 <map id="vsg::ViewMatrix" name="vsg::ViewMatrix">
-<area shape="rect" id="node1" title="ViewMatrix is a base class for specifying the Camera view matrix and it&#39;s inverse." alt="" coords="352,78,479,105"/>
+<area shape="rect" id="node1" title="ViewMatrix is a base class for specifying the Camera view matrix and its inverse." alt="" coords="352,78,479,105"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="527,5,715,47"/>
 <area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="527,71,715,112"/>
 <area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="527,136,715,177"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="148,71,304,112"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,78,100,105"/>
-<area shape="rect" id="node5" href="$classvsg_1_1LookAt.html" title="LookAt is a ViewMatrix that implements gluLookAt model for specify the view matrix." alt="" coords="804,13,903,39"/>
+<area shape="rect" id="node5" href="$classvsg_1_1LookAt.html" title="LookAt is a ViewMatrix that implements the gluLookAt model for specifying the view matrix." alt="" coords="804,13,903,39"/>
 <area shape="rect" id="node7" href="$classvsg_1_1TrackingViewMatrix.html" title=" " alt="" coords="763,78,944,105"/>
-<area shape="rect" id="node9" href="$classvsg_1_1RelativeViewMatrix.html" title="RelativeViewMatrix is a ViewMatrix that decorates another ViewMatrix and pre&#45;multiplies it&#39;s transfor..." alt="" coords="763,143,944,170"/>
+<area shape="rect" id="node9" href="$classvsg_1_1RelativeViewMatrix.html" title="RelativeViewMatrix is a ViewMatrix that decorates another ViewMatrix and pre&#45;multiplies its transform..." alt="" coords="763,143,944,170"/>
 </map>

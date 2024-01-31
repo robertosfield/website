@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -343,63 +343,64 @@ $(function() {
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keyword">enum</span> KeyModifier : uint16_t</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        MODKEY_Shift = 1,</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        MODKEY_CapsLock = 2,</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        MODKEY_Control = 4,</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        MODKEY_Alt = 8,</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        MODKEY_NumLock = 16,</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        MODKEY_Meta = 128</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    };</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="classvsg_1_1KeyEvent.html">  284</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1KeyEvent.html">KeyEvent</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;WindowEvent, KeyEvent&gt;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <a class="code" href="classvsg_1_1KeyEvent.html">KeyEvent</a>() {}</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <a class="code" href="classvsg_1_1KeyEvent.html">KeyEvent</a>(<a class="code" href="classvsg_1_1Window.html">Window</a>* in_window, time_point in_time, KeySymbol in_keyBase, KeySymbol in_keyModified, KeyModifier in_modifier, uint32_t in_repeatCount = 0) :</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>(in_window, in_time),</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            keyBase(in_keyBase),</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            keyModified(in_keyModified),</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            keyModifier(in_modifier),</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            repeatCount(in_repeatCount) {}</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        KeySymbol keyBase = {};</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        KeySymbol keyModified = {};</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        KeyModifier keyModifier = {};</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        uint32_t repeatCount = 0;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordtype">void</span> read(<a class="code" href="classvsg_1_1Input.html">Input</a>&amp; input) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordtype">void</span> write(<a class="code" href="classvsg_1_1Output.html">Output</a>&amp; output) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    };</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1KeyEvent.html">vsg::KeyEvent</a>);</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="classvsg_1_1KeyPressEvent.html">  307</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classvsg_1_1KeyPressEvent.html">KeyPressEvent</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;KeyEvent, KeyPressEvent&gt;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    {</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <a class="code" href="classvsg_1_1KeyPressEvent.html">KeyPressEvent</a>() {}</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <a class="code" href="classvsg_1_1KeyPressEvent.html">KeyPressEvent</a>(<a class="code" href="classvsg_1_1Window.html">Window</a>* in_window, time_point in_time, KeySymbol in_keyBase, KeySymbol in_keyModified, KeyModifier in_modifier, uint32_t in_repeatCount = 0) :</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>(in_window, in_time, in_keyBase, in_keyModified, in_modifier, in_repeatCount) {}</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    };</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1KeyPressEvent.html">vsg::KeyPressEvent</a>);</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
-<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="classvsg_1_1KeyReleaseEvent.html">  318</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classvsg_1_1KeyReleaseEvent.html">KeyReleaseEvent</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;KeyEvent, KeyReleaseEvent&gt;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <a class="code" href="classvsg_1_1KeyReleaseEvent.html">KeyReleaseEvent</a>() {}</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <a class="code" href="classvsg_1_1KeyReleaseEvent.html">KeyReleaseEvent</a>(<a class="code" href="classvsg_1_1Window.html">Window</a>* in_window, time_point in_time, KeySymbol in_keyBase, KeySymbol in_keyModified, KeyModifier in_modifier, uint32_t in_repeatCount = 0) :</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>(in_window, in_time, in_keyBase, in_keyModified, in_modifier, in_repeatCount) {}</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    };</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1KeyReleaseEvent.html">vsg::KeyReleaseEvent</a>);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        MODKEY_OFF = 0,</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        MODKEY_Shift = 1,</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        MODKEY_CapsLock = 2,</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        MODKEY_Control = 4,</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        MODKEY_Alt = 8,</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        MODKEY_NumLock = 16,</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        MODKEY_Meta = 128</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    };</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="classvsg_1_1KeyEvent.html">  285</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1KeyEvent.html">KeyEvent</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;WindowEvent, KeyEvent&gt;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <a class="code" href="classvsg_1_1KeyEvent.html">KeyEvent</a>() {}</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <a class="code" href="classvsg_1_1KeyEvent.html">KeyEvent</a>(<a class="code" href="classvsg_1_1Window.html">Window</a>* in_window, time_point in_time, KeySymbol in_keyBase, KeySymbol in_keyModified, KeyModifier in_modifier, uint32_t in_repeatCount = 0) :</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>(in_window, in_time),</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            keyBase(in_keyBase),</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            keyModified(in_keyModified),</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            keyModifier(in_modifier),</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            repeatCount(in_repeatCount) {}</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        KeySymbol keyBase = {};</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        KeySymbol keyModified = {};</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        KeyModifier keyModifier = {};</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        uint32_t repeatCount = 0;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordtype">void</span> read(<a class="code" href="classvsg_1_1Input.html">Input</a>&amp; input) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordtype">void</span> write(<a class="code" href="classvsg_1_1Output.html">Output</a>&amp; output) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    };</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1KeyEvent.html">vsg::KeyEvent</a>);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="classvsg_1_1KeyPressEvent.html">  308</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classvsg_1_1KeyPressEvent.html">KeyPressEvent</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;KeyEvent, KeyPressEvent&gt;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <a class="code" href="classvsg_1_1KeyPressEvent.html">KeyPressEvent</a>() {}</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <a class="code" href="classvsg_1_1KeyPressEvent.html">KeyPressEvent</a>(<a class="code" href="classvsg_1_1Window.html">Window</a>* in_window, time_point in_time, KeySymbol in_keyBase, KeySymbol in_keyModified, KeyModifier in_modifier, uint32_t in_repeatCount = 0) :</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>(in_window, in_time, in_keyBase, in_keyModified, in_modifier, in_repeatCount) {}</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    };</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1KeyPressEvent.html">vsg::KeyPressEvent</a>);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="classvsg_1_1KeyReleaseEvent.html">  319</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classvsg_1_1KeyReleaseEvent.html">KeyReleaseEvent</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;KeyEvent, KeyReleaseEvent&gt;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <a class="code" href="classvsg_1_1KeyReleaseEvent.html">KeyReleaseEvent</a>() {}</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <a class="code" href="classvsg_1_1KeyReleaseEvent.html">KeyReleaseEvent</a>(<a class="code" href="classvsg_1_1Window.html">Window</a>* in_window, time_point in_time, KeySymbol in_keyBase, KeySymbol in_keyModified, KeyModifier in_modifier, uint32_t in_repeatCount = 0) :</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>(in_window, in_time, in_keyBase, in_keyModified, in_modifier, in_repeatCount) {}</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    };</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1KeyReleaseEvent.html">vsg::KeyReleaseEvent</a>);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;} <span class="comment">// namespace vsg</span></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
-<div class="ttc" id="aclassvsg_1_1Input_html"><div class="ttname"><a href="classvsg_1_1Input.html">vsg::Input</a></div><div class="ttdef"><b>Definition:</b> Input.h:43</div></div>
-<div class="ttc" id="aclassvsg_1_1KeyEvent_html"><div class="ttname"><a href="classvsg_1_1KeyEvent.html">vsg::KeyEvent</a></div><div class="ttdoc">KeyEvent is a base class for key events.</div><div class="ttdef"><b>Definition:</b> KeyEvent.h:285</div></div>
-<div class="ttc" id="aclassvsg_1_1KeyPressEvent_html"><div class="ttname"><a href="classvsg_1_1KeyPressEvent.html">vsg::KeyPressEvent</a></div><div class="ttdoc">KeyPressEvent represents a key press event.</div><div class="ttdef"><b>Definition:</b> KeyEvent.h:308</div></div>
-<div class="ttc" id="aclassvsg_1_1KeyReleaseEvent_html"><div class="ttname"><a href="classvsg_1_1KeyReleaseEvent.html">vsg::KeyReleaseEvent</a></div><div class="ttdoc">KeyReleaseEvent represents a key release event.</div><div class="ttdef"><b>Definition:</b> KeyEvent.h:319</div></div>
-<div class="ttc" id="aclassvsg_1_1Output_html"><div class="ttname"><a href="classvsg_1_1Output.html">vsg::Output</a></div><div class="ttdef"><b>Definition:</b> Output.h:40</div></div>
+<div class="ttc" id="aclassvsg_1_1Input_html"><div class="ttname"><a href="classvsg_1_1Input.html">vsg::Input</a></div><div class="ttdef"><b>Definition:</b> Input.h:44</div></div>
+<div class="ttc" id="aclassvsg_1_1KeyEvent_html"><div class="ttname"><a href="classvsg_1_1KeyEvent.html">vsg::KeyEvent</a></div><div class="ttdoc">KeyEvent is a base class for key events.</div><div class="ttdef"><b>Definition:</b> KeyEvent.h:286</div></div>
+<div class="ttc" id="aclassvsg_1_1KeyPressEvent_html"><div class="ttname"><a href="classvsg_1_1KeyPressEvent.html">vsg::KeyPressEvent</a></div><div class="ttdoc">KeyPressEvent represents a key press event.</div><div class="ttdef"><b>Definition:</b> KeyEvent.h:309</div></div>
+<div class="ttc" id="aclassvsg_1_1KeyReleaseEvent_html"><div class="ttname"><a href="classvsg_1_1KeyReleaseEvent.html">vsg::KeyReleaseEvent</a></div><div class="ttdoc">KeyReleaseEvent represents a key release event.</div><div class="ttdef"><b>Definition:</b> KeyEvent.h:320</div></div>
+<div class="ttc" id="aclassvsg_1_1Output_html"><div class="ttname"><a href="classvsg_1_1Output.html">vsg::Output</a></div><div class="ttdef"><b>Definition:</b> Output.h:41</div></div>
 <div class="ttc" id="aclassvsg_1_1Window_html"><div class="ttname"><a href="classvsg_1_1Window.html">vsg::Window</a></div><div class="ttdef"><b>Definition:</b> Window.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

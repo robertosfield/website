@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -105,9 +105,9 @@ Public Types</h2></td></tr>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = T</td></tr>
 <tr class="separator:a01401f0dbdb6dc4a1955b27f03690caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classvsg_1_1Data"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classvsg_1_1Data')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classvsg_1_1Data.html">vsg::Data</a></td></tr>
-<tr class="memitem:a785444edae833943190280b3c7ad4648 inherit pub_types_classvsg_1_1Data"><td class="memItemLeft" align="right" valign="top"><a id="a785444edae833943190280b3c7ad4648"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>MipmapOffsets</b> = std::vector&lt; std::size_t &gt;</td></tr>
-<tr class="separator:a785444edae833943190280b3c7ad4648 inherit pub_types_classvsg_1_1Data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098b85f2fd953e86c86ab6ade6898a78 inherit pub_types_classvsg_1_1Data"><td class="memItemLeft" align="right" valign="top"><a id="a098b85f2fd953e86c86ab6ade6898a78"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>MipmapOffsets</b> = std::vector&lt; size_t &gt;</td></tr>
+<tr class="separator:a098b85f2fd953e86c86ab6ade6898a78 inherit pub_types_classvsg_1_1Data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14d95d99b2afc97f551bfafac147b669 inherit pub_types_classvsg_1_1Data"><td class="memItemLeft" align="right" valign="top"><a id="a14d95d99b2afc97f551bfafac147b669"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Data.html#a14d95d99b2afc97f551bfafac147b669">Layout</a> = <a class="el" href="structvsg_1_1Data_1_1Properties.html">Properties</a></td></tr>
 <tr class="memdesc:a14d95d99b2afc97f551bfafac147b669 inherit pub_types_classvsg_1_1Data"><td class="mdescLeft">&#160;</td><td class="mdescRight">deprecated: provided for backwards compatibility, use <a class="el" href="structvsg_1_1Data_1_1Properties.html">Properties</a> instead. <br /></td></tr>
@@ -125,9 +125,12 @@ Public Member Functions</h2></td></tr>
 template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a361c1e247bc211f0ef1f1f2892fd0c26"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Value</b> (Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a361c1e247bc211f0ef1f1f2892fd0c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3fb11f3c6c3c8f9bc18c50a1b1d8b16"><td class="memItemLeft" align="right" valign="top"><a id="aa3fb11f3c6c3c8f9bc18c50a1b1d8b16"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>sizeofObject</b> () const noexcept override</td></tr>
-<tr class="separator:aa3fb11f3c6c3c8f9bc18c50a1b1d8b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81fc7bf023fc38e5eb7481e56f80fd44"><td class="memItemLeft" align="right" valign="top"><a id="a81fc7bf023fc38e5eb7481e56f80fd44"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const override</td></tr>
+<tr class="separator:a81fc7bf023fc38e5eb7481e56f80fd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae268a68e8b365b62bbdb08314db1e546"><td class="memItemLeft" align="right" valign="top"><a id="ae268a68e8b365b62bbdb08314db1e546"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>sizeofObject</b> () const noexcept override</td></tr>
+<tr class="separator:ae268a68e8b365b62bbdb08314db1e546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9b35eb6da28bec240a56ba70af83212"><td class="memItemLeft" align="right" valign="top"><a id="ae9b35eb6da28bec240a56ba70af83212"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>className</b> () const noexcept override</td></tr>
 <tr class="separator:ae9b35eb6da28bec240a56ba70af83212"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,18 +153,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (<a class="e
 <tr class="memitem:a420a95902627d9b193fe2c1360fbf84e"><td class="memItemLeft" align="right" valign="top"><a id="a420a95902627d9b193fe2c1360fbf84e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (<a class="el" href="classvsg_1_1Output.html">Output</a> &amp;output) const override</td></tr>
 <tr class="separator:a420a95902627d9b193fe2c1360fbf84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23893099d68623814119f6e73e1a8497"><td class="memItemLeft" align="right" valign="top"><a id="a23893099d68623814119f6e73e1a8497"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>valueSize</b> () const override</td></tr>
-<tr class="separator:a23893099d68623814119f6e73e1a8497"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adac9a58cebcdde2ce05a70e343662bf4"><td class="memItemLeft" align="right" valign="top"><a id="adac9a58cebcdde2ce05a70e343662bf4"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>valueCount</b> () const override</td></tr>
-<tr class="separator:adac9a58cebcdde2ce05a70e343662bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3e0f2c964e981023ac22245364679c6"><td class="memItemLeft" align="right" valign="top"><a id="aa3e0f2c964e981023ac22245364679c6"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>valueSize</b> () const override</td></tr>
+<tr class="separator:aa3e0f2c964e981023ac22245364679c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad21fa42658f845b63e4b5dd6f34ab30b"><td class="memItemLeft" align="right" valign="top"><a id="ad21fa42658f845b63e4b5dd6f34ab30b"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>valueCount</b> () const override</td></tr>
+<tr class="separator:ad21fa42658f845b63e4b5dd6f34ab30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabd05ef95637dff54a09f38e6fbd2f5f"><td class="memItemLeft" align="right" valign="top"><a id="aabd05ef95637dff54a09f38e6fbd2f5f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>dataAvailable</b> () const override</td></tr>
 <tr class="separator:aabd05ef95637dff54a09f38e6fbd2f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69d2e4c4c0375dfcd0b0b9f37d2a6035"><td class="memItemLeft" align="right" valign="top"><a id="a69d2e4c4c0375dfcd0b0b9f37d2a6035"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>dataSize</b> () const override</td></tr>
-<tr class="separator:a69d2e4c4c0375dfcd0b0b9f37d2a6035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d78cd3c0d69e7df137761748829a61"><td class="memItemLeft" align="right" valign="top"><a id="ac9d78cd3c0d69e7df137761748829a61"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>dataSize</b> () const override</td></tr>
+<tr class="separator:ac9d78cd3c0d69e7df137761748829a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a362fff8dfe16be5ce946cdd41ca2d"><td class="memItemLeft" align="right" valign="top"><a id="a02a362fff8dfe16be5ce946cdd41ca2d"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>dataPointer</b> () override</td></tr>
 <tr class="separator:a02a362fff8dfe16be5ce946cdd41ca2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,18 +180,18 @@ const void *&#160;</td><td class="memItemRight" valign="bottom"><b>dataPointer</
 <tr class="memitem:a57e00bc9ba142863970e4f599497180f"><td class="memItemLeft" align="right" valign="top"><a id="a57e00bc9ba142863970e4f599497180f"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>dataRelease</b> () override</td></tr>
 <tr class="separator:a57e00bc9ba142863970e4f599497180f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad143b6df235ed8a714182d32a341dd1d"><td class="memItemLeft" align="right" valign="top"><a id="ad143b6df235ed8a714182d32a341dd1d"></a>
-std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>dimensions</b> () const override</td></tr>
-<tr class="separator:ad143b6df235ed8a714182d32a341dd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50e9dbbfabbf3613fa3c15fc62c3a08b"><td class="memItemLeft" align="right" valign="top"><a id="a50e9dbbfabbf3613fa3c15fc62c3a08b"></a>
-std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>width</b> () const override</td></tr>
-<tr class="separator:a50e9dbbfabbf3613fa3c15fc62c3a08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cbd31ce1da03f8dd572b3ea4e419d4c"><td class="memItemLeft" align="right" valign="top"><a id="a5cbd31ce1da03f8dd572b3ea4e419d4c"></a>
-std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> () const override</td></tr>
-<tr class="separator:a5cbd31ce1da03f8dd572b3ea4e419d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afea8367052c2dda55b1aa6d01accfef1"><td class="memItemLeft" align="right" valign="top"><a id="afea8367052c2dda55b1aa6d01accfef1"></a>
-std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b> () const override</td></tr>
-<tr class="separator:afea8367052c2dda55b1aa6d01accfef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf4e2e0991e1ba5030a910d12eacc39"><td class="memItemLeft" align="right" valign="top"><a id="a6cf4e2e0991e1ba5030a910d12eacc39"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>dimensions</b> () const override</td></tr>
+<tr class="separator:a6cf4e2e0991e1ba5030a910d12eacc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf37fbdde762b54a181b3090244e5f3"><td class="memItemLeft" align="right" valign="top"><a id="a5cf37fbdde762b54a181b3090244e5f3"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>width</b> () const override</td></tr>
+<tr class="separator:a5cf37fbdde762b54a181b3090244e5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5af0c330351a0ae68c186c57e7f0f1e"><td class="memItemLeft" align="right" valign="top"><a id="ac5af0c330351a0ae68c186c57e7f0f1e"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> () const override</td></tr>
+<tr class="separator:ac5af0c330351a0ae68c186c57e7f0f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a264b1dcc5d2a5629558ed5095e10e6"><td class="memItemLeft" align="right" valign="top"><a id="a7a264b1dcc5d2a5629558ed5095e10e6"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b> () const override</td></tr>
+<tr class="separator:a7a264b1dcc5d2a5629558ed5095e10e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82f110618f4731ed6255790be5227295"><td class="memItemLeft" align="right" valign="top"><a id="a82f110618f4731ed6255790be5227295"></a>
 <a class="el" href="classvsg_1_1Value.html">Value</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classvsg_1_1Value.html">Value</a> &amp;rhs)</td></tr>
 <tr class="separator:a82f110618f4731ed6255790be5227295"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,7 +246,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:adfe38841180314a74c7b5bf2c0090ef3 inherit pub_methods_classvsg_1_1Data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f48ab88fa1a8ce117b8800cc72c192 inherit pub_methods_classvsg_1_1Data"><td class="memItemLeft" align="right" valign="top"><a id="a38f48ab88fa1a8ce117b8800cc72c192"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Data.html#a38f48ab88fa1a8ce117b8800cc72c192">differentModifiedCount</a> (const <a class="el" href="structvsg_1_1ModifiedCount.html">ModifiedCount</a> &amp;mc) const</td></tr>
-<tr class="memdesc:a38f48ab88fa1a8ce117b8800cc72c192 inherit pub_methods_classvsg_1_1Data"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if <a class="el" href="classvsg_1_1Data.html">Data</a>'s <a class="el" href="structvsg_1_1ModifiedCount.html" title="ModifiedCount provides a count value to keep track of modifications to data.">ModifiedCount</a> is different than the specified <a class="el" href="structvsg_1_1ModifiedCount.html" title="ModifiedCount provides a count value to keep track of modifications to data.">ModifiedCount</a> <br /></td></tr>
+<tr class="memdesc:a38f48ab88fa1a8ce117b8800cc72c192 inherit pub_methods_classvsg_1_1Data"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if <a class="el" href="classvsg_1_1Data.html">Data</a>'s <a class="el" href="structvsg_1_1ModifiedCount.html" title="ModifiedCount provides a count value to keep track of modifications to data.">ModifiedCount</a> is different from the specified <a class="el" href="structvsg_1_1ModifiedCount.html" title="ModifiedCount provides a count value to keep track of modifications to data.">ModifiedCount</a> <br /></td></tr>
 <tr class="separator:a38f48ab88fa1a8ce117b8800cc72c192 inherit pub_methods_classvsg_1_1Data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9e75bc6ca9dbba54d5c5431403ac5bc inherit pub_methods_classvsg_1_1Data"><td class="memItemLeft" align="right" valign="top"><a id="aa9e75bc6ca9dbba54d5c5431403ac5bc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Data.html#aa9e75bc6ca9dbba54d5c5431403ac5bc">setLayout</a> (<a class="el" href="classvsg_1_1Data.html#a14d95d99b2afc97f551bfafac147b669">Layout</a> layout)</td></tr>
@@ -301,7 +304,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -369,16 +372,16 @@ template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:aa992f96850bcc0494642bc6e368e0921"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Value.html">Value</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>create</b> (Args &amp;&amp;... args)</td></tr>
 <tr class="separator:aa992f96850bcc0494642bc6e368e0921"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classvsg_1_1Data"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classvsg_1_1Data')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classvsg_1_1Data.html">vsg::Data</a></td></tr>
-<tr class="memitem:a11c4b4621c22368b42e8834e79186da0 inherit pub_static_methods_classvsg_1_1Data"><td class="memItemLeft" align="right" valign="top"><a id="a11c4b4621c22368b42e8834e79186da0"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Data.html#a11c4b4621c22368b42e8834e79186da0">operator new</a> (std::size_t count)</td></tr>
-<tr class="memdesc:a11c4b4621c22368b42e8834e79186da0 inherit pub_static_methods_classvsg_1_1Data"><td class="mdescLeft">&#160;</td><td class="mdescRight">provide new and delete to enable custom memory management via the <a class="el" href="classvsg_1_1Allocator.html">vsg::Allocator</a> singleton, using the MEMORY_AFFINTY_DATA <br /></td></tr>
-<tr class="separator:a11c4b4621c22368b42e8834e79186da0 inherit pub_static_methods_classvsg_1_1Data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7b73c5c3c4093851d0448b0afe58d2b inherit pub_static_methods_classvsg_1_1Data"><td class="memItemLeft" align="right" valign="top"><a id="af7b73c5c3c4093851d0448b0afe58d2b"></a>
+static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Data.html#af7b73c5c3c4093851d0448b0afe58d2b">operator new</a> (size_t count)</td></tr>
+<tr class="memdesc:af7b73c5c3c4093851d0448b0afe58d2b inherit pub_static_methods_classvsg_1_1Data"><td class="mdescLeft">&#160;</td><td class="mdescRight">provide new and delete to enable custom memory management via the <a class="el" href="classvsg_1_1Allocator.html">vsg::Allocator</a> singleton, using the MEMORY_AFFINTY_DATA <br /></td></tr>
+<tr class="separator:af7b73c5c3c4093851d0448b0afe58d2b inherit pub_static_methods_classvsg_1_1Data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5491d6768bb0ee7cc66162071d01171 inherit pub_static_methods_classvsg_1_1Data"><td class="memItemLeft" align="right" valign="top"><a id="ae5491d6768bb0ee7cc66162071d01171"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>operator delete</b> (void *ptr)</td></tr>
 <tr class="separator:ae5491d6768bb0ee7cc66162071d01171 inherit pub_static_methods_classvsg_1_1Data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab712cf64454e21b67176b2b5874f7331 inherit pub_static_methods_classvsg_1_1Data"><td class="memItemLeft" align="right" valign="top"><a id="ab712cf64454e21b67176b2b5874f7331"></a>
-static std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>computeValueCountIncludingMipmaps</b> (std::size_t w, std::size_t h, std::size_t d, uint32_t maxNumMipmaps)</td></tr>
-<tr class="separator:ab712cf64454e21b67176b2b5874f7331 inherit pub_static_methods_classvsg_1_1Data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc464159d3b8193e5387a538eac7cc0 inherit pub_static_methods_classvsg_1_1Data"><td class="memItemLeft" align="right" valign="top"><a id="a5dc464159d3b8193e5387a538eac7cc0"></a>
+static size_t&#160;</td><td class="memItemRight" valign="bottom"><b>computeValueCountIncludingMipmaps</b> (size_t w, size_t h, size_t d, uint32_t maxNumMipmaps)</td></tr>
+<tr class="separator:a5dc464159d3b8193e5387a538eac7cc0 inherit pub_static_methods_classvsg_1_1Data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classvsg_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classvsg_1_1Object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classvsg_1_1Object.html">vsg::Object</a></td></tr>
 <tr class="memitem:a94f3a609c2747192bf6ef98b3f9d991a inherit pub_static_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a94f3a609c2747192bf6ef98b3f9d991a"></a>
 static <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Object.html">Object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> ()</td></tr>

@@ -1,7 +1,7 @@
 <map id="vsg::Perspective" name="vsg::Perspective">
-<area shape="rect" id="node1" title="Perspective is a ProjectionMatrix that implements gluPerspective model for setting projection matrix." alt="" coords="28,333,157,360"/>
+<area shape="rect" id="node1" title="Perspective is a ProjectionMatrix that implements the gluPerspective model for setting the projection..." alt="" coords="28,333,157,360"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,244,180,285"/>
-<area shape="rect" id="node3" href="$classvsg_1_1ProjectionMatrix.html" title="ProjectionMatrix is a base class for specifying the Camera projection matrix and it&#39;s inverse." alt="" coords="13,169,173,196"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ProjectionMatrix.html" title="ProjectionMatrix is a base class for specifying the Camera projection matrix and its inverse." alt="" coords="13,169,173,196"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="15,80,171,121"/>
 <area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="45,5,140,32"/>
 </map>

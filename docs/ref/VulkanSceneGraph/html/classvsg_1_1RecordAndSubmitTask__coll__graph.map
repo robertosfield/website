@@ -1,9 +1,10 @@
 <map id="vsg::RecordAndSubmitTask" name="vsg::RecordAndSubmitTask">
-<area shape="rect" id="node1" title="RecordAndSubmitTask manages the recording of it&#39;s list of CommanGraph to CommandBuffer which are then..." alt="" coords="503,143,701,170"/>
+<area shape="rect" id="node1" title="RecordAndSubmitTask manages the recording of its list of CommandGraph to CommandBuffer which are then..." alt="" coords="628,170,827,197"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,336,47"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
 <area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="171,71,314,112"/>
 <area shape="rect" id="node5" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="171,136,314,177"/>
-<area shape="rect" id="node6" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="171,201,314,243"/>
-<area shape="rect" id="node7" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="171,267,314,308"/>
+<area shape="rect" id="node6" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="171,203,314,244"/>
+<area shape="rect" id="node7" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="171,268,314,309"/>
+<area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="171,333,314,375"/>
 </map>

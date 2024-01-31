@@ -9,7 +9,7 @@
 <area shape="rect" id="node5" href="$classvsg_1_1UIEvent.html" title="UIEvent is a base class for user interface events." alt="" coords="352,78,456,105"/>
 <area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="148,71,304,112"/>
 <area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,78,100,105"/>
-<area shape="rect" id="node9" href="$classvsg_1_1MoveEvent.html" title="MoveEvent represent a button move event." alt="" coords="1617,13,1744,39"/>
-<area shape="rect" id="node11" href="$classvsg_1_1ButtonReleaseEvent.html" title="ButtonReleaseEvent represent a button release event." alt="" coords="1588,78,1773,105"/>
-<area shape="rect" id="node13" href="$classvsg_1_1ButtonPressEvent.html" title="ButtonPressEvent represent a button press event." alt="" coords="1597,143,1765,170"/>
+<area shape="rect" id="node9" href="$classvsg_1_1MoveEvent.html" title="MoveEvent represents a pointer move event." alt="" coords="1617,13,1744,39"/>
+<area shape="rect" id="node11" href="$classvsg_1_1ButtonReleaseEvent.html" title="ButtonReleaseEvent represents a button release event." alt="" coords="1588,78,1773,105"/>
+<area shape="rect" id="node13" href="$classvsg_1_1ButtonPressEvent.html" title="ButtonPressEvent represents a button press event." alt="" coords="1597,143,1765,170"/>
 </map>

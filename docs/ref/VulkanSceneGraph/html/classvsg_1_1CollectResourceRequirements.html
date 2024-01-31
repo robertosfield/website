@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -78,7 +78,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classvsg_1_1CollectResourceRequirements.html" title="CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap...">CollectResourceRequirements</a> is a visitor class that collects the <a class="el" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that be used to he...">ResourceRequirements</a> of a scene graph.  
+<p><a class="el" href="classvsg_1_1CollectResourceRequirements.html" title="CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap...">CollectResourceRequirements</a> is a visitor class that collects the <a class="el" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that can be used t...">ResourceRequirements</a> of a scene graph.  
  <a href="classvsg_1_1CollectResourceRequirements.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ResourceRequirements_8h_source.html">ResourceRequirements.h</a>&gt;</code></p>
@@ -98,12 +98,13 @@ Collaboration diagram for vsg::CollectResourceRequirements:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1CollectResourceRequirements__coll__graph.png" border="0" usemap="#avsg_1_1CollectResourceRequirements_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1CollectResourceRequirements_coll__map" id="avsg_1_1CollectResourceRequirements_coll__map">
-<area shape="rect" title="CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap..." alt="" coords="905,42,1155,69"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="528,5,765,47"/>
+<area shape="rect" title="CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap..." alt="" coords="936,42,1185,69"/>
+<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="559,5,796,47"/>
 <area shape="rect" href="classvsg_1_1ConstVisitor.html" title=" " alt="" coords="185,13,317,39"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
-<area shape="rect" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that be used to he..." alt="" coords="545,71,749,98"/>
+<area shape="rect" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that can be used t..." alt="" coords="575,71,779,98"/>
 <area shape="rect" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html" title=" " alt="" coords="149,64,353,105"/>
+<area shape="rect" href="structvsg_1_1t__vec2.html" title=" " alt="" coords="162,146,341,173"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -111,7 +112,7 @@ Collaboration diagram for vsg::CollectResourceRequirements:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9a3f1eb7da3dafe3455775e23e9e102a"><td class="memItemLeft" align="right" valign="top"><a id="a9a3f1eb7da3dafe3455775e23e9e102a"></a>
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ResourceHints.html">ResourceHints</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1CollectResourceRequirements.html#a9a3f1eb7da3dafe3455775e23e9e102a">createResourceHints</a> (uint32_t tileMultiplier=1) const</td></tr>
-<tr class="memdesc:a9a3f1eb7da3dafe3455775e23e9e102a"><td class="mdescLeft">&#160;</td><td class="mdescRight">create ResouceHints that capture the collected <a class="el" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that be used to he...">ResourceRequirements</a>. Note, call after the <a class="el" href="classvsg_1_1CollectResourceRequirements.html" title="CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap...">CollectResourceRequirements</a> traversal. <br /></td></tr>
+<tr class="memdesc:a9a3f1eb7da3dafe3455775e23e9e102a"><td class="mdescLeft">&#160;</td><td class="mdescRight">create ResouceHints that capture the collected <a class="el" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that can be used t...">ResourceRequirements</a>. Note, call after the <a class="el" href="classvsg_1_1CollectResourceRequirements.html" title="CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap...">CollectResourceRequirements</a> traversal. <br /></td></tr>
 <tr class="separator:a9a3f1eb7da3dafe3455775e23e9e102a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20f1d7922c30a9266b3ae88626b60147"><td class="memItemLeft" align="right" valign="top"><a id="a20f1d7922c30a9266b3ae88626b60147"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>checkForResourceHints</b> (const <a class="el" href="classvsg_1_1Object.html">Object</a> &amp;object)</td></tr>
@@ -146,6 +147,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a c
 <tr class="memitem:ab97e73347ce7104ef1060c7fe3324839"><td class="memItemLeft" align="right" valign="top"><a id="ab97e73347ce7104ef1060c7fe3324839"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1PagedLOD.html">PagedLOD</a> &amp;plod) override</td></tr>
 <tr class="separator:ab97e73347ce7104ef1060c7fe3324839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5743e0e4bdc32cf9ebdfe589e3ca28f2"><td class="memItemLeft" align="right" valign="top"><a id="a5743e0e4bdc32cf9ebdfe589e3ca28f2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Light.html">Light</a> &amp;light) override</td></tr>
+<tr class="separator:a5743e0e4bdc32cf9ebdfe589e3ca28f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a940a4a163514a579724e1ef2f4d68a81"><td class="memItemLeft" align="right" valign="top"><a id="a940a4a163514a579724e1ef2f4d68a81"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1View.html">View</a> &amp;view) override</td></tr>
 <tr class="separator:a940a4a163514a579724e1ef2f4d68a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,12 +174,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a c
 <tr class="memitem:a7955efca419c83839f312ed187c95fb6"><td class="memItemLeft" align="right" valign="top"><a id="a7955efca419c83839f312ed187c95fb6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1BindIndexBuffer.html">BindIndexBuffer</a> &amp;bib) override</td></tr>
 <tr class="separator:a7955efca419c83839f312ed187c95fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac41ddb6b23db3cb0c7bc1ee75ab0e606"><td class="memItemLeft" align="right" valign="top"><a id="ac41ddb6b23db3cb0c7bc1ee75ab0e606"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1BufferInfo.html">BufferInfo</a> &gt; bufferInfo)</td></tr>
-<tr class="separator:ac41ddb6b23db3cb0c7bc1ee75ab0e606"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42d462ebc7014ee2d9f097e50df37e6b"><td class="memItemLeft" align="right" valign="top"><a id="a42d462ebc7014ee2d9f097e50df37e6b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ImageInfo.html">ImageInfo</a> &gt; imageInfo)</td></tr>
-<tr class="separator:a42d462ebc7014ee2d9f097e50df37e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa590afe3c08c612b387732d3cc388fb8"><td class="memItemLeft" align="right" valign="top"><a id="aa590afe3c08c612b387732d3cc388fb8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1BufferInfo.html">BufferInfo</a> &gt; bufferInfo)</td></tr>
+<tr class="separator:aa590afe3c08c612b387732d3cc388fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8057ad7ec7fbe07e4fe78e1da11ea35"><td class="memItemLeft" align="right" valign="top"><a id="ab8057ad7ec7fbe07e4fe78e1da11ea35"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ImageInfo.html">ImageInfo</a> &gt; imageInfo)</td></tr>
+<tr class="separator:ab8057ad7ec7fbe07e4fe78e1da11ea35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61936ca361b8f75dc7ee8de39ed86217"><td class="memItemLeft" align="right" valign="top"><a id="a61936ca361b8f75dc7ee8de39ed86217"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Object.html">Object</a> &amp;)</td></tr>
 <tr class="separator:a61936ca361b8f75dc7ee8de39ed86217"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,6 +195,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:aa80a978b07081b996f8eaed678c8f555"><td class="memItemLeft" align="right" valign="top"><a id="aa80a978b07081b996f8eaed678c8f555"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const stringValue &amp;)</td></tr>
 <tr class="separator:aa80a978b07081b996f8eaed678c8f555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac931aeea1b539beb76d46e378faced83"><td class="memItemLeft" align="right" valign="top"><a id="ac931aeea1b539beb76d46e378faced83"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const wstringValue &amp;)</td></tr>
+<tr class="separator:ac931aeea1b539beb76d46e378faced83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64b885f53fe3606609bc6697d78aaad8"><td class="memItemLeft" align="right" valign="top"><a id="a64b885f53fe3606609bc6697d78aaad8"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const boolValue &amp;)</td></tr>
 <tr class="separator:a64b885f53fe3606609bc6697d78aaad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -530,6 +537,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:a75f1bc1a738b0fad9ee68621384f49d3"><td class="memItemLeft" align="right" valign="top"><a id="a75f1bc1a738b0fad9ee68621384f49d3"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Node.html">Node</a> &amp;)</td></tr>
 <tr class="separator:a75f1bc1a738b0fad9ee68621384f49d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8db241e2eb1f2a7bd252511612231652"><td class="memItemLeft" align="right" valign="top"><a id="a8db241e2eb1f2a7bd252511612231652"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Compilable.html">Compilable</a> &amp;)</td></tr>
+<tr class="separator:a8db241e2eb1f2a7bd252511612231652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98b1f08910e106c8db2c6e9e1e44a1f0"><td class="memItemLeft" align="right" valign="top"><a id="a98b1f08910e106c8db2c6e9e1e44a1f0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Commands.html">Commands</a> &amp;)</td></tr>
 <tr class="separator:a98b1f08910e106c8db2c6e9e1e44a1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -629,6 +639,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:a59dc99e2df8588488211295c1da93c88"><td class="memItemLeft" align="right" valign="top"><a id="a59dc99e2df8588488211295c1da93c88"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1BindDescriptorSets.html">BindDescriptorSets</a> &amp;)</td></tr>
 <tr class="separator:a59dc99e2df8588488211295c1da93c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c05b7bfb1add0817d665372f1374c6"><td class="memItemLeft" align="right" valign="top"><a id="a19c05b7bfb1add0817d665372f1374c6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1BindViewDescriptorSets.html">BindViewDescriptorSets</a> &amp;)</td></tr>
+<tr class="separator:a19c05b7bfb1add0817d665372f1374c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9799e574da42a1376c758b26fdfc99a9"><td class="memItemLeft" align="right" valign="top"><a id="a9799e574da42a1376c758b26fdfc99a9"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Descriptor.html">Descriptor</a> &amp;)</td></tr>
 <tr class="separator:a9799e574da42a1376c758b26fdfc99a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -710,6 +723,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:a01a2af8f8b06259f930161bbfc908fd6"><td class="memItemLeft" align="right" valign="top"><a id="a01a2af8f8b06259f930161bbfc908fd6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ClearAttachments.html">ClearAttachments</a> &amp;)</td></tr>
 <tr class="separator:a01a2af8f8b06259f930161bbfc908fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3371a522a1fa945ce0b06ce5e994197f"><td class="memItemLeft" align="right" valign="top"><a id="a3371a522a1fa945ce0b06ce5e994197f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ClearColorImage.html">ClearColorImage</a> &amp;)</td></tr>
+<tr class="separator:a3371a522a1fa945ce0b06ce5e994197f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45549737afd268f5ccb4d5a35cf327d1"><td class="memItemLeft" align="right" valign="top"><a id="a45549737afd268f5ccb4d5a35cf327d1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ClearDepthStencilImage.html">ClearDepthStencilImage</a> &amp;)</td></tr>
+<tr class="separator:a45549737afd268f5ccb4d5a35cf327d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c3876dda9ddb5609a7d361de93ca2d0"><td class="memItemLeft" align="right" valign="top"><a id="a0c3876dda9ddb5609a7d361de93ca2d0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1QueryPool.html">QueryPool</a> &amp;)</td></tr>
 <tr class="separator:a0c3876dda9ddb5609a7d361de93ca2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -752,6 +771,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:ad36768192ee89657d8fe20c240c7a787"><td class="memItemLeft" align="right" valign="top"><a id="ad36768192ee89657d8fe20c240c7a787"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1CloseWindowEvent.html">CloseWindowEvent</a> &amp;)</td></tr>
 <tr class="separator:ad36768192ee89657d8fe20c240c7a787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c650e0787e6dd444d81cec2fdc822a2"><td class="memItemLeft" align="right" valign="top"><a id="a4c650e0787e6dd444d81cec2fdc822a2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1FocusInEvent.html">FocusInEvent</a> &amp;)</td></tr>
+<tr class="separator:a4c650e0787e6dd444d81cec2fdc822a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab14cb2a17f139e78f7eb0922377018da"><td class="memItemLeft" align="right" valign="top"><a id="ab14cb2a17f139e78f7eb0922377018da"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1FocusOutEvent.html">FocusOutEvent</a> &amp;)</td></tr>
+<tr class="separator:ab14cb2a17f139e78f7eb0922377018da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7604266e0ffce678b95c8975572e4bde"><td class="memItemLeft" align="right" valign="top"><a id="a7604266e0ffce678b95c8975572e4bde"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1KeyEvent.html">KeyEvent</a> &amp;)</td></tr>
 <tr class="separator:a7604266e0ffce678b95c8975572e4bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -797,6 +822,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:aba8e9fb695868ceac8aa3e0f36638010"><td class="memItemLeft" align="right" valign="top"><a id="aba8e9fb695868ceac8aa3e0f36638010"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1AnimationPath.html">AnimationPath</a> &amp;)</td></tr>
 <tr class="separator:aba8e9fb695868ceac8aa3e0f36638010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a020d851858bdef29df5f43948c6aa4e3"><td class="memItemLeft" align="right" valign="top"><a id="a020d851858bdef29df5f43948c6aa4e3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ShaderCompileSettings.html">ShaderCompileSettings</a> &amp;)</td></tr>
+<tr class="separator:a020d851858bdef29df5f43948c6aa4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e833448b44398f2fcf0f0f6b00e0b36"><td class="memItemLeft" align="right" valign="top"><a id="a6e833448b44398f2fcf0f0f6b00e0b36"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Camera.html">Camera</a> &amp;)</td></tr>
 <tr class="separator:a6e833448b44398f2fcf0f0f6b00e0b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -856,6 +884,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:aa80a978b07081b996f8eaed678c8f555 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="aa80a978b07081b996f8eaed678c8f555"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const stringValue &amp;)</td></tr>
 <tr class="separator:aa80a978b07081b996f8eaed678c8f555 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac931aeea1b539beb76d46e378faced83 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="ac931aeea1b539beb76d46e378faced83"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const wstringValue &amp;)</td></tr>
+<tr class="separator:ac931aeea1b539beb76d46e378faced83 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64b885f53fe3606609bc6697d78aaad8 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a64b885f53fe3606609bc6697d78aaad8"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const boolValue &amp;)</td></tr>
 <tr class="separator:a64b885f53fe3606609bc6697d78aaad8 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1192,6 +1223,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:a28dbb95f373c48810c838d9f76a6740f inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a28dbb95f373c48810c838d9f76a6740f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const block128Array3D &amp;)</td></tr>
 <tr class="separator:a28dbb95f373c48810c838d9f76a6740f inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8db241e2eb1f2a7bd252511612231652 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a8db241e2eb1f2a7bd252511612231652"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Compilable.html">Compilable</a> &amp;)</td></tr>
+<tr class="separator:a8db241e2eb1f2a7bd252511612231652 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98b1f08910e106c8db2c6e9e1e44a1f0 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a98b1f08910e106c8db2c6e9e1e44a1f0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Commands.html">Commands</a> &amp;)</td></tr>
 <tr class="separator:a98b1f08910e106c8db2c6e9e1e44a1f0 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1219,9 +1253,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:ae10182013a9dfa00e77a10badcf52db8 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="ae10182013a9dfa00e77a10badcf52db8"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Switch.html">Switch</a> &amp;)</td></tr>
 <tr class="separator:ae10182013a9dfa00e77a10badcf52db8 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06fc78896b9350a1ab68ee7e20c76eae inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a06fc78896b9350a1ab68ee7e20c76eae"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Light.html">Light</a> &amp;)</td></tr>
-<tr class="separator:a06fc78896b9350a1ab68ee7e20c76eae inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af98817fe03db78faf7d32a5258869dbf inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="af98817fe03db78faf7d32a5258869dbf"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1AmbientLight.html">AmbientLight</a> &amp;)</td></tr>
 <tr class="separator:af98817fe03db78faf7d32a5258869dbf inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1267,6 +1298,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:a59dc99e2df8588488211295c1da93c88 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a59dc99e2df8588488211295c1da93c88"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1BindDescriptorSets.html">BindDescriptorSets</a> &amp;)</td></tr>
 <tr class="separator:a59dc99e2df8588488211295c1da93c88 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c05b7bfb1add0817d665372f1374c6 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a19c05b7bfb1add0817d665372f1374c6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1BindViewDescriptorSets.html">BindViewDescriptorSets</a> &amp;)</td></tr>
+<tr class="separator:a19c05b7bfb1add0817d665372f1374c6 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e65b83f73426e0c678eb85f1996367a inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a8e65b83f73426e0c678eb85f1996367a"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1BindComputePipeline.html">BindComputePipeline</a> &amp;)</td></tr>
 <tr class="separator:a8e65b83f73426e0c678eb85f1996367a inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1327,6 +1361,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:a01a2af8f8b06259f930161bbfc908fd6 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a01a2af8f8b06259f930161bbfc908fd6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ClearAttachments.html">ClearAttachments</a> &amp;)</td></tr>
 <tr class="separator:a01a2af8f8b06259f930161bbfc908fd6 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3371a522a1fa945ce0b06ce5e994197f inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a3371a522a1fa945ce0b06ce5e994197f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ClearColorImage.html">ClearColorImage</a> &amp;)</td></tr>
+<tr class="separator:a3371a522a1fa945ce0b06ce5e994197f inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45549737afd268f5ccb4d5a35cf327d1 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a45549737afd268f5ccb4d5a35cf327d1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ClearDepthStencilImage.html">ClearDepthStencilImage</a> &amp;)</td></tr>
+<tr class="separator:a45549737afd268f5ccb4d5a35cf327d1 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c3876dda9ddb5609a7d361de93ca2d0 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a0c3876dda9ddb5609a7d361de93ca2d0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1QueryPool.html">QueryPool</a> &amp;)</td></tr>
 <tr class="separator:a0c3876dda9ddb5609a7d361de93ca2d0 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1369,6 +1409,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:ad36768192ee89657d8fe20c240c7a787 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="ad36768192ee89657d8fe20c240c7a787"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1CloseWindowEvent.html">CloseWindowEvent</a> &amp;)</td></tr>
 <tr class="separator:ad36768192ee89657d8fe20c240c7a787 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c650e0787e6dd444d81cec2fdc822a2 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a4c650e0787e6dd444d81cec2fdc822a2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1FocusInEvent.html">FocusInEvent</a> &amp;)</td></tr>
+<tr class="separator:a4c650e0787e6dd444d81cec2fdc822a2 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab14cb2a17f139e78f7eb0922377018da inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="ab14cb2a17f139e78f7eb0922377018da"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1FocusOutEvent.html">FocusOutEvent</a> &amp;)</td></tr>
+<tr class="separator:ab14cb2a17f139e78f7eb0922377018da inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7604266e0ffce678b95c8975572e4bde inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a7604266e0ffce678b95c8975572e4bde"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1KeyEvent.html">KeyEvent</a> &amp;)</td></tr>
 <tr class="separator:a7604266e0ffce678b95c8975572e4bde inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1414,6 +1460,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:aba8e9fb695868ceac8aa3e0f36638010 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="aba8e9fb695868ceac8aa3e0f36638010"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1AnimationPath.html">AnimationPath</a> &amp;)</td></tr>
 <tr class="separator:aba8e9fb695868ceac8aa3e0f36638010 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a020d851858bdef29df5f43948c6aa4e3 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a020d851858bdef29df5f43948c6aa4e3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ShaderCompileSettings.html">ShaderCompileSettings</a> &amp;)</td></tr>
+<tr class="separator:a020d851858bdef29df5f43948c6aa4e3 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e833448b44398f2fcf0f0f6b00e0b36 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a6e833448b44398f2fcf0f0f6b00e0b36"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Camera.html">Camera</a> &amp;)</td></tr>
 <tr class="separator:a6e833448b44398f2fcf0f0f6b00e0b36 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1476,7 +1525,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -1594,7 +1643,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>operator delet
 <tr class="separator:a1c92fe24ceb719dd228ee06363e79d09 inherit pub_static_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1CollectResourceRequirements.html" title="CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap...">CollectResourceRequirements</a> is a visitor class that collects the <a class="el" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that be used to he...">ResourceRequirements</a> of a scene graph. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1CollectResourceRequirements.html" title="CollectResourceRequirements is a visitor class that collects the ResourceRequirements of a scene grap...">CollectResourceRequirements</a> is a visitor class that collects the <a class="el" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that can be used t...">ResourceRequirements</a> of a scene graph. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/vk/<a class="el" href="ResourceRequirements_8h_source.html">ResourceRequirements.h</a></li>
 </ul>

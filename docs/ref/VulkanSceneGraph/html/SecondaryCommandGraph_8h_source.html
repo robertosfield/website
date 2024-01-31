@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -106,7 +106,7 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        VkCommandBufferLevel level() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> reset() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> record(CommandBuffers&amp; recordedCommandBuffers, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;FrameStamp&gt;</a> frameStamp = {}, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;DatabasePager&gt;</a> databasePager = {}) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> record(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;RecordedCommandBuffers&gt;</a> recordedCommandBuffers, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;FrameStamp&gt;</a> frameStamp = {}, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;DatabasePager&gt;</a> databasePager = {}) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1SecondaryCommandGraph.html">SecondaryCommandGraph</a>();</div>
@@ -125,7 +125,7 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">extern</span> VSG_DECLSPEC <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;SecondaryCommandGraph&gt;</a> createSecondaryCommandGraphForView(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Window&gt;</a> window, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Camera&gt;</a> camera, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> scenegraph, uint32_t subpass, <span class="keywordtype">bool</span> assignHeadlight = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;} <span class="comment">// namespace vsg</span></div>
-<div class="ttc" id="aclassvsg_1_1ExecuteCommands_html"><div class="ttname"><a href="classvsg_1_1ExecuteCommands.html">vsg::ExecuteCommands</a></div><div class="ttdoc">Encapsulation of vkCmdExecuteCommands with thread safe integration with secondary CommandGraph that p...</div><div class="ttdef"><b>Definition:</b> ExecuteCommands.h:23</div></div>
+<div class="ttc" id="aclassvsg_1_1ExecuteCommands_html"><div class="ttname"><a href="classvsg_1_1ExecuteCommands.html">vsg::ExecuteCommands</a></div><div class="ttdoc">Encapsulation of vkCmdExecuteCommands with thread safe integration with SecondaryCommandGraph that pr...</div><div class="ttdef"><b>Definition:</b> ExecuteCommands.h:23</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1SecondaryCommandGraph_html"><div class="ttname"><a href="classvsg_1_1SecondaryCommandGraph.html">vsg::SecondaryCommandGraph</a></div><div class="ttdoc">SecondaryCommandGraph is a specialization of CommandGraph that provides Vulkan secondary command buff...</div><div class="ttdef"><b>Definition:</b> SecondaryCommandGraph.h:25</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>

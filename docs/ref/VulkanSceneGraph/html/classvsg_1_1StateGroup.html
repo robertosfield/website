@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -68,7 +68,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classvsg_1_1StateGroup-members.html">List of all members</a>  </div>
@@ -108,16 +107,6 @@ Collaboration diagram for vsg::StateGroup:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a2981bb531c762437aa1c4396df971b0b"><td class="memItemLeft" align="right" valign="top"><a id="a2981bb531c762437aa1c4396df971b0b"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>StateCommands</b> = std::vector&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1StateCommand.html">StateCommand</a> &gt;, <a class="el" href="structvsg_1_1allocator__affinity__nodes.html">allocator_affinity_nodes</a>&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1StateCommand.html">StateCommand</a> &gt; &gt;&gt;</td></tr>
-<tr class="separator:a2981bb531c762437aa1c4396df971b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classvsg_1_1Group"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classvsg_1_1Group')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classvsg_1_1Group.html">vsg::Group</a></td></tr>
-<tr class="memitem:af1531a0888c452b879782a49a5371410 inherit pub_types_classvsg_1_1Group"><td class="memItemLeft" align="right" valign="top"><a id="af1531a0888c452b879782a49a5371410"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Children</b> = std::vector&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Node.html">Node</a> &gt;, <a class="el" href="structvsg_1_1allocator__affinity__nodes.html">allocator_affinity_nodes</a>&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Node.html">Node</a> &gt; &gt;&gt;</td></tr>
-<tr class="separator:af1531a0888c452b879782a49a5371410 inherit pub_types_classvsg_1_1Group"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1b86339621899a81caa115cd5429a080"><td class="memTemplParams" colspan="2"><a id="a1b86339621899a81caa115cd5429a080"></a>
@@ -256,7 +245,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -333,6 +322,10 @@ Children&#160;</td><td class="memItemRight" valign="bottom"><b>children</b></td>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classvsg_1_1Group"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classvsg_1_1Group')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classvsg_1_1Group.html">vsg::Group</a></td></tr>
+<tr class="memitem:af1531a0888c452b879782a49a5371410 inherit pub_types_classvsg_1_1Group"><td class="memItemLeft" align="right" valign="top"><a id="af1531a0888c452b879782a49a5371410"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Children</b> = std::vector&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Node.html">Node</a> &gt;, <a class="el" href="structvsg_1_1allocator__affinity__nodes.html">allocator_affinity_nodes</a>&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Node.html">Node</a> &gt; &gt;&gt;</td></tr>
+<tr class="separator:af1531a0888c452b879782a49a5371410 inherit pub_types_classvsg_1_1Group"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classvsg_1_1Inherit"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classvsg_1_1Inherit')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classvsg_1_1Inherit.html">vsg::Inherit&lt; Group, StateGroup &gt;</a></td></tr>
 <tr class="memitem:ace3e42536607990e142d737658c44345 inherit pub_static_methods_classvsg_1_1Inherit"><td class="memItemLeft" align="right" valign="top"><a id="ace3e42536607990e142d737658c44345"></a>
 static <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1StateGroup.html">StateGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (Args &amp;&amp;... args)</td></tr>
@@ -390,7 +383,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1StateGroup.html">StateGroup</a> is a <a class="el" href="classvsg_1_1Group.html" title="Group node provides a list of children.">Group</a> node that manages a list of StateCommands that are use during the <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> for applying state to subgraph When the <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> encounters a The <a class="el" href="classvsg_1_1StateGroup.html">StateGroup</a> the StateGroup::stateCommands are pushed to the appropriate <a class="el" href="classvsg_1_1State.html" title="vsg::State used by vsg::RecordTraversal to manage state stacks, projection, modelview matrix and frus...">vsg::State</a> stacks and when a <a class="el" href="classvsg_1_1Command.html" title="Command base class from encapsualting vkCmd* calls and associated settings.">Command</a> is encountered during the <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> the current head of these <a class="el" href="classvsg_1_1State.html" title="vsg::State used by vsg::RecordTraversal to manage state stacks, projection, modelview matrix and frus...">State</a> stacks are applied. After traversing the <a class="el" href="classvsg_1_1StateGroup.html">StateGroup</a>'s subgraph the StateGroup::stateCommands are popped from the <a class="el" href="classvsg_1_1State.html" title="vsg::State used by vsg::RecordTraversal to manage state stacks, projection, modelview matrix and frus...">vsg::State</a> stacks. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1StateGroup.html">StateGroup</a> is a <a class="el" href="classvsg_1_1Group.html" title="Group node provides a list of children.">Group</a> node that manages a list of StateCommands that are used during the <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> for applying state to subgraphs When the <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> encounters the <a class="el" href="classvsg_1_1StateGroup.html">StateGroup</a> its StateGroup::stateCommands are pushed to the appropriate <a class="el" href="classvsg_1_1State.html" title="vsg::State is used by vsg::RecordTraversal to manage state stacks, projection and modelview matrices ...">vsg::State</a> stacks and when a <a class="el" href="classvsg_1_1Command.html" title="Command base class for encapsulating vkCmd* calls and associated settings.">Command</a> is encountered during the <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> the current head of these <a class="el" href="classvsg_1_1State.html" title="vsg::State is used by vsg::RecordTraversal to manage state stacks, projection and modelview matrices ...">State</a> stacks are applied. After traversing the <a class="el" href="classvsg_1_1StateGroup.html">StateGroup</a>'s subgraph the StateGroup::stateCommands are popped from the <a class="el" href="classvsg_1_1State.html" title="vsg::State is used by vsg::RecordTraversal to manage state stacks, projection and modelview matrices ...">vsg::State</a> stacks. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/nodes/<a class="el" href="StateGroup_8h_source.html">StateGroup.h</a></li>
 </ul>

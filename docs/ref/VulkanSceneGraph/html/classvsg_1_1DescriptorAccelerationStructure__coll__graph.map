@@ -1,5 +1,5 @@
 <map id="vsg::DescriptorAccelerationStructure" name="vsg::DescriptorAccelerationStructure">
-<area shape="rect" id="node1" title="DescriptorAccelerationStructure descriptor encapsulates of VkAccelerationStructure." alt="" coords="29,333,230,375"/>
+<area shape="rect" id="node1" title="DescriptorAccelerationStructure encapsulates descriptors of type VkAccelerationStructure." alt="" coords="29,333,230,375"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,244,253,285"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Descriptor.html" title=" " alt="" coords="69,169,189,196"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="51,80,207,121"/>

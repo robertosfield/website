@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -133,9 +133,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a c
 <tr class="memitem:a5558800e95d1eff552b8704e3dace207"><td class="memItemLeft" align="right" valign="top"><a id="a5558800e95d1eff552b8704e3dace207"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1MatrixTransform.html">MatrixTransform</a> &amp;transform) override</td></tr>
 <tr class="separator:a5558800e95d1eff552b8704e3dace207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4f033032b2bb64e15ab806d8caa604e"><td class="memItemLeft" align="right" valign="top"><a id="ac4f033032b2bb64e15ab806d8caa604e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1CullNode.html">CullNode</a> &amp;cullNode) override</td></tr>
+<tr class="separator:ac4f033032b2bb64e15ab806d8caa604e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c624d983eddf2c610166ab056799ec3"><td class="memItemLeft" align="right" valign="top"><a id="a4c624d983eddf2c610166ab056799ec3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1CullGroup.html">CullGroup</a> &amp;cullGroup) override</td></tr>
+<tr class="separator:a4c624d983eddf2c610166ab056799ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a715ea0131b6f1732344a7dd016d972"><td class="memItemLeft" align="right" valign="top"><a id="a3a715ea0131b6f1732344a7dd016d972"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1LOD.html">LOD</a> &amp;lod) override</td></tr>
+<tr class="separator:a3a715ea0131b6f1732344a7dd016d972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ebbb6d282187c2da8fae91199fbb94"><td class="memItemLeft" align="right" valign="top"><a id="a01ebbb6d282187c2da8fae91199fbb94"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1PagedLOD.html">PagedLOD</a> &amp;plod) override</td></tr>
+<tr class="separator:a01ebbb6d282187c2da8fae91199fbb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3631add130f174152c3e2feb5bbd0fa6"><td class="memItemLeft" align="right" valign="top"><a id="a3631add130f174152c3e2feb5bbd0fa6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Geometry.html">Geometry</a> &amp;geometry) override</td></tr>
 <tr class="separator:a3631add130f174152c3e2feb5bbd0fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd97f3dfdefb6bc5609ae877f0eae02b"><td class="memItemLeft" align="right" valign="top"><a id="acd97f3dfdefb6bc5609ae877f0eae02b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1VertexDraw.html">VertexDraw</a> &amp;vid) override</td></tr>
+<tr class="separator:acd97f3dfdefb6bc5609ae877f0eae02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae21a67747962be2779ec4ede2ee056cf"><td class="memItemLeft" align="right" valign="top"><a id="ae21a67747962be2779ec4ede2ee056cf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1VertexIndexDraw.html">VertexIndexDraw</a> &amp;vid) override</td></tr>
 <tr class="separator:ae21a67747962be2779ec4ede2ee056cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,6 +193,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>applyDraw</b>
 <tr class="memitem:a9c32a2ef289ffe005836f928b1816585"><td class="memItemLeft" align="right" valign="top"><a id="a9c32a2ef289ffe005836f928b1816585"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>applyDrawIndexed</b> (uint32_t firstIndex, uint32_t indexCount, uint32_t firstInstance, uint32_t instanceCount)</td></tr>
 <tr class="separator:a9c32a2ef289ffe005836f928b1816585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae338ae03858d57ff9e1d84a9b068b8c4"><td class="memItemLeft" align="right" valign="top"><a id="ae338ae03858d57ff9e1d84a9b068b8c4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (const <a class="el" href="structvsg_1_1t__box.html">dbox</a> &amp;bb)</td></tr>
+<tr class="separator:ae338ae03858d57ff9e1d84a9b068b8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71a6d9c033fb5f905e0c798bf72dabc9"><td class="memItemLeft" align="right" valign="top"><a id="a71a6d9c033fb5f905e0c798bf72dabc9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (const <a class="el" href="structvsg_1_1t__sphere.html">dsphere</a> &amp;bs)</td></tr>
+<tr class="separator:a71a6d9c033fb5f905e0c798bf72dabc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvsg_1_1Inherit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvsg_1_1Inherit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvsg_1_1Inherit.html">vsg::Inherit&lt; ConstVisitor, ComputeBounds &gt;</a></td></tr>
 <tr class="memitem:a24550cd9c037afd7d161ff391b1ceac7 inherit pub_methods_classvsg_1_1Inherit"><td class="memItemLeft" align="right" valign="top"><a id="a24550cd9c037afd7d161ff391b1ceac7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Inherit</b> (Args &amp;&amp;... args)</td></tr>
@@ -219,6 +240,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:aa80a978b07081b996f8eaed678c8f555 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="aa80a978b07081b996f8eaed678c8f555"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const stringValue &amp;)</td></tr>
 <tr class="separator:aa80a978b07081b996f8eaed678c8f555 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac931aeea1b539beb76d46e378faced83 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="ac931aeea1b539beb76d46e378faced83"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const wstringValue &amp;)</td></tr>
+<tr class="separator:ac931aeea1b539beb76d46e378faced83 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64b885f53fe3606609bc6697d78aaad8 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a64b885f53fe3606609bc6697d78aaad8"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const boolValue &amp;)</td></tr>
 <tr class="separator:a64b885f53fe3606609bc6697d78aaad8 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -552,6 +576,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:a75f1bc1a738b0fad9ee68621384f49d3 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a75f1bc1a738b0fad9ee68621384f49d3"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Node.html">Node</a> &amp;)</td></tr>
 <tr class="separator:a75f1bc1a738b0fad9ee68621384f49d3 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8db241e2eb1f2a7bd252511612231652 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a8db241e2eb1f2a7bd252511612231652"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Compilable.html">Compilable</a> &amp;)</td></tr>
+<tr class="separator:a8db241e2eb1f2a7bd252511612231652 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98b1f08910e106c8db2c6e9e1e44a1f0 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a98b1f08910e106c8db2c6e9e1e44a1f0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Commands.html">Commands</a> &amp;)</td></tr>
 <tr class="separator:a98b1f08910e106c8db2c6e9e1e44a1f0 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -561,21 +588,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:a1860447d7d5a213c46dd1ab8e1f7ac74 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a1860447d7d5a213c46dd1ab8e1f7ac74"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1QuadGroup.html">QuadGroup</a> &amp;)</td></tr>
 <tr class="separator:a1860447d7d5a213c46dd1ab8e1f7ac74 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95cf3b692a4b7c93ec8b9221eb7969d2 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a95cf3b692a4b7c93ec8b9221eb7969d2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1LOD.html">LOD</a> &amp;)</td></tr>
-<tr class="separator:a95cf3b692a4b7c93ec8b9221eb7969d2 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5bef4ed24d45cc68210ca2f5b0ac57d inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="af5bef4ed24d45cc68210ca2f5b0ac57d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1PagedLOD.html">PagedLOD</a> &amp;)</td></tr>
-<tr class="separator:af5bef4ed24d45cc68210ca2f5b0ac57d inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55e6a5c0306db8953784d211effa5c5 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="ad55e6a5c0306db8953784d211effa5c5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1CullGroup.html">CullGroup</a> &amp;)</td></tr>
-<tr class="separator:ad55e6a5c0306db8953784d211effa5c5 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53e854ad78920906feccf195a657f3e3 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a53e854ad78920906feccf195a657f3e3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1CullNode.html">CullNode</a> &amp;)</td></tr>
-<tr class="separator:a53e854ad78920906feccf195a657f3e3 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e44ab836a9ac32b65a8c86d86f616c8 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a7e44ab836a9ac32b65a8c86d86f616c8"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1VertexDraw.html">VertexDraw</a> &amp;)</td></tr>
-<tr class="separator:a7e44ab836a9ac32b65a8c86d86f616c8 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e0b79a7495aa10e6447097bebe7450d inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a4e0b79a7495aa10e6447097bebe7450d"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1DepthSorted.html">DepthSorted</a> &amp;)</td></tr>
 <tr class="separator:a4e0b79a7495aa10e6447097bebe7450d inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -621,6 +633,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:a59dc99e2df8588488211295c1da93c88 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a59dc99e2df8588488211295c1da93c88"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1BindDescriptorSets.html">BindDescriptorSets</a> &amp;)</td></tr>
 <tr class="separator:a59dc99e2df8588488211295c1da93c88 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c05b7bfb1add0817d665372f1374c6 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a19c05b7bfb1add0817d665372f1374c6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1BindViewDescriptorSets.html">BindViewDescriptorSets</a> &amp;)</td></tr>
+<tr class="separator:a19c05b7bfb1add0817d665372f1374c6 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9799e574da42a1376c758b26fdfc99a9 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a9799e574da42a1376c758b26fdfc99a9"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Descriptor.html">Descriptor</a> &amp;)</td></tr>
 <tr class="separator:a9799e574da42a1376c758b26fdfc99a9 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -690,6 +705,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:a01a2af8f8b06259f930161bbfc908fd6 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a01a2af8f8b06259f930161bbfc908fd6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ClearAttachments.html">ClearAttachments</a> &amp;)</td></tr>
 <tr class="separator:a01a2af8f8b06259f930161bbfc908fd6 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3371a522a1fa945ce0b06ce5e994197f inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a3371a522a1fa945ce0b06ce5e994197f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ClearColorImage.html">ClearColorImage</a> &amp;)</td></tr>
+<tr class="separator:a3371a522a1fa945ce0b06ce5e994197f inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45549737afd268f5ccb4d5a35cf327d1 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a45549737afd268f5ccb4d5a35cf327d1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ClearDepthStencilImage.html">ClearDepthStencilImage</a> &amp;)</td></tr>
+<tr class="separator:a45549737afd268f5ccb4d5a35cf327d1 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c3876dda9ddb5609a7d361de93ca2d0 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a0c3876dda9ddb5609a7d361de93ca2d0"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1QueryPool.html">QueryPool</a> &amp;)</td></tr>
 <tr class="separator:a0c3876dda9ddb5609a7d361de93ca2d0 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -732,6 +753,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:ad36768192ee89657d8fe20c240c7a787 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="ad36768192ee89657d8fe20c240c7a787"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1CloseWindowEvent.html">CloseWindowEvent</a> &amp;)</td></tr>
 <tr class="separator:ad36768192ee89657d8fe20c240c7a787 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c650e0787e6dd444d81cec2fdc822a2 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a4c650e0787e6dd444d81cec2fdc822a2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1FocusInEvent.html">FocusInEvent</a> &amp;)</td></tr>
+<tr class="separator:a4c650e0787e6dd444d81cec2fdc822a2 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab14cb2a17f139e78f7eb0922377018da inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="ab14cb2a17f139e78f7eb0922377018da"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1FocusOutEvent.html">FocusOutEvent</a> &amp;)</td></tr>
+<tr class="separator:ab14cb2a17f139e78f7eb0922377018da inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7604266e0ffce678b95c8975572e4bde inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a7604266e0ffce678b95c8975572e4bde"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1KeyEvent.html">KeyEvent</a> &amp;)</td></tr>
 <tr class="separator:a7604266e0ffce678b95c8975572e4bde inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -777,6 +804,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (co
 <tr class="memitem:aba8e9fb695868ceac8aa3e0f36638010 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="aba8e9fb695868ceac8aa3e0f36638010"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1AnimationPath.html">AnimationPath</a> &amp;)</td></tr>
 <tr class="separator:aba8e9fb695868ceac8aa3e0f36638010 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a020d851858bdef29df5f43948c6aa4e3 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a020d851858bdef29df5f43948c6aa4e3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1ShaderCompileSettings.html">ShaderCompileSettings</a> &amp;)</td></tr>
+<tr class="separator:a020d851858bdef29df5f43948c6aa4e3 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e833448b44398f2fcf0f0f6b00e0b36 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memItemLeft" align="right" valign="top"><a id="a6e833448b44398f2fcf0f0f6b00e0b36"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (const <a class="el" href="classvsg_1_1Camera.html">Camera</a> &amp;)</td></tr>
 <tr class="separator:a6e833448b44398f2fcf0f0f6b00e0b36 inherit pub_methods_classvsg_1_1ConstVisitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -842,7 +872,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -906,8 +936,11 @@ const <a class="el" href="classvsg_1_1Auxiliary.html">Auxiliary</a> *&#160;</td>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aff7d1202ac4768c625f585837ad7ce6a"><td class="memItemLeft" align="right" valign="top"><a id="aff7d1202ac4768c625f585837ad7ce6a"></a>
-<a class="el" href="structvsg_1_1t__box.html">dbox</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bounds</b></td></tr>
+<a class="el" href="structvsg_1_1t__box.html">dbox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ComputeBounds.html#aff7d1202ac4768c625f585837ad7ce6a">bounds</a></td></tr>
+<tr class="memdesc:aff7d1202ac4768c625f585837ad7ce6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of compute bounds traversal. <br /></td></tr>
 <tr class="separator:aff7d1202ac4768c625f585837ad7ce6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717510f147e11f1784d83f7a503e5af8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ComputeBounds.html#a717510f147e11f1784d83f7a503e5af8">useNodeBounds</a> = true</td></tr>
+<tr class="separator:a717510f147e11f1784d83f7a503e5af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a300b6f4a9dab4e349e3266152234fcc9"><td class="memItemLeft" align="right" valign="top"><a id="a300b6f4a9dab4e349e3266152234fcc9"></a>
 ArrayStateStack&#160;</td><td class="memItemRight" valign="bottom"><b>arrayStateStack</b></td></tr>
 <tr class="separator:a300b6f4a9dab4e349e3266152234fcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -961,7 +994,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classvsg_1_1ComputeBounds.html" title="ComputeBounds traverses a scene graph computing an overall bounding box that encloses all the geometr...">ComputeBounds</a> traverses a scene graph computing an overall bounding box that encloses all the geometry in that scene graph. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a717510f147e11f1784d83f7a503e5af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717510f147e11f1784d83f7a503e5af8">&#9670;&nbsp;</a></span>useNodeBounds</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vsg::ComputeBounds::useNodeBounds = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Use the bounding volumes of Cull/LOD nodes etc to compute the bounds rather than traverse their subgraphs. Using the bounding volumes is faster but may result in less tight bounds around the geometry in the scene. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/utils/<a class="el" href="ComputeBounds_8h_source.html">ComputeBounds.h</a></li>
 </ul>
 </div><!-- contents -->

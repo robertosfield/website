@@ -1,7 +1,6 @@
 <map id="vsg::GraphicsPipeline" name="vsg::GraphicsPipeline">
-<area shape="rect" id="node1" title="GraphicsPipeline encapsulates graphics VkPipeline and the VkGraphicsPipelineCreateInfo settings used ..." alt="" coords="429,78,592,105"/>
-<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
-<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
-<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,71,299,112"/>
-<area shape="rect" id="node5" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,136,299,177"/>
+<area shape="rect" id="node1" title="GraphicsPipeline encapsulates graphics VkPipeline and the VkGraphicsPipelineCreateInfo settings used ..." alt="" coords="131,185,294,212"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,81,161,123"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="185,81,328,123"/>
 </map>

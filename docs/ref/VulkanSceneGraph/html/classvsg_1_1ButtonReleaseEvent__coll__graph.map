@@ -1,5 +1,5 @@
 <map id="vsg::ButtonReleaseEvent" name="vsg::ButtonReleaseEvent">
-<area shape="rect" id="node1" title="ButtonReleaseEvent represent a button release event." alt="" coords="130,685,315,712"/>
+<area shape="rect" id="node1" title="ButtonReleaseEvent represents a button release event." alt="" coords="130,685,315,712"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="124,595,321,636"/>
 <area shape="rect" id="node3" href="$classvsg_1_1PointerEvent.html" title="PointerEvent is a base class for mouse pointer events." alt="" coords="155,519,291,545"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="121,428,324,469"/>

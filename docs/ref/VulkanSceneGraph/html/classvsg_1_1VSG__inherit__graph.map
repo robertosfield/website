@@ -1,7 +1,7 @@
 <map id="vsg::VSG" name="vsg::VSG">
 <area shape="rect" id="node1" title="ReaderWriter for reading and writing native VSG ascii and binary files." alt="" coords="65,333,145,360"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,244,205,285"/>
-<area shape="rect" id="node3" href="$classvsg_1_1ReaderWriter.html" title="Base class from providing support for reading and/or writing various file formats and IO protocols." alt="" coords="36,169,175,196"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ReaderWriter.html" title="Base class for providing support for reading and/or writing various file formats and IO protocols." alt="" coords="36,169,175,196"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="27,80,183,121"/>
 <area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="58,5,153,32"/>
 </map>

@@ -1,9 +1,11 @@
 <map id="vsg::DrawMeshTasksIndirectCount" name="vsg::DrawMeshTasksIndirectCount">
-<area shape="rect" id="node1" title="DrawMeshTasksIndirectCount command encapsulates vkCmdDrawMeshTasksIndirectCountEXT call and associate..." alt="" coords="19,497,225,539"/>
-<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,408,239,449"/>
-<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class from encapsualting vkCmd* calls and associated settings." alt="" coords="62,333,182,360"/>
-<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="48,244,196,285"/>
-<area shape="rect" id="node5" href="$classvsg_1_1Node.html" title=" " alt="" coords="79,169,165,196"/>
-<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="44,80,200,121"/>
-<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="75,5,169,32"/>
+<area shape="rect" id="node1" title="DrawMeshTasksIndirectCount command encapsulates vkCmdDrawMeshTasksIndirectCountEXT call and associate..." alt="" coords="19,661,225,703"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,572,239,613"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class for encapsulating vkCmd* calls and associated settings." alt="" coords="62,497,182,524"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="28,408,216,449"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Compilable.html" title="Base class for encapsulating nodes that have Vulkan objects associated with them that will need compi..." alt="" coords="59,333,185,360"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="48,244,196,285"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Node.html" title=" " alt="" coords="79,169,165,196"/>
+<area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="44,80,200,121"/>
+<area shape="rect" id="node9" href="$classvsg_1_1Object.html" title=" " alt="" coords="75,5,169,32"/>
 </map>

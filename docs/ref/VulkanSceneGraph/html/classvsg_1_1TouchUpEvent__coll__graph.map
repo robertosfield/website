@@ -1,7 +1,7 @@
 <map id="vsg::TouchUpEvent" name="vsg::TouchUpEvent">
 <area shape="rect" id="node1" title="TouchUpEvent represents a touch up event." alt="" coords="150,685,295,712"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="129,595,317,636"/>
-<area shape="rect" id="node3" href="$classvsg_1_1TouchEvent.html" title="TouchEvent is a base class touch events." alt="" coords="159,519,286,545"/>
+<area shape="rect" id="node3" href="$classvsg_1_1TouchEvent.html" title="TouchEvent is a base class for touch events." alt="" coords="159,519,286,545"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="121,428,324,469"/>
 <area shape="rect" id="node5" href="$classvsg_1_1WindowEvent.html" title="WindowEvent is the base class for events related to a window." alt="" coords="151,352,294,379"/>
 <area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,248,171,289"/>

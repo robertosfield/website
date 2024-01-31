@@ -1,5 +1,5 @@
 <map id="vsg::ConfigureWindowEvent" name="vsg::ConfigureWindowEvent">
-<area shape="rect" id="node1" title="ExposeWindowEvent represents a window configure event &#45; such as changes to the size of the window." alt="" coords="121,519,325,545"/>
+<area shape="rect" id="node1" title="ConfigureWindowEvent represents a window configure event &#45; such as changes to the size of the window." alt="" coords="121,519,325,545"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="121,428,324,469"/>
 <area shape="rect" id="node3" href="$classvsg_1_1WindowEvent.html" title="WindowEvent is the base class for events related to a window." alt="" coords="151,352,294,379"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,248,171,289"/>

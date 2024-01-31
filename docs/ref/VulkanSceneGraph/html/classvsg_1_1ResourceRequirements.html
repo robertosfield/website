@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -78,7 +78,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that be used to he...">ResourceRequirements</a> provides a container for various Vulkan resource requirements that be used to help guide allocation of resources.  
+<p><a class="el" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that can be used t...">ResourceRequirements</a> provides a container for various Vulkan resource requirements that can be used to help guide allocation of resources.  
  <a href="classvsg_1_1ResourceRequirements.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ResourceRequirements_8h_source.html">ResourceRequirements.h</a>&gt;</code></p>
@@ -87,16 +87,17 @@ Collaboration diagram for vsg::ResourceRequirements:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1ResourceRequirements__coll__graph.png" border="0" usemap="#avsg_1_1ResourceRequirements_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1ResourceRequirements_coll__map" id="avsg_1_1ResourceRequirements_coll__map">
-<area shape="rect" title="ResourceRequirements provides a container for various Vulkan resource requirements that be used to he..." alt="" coords="5,124,209,151"/>
+<area shape="rect" title="ResourceRequirements provides a container for various Vulkan resource requirements that can be used t..." alt="" coords="113,139,317,165"/>
 <area shape="rect" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html" title=" " alt="" coords="5,5,209,47"/>
+<area shape="rect" href="structvsg_1_1t__vec2.html" title=" " alt="" coords="234,13,413,39"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvsg_1_1ResourceRequirements_1_1BinDetails.html">BinDetails</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvsg_1_1ResourceRequirements_1_1DynamicData.html">DynamicData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvsg_1_1ResourceRequirements_1_1ViewDetails.html">ViewDetails</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -110,12 +111,12 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>DescriptorSets</b> =
 <tr class="memitem:a4a1563cfe38d22a6d7618d0ae55227c6"><td class="memItemLeft" align="right" valign="top"><a id="a4a1563cfe38d22a6d7618d0ae55227c6"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>DescriptorTypeMap</b> = std::map&lt; VkDescriptorType, uint32_t &gt;</td></tr>
 <tr class="separator:a4a1563cfe38d22a6d7618d0ae55227c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecc703ab5523732c797bfe17a98f2bc7"><td class="memItemLeft" align="right" valign="top"><a id="aecc703ab5523732c797bfe17a98f2bc7"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Views</b> = std::map&lt; const <a class="el" href="classvsg_1_1View.html">View</a> *, <a class="el" href="structvsg_1_1ResourceRequirements_1_1BinDetails.html">BinDetails</a> &gt;</td></tr>
-<tr class="separator:aecc703ab5523732c797bfe17a98f2bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ab0d64b003e95cf484f1c2fbe8249e4"><td class="memItemLeft" align="right" valign="top"><a id="a3ab0d64b003e95cf484f1c2fbe8249e4"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>BinStack</b> = std::stack&lt; <a class="el" href="structvsg_1_1ResourceRequirements_1_1BinDetails.html">BinDetails</a> &gt;</td></tr>
-<tr class="separator:a3ab0d64b003e95cf484f1c2fbe8249e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0889335c1f019b2dae2c644db7024c78"><td class="memItemLeft" align="right" valign="top"><a id="a0889335c1f019b2dae2c644db7024c78"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Views</b> = std::map&lt; const <a class="el" href="classvsg_1_1View.html">View</a> *, <a class="el" href="structvsg_1_1ResourceRequirements_1_1ViewDetails.html">ViewDetails</a> &gt;</td></tr>
+<tr class="separator:a0889335c1f019b2dae2c644db7024c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f3e7375c985289d5692767e5a80f12d"><td class="memItemLeft" align="right" valign="top"><a id="a7f3e7375c985289d5692767e5a80f12d"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ViewDetailStack</b> = std::stack&lt; <a class="el" href="structvsg_1_1ResourceRequirements_1_1ViewDetails.html">ViewDetails</a> &gt;</td></tr>
+<tr class="separator:a7f3e7375c985289d5692767e5a80f12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -158,9 +159,9 @@ DescriptorTypeMap&#160;</td><td class="memItemRight" valign="bottom"><b>descript
 <tr class="memitem:a0da330d31c0d9cd8e2ea0e0dee4168bc"><td class="memItemLeft" align="right" valign="top"><a id="a0da330d31c0d9cd8e2ea0e0dee4168bc"></a>
 Views&#160;</td><td class="memItemRight" valign="bottom"><b>views</b></td></tr>
 <tr class="separator:a0da330d31c0d9cd8e2ea0e0dee4168bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4e1280f1bcdc096b1c29e1d8fcb7875"><td class="memItemLeft" align="right" valign="top"><a id="af4e1280f1bcdc096b1c29e1d8fcb7875"></a>
-BinStack&#160;</td><td class="memItemRight" valign="bottom"><b>binStack</b></td></tr>
-<tr class="separator:af4e1280f1bcdc096b1c29e1d8fcb7875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a6e14fe95c326eb956177cc1395baf"><td class="memItemLeft" align="right" valign="top"><a id="ab0a6e14fe95c326eb956177cc1395baf"></a>
+ViewDetailStack&#160;</td><td class="memItemRight" valign="bottom"><b>viewDetailsStack</b></td></tr>
+<tr class="separator:ab0a6e14fe95c326eb956177cc1395baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35ea285950399e01b7218bc47d5106ec"><td class="memItemLeft" align="right" valign="top"><a id="a35ea285950399e01b7218bc47d5106ec"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>maxSlot</b> = 0</td></tr>
 <tr class="separator:a35ea285950399e01b7218bc47d5106ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,9 +177,18 @@ VkDeviceSize&#160;</td><td class="memItemRight" valign="bottom"><b>minimumBuffer
 <tr class="memitem:aea957b49ba9bd282a26e1524fc80ffb0"><td class="memItemLeft" align="right" valign="top"><a id="aea957b49ba9bd282a26e1524fc80ffb0"></a>
 VkDeviceSize&#160;</td><td class="memItemRight" valign="bottom"><b>minimumDeviceMemorySize</b> = 16 * 1024 * 1024</td></tr>
 <tr class="separator:aea957b49ba9bd282a26e1524fc80ffb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9663ed8649149bf82c97e72f4e2230c3"><td class="memItemLeft" align="right" valign="top"><a id="a9663ed8649149bf82c97e72f4e2230c3"></a>
+<a class="el" href="structvsg_1_1t__vec2.html">uivec2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>numLightsRange</b> = {8, 1024}</td></tr>
+<tr class="separator:a9663ed8649149bf82c97e72f4e2230c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8d08094747936ef8983a2ba1856576e"><td class="memItemLeft" align="right" valign="top"><a id="ab8d08094747936ef8983a2ba1856576e"></a>
+<a class="el" href="structvsg_1_1t__vec2.html">uivec2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>numShadowMapsRange</b> = {0, 64}</td></tr>
+<tr class="separator:ab8d08094747936ef8983a2ba1856576e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40fffc392ca7114903015d61715de8e4"><td class="memItemLeft" align="right" valign="top"><a id="a40fffc392ca7114903015d61715de8e4"></a>
+<a class="el" href="structvsg_1_1t__vec2.html">uivec2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>shadowMapSize</b> = {2048, 2048}</td></tr>
+<tr class="separator:a40fffc392ca7114903015d61715de8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that be used to he...">ResourceRequirements</a> provides a container for various Vulkan resource requirements that be used to help guide allocation of resources. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1ResourceRequirements.html" title="ResourceRequirements provides a container for various Vulkan resource requirements that can be used t...">ResourceRequirements</a> provides a container for various Vulkan resource requirements that can be used to help guide allocation of resources. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/vk/<a class="el" href="ResourceRequirements_8h_source.html">ResourceRequirements.h</a></li>
 </ul>

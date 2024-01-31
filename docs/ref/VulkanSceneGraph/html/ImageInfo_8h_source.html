@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -97,102 +97,89 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>() :</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            imageLayout(VK_IMAGE_LAYOUT_UNDEFINED) {}</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Sampler&gt;</a> in_sampler, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ImageView&gt;</a> in_imageView, VkImageLayout in_imageLayout = VK_IMAGE_LAYOUT_UNDEFINED) :</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            sampler(in_sampler),</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            imageView(in_imageView),</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            imageLayout(in_imageLayout)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            computeNumMipMapLevels();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">// Convenience constructor that creates a vsg::ImageView and vsg::Image to represent the data on the GPU.</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Sampler&gt;</a> in_sampler, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;T&gt;</a> in_data, VkImageLayout in_imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL) :</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            sampler(in_sampler),</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            imageLayout(in_imageLayout)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">auto</span> image = Image::create(in_data);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            image-&gt;usage |= (VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            imageView = ImageView::create(image);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            computeNumMipMapLevels();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Sampler&gt;</a> in_sampler, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ImageView&gt;</a> in_imageView, VkImageLayout in_imageLayout = VK_IMAGE_LAYOUT_UNDEFINED);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">// Convenience constructor that creates a vsg::ImageView and vsg::Image to represent the data on the GPU.</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Sampler&gt;</a> in_sampler, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;T&gt;</a> in_data, VkImageLayout in_imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL) :</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>(in_sampler, ImageView::create(Image::create(in_data)), in_imageLayout)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">explicit</span> <span class="keyword">operator</span> bool()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> sampler.valid() &amp;&amp; imageView.valid(); }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classvsg_1_1ImageInfo.html#a3826d1bb409a3529bb23290380a82d40">   42</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classvsg_1_1ImageInfo.html#a3826d1bb409a3529bb23290380a82d40">compare</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; rhs_object) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> computeNumMipMapLevels();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Sampler&gt;</a> sampler;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ImageView&gt;</a> imageView;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        VkImageLayout imageLayout = VK_IMAGE_LAYOUT_UNDEFINED;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">explicit</span> <span class="keyword">operator</span> bool()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> sampler.valid() &amp;&amp; imageView.valid(); }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classvsg_1_1ImageInfo.html#a3826d1bb409a3529bb23290380a82d40">   55</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classvsg_1_1ImageInfo.html#a3826d1bb409a3529bb23290380a82d40">compare</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Object.html">Object</a>&amp; rhs_object) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> computeNumMipMapLevels();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Sampler&gt;</a> sampler;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ImageView&gt;</a> imageView;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        VkImageLayout imageLayout = VK_IMAGE_LAYOUT_UNDEFINED;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classvsg_1_1ImageInfo.html#a877dc56ca6d9357126039d5b3fcfb34c">   64</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1ImageInfo.html#a877dc56ca6d9357126039d5b3fcfb34c">requiresCopy</a>(uint32_t deviceID)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> (!imageView || !imageView-&gt;image) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keyword">auto</span>&amp; data = imageView-&gt;image-&gt;data;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> data &amp;&amp; data-&gt;differentModifiedCount(copiedModifiedCounts[deviceID]);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classvsg_1_1ImageInfo.html#a5a97b9648e639c71d8c2ba952396b534">   72</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1ImageInfo.html#a5a97b9648e639c71d8c2ba952396b534">syncModifiedCounts</a>(uint32_t deviceID)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span> (!imageView || !imageView-&gt;image) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keyword">auto</span>&amp; data = imageView-&gt;image-&gt;data;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span> data &amp;&amp; data-&gt;getModifiedCount(copiedModifiedCounts[deviceID]);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="structvsg_1_1vk__buffer.html">vk_buffer&lt;ModifiedCount&gt;</a> copiedModifiedCounts;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    };</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1ImageInfo.html">vsg::ImageInfo</a>);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">using</span> ImageInfoList = std::vector&lt;ref_ptr&lt;ImageInfo&gt;&gt;;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="structvsg_1_1FormatTraits.html">   89</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structvsg_1_1FormatTraits.html">FormatTraits</a></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">int</span> size = 0;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">int</span> numBitsPerComponent = 0;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">int</span> numComponents = 0;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">bool</span> packed = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">int</span> blockWidth = 1;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">int</span> blockHeight = 1;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">int</span> blockDepth = 1;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        uint8_t defaultValue[32];</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">void</span> assign4(T value)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            T* ptr = <span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(defaultValue);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            (*ptr++) = value;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            (*ptr++) = value;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            (*ptr++) = value;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            (*ptr++) = value;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    };</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">extern</span> VSG_DECLSPEC <a class="code" href="structvsg_1_1FormatTraits.html">FormatTraits</a> getFormatTraits(VkFormat format, <span class="keywordtype">bool</span> default_one = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">extern</span> VSG_DECLSPEC uint32_t computeNumMipMapLevels(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Data.html">Data</a>* data, <span class="keyword">const</span> <a class="code" href="classvsg_1_1Sampler.html">Sampler</a>* sampler);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;} <span class="comment">// namespace vsg</span></div>
-<div class="ttc" id="aclassvsg_1_1Data_html"><div class="ttname"><a href="classvsg_1_1Data.html">vsg::Data</a></div><div class="ttdef"><b>Definition:</b> Data.h:104</div></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classvsg_1_1ImageInfo.html#a877dc56ca6d9357126039d5b3fcfb34c">   51</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1ImageInfo.html#a877dc56ca6d9357126039d5b3fcfb34c">requiresCopy</a>(uint32_t deviceID)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> (!imageView || !imageView-&gt;image) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keyword">auto</span>&amp; data = imageView-&gt;image-&gt;data;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">return</span> data &amp;&amp; data-&gt;differentModifiedCount(copiedModifiedCounts[deviceID]);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classvsg_1_1ImageInfo.html#a5a97b9648e639c71d8c2ba952396b534">   59</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsg_1_1ImageInfo.html#a5a97b9648e639c71d8c2ba952396b534">syncModifiedCounts</a>(uint32_t deviceID)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span> (!imageView || !imageView-&gt;image) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keyword">auto</span>&amp; data = imageView-&gt;image-&gt;data;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> data &amp;&amp; data-&gt;getModifiedCount(copiedModifiedCounts[deviceID]);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="structvsg_1_1vk__buffer.html">vk_buffer&lt;ModifiedCount&gt;</a> copiedModifiedCounts;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1ImageInfo.html">ImageInfo</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1ImageInfo.html">vsg::ImageInfo</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">using</span> ImageInfoList = std::vector&lt;ref_ptr&lt;ImageInfo&gt;&gt;;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="structvsg_1_1FormatTraits.html">   76</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structvsg_1_1FormatTraits.html">FormatTraits</a></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">int</span> size = 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">int</span> numBitsPerComponent = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">int</span> numComponents = 0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">bool</span> packed = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">int</span> blockWidth = 1;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">int</span> blockHeight = 1;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">int</span> blockDepth = 1;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        uint8_t defaultValue[32];</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">void</span> assign4(T value)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            T* ptr = <span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(defaultValue);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            (*ptr++) = value;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            (*ptr++) = value;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            (*ptr++) = value;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            (*ptr++) = value;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    };</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">extern</span> VSG_DECLSPEC <a class="code" href="structvsg_1_1FormatTraits.html">FormatTraits</a> getFormatTraits(VkFormat format, <span class="keywordtype">bool</span> default_one = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">extern</span> VSG_DECLSPEC uint32_t computeNumMipMapLevels(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Data.html">Data</a>* data, <span class="keyword">const</span> <a class="code" href="classvsg_1_1Sampler.html">Sampler</a>* sampler);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="ttc" id="aclassvsg_1_1Data_html"><div class="ttname"><a href="classvsg_1_1Data.html">vsg::Data</a></div><div class="ttdef"><b>Definition:</b> Data.h:110</div></div>
 <div class="ttc" id="aclassvsg_1_1ImageInfo_html"><div class="ttname"><a href="classvsg_1_1ImageInfo.html">vsg::ImageInfo</a></div><div class="ttdoc">ImageInfo class provides the VkDescriptorImageInfo settings used when setting up vsg::/vkDescriptorIm...</div><div class="ttdef"><b>Definition:</b> ImageInfo.h:23</div></div>
 <div class="ttc" id="aclassvsg_1_1ImageInfo_html_a3826d1bb409a3529bb23290380a82d40"><div class="ttname"><a href="classvsg_1_1ImageInfo.html#a3826d1bb409a3529bb23290380a82d40">vsg::ImageInfo::compare</a></div><div class="ttdeci">int compare(const Object &amp;rhs_object) const override</div><div class="ttdoc">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal,...</div></div>
-<div class="ttc" id="aclassvsg_1_1ImageInfo_html_a5a97b9648e639c71d8c2ba952396b534"><div class="ttname"><a href="classvsg_1_1ImageInfo.html#a5a97b9648e639c71d8c2ba952396b534">vsg::ImageInfo::syncModifiedCounts</a></div><div class="ttdeci">bool syncModifiedCounts(uint32_t deviceID)</div><div class="ttdoc">return true if the ImageInfo's data has been modified and should be copied to the buffer,...</div><div class="ttdef"><b>Definition:</b> ImageInfo.h:72</div></div>
-<div class="ttc" id="aclassvsg_1_1ImageInfo_html_a877dc56ca6d9357126039d5b3fcfb34c"><div class="ttname"><a href="classvsg_1_1ImageInfo.html#a877dc56ca6d9357126039d5b3fcfb34c">vsg::ImageInfo::requiresCopy</a></div><div class="ttdeci">bool requiresCopy(uint32_t deviceID) const</div><div class="ttdoc">return true if the ImageInfo's data has been modified and should be copied to the buffer</div><div class="ttdef"><b>Definition:</b> ImageInfo.h:64</div></div>
+<div class="ttc" id="aclassvsg_1_1ImageInfo_html_a5a97b9648e639c71d8c2ba952396b534"><div class="ttname"><a href="classvsg_1_1ImageInfo.html#a5a97b9648e639c71d8c2ba952396b534">vsg::ImageInfo::syncModifiedCounts</a></div><div class="ttdeci">bool syncModifiedCounts(uint32_t deviceID)</div><div class="ttdoc">return true if the ImageInfo's data has been modified and should be copied to the buffer,...</div><div class="ttdef"><b>Definition:</b> ImageInfo.h:59</div></div>
+<div class="ttc" id="aclassvsg_1_1ImageInfo_html_a877dc56ca6d9357126039d5b3fcfb34c"><div class="ttname"><a href="classvsg_1_1ImageInfo.html#a877dc56ca6d9357126039d5b3fcfb34c">vsg::ImageInfo::requiresCopy</a></div><div class="ttdeci">bool requiresCopy(uint32_t deviceID) const</div><div class="ttdoc">return true if the ImageInfo's data has been modified and should be copied to the buffer</div><div class="ttdef"><b>Definition:</b> ImageInfo.h:51</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1Object_html"><div class="ttname"><a href="classvsg_1_1Object.html">vsg::Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:42</div></div>
-<div class="ttc" id="aclassvsg_1_1Sampler_html"><div class="ttname"><a href="classvsg_1_1Sampler.html">vsg::Sampler</a></div><div class="ttdoc">Sampler encapsulates the VkSampler and the VkSamplerCreateInfo settings used to set it up.</div><div class="ttdef"><b>Definition:</b> Sampler.h:24</div></div>
+<div class="ttc" id="aclassvsg_1_1Sampler_html"><div class="ttname"><a href="classvsg_1_1Sampler.html">vsg::Sampler</a></div><div class="ttdoc">Sampler encapsulates the VkSampler and the VkSamplerCreateInfo settings used to set it up.</div><div class="ttdef"><b>Definition:</b> Sampler.h:25</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>
-<div class="ttc" id="astructvsg_1_1FormatTraits_html"><div class="ttname"><a href="structvsg_1_1FormatTraits.html">vsg::FormatTraits</a></div><div class="ttdoc">format traits hints that can be used when initialize image data</div><div class="ttdef"><b>Definition:</b> ImageInfo.h:90</div></div>
-<div class="ttc" id="astructvsg_1_1vk__buffer_html"><div class="ttname"><a href="structvsg_1_1vk__buffer.html">vsg::vk_buffer</a></div><div class="ttdoc">vk_buffer that manages a single logical device support.</div><div class="ttdef"><b>Definition:</b> vk_buffer.h:28</div></div>
+<div class="ttc" id="astructvsg_1_1FormatTraits_html"><div class="ttname"><a href="structvsg_1_1FormatTraits.html">vsg::FormatTraits</a></div><div class="ttdoc">format traits hints that can be used when initializing image data</div><div class="ttdef"><b>Definition:</b> ImageInfo.h:77</div></div>
+<div class="ttc" id="astructvsg_1_1vk__buffer_html"><div class="ttname"><a href="structvsg_1_1vk__buffer.html">vsg::vk_buffer</a></div><div class="ttdoc">vk_buffer that manages a single logical device supported.</div><div class="ttdef"><b>Definition:</b> vk_buffer.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

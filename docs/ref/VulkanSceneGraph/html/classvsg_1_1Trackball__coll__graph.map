@@ -1,5 +1,5 @@
 <map id="vsg::Trackball" name="vsg::Trackball">
-<area shape="rect" id="node1" title="Trackball is an event handler that provides mouse and touch controlled 3d trackball camera view manip..." alt="" coords="663,218,773,245"/>
+<area shape="rect" id="node1" title="Trackball is an event handler that provides mouse and touch controlled 3d trackball camera view manip..." alt="" coords="663,243,773,270"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="301,5,457,47"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Visitor.html" title=" " alt="" coords="149,13,244,39"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
@@ -9,4 +9,5 @@
 <area shape="rect" id="node8" href="$structvsg_1_1t__vec3.html" title=" " alt="" coords="293,267,464,294"/>
 <area shape="rect" id="node9" href="$structvsg_1_1t__vec2.html" title=" " alt="" coords="293,318,464,345"/>
 <area shape="rect" id="node10" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="307,369,450,411"/>
+<area shape="rect" id="node11" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="307,435,450,476"/>
 </map>

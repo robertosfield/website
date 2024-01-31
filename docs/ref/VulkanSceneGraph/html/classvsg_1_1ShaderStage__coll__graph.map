@@ -1,5 +1,5 @@
 <map id="vsg::ShaderStage" name="vsg::ShaderStage">
-<area shape="rect" id="node1" title="ShaderStage encapsulates to VkPipelineShaderStageCreateInfo settings passed when setting up GraphicsP..." alt="" coords="145,185,280,212"/>
+<area shape="rect" id="node1" title="ShaderStage encapsulates VkPipelineShaderStageCreateInfo settings passed when setting up GraphicsPipe..." alt="" coords="145,185,280,212"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,81,161,123"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
 <area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="185,81,328,123"/>

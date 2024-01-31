@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -102,37 +102,41 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">operator</span> VkQueue()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _vkQueue; }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        VkQueue vk()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _vkQueue; }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        uint32_t queueFamilyIndex()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _queueFamilyIndex; }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        uint32_t queueIndex()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _queueIndex; }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        VkResult submit(<span class="keyword">const</span> std::vector&lt;VkSubmitInfo&gt;&amp; submitInfos, <a class="code" href="classvsg_1_1Fence.html">Fence</a>* fence = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        VkResult submit(<span class="keyword">const</span> VkSubmitInfo&amp; submitInfo, <a class="code" href="classvsg_1_1Fence.html">Fence</a>* fence = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        VkResult present(<span class="keyword">const</span> VkPresentInfoKHR&amp; info);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        VkResult waitIdle();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classvsg_1_1Queue.html">Queue</a>(VkQueue queue, uint32_t queueFamilyIndex, uint32_t queueIndex);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1Queue.html">Queue</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classvsg_1_1Queue.html">Queue</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classvsg_1_1Queue.html">Queue</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Queue.html">Queue</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classvsg_1_1Queue.html">Queue</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Queue.html">Queue</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// allow only Device to create Queue to ensure that queues are shared</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classvsg_1_1Device.html">Device</a>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        VkQueue _vkQueue;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        uint32_t _queueFamilyIndex;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        uint32_t _queueIndex;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::mutex _mutex;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    };</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1Queue.html">vsg::Queue</a>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;} <span class="comment">// namespace vsg</span></div>
-<div class="ttc" id="aclassvsg_1_1Device_html"><div class="ttname"><a href="classvsg_1_1Device.html">vsg::Device</a></div><div class="ttdoc">Device encapsulate vkDeivce, a logical handle to the PhysicalDevice with capabilities specified durin...</div><div class="ttdef"><b>Definition:</b> Device.h:37</div></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        VkQueueFlags queueFlags()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _queueFlags; }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        uint32_t queueFamilyIndex()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _queueFamilyIndex; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        uint32_t queueIndex()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _queueIndex; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        VkResult submit(<span class="keyword">const</span> std::vector&lt;VkSubmitInfo&gt;&amp; submitInfos, <a class="code" href="classvsg_1_1Fence.html">Fence</a>* fence = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        VkResult submit(<span class="keyword">const</span> VkSubmitInfo&amp; submitInfo, <a class="code" href="classvsg_1_1Fence.html">Fence</a>* fence = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        VkResult present(<span class="keyword">const</span> VkPresentInfoKHR&amp; info);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        VkResult waitIdle();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classvsg_1_1Queue.html">Queue</a>(VkQueue queue, VkQueueFlags queueFlags, uint32_t queueFamilyIndex, uint32_t queueIndex);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1Queue.html">Queue</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classvsg_1_1Queue.html">Queue</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classvsg_1_1Queue.html">Queue</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Queue.html">Queue</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="classvsg_1_1Queue.html">Queue</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classvsg_1_1Queue.html">Queue</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">// allow only Device to create Queue to ensure that queues are shared</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classvsg_1_1Device.html">Device</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        VkQueue _vkQueue;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        VkQueueFlags _queueFlags;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        uint32_t _queueFamilyIndex;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        uint32_t _queueIndex;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        std::mutex _mutex;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1Queue.html">vsg::Queue</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">using</span> Queues = std::vector&lt;ref_ptr&lt;Queue&gt;&gt;;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="ttc" id="aclassvsg_1_1Device_html"><div class="ttname"><a href="classvsg_1_1Device.html">vsg::Device</a></div><div class="ttdoc">Device encapsulates VkDevice, a logical handle to the PhysicalDevice with capabilities specified duri...</div><div class="ttdef"><b>Definition:</b> Device.h:37</div></div>
 <div class="ttc" id="aclassvsg_1_1Fence_html"><div class="ttname"><a href="classvsg_1_1Fence.html">vsg::Fence</a></div><div class="ttdef"><b>Definition:</b> Fence.h:23</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1Queue_html"><div class="ttname"><a href="classvsg_1_1Queue.html">vsg::Queue</a></div><div class="ttdoc">Queue encapsulates a single vkQueue, used to submit vulkan commands for processing.</div><div class="ttdef"><b>Definition:</b> Queue.h:28</div></div>

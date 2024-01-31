@@ -1,8 +1,8 @@
 <map id="vsg::BuildAccelerationStructureTraversal" name="vsg::BuildAccelerationStructureTraversal">
-<area shape="rect" id="node1" title="BuildAccelerationStructureTraversal is helper class for traversal of a scene graph to required accele..." alt="" coords="544,90,771,131"/>
+<area shape="rect" id="node1" title="BuildAccelerationStructureTraversal is a helper class for traversal of a scene graph to build require..." alt="" coords="544,90,771,131"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Visitor.html" title=" " alt="" coords="219,5,314,32"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,5,100,32"/>
 <area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="195,57,338,98"/>
 <area shape="rect" id="node5" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="149,122,384,163"/>
-<area shape="rect" id="node6" href="$classvsg_1_1MatrixStack.html" title="MatrixStack used internally by vsg::State to manage stack of project or modelview matrices." alt="" coords="201,188,332,215"/>
+<area shape="rect" id="node6" href="$classvsg_1_1MatrixStack.html" title="MatrixStack used internally by vsg::State to manage stack of projection or modelview matrices." alt="" coords="201,188,332,215"/>
 </map>

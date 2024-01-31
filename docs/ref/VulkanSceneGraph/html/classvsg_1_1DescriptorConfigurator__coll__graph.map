@@ -1,7 +1,6 @@
 <map id="vsg::DescriptorConfigurator" name="vsg::DescriptorConfigurator">
-<area shape="rect" id="node1" title="DescriptorConfigurator utility provides a means of setting up descriptors using ShaderSet as a guide ..." alt="" coords="476,78,676,105"/>
-<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,337,47"/>
-<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
-<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="172,71,315,112"/>
-<area shape="rect" id="node5" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="172,136,315,177"/>
+<area shape="rect" id="node1" title="DescriptorConfigurator utility provides a means of setting up descriptors using ShaderSet as a guide ..." alt="" coords="141,185,341,212"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,81,193,123"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="52,5,147,32"/>
+<area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="217,81,360,123"/>
 </map>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -95,11 +95,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a06c4750b65a8aee98c44fd3d74c1147c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9aa6022074590f525f767b127496a0f7"><td class="memItemLeft" align="right" valign="top"><a id="a9aa6022074590f525f767b127496a0f7"></a>
 virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Allocator.html#a9aa6022074590f525f767b127496a0f7">allocate</a> (std::size_t size, AllocatorAffinity allocatorAffinity=ALLOCATOR_AFFINITY_OBJECTS)</td></tr>
-<tr class="memdesc:a9aa6022074590f525f767b127496a0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocate from the pool of memory blocks, or allocate from a new memory bock <br /></td></tr>
+<tr class="memdesc:a9aa6022074590f525f767b127496a0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">allocate from the pool of memory blocks, or allocate from a new memory block <br /></td></tr>
 <tr class="separator:a9aa6022074590f525f767b127496a0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2317a778f8d5aec0cdde88388f2458fb"><td class="memItemLeft" align="right" valign="top"><a id="a2317a778f8d5aec0cdde88388f2458fb"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Allocator.html#a2317a778f8d5aec0cdde88388f2458fb">deallocate</a> (void *ptr, std::size_t size)</td></tr>
-<tr class="memdesc:a2317a778f8d5aec0cdde88388f2458fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">deallocate returning data to pool. <br /></td></tr>
+<tr class="memdesc:a2317a778f8d5aec0cdde88388f2458fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">deallocate, returning data to pool. <br /></td></tr>
 <tr class="separator:a2317a778f8d5aec0cdde88388f2458fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84f296d568f3a7a6fc953000a8293256"><td class="memItemLeft" align="right" valign="top"><a id="a84f296d568f3a7a6fc953000a8293256"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Allocator.html#a84f296d568f3a7a6fc953000a8293256">deleteEmptyMemoryBlocks</a> ()</td></tr>
@@ -107,7 +107,7 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="separator:a84f296d568f3a7a6fc953000a8293256"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca1a9cdf38c9cb7ec0ccd209d9501983"><td class="memItemLeft" align="right" valign="top"><a id="aca1a9cdf38c9cb7ec0ccd209d9501983"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Allocator.html#aca1a9cdf38c9cb7ec0ccd209d9501983">totalAvailableSize</a> () const</td></tr>
-<tr class="memdesc:aca1a9cdf38c9cb7ec0ccd209d9501983"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the total available size amount allocated <a class="el" href="structvsg_1_1Allocator_1_1MemoryBlocks.html">MemoryBlocks</a> <br /></td></tr>
+<tr class="memdesc:aca1a9cdf38c9cb7ec0ccd209d9501983"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the total available size of allocated <a class="el" href="structvsg_1_1Allocator_1_1MemoryBlocks.html">MemoryBlocks</a> <br /></td></tr>
 <tr class="separator:aca1a9cdf38c9cb7ec0ccd209d9501983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7b86526f96c42987e043c5e204c9fb9"><td class="memItemLeft" align="right" valign="top"><a id="ad7b86526f96c42987e043c5e204c9fb9"></a>
 virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Allocator.html#ad7b86526f96c42987e043c5e204c9fb9">totalReservedSize</a> () const</td></tr>
@@ -119,7 +119,7 @@ virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="separator:a401c1e8b535e7aafa3079de7c45e15b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f2d4db168718994df4d4d3efcbf598a"><td class="memItemLeft" align="right" valign="top"><a id="a9f2d4db168718994df4d4d3efcbf598a"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Allocator.html#a9f2d4db168718994df4d4d3efcbf598a">report</a> (std::ostream &amp;out) const</td></tr>
-<tr class="memdesc:a9f2d4db168718994df4d4d3efcbf598a"><td class="mdescLeft">&#160;</td><td class="mdescRight">report stats about block of memory allocated. <br /></td></tr>
+<tr class="memdesc:a9f2d4db168718994df4d4d3efcbf598a"><td class="mdescLeft">&#160;</td><td class="mdescRight">report stats about blocks of memory allocated. <br /></td></tr>
 <tr class="separator:a9f2d4db168718994df4d4d3efcbf598a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0738021396d7bc53bf4c813876df2a28"><td class="memItemLeft" align="right" valign="top"><a id="a0738021396d7bc53bf4c813876df2a28"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Allocator.html#a0738021396d7bc53bf4c813876df2a28">setMemoryTracking</a> (int mt)</td></tr>
@@ -156,6 +156,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>memoryTracking</b> = M
 <tr class="memitem:a8abc77b787479f40c4f7d0f55985c825"><td class="memItemLeft" align="right" valign="top"><a id="a8abc77b787479f40c4f7d0f55985c825"></a>
 std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>mutex</b></td></tr>
 <tr class="separator:a8abc77b787479f40c4f7d0f55985c825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57780e4de0ee661de7ede98ec004471"><td class="memItemLeft" align="right" valign="top"><a id="ac57780e4de0ee661de7ede98ec004471"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>allocationTime</b> = 0.0</td></tr>
+<tr class="separator:ac57780e4de0ee661de7ede98ec004471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46ca4eb7fcc88cef42974a82ad0ad698"><td class="memItemLeft" align="right" valign="top"><a id="a46ca4eb7fcc88cef42974a82ad0ad698"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>deallocationTime</b> = 0.0</td></tr>
+<tr class="separator:a46ca4eb7fcc88cef42974a82ad0ad698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>

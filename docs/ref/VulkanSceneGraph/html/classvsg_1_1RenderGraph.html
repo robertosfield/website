@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -98,7 +98,7 @@ Collaboration diagram for vsg::RenderGraph:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1RenderGraph__coll__graph.png" border="0" usemap="#avsg_1_1RenderGraph_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1RenderGraph_coll__map" id="avsg_1_1RenderGraph_coll__map">
-<area shape="rect" title=" " alt="" coords="1209,111,1348,138"/>
+<area shape="rect" title=" " alt="" coords="1209,143,1348,170"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="844,5,997,47"/>
 <area shape="rect" href="classvsg_1_1Group.html" title="Group node provides a list of children." alt="" coords="688,13,780,39"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="491,5,639,47"/>
@@ -108,6 +108,7 @@ Collaboration diagram for vsg::RenderGraph:</div>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="829,71,1012,112"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="849,136,992,177"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="849,201,992,243"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="849,267,992,308"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -115,7 +116,7 @@ Collaboration diagram for vsg::RenderGraph:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:a5771b02c6ddec22063385fff214a98e5"><td class="memItemLeft" align="right" valign="top"><a id="a5771b02c6ddec22063385fff214a98e5"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RenderGraph.html#a5771b02c6ddec22063385fff214a98e5">ClearValues</a> = std::vector&lt; VkClearValue &gt;</td></tr>
-<tr class="memdesc:a5771b02c6ddec22063385fff214a98e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classvsg_1_1Buffer.html">Buffer</a> clearing settings for vkRrenderPassInfo.clearValueCount &amp; vkRenderPassInfo.pClearValues passed to the vkCmdBeginRenderPass. <br /></td></tr>
+<tr class="memdesc:a5771b02c6ddec22063385fff214a98e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classvsg_1_1Buffer.html">Buffer</a> clearing settings for VkRenderPassBeginInfo.clearValueCount &amp; VkRenderPassBeginInfo.pClearValues passed to the vkCmdBeginRenderPass. <br /></td></tr>
 <tr class="separator:a5771b02c6ddec22063385fff214a98e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classvsg_1_1Group"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classvsg_1_1Group')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classvsg_1_1Group.html">vsg::Group</a></td></tr>
 <tr class="memitem:af1531a0888c452b879782a49a5371410 inherit pub_types_classvsg_1_1Group"><td class="memItemLeft" align="right" valign="top"><a id="af1531a0888c452b879782a49a5371410"></a>
@@ -134,17 +135,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aa7f4ef92f34df11541c5d1c7b8de696f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89e4d47d4ab8ab6b6eaf842a8713cc27"><td class="memItemLeft" align="right" valign="top"><a id="a89e4d47d4ab8ab6b6eaf842a8713cc27"></a>
 <a class="el" href="classvsg_1_1RenderPass.html">RenderPass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RenderGraph.html#a89e4d47d4ab8ab6b6eaf842a8713cc27">getRenderPass</a> ()</td></tr>
-<tr class="memdesc:a89e4d47d4ab8ab6b6eaf842a8713cc27"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classvsg_1_1RenderPass.html" title="RenderPass encapsulation of VkRenderPass.">RenderPass</a> to use passed to the vkCmdBeginRenderPass, either obtained from which of the framebuffer or window are active. <br /></td></tr>
+<tr class="memdesc:a89e4d47d4ab8ab6b6eaf842a8713cc27"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classvsg_1_1RenderPass.html" title="RenderPass encapsulation of VkRenderPass.">RenderPass</a> to use passed to the vkCmdBeginRenderPass, if renderPass is set it takes precedence, if not then either obtained from which of the framebuffer or window are active. <br /></td></tr>
 <tr class="separator:a89e4d47d4ab8ab6b6eaf842a8713cc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5feef141a7876ab54f66aa5f3b30947"><td class="memItemLeft" align="right" valign="top"><a id="aa5feef141a7876ab54f66aa5f3b30947"></a>
 VkExtent2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RenderGraph.html#aa5feef141a7876ab54f66aa5f3b30947">getExtent</a> () const</td></tr>
-<tr class="memdesc:aa5feef141a7876ab54f66aa5f3b30947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Exten2D of the attached <a class="el" href="classvsg_1_1Framebuffer.html" title="Framebuffer encapsulates vkFramebuffer used a rendering target associated with Window or for render t...">Framebuffer</a> or <a class="el" href="classvsg_1_1Window.html">Window</a>. <br /></td></tr>
+<tr class="memdesc:aa5feef141a7876ab54f66aa5f3b30947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Extent2D of the attached <a class="el" href="classvsg_1_1Framebuffer.html" title="Framebuffer encapsulates VkFramebuffer, used as a rendering target associated with a Window or for re...">Framebuffer</a> or <a class="el" href="classvsg_1_1Window.html">Window</a>. <br /></td></tr>
 <tr class="separator:aa5feef141a7876ab54f66aa5f3b30947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec5b5faaee1e350cc798fd1ecd8ae8f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RenderGraph.html#aec5b5faaee1e350cc798fd1ecd8ae8f4">setClearValues</a> (VkClearColorValue clearColor={{0.2f, 0.2f, 0.4f, 1.0f}}, VkClearDepthStencilValue clearDepthStencil={0.0f, 0})</td></tr>
 <tr class="separator:aec5b5faaee1e350cc798fd1ecd8ae8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bc21120d12411b8372b3ee0f79e4592"><td class="memItemLeft" align="right" valign="top"><a id="a1bc21120d12411b8372b3ee0f79e4592"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RenderGraph.html#a1bc21120d12411b8372b3ee0f79e4592">resized</a> ()</td></tr>
-<tr class="memdesc:a1bc21120d12411b8372b3ee0f79e4592"><td class="mdescLeft">&#160;</td><td class="mdescRight">invoke the <a class="el" href="classvsg_1_1WindowResizeHandler.html">WindowResizeHandler</a>, called automatically when window dimension change is detected. <br /></td></tr>
+<tr class="memdesc:a1bc21120d12411b8372b3ee0f79e4592"><td class="mdescLeft">&#160;</td><td class="mdescRight">invoke the <a class="el" href="classvsg_1_1WindowResizeHandler.html" title="WindowResizeHandler class for updating viewport/scissor and attachments to fit with new window dimens...">WindowResizeHandler</a>, called automatically when a window dimension change is detected. <br /></td></tr>
 <tr class="separator:a1bc21120d12411b8372b3ee0f79e4592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvsg_1_1Inherit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvsg_1_1Inherit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvsg_1_1Inherit.html">vsg::Inherit&lt; Group, RenderGraph &gt;</a></td></tr>
 <tr class="memitem:a24550cd9c037afd7d161ff391b1ceac7 inherit pub_methods_classvsg_1_1Inherit"><td class="memItemLeft" align="right" valign="top"><a id="a24550cd9c037afd7d161ff391b1ceac7"></a>
@@ -264,7 +265,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -336,14 +337,18 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a8f71172d9b5bb84014ab117bbdbeb909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d4127cd87e8ab161f56eecbb0390776"><td class="memItemLeft" align="right" valign="top"><a id="a3d4127cd87e8ab161f56eecbb0390776"></a>
 VkRect2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RenderGraph.html#a3d4127cd87e8ab161f56eecbb0390776">renderArea</a></td></tr>
-<tr class="memdesc:a3d4127cd87e8ab161f56eecbb0390776"><td class="mdescLeft">&#160;</td><td class="mdescRight">ReandingArea settings for VkRenderPassBeginInfo.renderArea passed to the vkCmdBeginRenderPass, usually maps the <a class="el" href="classvsg_1_1ViewportState.html" title="ViewportState encapsulates to VkPipelineViewportStateCreateInfo settings passed when setting up Graph...">ViewportState</a>'s scissor. <br /></td></tr>
+<tr class="memdesc:a3d4127cd87e8ab161f56eecbb0390776"><td class="mdescLeft">&#160;</td><td class="mdescRight">RenderArea settings for VkRenderPassBeginInfo.renderArea passed to the vkCmdBeginRenderPass, usually matches the <a class="el" href="classvsg_1_1ViewportState.html" title="ViewportState encapsulates VkPipelineViewportStateCreateInfo settings passed when setting up Graphics...">ViewportState</a>'s scissor. <br /></td></tr>
 <tr class="separator:a3d4127cd87e8ab161f56eecbb0390776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc54791e8fea470ee324afe84368e360"><td class="memItemLeft" align="right" valign="top"><a id="acc54791e8fea470ee324afe84368e360"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1RenderPass.html">RenderPass</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RenderGraph.html#acc54791e8fea470ee324afe84368e360">renderPass</a></td></tr>
+<tr class="memdesc:acc54791e8fea470ee324afe84368e360"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classvsg_1_1RenderPass.html" title="RenderPass encapsulation of VkRenderPass.">RenderPass</a> to use passed to the vkCmdBeginRenderPass in place of the framebuffer's or window's renderPass. renderPass must be compatible with the render pass used to create the window or framebuffer. <br /></td></tr>
+<tr class="separator:acc54791e8fea470ee324afe84368e360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8db838717924f18cade9d7081faa91f5"><td class="memItemLeft" align="right" valign="top"><a id="a8db838717924f18cade9d7081faa91f5"></a>
 <a class="el" href="classvsg_1_1RenderGraph.html#a5771b02c6ddec22063385fff214a98e5">ClearValues</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clearValues</b></td></tr>
 <tr class="separator:a8db838717924f18cade9d7081faa91f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a99d645f7179620546bfc3047dbdd95"><td class="memItemLeft" align="right" valign="top"><a id="a9a99d645f7179620546bfc3047dbdd95"></a>
 VkSubpassContents&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RenderGraph.html#a9a99d645f7179620546bfc3047dbdd95">contents</a> = VK_SUBPASS_CONTENTS_INLINE</td></tr>
-<tr class="memdesc:a9a99d645f7179620546bfc3047dbdd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subpass contents stetting passed to vkCmdBeginRenderPass. <br /></td></tr>
+<tr class="memdesc:a9a99d645f7179620546bfc3047dbdd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subpass contents setting passed to vkCmdBeginRenderPass. <br /></td></tr>
 <tr class="separator:a9a99d645f7179620546bfc3047dbdd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad04b3f52d0947575e54db1d0212c56e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1WindowResizeHandler.html">WindowResizeHandler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1RenderGraph.html#ad04b3f52d0947575e54db1d0212c56e6">windowResizeHandler</a></td></tr>
 <tr class="separator:ad04b3f52d0947575e54db1d0212c56e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -421,7 +426,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1RenderGraph.html">RenderGraph</a> encapsulates the vkCmdRenderPass/vkCmdEndRenderPass functionality. Members variables of the <a class="el" href="classvsg_1_1RenderGraph.html">RenderGraph</a> map to the settings of the VkRenderPassBeginInfo. During the <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> children of <a class="el" href="classvsg_1_1RenderGraph.html">RenderGraph</a> are visited within vkCmdRenderPass/vkCmdEndRenderPass pair. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1RenderGraph.html">RenderGraph</a> encapsulates the vkCmdBeginRenderPass/vkCmdEndRenderPass functionality. Member variables of the <a class="el" href="classvsg_1_1RenderGraph.html">RenderGraph</a> map to the settings of the VkRenderPassBeginInfo. During the <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">RecordTraversal</a> children of <a class="el" href="classvsg_1_1RenderGraph.html">RenderGraph</a> are visited within the vkCmdBeginRenderPass/vkCmdEndRenderPass pair. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aec5b5faaee1e350cc798fd1ecd8ae8f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec5b5faaee1e350cc798fd1ecd8ae8f4">&#9670;&nbsp;</a></span>setClearValues()</h2>
@@ -448,7 +453,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>initialize cleaValues with the cleaColor or cleaDpethStencil based on the attachments set up in the associated <a class="el" href="classvsg_1_1RenderPass.html" title="RenderPass encapsulation of VkRenderPass.">RenderPass</a>. call after a framebuffer or window has been assigned to the <a class="el" href="classvsg_1_1RenderGraph.html">RenderGraph</a>. </p>
+<p>initialize clearValues with the clearColor and/or clearDepthStencil based on the attachments set up in the associated <a class="el" href="classvsg_1_1RenderPass.html" title="RenderPass encapsulation of VkRenderPass.">RenderPass</a>. call after a framebuffer or window has been assigned to the <a class="el" href="classvsg_1_1RenderGraph.html">RenderGraph</a>. </p>
 
 </div>
 </div>
@@ -464,7 +469,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Callback used to automatically update viewports, scissors, renderArea and clears when the window is resized. By default is null so no resize handling is done. </p>
+<p>Callback used to automatically update viewports, scissors, renderArea and clears when the window is resized. By default resize handling is done. </p>
 
 </div>
 </div>

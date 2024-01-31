@@ -6,8 +6,8 @@
 <area shape="rect" id="node10" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="553,201,735,243"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="148,104,304,145"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,111,100,138"/>
-<area shape="rect" id="node5" href="$classvsg_1_1DescriptorAccelerationStructure.html" title="DescriptorAccelerationStructure descriptor encapsulates of VkAccelerationStructure." alt="" coords="827,5,1029,47"/>
-<area shape="rect" id="node7" href="$classvsg_1_1DescriptorTexelBufferView.html" title="DescriptorTexelBufferView is Descriptor class that encapsulates texelBufferViews used to set VkWriteD..." alt="" coords="816,78,1040,105"/>
+<area shape="rect" id="node5" href="$classvsg_1_1DescriptorAccelerationStructure.html" title="DescriptorAccelerationStructure encapsulates descriptors of type VkAccelerationStructure." alt="" coords="827,5,1029,47"/>
+<area shape="rect" id="node7" href="$classvsg_1_1DescriptorTexelBufferView.html" title="DescriptorTexelBufferView is a Descriptor class that encapsulates texelBufferViews used to set VkWrit..." alt="" coords="816,78,1040,105"/>
 <area shape="rect" id="node9" href="$classvsg_1_1DescriptorImage.html" title=" " alt="" coords="847,143,1009,170"/>
 <area shape="rect" id="node11" href="$classvsg_1_1DescriptorBuffer.html" title=" " alt="" coords="849,209,1007,235"/>
 </map>

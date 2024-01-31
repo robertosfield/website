@@ -7,13 +7,13 @@
 <area shape="rect" id="node12" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,267,635,308"/>
 <area shape="rect" id="node14" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="488,332,633,373"/>
 <area shape="rect" id="node16" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,397,635,439"/>
-<area shape="rect" id="node18" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,463,635,504"/>
-<area shape="rect" id="node20" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,528,635,569"/>
-<area shape="rect" id="node22" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,593,635,635"/>
-<area shape="rect" id="node28" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,664,635,705"/>
-<area shape="rect" id="node44" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,740,635,781"/>
-<area shape="rect" id="node46" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,827,635,868"/>
-<area shape="rect" id="node48" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,935,635,976"/>
+<area shape="rect" id="node20" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,463,635,504"/>
+<area shape="rect" id="node22" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,528,635,569"/>
+<area shape="rect" id="node24" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,593,635,635"/>
+<area shape="rect" id="node26" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,659,635,700"/>
+<area shape="rect" id="node36" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,724,635,765"/>
+<area shape="rect" id="node38" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,796,635,837"/>
+<area shape="rect" id="node48" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="487,873,635,915"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="148,431,304,472"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,438,100,465"/>
 <area shape="rect" id="node5" href="$classvsg_1_1LOD.html" title=" " alt="" coords="712,13,792,39"/>
@@ -22,30 +22,30 @@
 <area shape="rect" id="node11" href="$classvsg_1_1TileDatabase.html" title=" " alt="" coords="683,209,821,235"/>
 <area shape="rect" id="node13" href="$classvsg_1_1PagedLOD.html" title=" " alt="" coords="693,274,811,301"/>
 <area shape="rect" id="node15" href="$classvsg_1_1TextGroup.html" title=" " alt="" coords="693,339,811,366"/>
-<area shape="rect" id="node17" href="$classvsg_1_1DepthSorted.html" title=" " alt="" coords="685,397,819,423"/>
-<area shape="rect" id="node19" href="$classvsg_1_1QuadGroup.html" title=" " alt="" coords="689,447,815,474"/>
-<area shape="rect" id="node21" href="$classvsg_1_1CullNode.html" title=" " alt="" coords="696,498,808,525"/>
-<area shape="rect" id="node23" href="$classvsg_1_1Light.html" title=" " alt="" coords="709,549,795,575"/>
-<area shape="rect" id="node24" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="893,339,1040,380"/>
-<area shape="rect" id="node25" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="893,404,1040,445"/>
-<area shape="rect" id="node26" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="893,469,1040,511"/>
-<area shape="rect" id="node27" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="893,535,1040,576"/>
-<area shape="rect" id="node29" href="$classvsg_1_1Command.html" title="Command base class from encapsualting vkCmd* calls and associated settings." alt="" coords="692,902,812,929"/>
-<area shape="rect" id="node30" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,600,1057,641"/>
-<area shape="rect" id="node31" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,665,1057,707"/>
-<area shape="rect" id="node32" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="872,731,1061,772"/>
-<area shape="rect" id="node33" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,796,1057,837"/>
-<area shape="rect" id="node34" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,861,1057,903"/>
-<area shape="rect" id="node35" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,927,1057,968"/>
-<area shape="rect" id="node36" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,992,1057,1033"/>
-<area shape="rect" id="node37" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,1057,1057,1099"/>
-<area shape="rect" id="node38" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,1123,1057,1164"/>
-<area shape="rect" id="node39" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,1188,1057,1229"/>
-<area shape="rect" id="node40" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,1253,1057,1295"/>
-<area shape="rect" id="node41" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,1319,1057,1360"/>
-<area shape="rect" id="node42" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="876,1384,1057,1425"/>
-<area shape="rect" id="node43" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="869,1449,1064,1491"/>
-<area shape="rect" id="node45" href="$classvsg_1_1Camera.html" title=" " alt="" coords="700,953,804,979"/>
-<area shape="rect" id="node47" href="$classvsg_1_1Group.html" title="Group node provides a list of children." alt="" coords="706,1003,798,1030"/>
-<area shape="rect" id="node49" href="$classvsg_1_1Switch.html" title="Switch node for toggling on/off recording of children." alt="" coords="704,1054,800,1081"/>
+<area shape="rect" id="node17" href="$classvsg_1_1Compilable.html" title="Base class for encapsulating nodes that have Vulkan objects associated with them that will need compi..." alt="" coords="689,405,815,431"/>
+<area shape="rect" id="node18" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="869,397,1057,439"/>
+<area shape="rect" id="node19" href="$classvsg_1_1Command.html" title="Command base class for encapsulating vkCmd* calls and associated settings." alt="" coords="1123,405,1243,431"/>
+<area shape="rect" id="node21" href="$classvsg_1_1DepthSorted.html" title=" " alt="" coords="685,470,819,497"/>
+<area shape="rect" id="node23" href="$classvsg_1_1QuadGroup.html" title=" " alt="" coords="689,535,815,562"/>
+<area shape="rect" id="node25" href="$classvsg_1_1CullNode.html" title=" " alt="" coords="696,593,808,619"/>
+<area shape="rect" id="node27" href="$classvsg_1_1Light.html" title=" " alt="" coords="709,643,795,670"/>
+<area shape="rect" id="node28" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="890,484,1037,525"/>
+<area shape="rect" id="node30" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="890,549,1037,591"/>
+<area shape="rect" id="node32" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="890,615,1037,656"/>
+<area shape="rect" id="node34" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="890,680,1037,721"/>
+<area shape="rect" id="node29" href="$classvsg_1_1PointLight.html" title="PointLight represents a local point light source where all light radiants event from the light positi..." alt="" coords="1124,491,1243,518"/>
+<area shape="rect" id="node31" href="$classvsg_1_1SpotLight.html" title="SpotLight represents a local point light source whose intensity varies as a spot light." alt="" coords="1126,557,1241,583"/>
+<area shape="rect" id="node33" href="$classvsg_1_1DirectionalLight.html" title="DirectionalLight represents a directional light source &#45; used for light sources that are treated as i..." alt="" coords="1105,622,1261,649"/>
+<area shape="rect" id="node35" href="$classvsg_1_1AmbientLight.html" title="AmbientLight represents an ambient light source." alt="" coords="1113,687,1253,714"/>
+<area shape="rect" id="node37" href="$classvsg_1_1Camera.html" title=" " alt="" coords="700,731,804,758"/>
+<area shape="rect" id="node39" href="$classvsg_1_1Group.html" title="Group node provides a list of children." alt="" coords="706,858,798,885"/>
+<area shape="rect" id="node40" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="887,745,1040,787"/>
+<area shape="rect" id="node42" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="887,811,1040,852"/>
+<area shape="rect" id="node44" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="887,876,1040,917"/>
+<area shape="rect" id="node45" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="887,941,1040,983"/>
+<area shape="rect" id="node46" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="887,1007,1040,1048"/>
+<area shape="rect" id="node47" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="887,1072,1040,1113"/>
+<area shape="rect" id="node41" href="$classvsg_1_1Transform.html" title="Transform node is a pure virtual base class for positioning/scaling/rotating subgraphs." alt="" coords="1124,753,1243,779"/>
+<area shape="rect" id="node43" href="$classvsg_1_1View.html" title="View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen..." alt="" coords="1141,818,1226,845"/>
+<area shape="rect" id="node49" href="$classvsg_1_1Switch.html" title="Switch node for toggling on/off recording of children." alt="" coords="704,909,800,935"/>
 </map>

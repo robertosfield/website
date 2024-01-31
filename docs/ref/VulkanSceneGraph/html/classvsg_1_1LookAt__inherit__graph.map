@@ -1,7 +1,7 @@
 <map id="vsg::LookAt" name="vsg::LookAt">
-<area shape="rect" id="node1" title="LookAt is a ViewMatrix that implements gluLookAt model for specify the view matrix." alt="" coords="50,333,149,360"/>
+<area shape="rect" id="node1" title="LookAt is a ViewMatrix that implements the gluLookAt model for specifying the view matrix." alt="" coords="50,333,149,360"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,244,193,285"/>
-<area shape="rect" id="node3" href="$classvsg_1_1ViewMatrix.html" title="ViewMatrix is a base class for specifying the Camera view matrix and it&#39;s inverse." alt="" coords="36,169,163,196"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ViewMatrix.html" title="ViewMatrix is a base class for specifying the Camera view matrix and its inverse." alt="" coords="36,169,163,196"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="21,80,177,121"/>
 <area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="52,5,147,32"/>
 </map>

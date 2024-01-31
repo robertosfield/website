@@ -1,7 +1,7 @@
 <map id="vsg::TrackingViewMatrix" name="vsg::TrackingViewMatrix">
 <area shape="rect" id="node1" title=" " alt="" coords="111,352,293,379"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,248,193,289"/>
-<area shape="rect" id="node3" href="$classvsg_1_1ViewMatrix.html" title="ViewMatrix is a base class for specifying the Camera view matrix and it&#39;s inverse." alt="" coords="36,172,163,199"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ViewMatrix.html" title="ViewMatrix is a base class for specifying the Camera view matrix and its inverse." alt="" coords="36,172,163,199"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="21,81,177,123"/>
 <area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="52,5,147,32"/>
 <area shape="rect" id="node6" href="$structvsg_1_1t__mat4.html" title=" " alt="" coords="218,255,391,282"/>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -126,8 +126,8 @@ $(function() {
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">const</span> VkExtent2D&amp; extent2D()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _extent2D; }</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        VkClearColorValue&amp; clearColor() { <span class="keywordflow">return</span> _clearColor; }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">const</span> VkClearColorValue&amp; clearColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _clearColor; }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        vec4&amp; clearColor() { <span class="keywordflow">return</span> _clearColor; }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">const</span> vec4&amp; clearColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _clearColor; }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        VkSurfaceFormatKHR surfaceFormat();</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
@@ -204,13 +204,13 @@ $(function() {
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">void</span> _initSwapchain();</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> clear();</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordtype">void</span> share(Window&amp; window);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordtype">void</span> share(ref_ptr&lt;Device&gt; device);</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">void</span> buildSwapchain();</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        ref_ptr&lt;WindowTraits&gt; _traits;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        VkExtent2D _extent2D;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        VkClearColorValue _clearColor;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        vec4 _clearColor;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        VkSurfaceFormatKHR _imageFormat;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        VkFormat _depthFormat;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
@@ -250,7 +250,7 @@ $(function() {
 <div class="ttc" id="aclassvsg_1_1Window_html_aa4161ebc81abe6462c76f24fd4871b3e"><div class="ttname"><a href="classvsg_1_1Window.html#aa4161ebc81abe6462c76f24fd4871b3e">vsg::Window::releaseWindow</a></div><div class="ttdeci">virtual void releaseWindow()</div><div class="ttdef"><b>Definition:</b> Window.h:47</div></div>
 <div class="ttc" id="aclassvsg_1_1Window_html_aa6d1e336fcf3a659ec4decd5c5226318"><div class="ttname"><a href="classvsg_1_1Window.html#aa6d1e336fcf3a659ec4decd5c5226318">vsg::Window::create</a></div><div class="ttdeci">static ref_ptr&lt; Window &gt; create(vsg::ref_ptr&lt; WindowTraits &gt; traits)</div><div class="ttdoc">static Window::create(traits) method creates a platform specific Window instance based on specified w...</div></div>
 <div class="ttc" id="aclassvsg_1_1Window_html_aa7a5d7681ee7a3c57b5b7917af3fbe1b"><div class="ttname"><a href="classvsg_1_1Window.html#aa7a5d7681ee7a3c57b5b7917af3fbe1b">vsg::Window::imageIndex</a></div><div class="ttdeci">size_t imageIndex(size_t relativeFrameIndex=0) const</div><div class="ttdoc">get the image index for specified relative frame index, a 0 value is the current frame being rendered...</div><div class="ttdef"><b>Definition:</b> Window.h:116</div></div>
-<div class="ttc" id="aclassvsg_1_1Window_html_aaf4f91d320bb94f5cf5b0d92c8d7eda1"><div class="ttname"><a href="classvsg_1_1Window.html#aaf4f91d320bb94f5cf5b0d92c8d7eda1">vsg::Window::pollEvents</a></div><div class="ttdeci">virtual bool pollEvents(UIEvents &amp;events)</div><div class="ttdoc">get the list of events since the last poolEvents() call by splicing bufferEvents with polled windowin...</div></div>
+<div class="ttc" id="aclassvsg_1_1Window_html_aaf4f91d320bb94f5cf5b0d92c8d7eda1"><div class="ttname"><a href="classvsg_1_1Window.html#aaf4f91d320bb94f5cf5b0d92c8d7eda1">vsg::Window::pollEvents</a></div><div class="ttdeci">virtual bool pollEvents(UIEvents &amp;events)</div><div class="ttdoc">get the list of events since the last pollEvents() call by splicing bufferEvents with polled windowin...</div></div>
 <div class="ttc" id="aclassvsg_1_1Window_html_abd10d1603aa58c3d7058634995948d8c"><div class="ttname"><a href="classvsg_1_1Window.html#abd10d1603aa58c3d7058634995948d8c">vsg::Window::releaseConnection</a></div><div class="ttdeci">virtual void releaseConnection()</div><div class="ttdef"><b>Definition:</b> Window.h:51</div></div>
 <div class="ttc" id="aclassvsg_1_1Window_html_ac819f64dd57e15ac5110ac82edb1a8c7"><div class="ttname"><a href="classvsg_1_1Window.html#ac819f64dd57e15ac5110ac82edb1a8c7">vsg::Window::bufferedEvents</a></div><div class="ttdeci">UIEvents bufferedEvents</div><div class="ttdoc">events buffered since the last pollEvents.</div><div class="ttdef"><b>Definition:</b> Window.h:54</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>

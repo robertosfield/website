@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -90,13 +90,14 @@ Collaboration diagram for vsg::Font:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1Font__coll__graph.png" border="0" usemap="#avsg_1_1Font_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1Font_coll__map" id="avsg_1_1Font_coll__map">
-<area shape="rect" title=" " alt="" coords="492,130,573,157"/>
+<area shape="rect" title=" " alt="" coords="497,163,579,190"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="170,5,326,47"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="155,71,341,98"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="177,123,319,164"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="149,188,347,229"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="177,253,319,295"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="177,319,319,360"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -112,6 +113,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (<a class="
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Font.html#ad4bdd94a8feecc61f049959b2b08b9b6">glyphIndexForCharcode</a> (uint32_t charcode) const</td></tr>
 <tr class="memdesc:ad4bdd94a8feecc61f049959b2b08b9b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the index into the glyphMetrics array for the glyph associated with specified charcode <br /></td></tr>
 <tr class="separator:ad4bdd94a8feecc61f049959b2b08b9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e77089a5b616f4caf2d07604da4aa7a"><td class="memItemLeft" align="right" valign="top"><a id="a6e77089a5b616f4caf2d07604da4aa7a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>createFontImages</b> ()</td></tr>
+<tr class="separator:a6e77089a5b616f4caf2d07604da4aa7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvsg_1_1Inherit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvsg_1_1Inherit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvsg_1_1Inherit.html">vsg::Inherit&lt; Object, Font &gt;</a></td></tr>
 <tr class="memitem:a24550cd9c037afd7d161ff391b1ceac7 inherit pub_methods_classvsg_1_1Inherit"><td class="memItemLeft" align="right" valign="top"><a id="a24550cd9c037afd7d161ff391b1ceac7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Inherit</b> (Args &amp;&amp;... args)</td></tr>
@@ -181,7 +185,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -265,6 +269,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> = 1.0f</t
 <tr class="memitem:abde5f2deab6367f72b7fd5922f58b8c3"><td class="memItemLeft" align="right" valign="top"><a id="abde5f2deab6367f72b7fd5922f58b8c3"></a>
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1SharedObjects.html">SharedObjects</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sharedObjects</b></td></tr>
 <tr class="separator:abde5f2deab6367f72b7fd5922f58b8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9a1b7cc4f04e6379ca6f58962687a6"><td class="memItemLeft" align="right" valign="top"><a id="a0e9a1b7cc4f04e6379ca6f58962687a6"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ImageInfo.html">ImageInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atlasImageInfo</b></td></tr>
+<tr class="separator:a0e9a1b7cc4f04e6379ca6f58962687a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed50e882301b9f7f3c79ae5708fc4a14"><td class="memItemLeft" align="right" valign="top"><a id="aed50e882301b9f7f3c79ae5708fc4a14"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ImageInfo.html">ImageInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>glyphImageInfo</b></td></tr>
+<tr class="separator:aed50e882301b9f7f3c79ae5708fc4a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

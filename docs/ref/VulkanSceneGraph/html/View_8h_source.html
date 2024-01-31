@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -88,64 +88,83 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vsg/app/Camera.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vsg/app/Window.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vsg/nodes/Group.h&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;vsg/state/ViewDependentState.h&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>vsg</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html">   24</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1View.html">View</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Group, View&gt;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="classvsg_1_1View.html">View</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classvsg_1_1View.html">View</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Camera&gt;</a> in_camera, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> in_scenegraph = {});</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> N, <span class="keyword">class</span> V&gt;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> t_accept(N&amp; node, V&amp; visitor)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> ((visitor.traversalMask &amp; (visitor.overrideMask | node.mask)) == MASK_OFF) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">auto</span> cached_traversalMask = visitor.traversalMask;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            visitor.traversalMask = visitor.traversalMask &amp; node.<a class="code" href="classvsg_1_1View.html#aac0b9dd1718188c70244e2a66ca8cc9e">mask</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>vsg</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// forward declare</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">class </span>ViewDependentState;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">enum</span> ViewFeatures</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        INHERIT_VIEWPOINT = (1 &lt;&lt; 0),</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        RECORD_LIGHTS = (1 &lt;&lt; 1),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        RECORD_SHADOW_MAPS = (1 &lt;&lt; 2),</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        RECORD_ALL = (RECORD_LIGHTS | RECORD_SHADOW_MAPS)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html">   35</a></span>&#160;    <span class="keyword">class </span>VSG_DECLSPEC <a class="code" href="classvsg_1_1View.html">View</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">Inherit</a>&lt;Group, View&gt;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classvsg_1_1View.html">View</a>(ViewFeatures in_features = RECORD_ALL);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            visitor.apply(node);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            visitor.traversalMask = cached_traversalMask;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// share the specified view&#39;s children, viewID, mask and camera ViewportState</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classvsg_1_1View.html">View</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1View.html">View</a>&amp; view);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classvsg_1_1View.html">View</a>(<a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Camera&gt;</a> in_camera, <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Node&gt;</a> in_scenegraph = {}, ViewFeatures in_features = RECORD_ALL);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">void</span> accept(<a class="code" href="classvsg_1_1Visitor.html">Visitor</a>&amp; visitor)<span class="keyword"> override </span>{ t_accept(*<span class="keyword">this</span>, visitor); }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> accept(<a class="code" href="classvsg_1_1ConstVisitor.html">ConstVisitor</a>&amp; visitor)<span class="keyword"> const override </span>{ t_accept(*<span class="keyword">this</span>, visitor); }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> accept(<a class="code" href="classvsg_1_1RecordTraversal.html">RecordTraversal</a>&amp; visitor)<span class="keyword"> const override </span>{ t_accept(*<span class="keyword">this</span>, visitor); }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#afa81164c675d90f3695194199a67b158">   50</a></span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Camera&gt;</a> <a class="code" href="classvsg_1_1View.html#afa81164c675d90f3695194199a67b158">camera</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span> N, <span class="keyword">class</span> V&gt;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> t_accept(N&amp; node, V&amp; visitor)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> ((visitor.traversalMask &amp; (visitor.overrideMask | node.mask)) == MASK_OFF) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keyword">auto</span> cached_traversalMask = visitor.traversalMask;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#aaa0cc4fb17f916261b8dfaf248b0a622">   53</a></span>&#160;        <span class="keyword">const</span> uint32_t viewID = 0;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#aac0b9dd1718188c70244e2a66ca8cc9e">   58</a></span>&#160;        Mask mask = MASK_ALL;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#adf9775914ca22d29df1b30d33541c451">   61</a></span>&#160;        std::vector&lt;ref_ptr&lt;Bin&gt;&gt; <a class="code" href="classvsg_1_1View.html#adf9775914ca22d29df1b30d33541c451">bins</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            visitor.traversalMask = visitor.traversalMask &amp; node.<a class="code" href="classvsg_1_1View.html#aac0b9dd1718188c70244e2a66ca8cc9e">mask</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            visitor.apply(node);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            visitor.traversalMask = cached_traversalMask;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> accept(<a class="code" href="classvsg_1_1Visitor.html">Visitor</a>&amp; visitor)<span class="keyword"> override </span>{ t_accept(*<span class="keyword">this</span>, visitor); }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> accept(<a class="code" href="classvsg_1_1ConstVisitor.html">ConstVisitor</a>&amp; visitor)<span class="keyword"> const override </span>{ t_accept(*<span class="keyword">this</span>, visitor); }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">void</span> accept(<a class="code" href="classvsg_1_1RecordTraversal.html">RecordTraversal</a>&amp; visitor)<span class="keyword"> const override </span>{ t_accept(*<span class="keyword">this</span>, visitor); }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#a3a65eda5f5e3076241e5a546aacb7834">   64</a></span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ViewDependentState&gt;</a> <a class="code" href="classvsg_1_1View.html#a3a65eda5f5e3076241e5a546aacb7834">viewDependentState</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#a51d4fd4683511c15383b004f131ce38c">   64</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classvsg_1_1View.html#a51d4fd4683511c15383b004f131ce38c">share</a>(<span class="keyword">const</span> <a class="code" href="classvsg_1_1View.html">View</a>&amp; view);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#a7bec11ea8ca11379083eefb843aa9b6f">   67</a></span>&#160;        GraphicsPipelineStates <a class="code" href="classvsg_1_1View.html#a7bec11ea8ca11379083eefb843aa9b6f">overridePipelineStates</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#afa81164c675d90f3695194199a67b158">   67</a></span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;Camera&gt;</a> <a class="code" href="classvsg_1_1View.html#afa81164c675d90f3695194199a67b158">camera</a>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1View.html">View</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1View.html">vsg::View</a>);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;} <span class="comment">// namespace vsg</span></div>
-<div class="ttc" id="aclassvsg_1_1ConstVisitor_html"><div class="ttname"><a href="classvsg_1_1ConstVisitor.html">vsg::ConstVisitor</a></div><div class="ttdef"><b>Definition:</b> ConstVisitor.h:140</div></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#aaa0cc4fb17f916261b8dfaf248b0a622">   70</a></span>&#160;        <span class="keyword">const</span> uint32_t viewID = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#a930611a8bde8fe2a15c9c72aceeae48c">   73</a></span>&#160;        ViewFeatures <a class="code" href="classvsg_1_1View.html#a930611a8bde8fe2a15c9c72aceeae48c">features</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#aac0b9dd1718188c70244e2a66ca8cc9e">   78</a></span>&#160;        Mask mask = MASK_ALL;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#adf9775914ca22d29df1b30d33541c451">   81</a></span>&#160;        std::vector&lt;ref_ptr&lt;Bin&gt;&gt; <a class="code" href="classvsg_1_1View.html#adf9775914ca22d29df1b30d33541c451">bins</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#a3a65eda5f5e3076241e5a546aacb7834">   84</a></span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;ViewDependentState&gt;</a> <a class="code" href="classvsg_1_1View.html#a3a65eda5f5e3076241e5a546aacb7834">viewDependentState</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classvsg_1_1View.html#a7bec11ea8ca11379083eefb843aa9b6f">   87</a></span>&#160;        GraphicsPipelineStates <a class="code" href="classvsg_1_1View.html#a7bec11ea8ca11379083eefb843aa9b6f">overridePipelineStates</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1View.html">View</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    };</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1View.html">vsg::View</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="ttc" id="aclassvsg_1_1ConstVisitor_html"><div class="ttname"><a href="classvsg_1_1ConstVisitor.html">vsg::ConstVisitor</a></div><div class="ttdef"><b>Definition:</b> ConstVisitor.h:147</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
-<div class="ttc" id="aclassvsg_1_1RecordTraversal_html"><div class="ttname"><a href="classvsg_1_1RecordTraversal.html">vsg::RecordTraversal</a></div><div class="ttdoc">RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...</div><div class="ttdef"><b>Definition:</b> RecordTraversal.h:59</div></div>
-<div class="ttc" id="aclassvsg_1_1View_html"><div class="ttname"><a href="classvsg_1_1View.html">vsg::View</a></div><div class="ttdoc">View class is Group class that pairs a Camera that defines the view with a subgraph that defines the ...</div><div class="ttdef"><b>Definition:</b> View.h:25</div></div>
-<div class="ttc" id="aclassvsg_1_1View_html_a3a65eda5f5e3076241e5a546aacb7834"><div class="ttname"><a href="classvsg_1_1View.html#a3a65eda5f5e3076241e5a546aacb7834">vsg::View::viewDependentState</a></div><div class="ttdeci">ref_ptr&lt; ViewDependentState &gt; viewDependentState</div><div class="ttdoc">view dependent state used for positional state like lighting, texgen and clipping</div><div class="ttdef"><b>Definition:</b> View.h:64</div></div>
-<div class="ttc" id="aclassvsg_1_1View_html_a7bec11ea8ca11379083eefb843aa9b6f"><div class="ttname"><a href="classvsg_1_1View.html#a7bec11ea8ca11379083eefb843aa9b6f">vsg::View::overridePipelineStates</a></div><div class="ttdeci">GraphicsPipelineStates overridePipelineStates</div><div class="ttdoc">override states for customization of graphics pipelines for this view</div><div class="ttdef"><b>Definition:</b> View.h:67</div></div>
-<div class="ttc" id="aclassvsg_1_1View_html_aac0b9dd1718188c70244e2a66ca8cc9e"><div class="ttname"><a href="classvsg_1_1View.html#aac0b9dd1718188c70244e2a66ca8cc9e">vsg::View::mask</a></div><div class="ttdeci">Mask mask</div><div class="ttdef"><b>Definition:</b> View.h:58</div></div>
-<div class="ttc" id="aclassvsg_1_1View_html_adf9775914ca22d29df1b30d33541c451"><div class="ttname"><a href="classvsg_1_1View.html#adf9775914ca22d29df1b30d33541c451">vsg::View::bins</a></div><div class="ttdeci">std::vector&lt; ref_ptr&lt; Bin &gt; &gt; bins</div><div class="ttdoc">bins</div><div class="ttdef"><b>Definition:</b> View.h:61</div></div>
-<div class="ttc" id="aclassvsg_1_1View_html_afa81164c675d90f3695194199a67b158"><div class="ttname"><a href="classvsg_1_1View.html#afa81164c675d90f3695194199a67b158">vsg::View::camera</a></div><div class="ttdeci">ref_ptr&lt; Camera &gt; camera</div><div class="ttdoc">camera controls the viewport state and projection and view matrices</div><div class="ttdef"><b>Definition:</b> View.h:50</div></div>
-<div class="ttc" id="aclassvsg_1_1Visitor_html"><div class="ttname"><a href="classvsg_1_1Visitor.html">vsg::Visitor</a></div><div class="ttdef"><b>Definition:</b> Visitor.h:140</div></div>
+<div class="ttc" id="aclassvsg_1_1RecordTraversal_html"><div class="ttname"><a href="classvsg_1_1RecordTraversal.html">vsg::RecordTraversal</a></div><div class="ttdoc">RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...</div><div class="ttdef"><b>Definition:</b> RecordTraversal.h:61</div></div>
+<div class="ttc" id="aclassvsg_1_1View_html"><div class="ttname"><a href="classvsg_1_1View.html">vsg::View</a></div><div class="ttdoc">View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen...</div><div class="ttdef"><b>Definition:</b> View.h:36</div></div>
+<div class="ttc" id="aclassvsg_1_1View_html_a3a65eda5f5e3076241e5a546aacb7834"><div class="ttname"><a href="classvsg_1_1View.html#a3a65eda5f5e3076241e5a546aacb7834">vsg::View::viewDependentState</a></div><div class="ttdeci">ref_ptr&lt; ViewDependentState &gt; viewDependentState</div><div class="ttdoc">view dependent state used for positional state like lighting, texgen and clipping</div><div class="ttdef"><b>Definition:</b> View.h:84</div></div>
+<div class="ttc" id="aclassvsg_1_1View_html_a51d4fd4683511c15383b004f131ce38c"><div class="ttname"><a href="classvsg_1_1View.html#a51d4fd4683511c15383b004f131ce38c">vsg::View::share</a></div><div class="ttdeci">void share(const View &amp;view)</div><div class="ttdoc">share the specified view's viewID, mask, camera ViewportState, with this View</div></div>
+<div class="ttc" id="aclassvsg_1_1View_html_a7bec11ea8ca11379083eefb843aa9b6f"><div class="ttname"><a href="classvsg_1_1View.html#a7bec11ea8ca11379083eefb843aa9b6f">vsg::View::overridePipelineStates</a></div><div class="ttdeci">GraphicsPipelineStates overridePipelineStates</div><div class="ttdoc">override states for customization of graphics pipelines for this view</div><div class="ttdef"><b>Definition:</b> View.h:87</div></div>
+<div class="ttc" id="aclassvsg_1_1View_html_a930611a8bde8fe2a15c9c72aceeae48c"><div class="ttname"><a href="classvsg_1_1View.html#a930611a8bde8fe2a15c9c72aceeae48c">vsg::View::features</a></div><div class="ttdeci">ViewFeatures features</div><div class="ttdoc">Hints for how ViewDependentState features should be handled.</div><div class="ttdef"><b>Definition:</b> View.h:73</div></div>
+<div class="ttc" id="aclassvsg_1_1View_html_aac0b9dd1718188c70244e2a66ca8cc9e"><div class="ttname"><a href="classvsg_1_1View.html#aac0b9dd1718188c70244e2a66ca8cc9e">vsg::View::mask</a></div><div class="ttdeci">Mask mask</div><div class="ttdef"><b>Definition:</b> View.h:78</div></div>
+<div class="ttc" id="aclassvsg_1_1View_html_adf9775914ca22d29df1b30d33541c451"><div class="ttname"><a href="classvsg_1_1View.html#adf9775914ca22d29df1b30d33541c451">vsg::View::bins</a></div><div class="ttdeci">std::vector&lt; ref_ptr&lt; Bin &gt; &gt; bins</div><div class="ttdoc">bins</div><div class="ttdef"><b>Definition:</b> View.h:81</div></div>
+<div class="ttc" id="aclassvsg_1_1View_html_afa81164c675d90f3695194199a67b158"><div class="ttname"><a href="classvsg_1_1View.html#afa81164c675d90f3695194199a67b158">vsg::View::camera</a></div><div class="ttdeci">ref_ptr&lt; Camera &gt; camera</div><div class="ttdoc">camera controls the viewport state and projection and view matrices</div><div class="ttdef"><b>Definition:</b> View.h:67</div></div>
+<div class="ttc" id="aclassvsg_1_1Visitor_html"><div class="ttname"><a href="classvsg_1_1Visitor.html">vsg::Visitor</a></div><div class="ttdef"><b>Definition:</b> Visitor.h:147</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

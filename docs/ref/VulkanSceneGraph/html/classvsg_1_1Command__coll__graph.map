@@ -1,7 +1,9 @@
 <map id="vsg::Command" name="vsg::Command">
-<area shape="rect" id="node1" title="Command base class from encapsualting vkCmd* calls and associated settings." alt="" coords="23,333,143,360"/>
-<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="9,244,157,285"/>
-<area shape="rect" id="node3" href="$classvsg_1_1Node.html" title=" " alt="" coords="40,169,127,196"/>
-<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,80,161,121"/>
-<area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
+<area shape="rect" id="node1" title="Command base class for encapsulating vkCmd* calls and associated settings." alt="" coords="39,497,159,524"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,408,193,449"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Compilable.html" title="Base class for encapsulating nodes that have Vulkan objects associated with them that will need compi..." alt="" coords="36,333,163,360"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="25,244,173,285"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Node.html" title=" " alt="" coords="56,169,143,196"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="21,80,177,121"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="52,5,147,32"/>
 </map>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -77,7 +77,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classvsg_1_1State.html" title="vsg::State used by vsg::RecordTraversal to manage state stacks, projection, modelview matrix and frus...">vsg::State</a> used by <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">vsg::RecordTraversal</a> to manage state stacks, projection, modelview matrix and frustum stacks.  
+<p><a class="el" href="classvsg_1_1State.html" title="vsg::State is used by vsg::RecordTraversal to manage state stacks, projection and modelview matrices ...">vsg::State</a> is used by <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">vsg::RecordTraversal</a> to manage state stacks, projection and modelview matrices and frustum stacks.  
  <a href="classvsg_1_1State.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="State_8h_source.html">State.h</a>&gt;</code></p>
@@ -86,7 +86,7 @@ Inheritance diagram for vsg::State:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1State__inherit__graph.png" border="0" usemap="#avsg_1_1State_inherit__map" alt="Inheritance graph"/></div>
 <map name="avsg_1_1State_inherit__map" id="avsg_1_1State_inherit__map">
-<area shape="rect" title="vsg::State used by vsg::RecordTraversal to manage state stacks, projection, modelview matrix and frus..." alt="" coords="40,169,127,196"/>
+<area shape="rect" title="vsg::State is used by vsg::RecordTraversal to manage state stacks, projection and modelview matrices ..." alt="" coords="40,169,127,196"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="5,80,161,121"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
 </map>
@@ -96,15 +96,16 @@ Collaboration diagram for vsg::State:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1State__coll__graph.png" border="0" usemap="#avsg_1_1State_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1State_coll__map" id="avsg_1_1State_coll__map">
-<area shape="rect" title="vsg::State used by vsg::RecordTraversal to manage state stacks, projection, modelview matrix and frus..." alt="" coords="1043,109,1129,135"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="684,5,840,47"/>
+<area shape="rect" title="vsg::State is used by vsg::RecordTraversal to manage state stacks, projection and modelview matrices ..." alt="" coords="1075,131,1161,158"/>
+<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="693,5,849,47"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="479,13,574,39"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="691,71,833,112"/>
-<area shape="rect" href="structvsg_1_1Frustum.html" title="Frustum used internally by vsg::State to manage view fustum culling during vsg::RecordTraversal." alt="" coords="709,138,815,165"/>
-<area shape="rect" href="structvsg_1_1t__vec4.html" title=" " alt="" coords="228,123,375,164"/>
-<area shape="rect" href="structvsg_1_1t__plane.html" title=" " alt="" coords="451,173,603,215"/>
-<area shape="rect" href="structvsg_1_1t__vec3.html" title=" " alt="" coords="5,161,152,203"/>
-<area shape="rect" href="classvsg_1_1MatrixStack.html" title="MatrixStack used internally by vsg::State to manage stack of project or modelview matrices." alt="" coords="697,198,827,225"/>
+<area shape="rect" href="structvsg_1_1t__mat4.html" title=" " alt="" coords="684,74,857,101"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="699,125,842,167"/>
+<area shape="rect" href="structvsg_1_1Frustum.html" title="Frustum used internally by vsg::State to manage view fustum culling during vsg::RecordTraversal." alt="" coords="717,191,824,218"/>
+<area shape="rect" href="structvsg_1_1t__vec4.html" title=" " alt="" coords="228,176,375,217"/>
+<area shape="rect" href="structvsg_1_1t__plane.html" title=" " alt="" coords="451,227,603,268"/>
+<area shape="rect" href="structvsg_1_1t__vec3.html" title=" " alt="" coords="5,215,152,256"/>
+<area shape="rect" href="classvsg_1_1MatrixStack.html" title="MatrixStack used internally by vsg::State to manage stack of projection or modelview matrices." alt="" coords="705,251,836,278"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -119,9 +120,12 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>FrustumStack</b> = s
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2b6c4ebe78772dfc8ceb769638bcf4a3"><td class="memItemLeft" align="right" valign="top"><a id="a2b6c4ebe78772dfc8ceb769638bcf4a3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>State</b> (<a class="el" href="classvsg_1_1CommandBuffer.html">CommandBuffer</a> *commandBuffer, uint32_t maxSlot)</td></tr>
-<tr class="separator:a2b6c4ebe78772dfc8ceb769638bcf4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0533c3b73dbc061bd3dd5a5fe029a85b"><td class="memItemLeft" align="right" valign="top"><a id="a0533c3b73dbc061bd3dd5a5fe029a85b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>State</b> (uint32_t maxSlot)</td></tr>
+<tr class="separator:a0533c3b73dbc061bd3dd5a5fe029a85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd21d7af10329b77e4f5aceb551d5225"><td class="memItemLeft" align="right" valign="top"><a id="acd21d7af10329b77e4f5aceb551d5225"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setInhertiedViewProjectionAndViewMatrix</b> (const <a class="el" href="structvsg_1_1t__mat4.html">dmat4</a> &amp;projMatrix, const <a class="el" href="structvsg_1_1t__mat4.html">dmat4</a> &amp;viewMatrix)</td></tr>
+<tr class="separator:acd21d7af10329b77e4f5aceb551d5225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af272c91cf57b562aa4d2626ae38feb90"><td class="memItemLeft" align="right" valign="top"><a id="af272c91cf57b562aa4d2626ae38feb90"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setProjectionAndViewMatrix</b> (const <a class="el" href="structvsg_1_1t__mat4.html">dmat4</a> &amp;projMatrix, const <a class="el" href="structvsg_1_1t__mat4.html">dmat4</a> &amp;viewMatrix)</td></tr>
 <tr class="separator:af272c91cf57b562aa4d2626ae38feb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,7 +224,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -296,8 +300,20 @@ Public Attributes</h2></td></tr>
 FrustumStack&#160;</td><td class="memItemRight" valign="bottom"><b>_frustumStack</b></td></tr>
 <tr class="separator:ac983c66e6445d31276b6242baf9fd82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fcb98000446025c822a0a2baea513a9"><td class="memItemLeft" align="right" valign="top"><a id="a7fcb98000446025c822a0a2baea513a9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>dirty</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>dirty</b> = true</td></tr>
 <tr class="separator:a7fcb98000446025c822a0a2baea513a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1c63fbf17ff7e951188d9410822f5f"><td class="memItemLeft" align="right" valign="top"><a id="aeb1c63fbf17ff7e951188d9410822f5f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>inheritViewForLODScaling</b> = false</td></tr>
+<tr class="separator:aeb1c63fbf17ff7e951188d9410822f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c7bb39768da37aef3b3e3cd4cf22f3"><td class="memItemLeft" align="right" valign="top"><a id="a09c7bb39768da37aef3b3e3cd4cf22f3"></a>
+<a class="el" href="structvsg_1_1t__mat4.html">dmat4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>inheritedProjectionMatrix</b></td></tr>
+<tr class="separator:a09c7bb39768da37aef3b3e3cd4cf22f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0e1c06713a2d93e9fb96da6a02905c"><td class="memItemLeft" align="right" valign="top"><a id="a2e0e1c06713a2d93e9fb96da6a02905c"></a>
+<a class="el" href="structvsg_1_1t__mat4.html">dmat4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>inheritedViewMatrix</b></td></tr>
+<tr class="separator:a2e0e1c06713a2d93e9fb96da6a02905c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7eb77d4137d7515ac690e4f45e209d"><td class="memItemLeft" align="right" valign="top"><a id="adf7eb77d4137d7515ac690e4f45e209d"></a>
+<a class="el" href="structvsg_1_1t__mat4.html">dmat4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>inheritedViewTransform</b></td></tr>
+<tr class="separator:adf7eb77d4137d7515ac690e4f45e209d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc3376fa765782503055f7b6f7005660"><td class="memItemLeft" align="right" valign="top"><a id="acc3376fa765782503055f7b6f7005660"></a>
 StateStacks&#160;</td><td class="memItemRight" valign="bottom"><b>stateStacks</b></td></tr>
 <tr class="separator:acc3376fa765782503055f7b6f7005660"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -340,7 +356,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1State.html" title="vsg::State used by vsg::RecordTraversal to manage state stacks, projection, modelview matrix and frus...">vsg::State</a> used by <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">vsg::RecordTraversal</a> to manage state stacks, projection, modelview matrix and frustum stacks. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1State.html" title="vsg::State is used by vsg::RecordTraversal to manage state stacks, projection and modelview matrices ...">vsg::State</a> is used by <a class="el" href="classvsg_1_1RecordTraversal.html" title="RecordTraversal traverses a scene graph doing view frustum culling and invoking state/commands to rec...">vsg::RecordTraversal</a> to manage state stacks, projection and modelview matrices and frustum stacks. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/vk/<a class="el" href="State_8h_source.html">State.h</a></li>
 </ul>

@@ -1,5 +1,6 @@
 <map id="vsg::ResourceHints" name="vsg::ResourceHints">
-<area shape="rect" id="node1" title="ResourceHints provides settings that help preallocation of Vulkan resources and memory." alt="" coords="10,169,157,196"/>
-<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,80,161,121"/>
+<area shape="rect" id="node1" title="ResourceHints provides settings that help preallocation of Vulkan resources and memory." alt="" coords="106,215,253,241"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,81,161,123"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
+<area shape="rect" id="node4" href="$structvsg_1_1t__vec2.html" title=" " alt="" coords="186,89,365,115"/>
 </map>

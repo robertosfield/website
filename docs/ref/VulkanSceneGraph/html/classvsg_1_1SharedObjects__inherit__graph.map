@@ -1,5 +1,5 @@
 <map id="vsg::SharedObjects" name="vsg::SharedObjects">
-<area shape="rect" id="node1" title="class for facilitating the share of instances of objects that have the same properties." alt="" coords="10,169,157,196"/>
+<area shape="rect" id="node1" title="class for facilitating the sharing of instances of objects that have the same properties." alt="" coords="10,169,157,196"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,80,161,121"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
 </map>

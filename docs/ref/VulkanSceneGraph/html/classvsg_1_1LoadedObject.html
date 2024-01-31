@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Helper class for support sharing of objects loaded from files.  
+<p>Helper class for sharing of objects loaded from files.  
  <a href="classvsg_1_1LoadedObject.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="SharedObjects_8h_source.html">SharedObjects.h</a>&gt;</code></p>
@@ -85,7 +85,7 @@ Inheritance diagram for vsg::LoadedObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1LoadedObject__inherit__graph.png" border="0" usemap="#avsg_1_1LoadedObject_inherit__map" alt="Inheritance graph"/></div>
 <map name="avsg_1_1LoadedObject_inherit__map" id="avsg_1_1LoadedObject_inherit__map">
-<area shape="rect" title="Helper class for support sharing of objects loaded from files." alt="" coords="12,169,155,196"/>
+<area shape="rect" title="Helper class for sharing of objects loaded from files." alt="" coords="12,169,155,196"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="5,80,161,121"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
 </map>
@@ -95,12 +95,12 @@ Collaboration diagram for vsg::LoadedObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1LoadedObject__coll__graph.png" border="0" usemap="#avsg_1_1LoadedObject_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1LoadedObject_coll__map" id="avsg_1_1LoadedObject_coll__map">
-<area shape="rect" title="Helper class for support sharing of objects loaded from files." alt="" coords="415,107,557,134"/>
+<area shape="rect" title="Helper class for sharing of objects loaded from files." alt="" coords="415,107,557,134"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,71,299,112"/>
 <area shape="rect" href="classvsg_1_1Path.html" title=" " alt="" coords="187,137,268,163"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="154,188,301,229"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,188,299,229"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -109,6 +109,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1483adf652515f713e59606f6e343e05"><td class="memItemLeft" align="right" valign="top"><a id="a1483adf652515f713e59606f6e343e05"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LoadedObject</b> (const <a class="el" href="classvsg_1_1Path.html">Path</a> &amp;in_filename, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; const <a class="el" href="classvsg_1_1Options.html">Options</a> &gt; in_options, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Object.html">Object</a> &gt; in_object={})</td></tr>
 <tr class="separator:a1483adf652515f713e59606f6e343e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4a5cea9288a914961fb4a88806b485"><td class="memItemLeft" align="right" valign="top"><a id="adf4a5cea9288a914961fb4a88806b485"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>traverse</b> (<a class="el" href="classvsg_1_1Visitor.html">Visitor</a> &amp;visitor) override</td></tr>
+<tr class="separator:adf4a5cea9288a914961fb4a88806b485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ccbf0507d3b702efb9f2aafc1fbf6a"><td class="memItemLeft" align="right" valign="top"><a id="a21ccbf0507d3b702efb9f2aafc1fbf6a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>traverse</b> (<a class="el" href="classvsg_1_1ConstVisitor.html">ConstVisitor</a> &amp;visitor) const override</td></tr>
+<tr class="separator:a21ccbf0507d3b702efb9f2aafc1fbf6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a785d25b36655aa035458d4ad80b28dc4"><td class="memItemLeft" align="right" valign="top"><a id="a785d25b36655aa035458d4ad80b28dc4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1LoadedObject.html#a785d25b36655aa035458d4ad80b28dc4">compare</a> (const <a class="el" href="classvsg_1_1Object.html">Object</a> &amp;rhs_object) const override</td></tr>
 <tr class="memdesc:a785d25b36655aa035458d4ad80b28dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal, return 1 if rhs is greater, <br /></td></tr>
@@ -156,12 +162,6 @@ template&lt;class T &gt; </td></tr>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:ada89c6e827ef362b4db7d35e3ba7c94b inherit pub_methods_classvsg_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cast</b> () const</td></tr>
 <tr class="separator:ada89c6e827ef362b4db7d35e3ba7c94b inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e778bcdbf1abb7afff09494d701c727 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a7e778bcdbf1abb7afff09494d701c727"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>traverse</b> (<a class="el" href="classvsg_1_1Visitor.html">Visitor</a> &amp;)</td></tr>
-<tr class="separator:a7e778bcdbf1abb7afff09494d701c727 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c1fbf9b4ad783680c65e3985499209f inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a4c1fbf9b4ad783680c65e3985499209f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>traverse</b> (<a class="el" href="classvsg_1_1ConstVisitor.html">ConstVisitor</a> &amp;) const</td></tr>
-<tr class="separator:a4c1fbf9b4ad783680c65e3985499209f inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50251d7ce5cd17384aafcf30a6a3ce9f inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a50251d7ce5cd17384aafcf30a6a3ce9f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>traverse</b> (<a class="el" href="classvsg_1_1RecordTraversal.html">RecordTraversal</a> &amp;) const</td></tr>
 <tr class="separator:a50251d7ce5cd17384aafcf30a6a3ce9f inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,7 +188,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -254,9 +254,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aab0d6f3e316079971dd02f3f7a955155"><td class="memItemLeft" align="right" valign="top"><a id="aab0d6f3e316079971dd02f3f7a955155"></a>
 <a class="el" href="classvsg_1_1Path.html">Path</a>&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b></td></tr>
 <tr class="separator:aab0d6f3e316079971dd02f3f7a955155"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b22bf2bde7f86a27e5e4512c0a6ea39"><td class="memItemLeft" align="right" valign="top"><a id="a9b22bf2bde7f86a27e5e4512c0a6ea39"></a>
-<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; const <a class="el" href="classvsg_1_1Options.html">Options</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>options</b></td></tr>
-<tr class="separator:a9b22bf2bde7f86a27e5e4512c0a6ea39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17202baf70fe4f85671b622bae187bb6"><td class="memItemLeft" align="right" valign="top"><a id="a17202baf70fe4f85671b622bae187bb6"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Options.html">Options</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>options</b></td></tr>
+<tr class="separator:a17202baf70fe4f85671b622bae187bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a471af4cd0c23afb583d9e8c3e28373ef"><td class="memItemLeft" align="right" valign="top"><a id="a471af4cd0c23afb583d9e8c3e28373ef"></a>
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Object.html">Object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>object</b></td></tr>
 <tr class="separator:a471af4cd0c23afb583d9e8c3e28373ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -293,7 +293,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Helper class for support sharing of objects loaded from files. </p>
+<div class="textblock"><p>Helper class for sharing of objects loaded from files. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/utils/<a class="el" href="SharedObjects_8h_source.html">SharedObjects.h</a></li>
 </ul>

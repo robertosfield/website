@@ -1,10 +1,12 @@
 <map id="vsg::CopyAndReleaseBuffer" name="vsg::CopyAndReleaseBuffer">
-<area shape="rect" id="node1" title="Deprecated &#45; use vsg::Data dataVariance and Data.dirty() to signal vsg::TransferData to transfer data..." alt="" coords="1277,61,1480,87"/>
-<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="857,5,1048,47"/>
-<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class from encapsualting vkCmd* calls and associated settings." alt="" coords="688,13,808,39"/>
-<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="491,5,639,47"/>
-<area shape="rect" id="node5" href="$classvsg_1_1Node.html" title=" " alt="" coords="355,13,441,39"/>
-<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
-<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
-<area shape="rect" id="node8" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="870,71,1035,112"/>
+<area shape="rect" id="node1" title="Deprecated &#45; use vsg::Data dataVariance and Data::dirty() to signal vsg::TransferTask to transfer dat..." alt="" coords="1691,61,1893,87"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="1271,5,1461,47"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class for encapsulating vkCmd* calls and associated settings." alt="" coords="1101,13,1221,39"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="864,5,1052,47"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Compilable.html" title="Base class for encapsulating nodes that have Vulkan objects associated with them that will need compi..." alt="" coords="688,13,815,39"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="491,5,639,47"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Node.html" title=" " alt="" coords="355,13,441,39"/>
+<area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" id="node9" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
+<area shape="rect" id="node10" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="1283,71,1449,112"/>
 </map>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -70,6 +70,9 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classvsg_1_1Builder-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">vsg::Builder Class Reference</div>  </div>
@@ -92,13 +95,14 @@ Collaboration diagram for vsg::Builder:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1Builder__coll__graph.png" border="0" usemap="#avsg_1_1Builder_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1Builder_coll__map" id="avsg_1_1Builder_coll__map">
-<area shape="rect" title=" " alt="" coords="469,143,568,170"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
+<area shape="rect" title=" " alt="" coords="503,162,601,189"/>
+<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="151,5,307,47"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="152,71,303,112"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,136,299,177"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,201,299,243"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,267,299,308"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="153,71,304,112"/>
+<area shape="rect" href="structvsg_1_1t__mat4.html" title=" " alt="" coords="149,137,308,163"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="157,188,300,229"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="157,253,300,295"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="157,319,300,360"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -210,7 +214,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -289,6 +293,70 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>verbose</b> = false</
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1CompileTraversal.html">CompileTraversal</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>compileTraversal</b></td></tr>
 <tr class="separator:a1ee1cea1aa23f52503c6067be67239f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:aa63761531e5fc8b4a7e0d12bbb561ecd"><td class="memItemLeft" align="right" valign="top"><a id="aa63761531e5fc8b4a7e0d12bbb561ecd"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>GeometryMap</b> = std::map&lt; <a class="el" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a>, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Node.html">Node</a> &gt; &gt;</td></tr>
+<tr class="separator:aa63761531e5fc8b4a7e0d12bbb561ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:af536abee8b264e780ffb963fcdccb81a"><td class="memItemLeft" align="right" valign="top"><a id="af536abee8b264e780ffb963fcdccb81a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>transform</b> (const <a class="el" href="structvsg_1_1t__mat4.html">mat4</a> &amp;matrix, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; vec3Array &gt; vertices, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; vec3Array &gt; normals)</td></tr>
+<tr class="separator:af536abee8b264e780ffb963fcdccb81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f9194125168bb69d8bb8188db67e947"><td class="memItemLeft" align="right" valign="top"><a id="a4f9194125168bb69d8bb8188db67e947"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>instancePositions</b> (const <a class="el" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a> &amp;info, uint32_t &amp;instanceCount)</td></tr>
+<tr class="separator:a4f9194125168bb69d8bb8188db67e947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f9773ad2e8ee612fd7f7c62562642e"><td class="memItemLeft" align="right" valign="top"><a id="a64f9773ad2e8ee612fd7f7c62562642e"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>instanceColors</b> (const <a class="el" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a> &amp;info, uint32_t instanceCount)</td></tr>
+<tr class="separator:a64f9773ad2e8ee612fd7f7c62562642e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca523caf7d5e3cfa7e4e1a9e2f5376a"><td class="memItemLeft" align="right" valign="top"><a id="a2ca523caf7d5e3cfa7e4e1a9e2f5376a"></a>
+<a class="el" href="structvsg_1_1t__vec3.html">vec3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>y_texcoord</b> (const <a class="el" href="structvsg_1_1StateInfo.html">StateInfo</a> &amp;info) const</td></tr>
+<tr class="separator:a2ca523caf7d5e3cfa7e4e1a9e2f5376a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f935b918d0fa976981b7fd926c56a08"><td class="memItemLeft" align="right" valign="top"><a id="a4f935b918d0fa976981b7fd926c56a08"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>decorateAndCompileIfRequired</b> (const <a class="el" href="structvsg_1_1GeometryInfo.html">GeometryInfo</a> &amp;info, const <a class="el" href="structvsg_1_1StateInfo.html">StateInfo</a> &amp;stateInfo, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Node.html">Node</a> &gt; node)</td></tr>
+<tr class="separator:a4f935b918d0fa976981b7fd926c56a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classvsg_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classvsg_1_1Object')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classvsg_1_1Object.html">vsg::Object</a></td></tr>
+<tr class="memitem:a36bd732d3f6d9d28d28f215139f87ad6 inherit pro_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a36bd732d3f6d9d28d28f215139f87ad6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>_attemptDelete</b> () const</td></tr>
+<tr class="separator:a36bd732d3f6d9d28d28f215139f87ad6 inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a6e38eeef0064e1bfa84ad776f5f2f31a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a class="el" href="classvsg_1_1Auxiliary.html">Auxiliary</a> *auxiliary)</td></tr>
+<tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a9ec84c8da12bafb93e20c7ac37af1baa"><td class="memItemLeft" align="right" valign="top"><a id="a9ec84c8da12bafb93e20c7ac37af1baa"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ShaderSet.html">ShaderSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_flatShadedShaderSet</b></td></tr>
+<tr class="separator:a9ec84c8da12bafb93e20c7ac37af1baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e278018fcaac3513e5d1a74a035a50"><td class="memItemLeft" align="right" valign="top"><a id="a90e278018fcaac3513e5d1a74a035a50"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ShaderSet.html">ShaderSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_phongShaderSet</b></td></tr>
+<tr class="separator:a90e278018fcaac3513e5d1a74a035a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac91928691dbe264f4eda254195d3c5c4"><td class="memItemLeft" align="right" valign="top"><a id="ac91928691dbe264f4eda254195d3c5c4"></a>
+GeometryMap&#160;</td><td class="memItemRight" valign="bottom"><b>_boxes</b></td></tr>
+<tr class="separator:ac91928691dbe264f4eda254195d3c5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af24cf41e38e19fcee516ddd158a680b9"><td class="memItemLeft" align="right" valign="top"><a id="af24cf41e38e19fcee516ddd158a680b9"></a>
+GeometryMap&#160;</td><td class="memItemRight" valign="bottom"><b>_capsules</b></td></tr>
+<tr class="separator:af24cf41e38e19fcee516ddd158a680b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06127d175eceb5ca0c3e19ee6850c01"><td class="memItemLeft" align="right" valign="top"><a id="aa06127d175eceb5ca0c3e19ee6850c01"></a>
+GeometryMap&#160;</td><td class="memItemRight" valign="bottom"><b>_cones</b></td></tr>
+<tr class="separator:aa06127d175eceb5ca0c3e19ee6850c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389f6105eeb7c4f028ef2733e2618dd0"><td class="memItemLeft" align="right" valign="top"><a id="a389f6105eeb7c4f028ef2733e2618dd0"></a>
+GeometryMap&#160;</td><td class="memItemRight" valign="bottom"><b>_cylinders</b></td></tr>
+<tr class="separator:a389f6105eeb7c4f028ef2733e2618dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81b446a0097db964405991f4a3bc2fe7"><td class="memItemLeft" align="right" valign="top"><a id="a81b446a0097db964405991f4a3bc2fe7"></a>
+GeometryMap&#160;</td><td class="memItemRight" valign="bottom"><b>_quads</b></td></tr>
+<tr class="separator:a81b446a0097db964405991f4a3bc2fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac844fd88f1b50a5fc99c9d7d4ced9781"><td class="memItemLeft" align="right" valign="top"><a id="ac844fd88f1b50a5fc99c9d7d4ced9781"></a>
+GeometryMap&#160;</td><td class="memItemRight" valign="bottom"><b>_spheres</b></td></tr>
+<tr class="separator:ac844fd88f1b50a5fc99c9d7d4ced9781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c1d75d87155b5aa65e90b6b6cbcf1ff"><td class="memItemLeft" align="right" valign="top"><a id="a7c1d75d87155b5aa65e90b6b6cbcf1ff"></a>
+GeometryMap&#160;</td><td class="memItemRight" valign="bottom"><b>_heightfields</b></td></tr>
+<tr class="separator:a7c1d75d87155b5aa65e90b6b6cbcf1ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e58b19f4b2286813890147f42ecee78"><td class="memItemLeft" align="right" valign="top"><a id="a5e58b19f4b2286813890147f42ecee78"></a>
+<a class="el" href="structvsg_1_1t__mat4.html">mat4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>identity</b></td></tr>
+<tr class="separator:a5e58b19f4b2286813890147f42ecee78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classvsg_1_1Inherit"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classvsg_1_1Inherit')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classvsg_1_1Inherit.html">vsg::Inherit&lt; Object, Builder &gt;</a></td></tr>
@@ -312,16 +380,9 @@ static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:a1c92fe24ceb719dd228ee06363e79d09 inherit pub_static_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a1c92fe24ceb719dd228ee06363e79d09"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>operator delete</b> (void *ptr)</td></tr>
 <tr class="separator:a1c92fe24ceb719dd228ee06363e79d09 inherit pub_static_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classvsg_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classvsg_1_1Object')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classvsg_1_1Object.html">vsg::Object</a></td></tr>
-<tr class="memitem:a36bd732d3f6d9d28d28f215139f87ad6 inherit pro_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a36bd732d3f6d9d28d28f215139f87ad6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>_attemptDelete</b> () const</td></tr>
-<tr class="separator:a36bd732d3f6d9d28d28f215139f87ad6 inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a6e38eeef0064e1bfa84ad776f5f2f31a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a class="el" href="classvsg_1_1Auxiliary.html">Auxiliary</a> *auxiliary)</td></tr>
-<tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1Builder.html">Builder</a> class that creates subgraphs that can render primitive geometries. Supported shapes are Box, Capsule, Cone, Cylinder, Disk, Quad, Sphere and HeightField. Uses <a class="el" href="structvsg_1_1GeometryInfo.html" title="GeometryInfo struct provides geometry related settings supported by Builder.">GeometryInfo</a> and <a class="el" href="structvsg_1_1StateInfo.html" title="StateInfo struct provides state related settings supported by Builder.">StateInfo</a> to guide the geometry position/size and rendering state. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1Builder.html">Builder</a> class that creates subgraphs that can render primitive geometries. Supported shapes are Box, Capsule, Cone, Cylinder, Disk, Quad, Sphere and HeightField. Uses <a class="el" href="structvsg_1_1GeometryInfo.html" title="GeometryInfo struct provides geometry related settings supported by Builder.">GeometryInfo</a> and <a class="el" href="structvsg_1_1StateInfo.html" title="StateInfo struct provides state related settings supported by Builder.">StateInfo</a> to guide the geometry's position/size and rendering state. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/utils/<a class="el" href="Builder_8h_source.html">Builder.h</a></li>
 </ul>

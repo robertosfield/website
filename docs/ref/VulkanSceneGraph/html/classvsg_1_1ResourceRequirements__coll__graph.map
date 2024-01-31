@@ -1,4 +1,5 @@
 <map id="vsg::ResourceRequirements" name="vsg::ResourceRequirements">
-<area shape="rect" id="node1" title="ResourceRequirements provides a container for various Vulkan resource requirements that be used to he..." alt="" coords="5,124,209,151"/>
+<area shape="rect" id="node1" title="ResourceRequirements provides a container for various Vulkan resource requirements that can be used t..." alt="" coords="113,139,317,165"/>
 <area shape="rect" id="node2" href="$structvsg_1_1ResourceRequirements_1_1DynamicData.html" title=" " alt="" coords="5,5,209,47"/>
+<area shape="rect" id="node3" href="$structvsg_1_1t__vec2.html" title=" " alt="" coords="234,13,413,39"/>
 </map>

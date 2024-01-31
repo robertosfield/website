@@ -1,5 +1,5 @@
 <map id="vsg::ShaderSet" name="vsg::ShaderSet">
-<area shape="rect" id="node1" title="ShaderSet provides collection of shader related settings to provide a form of shader introspection." alt="" coords="24,169,143,196"/>
+<area shape="rect" id="node1" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection." alt="" coords="24,169,143,196"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,80,161,121"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
 </map>

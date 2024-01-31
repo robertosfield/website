@@ -1,0 +1,7 @@
+<map id="vsg::CustomDescriptorSetBinding" name="vsg::CustomDescriptorSetBinding">
+<area shape="rect" id="node1" title="Base class for specifying custom DescriptorSetLayout and StateCommand." alt="" coords="61,169,251,211"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,259,307,300"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="42,80,270,121"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="109,5,203,32"/>
+<area shape="rect" id="node5" href="$structvsg_1_1ViewDependentStateBinding.html" title="Custom state binding class for providing the DescriptorSetLayout and StateCommand required to pass vi..." alt="" coords="37,348,275,375"/>
+</map>

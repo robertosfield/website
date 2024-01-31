@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -98,22 +98,24 @@ Collaboration diagram for vsgXcb::Xcb_Window:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsgXcb_1_1Xcb__Window__coll__graph.png" border="0" usemap="#avsgXcb_1_1Xcb__Window_coll__map" alt="Collaboration graph"/></div>
 <map name="avsgXcb_1_1Xcb__Window_coll__map" id="avsgXcb_1_1Xcb__Window_coll__map">
-<area shape="rect" title="Xcb_Window implements Xcb specific window creation, event handling and vulkan Surface setup." alt="" coords="1009,378,1169,405"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="709,323,889,364"/>
-<area shape="rect" href="classvsg_1_1Window.html" title=" " alt="" coords="555,330,660,357"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
-<area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,71,299,112"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,136,299,177"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,201,299,243"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,267,299,308"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,332,299,373"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,397,299,439"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,463,299,504"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,528,299,569"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,593,299,635"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,659,299,700"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="720,388,879,429"/>
+<area shape="rect" title="Xcb_Window implements Xcb specific window creation, event handling and vulkan Surface setup." alt="" coords="1096,421,1256,447"/>
+<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="796,365,976,407"/>
+<area shape="rect" href="classvsg_1_1Window.html" title=" " alt="" coords="641,373,747,399"/>
+<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="236,5,392,47"/>
+<area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="35,13,130,39"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="243,71,385,112"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="243,136,385,177"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="243,201,385,243"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="243,267,385,308"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="243,332,385,373"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="243,397,385,439"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="243,463,385,504"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="243,528,385,569"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="243,593,385,635"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="243,659,385,700"/>
+<area shape="rect" href="structvsg_1_1t__vec4.html" title=" " alt="" coords="237,725,391,751"/>
+<area shape="rect" href="structvsg_1_1t__vec3.html" title=" " alt="" coords="5,725,160,751"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="807,431,965,472"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -143,7 +145,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>visible</b> () const 
 <tr class="separator:afff9acdaf12807c744c9f40d5633ee82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51f44aa082d1f3a4a57f2f45b076e44c"><td class="memItemLeft" align="right" valign="top"><a id="a51f44aa082d1f3a4a57f2f45b076e44c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsgXcb_1_1Xcb__Window.html#a51f44aa082d1f3a4a57f2f45b076e44c">pollEvents</a> (vsg::UIEvents &amp;events) override</td></tr>
-<tr class="memdesc:a51f44aa082d1f3a4a57f2f45b076e44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the list of events since the last poolEvents() call by splicing bufferEvents with polled windowing events. <br /></td></tr>
+<tr class="memdesc:a51f44aa082d1f3a4a57f2f45b076e44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the list of events since the last <a class="el" href="classvsgXcb_1_1Xcb__Window.html#a51f44aa082d1f3a4a57f2f45b076e44c" title="get the list of events since the last pollEvents() call by splicing bufferEvents with polled windowin...">pollEvents()</a> call by splicing bufferEvents with polled windowing events. <br /></td></tr>
 <tr class="separator:a51f44aa082d1f3a4a57f2f45b076e44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e24726d4ff8e3db25602f69dc5bf378"><td class="memItemLeft" align="right" valign="top"><a id="a2e24726d4ff8e3db25602f69dc5bf378"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> () override</td></tr>
@@ -192,12 +194,12 @@ const <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="e
 <tr class="memitem:ac334c6efe10d0a97cef9407f05305e5c inherit pub_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="ac334c6efe10d0a97cef9407f05305e5c"></a>
 const VkExtent2D &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>extent2D</b> () const</td></tr>
 <tr class="separator:ac334c6efe10d0a97cef9407f05305e5c inherit pub_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af44475b027910b5001979b473ca0297b inherit pub_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="af44475b027910b5001979b473ca0297b"></a>
-VkClearColorValue &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>clearColor</b> ()</td></tr>
-<tr class="separator:af44475b027910b5001979b473ca0297b inherit pub_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04f4c404a0e0d216a27b45e1974ec449 inherit pub_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="a04f4c404a0e0d216a27b45e1974ec449"></a>
-const VkClearColorValue &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>clearColor</b> () const</td></tr>
-<tr class="separator:a04f4c404a0e0d216a27b45e1974ec449 inherit pub_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead28b382e92bfc8ebc8b6f7e53c008e inherit pub_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="aead28b382e92bfc8ebc8b6f7e53c008e"></a>
+<a class="el" href="structvsg_1_1t__vec4.html">vec4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>clearColor</b> ()</td></tr>
+<tr class="separator:aead28b382e92bfc8ebc8b6f7e53c008e inherit pub_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d37b385f4c21ed18431f0f010f4dc6 inherit pub_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="a92d37b385f4c21ed18431f0f010f4dc6"></a>
+const <a class="el" href="structvsg_1_1t__vec4.html">vec4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>clearColor</b> () const</td></tr>
+<tr class="separator:a92d37b385f4c21ed18431f0f010f4dc6 inherit pub_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a657e429c64344f3b1b8ea47e6d2f844a inherit pub_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="a657e429c64344f3b1b8ea47e6d2f844a"></a>
 VkSurfaceFormatKHR&#160;</td><td class="memItemRight" valign="bottom"><b>surfaceFormat</b> ()</td></tr>
 <tr class="separator:a657e429c64344f3b1b8ea47e6d2f844a inherit pub_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,7 +293,7 @@ VkResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="separator:a88837801ab4f16195a97de3bdf461c96 inherit pub_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7a5d7681ee7a3c57b5b7917af3fbe1b inherit pub_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="aa7a5d7681ee7a3c57b5b7917af3fbe1b"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Window.html#aa7a5d7681ee7a3c57b5b7917af3fbe1b">imageIndex</a> (size_t relativeFrameIndex=0) const</td></tr>
-<tr class="memdesc:aa7a5d7681ee7a3c57b5b7917af3fbe1b inherit pub_methods_classvsg_1_1Window"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the image index for specified relative frame index, a 0 value is the current frame being rendered, 1 is the previous frame, 2 is the previous frame that. <br /></td></tr>
+<tr class="memdesc:aa7a5d7681ee7a3c57b5b7917af3fbe1b inherit pub_methods_classvsg_1_1Window"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the image index for specified relative frame index, a 0 value is the current frame being rendered, 1 is the previous frame, 2 is the frame before that. <br /></td></tr>
 <tr class="separator:aa7a5d7681ee7a3c57b5b7917af3fbe1b inherit pub_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a634d7d1804bdb427b00b8fbd0591b0a4 inherit pub_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="a634d7d1804bdb427b00b8fbd0591b0a4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>debugLayersEnabled</b> () const</td></tr>
@@ -377,7 +379,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -468,9 +470,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>_initSwapchain</b> ()
 <tr class="memitem:a610819933c18f7043209034eb8142190 inherit pro_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="a610819933c18f7043209034eb8142190"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
 <tr class="separator:a610819933c18f7043209034eb8142190 inherit pro_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a788405a0d0fb2bbf8a195242dc3ed582 inherit pro_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="a788405a0d0fb2bbf8a195242dc3ed582"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>share</b> (<a class="el" href="classvsg_1_1Window.html">Window</a> &amp;window)</td></tr>
-<tr class="separator:a788405a0d0fb2bbf8a195242dc3ed582 inherit pro_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c40f5fd60e996aba92719f8f2bbc1b7 inherit pro_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="a6c40f5fd60e996aba92719f8f2bbc1b7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>share</b> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Device.html">Device</a> &gt; device)</td></tr>
+<tr class="separator:a6c40f5fd60e996aba92719f8f2bbc1b7 inherit pro_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dcfaed0f7a9a811a25bac87c8effdaf inherit pro_methods_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="a2dcfaed0f7a9a811a25bac87c8effdaf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>buildSwapchain</b> ()</td></tr>
 <tr class="separator:a2dcfaed0f7a9a811a25bac87c8effdaf inherit pro_methods_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -518,9 +520,9 @@ vsg::clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><b>_fi
 <tr class="memitem:a3158d0268fc616d68164e93bef2c5015 inherit pro_attribs_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="a3158d0268fc616d68164e93bef2c5015"></a>
 VkExtent2D&#160;</td><td class="memItemRight" valign="bottom"><b>_extent2D</b></td></tr>
 <tr class="separator:a3158d0268fc616d68164e93bef2c5015 inherit pro_attribs_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadc1857178832206bc64518e4dbe58d2 inherit pro_attribs_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="aadc1857178832206bc64518e4dbe58d2"></a>
-VkClearColorValue&#160;</td><td class="memItemRight" valign="bottom"><b>_clearColor</b></td></tr>
-<tr class="separator:aadc1857178832206bc64518e4dbe58d2 inherit pro_attribs_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef14e2dbef178644495901115b38d01 inherit pro_attribs_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="adef14e2dbef178644495901115b38d01"></a>
+<a class="el" href="structvsg_1_1t__vec4.html">vec4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_clearColor</b></td></tr>
+<tr class="separator:adef14e2dbef178644495901115b38d01 inherit pro_attribs_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbd9943201e3cf8963de16b2800882ed inherit pro_attribs_classvsg_1_1Window"><td class="memItemLeft" align="right" valign="top"><a id="adbd9943201e3cf8963de16b2800882ed"></a>
 VkSurfaceFormatKHR&#160;</td><td class="memItemRight" valign="bottom"><b>_imageFormat</b></td></tr>
 <tr class="separator:adbd9943201e3cf8963de16b2800882ed inherit pro_attribs_classvsg_1_1Window"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -674,14 +676,14 @@ UIEvents&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Release the window as it's owned by a 3rd party windowing object. Resets the window handle and invalidating the window, preventing Window deletion or closing from deleting the window resource. </p>
+<p>Release the window as it's owned by a 3rd party windowing object. Resets the window handle and invalidates the window, preventing Window deletion or closing from deleting the window resource. </p>
 
 <p>Reimplemented from <a class="el" href="classvsg_1_1Window.html#aa4161ebc81abe6462c76f24fd4871b3e">vsg::Window</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/vsg/platform/unix/<a class="el" href="Xcb__Window_8h_source.html">Xcb_Window.h</a></li>
+<li>include/vsg/platform/xcb/<a class="el" href="Xcb__Window_8h_source.html">Xcb_Window.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

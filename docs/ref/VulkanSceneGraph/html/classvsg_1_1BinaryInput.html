@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -153,6 +153,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>_read</b> (std::strin
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1BinaryInput.html#aaabbcf38af7adfa57e6b928a4e89bda2">read</a> (size_t num, std::string *value) override</td></tr>
 <tr class="memdesc:aaabbcf38af7adfa57e6b928a4e89bda2"><td class="mdescLeft">&#160;</td><td class="mdescRight">read one or more strings <br /></td></tr>
 <tr class="separator:aaabbcf38af7adfa57e6b928a4e89bda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c542489b27f61c152d9c1b872dfcefc"><td class="memItemLeft" align="right" valign="top"><a id="a4c542489b27f61c152d9c1b872dfcefc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>_read</b> (std::wstring &amp;value)</td></tr>
+<tr class="separator:a4c542489b27f61c152d9c1b872dfcefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a268bed9e9b47d0e4ca7ea0d1376d355b"><td class="memItemLeft" align="right" valign="top"><a id="a268bed9e9b47d0e4ca7ea0d1376d355b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1BinaryInput.html#a268bed9e9b47d0e4ca7ea0d1376d355b">read</a> (size_t num, std::wstring *value) override</td></tr>
+<tr class="memdesc:a268bed9e9b47d0e4ca7ea0d1376d355b"><td class="mdescLeft">&#160;</td><td class="mdescRight">read one or more strings <br /></td></tr>
+<tr class="separator:a268bed9e9b47d0e4ca7ea0d1376d355b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa418e372161edaae4dee8b50125c2055"><td class="memItemLeft" align="right" valign="top"><a id="aa418e372161edaae4dee8b50125c2055"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1BinaryInput.html#aa418e372161edaae4dee8b50125c2055">read</a> (size_t num, <a class="el" href="classvsg_1_1Path.html">Path</a> *value) override</td></tr>
 <tr class="memdesc:aa418e372161edaae4dee8b50125c2055"><td class="mdescLeft">&#160;</td><td class="mdescRight">read one or more paths <br /></td></tr>
@@ -252,6 +259,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (size_t num,
 <tr class="memitem:a72e953f3de431b4480d02881c33887cb inherit pub_methods_classvsg_1_1Input"><td class="memItemLeft" align="right" valign="top"><a id="a72e953f3de431b4480d02881c33887cb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (size_t num, <a class="el" href="structvsg_1_1t__quat.html">dquat</a> *value)</td></tr>
 <tr class="separator:a72e953f3de431b4480d02881c33887cb inherit pub_methods_classvsg_1_1Input"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac52bf546a1e4e8fa882661de9332fe84 inherit pub_methods_classvsg_1_1Input"><td class="memItemLeft" align="right" valign="top"><a id="ac52bf546a1e4e8fa882661de9332fe84"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (size_t num, <a class="el" href="structvsg_1_1t__mat3.html">mat3</a> *value)</td></tr>
+<tr class="separator:ac52bf546a1e4e8fa882661de9332fe84 inherit pub_methods_classvsg_1_1Input"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97cfeb911cf9db76a2b48357f8a5853 inherit pub_methods_classvsg_1_1Input"><td class="memItemLeft" align="right" valign="top"><a id="aa97cfeb911cf9db76a2b48357f8a5853"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (size_t num, <a class="el" href="structvsg_1_1t__mat3.html">dmat3</a> *value)</td></tr>
+<tr class="separator:aa97cfeb911cf9db76a2b48357f8a5853 inherit pub_methods_classvsg_1_1Input"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30deb4b8fc92f430931e00e3fd0c72b5 inherit pub_methods_classvsg_1_1Input"><td class="memItemLeft" align="right" valign="top"><a id="a30deb4b8fc92f430931e00e3fd0c72b5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (size_t num, <a class="el" href="structvsg_1_1t__mat4.html">mat4</a> *value)</td></tr>
 <tr class="separator:a30deb4b8fc92f430931e00e3fd0c72b5 inherit pub_methods_classvsg_1_1Input"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -279,7 +292,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (size_t num,
 <tr class="memitem:af5a7f5dfe6afe18047e49913a4aa789b inherit pub_methods_classvsg_1_1Input"><td class="memTemplParams" colspan="2"><a id="af5a7f5dfe6afe18047e49913a4aa789b"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:af5a7f5dfe6afe18047e49913a4aa789b inherit pub_methods_classvsg_1_1Input"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvsg_1_1Input.html#af5a7f5dfe6afe18047e49913a4aa789b">read</a> (size_t num, T *value)</td></tr>
-<tr class="memdesc:af5a7f5dfe6afe18047e49913a4aa789b inherit pub_methods_classvsg_1_1Input"><td class="mdescLeft">&#160;</td><td class="mdescRight">treat non standard type as raw data, <br /></td></tr>
+<tr class="memdesc:af5a7f5dfe6afe18047e49913a4aa789b inherit pub_methods_classvsg_1_1Input"><td class="mdescLeft">&#160;</td><td class="mdescRight">treat non standard type as raw data <br /></td></tr>
 <tr class="separator:af5a7f5dfe6afe18047e49913a4aa789b inherit pub_methods_classvsg_1_1Input"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5a962de230b642af5c043d265dfd3f7 inherit pub_methods_classvsg_1_1Input"><td class="memTemplParams" colspan="2"><a id="ab5a962de230b642af5c043d265dfd3f7"></a>
 template&lt;typename T &gt; </td></tr>
@@ -324,7 +337,7 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1a79f077b1e4dc0aa1ee75500a86a271 inherit pub_methods_classvsg_1_1Input"><td class="memTemplParams" colspan="2"><a id="a1a79f077b1e4dc0aa1ee75500a86a271"></a>
 template&lt;typename W , typename T &gt; </td></tr>
 <tr class="memitem:a1a79f077b1e4dc0aa1ee75500a86a271 inherit pub_methods_classvsg_1_1Input"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvsg_1_1Input.html#a1a79f077b1e4dc0aa1ee75500a86a271">readValue</a> (const char *propertyName, T &amp;value)</td></tr>
-<tr class="memdesc:a1a79f077b1e4dc0aa1ee75500a86a271 inherit pub_methods_classvsg_1_1Input"><td class="mdescLeft">&#160;</td><td class="mdescRight">read a value as a type, then cast it another type <br /></td></tr>
+<tr class="memdesc:a1a79f077b1e4dc0aa1ee75500a86a271 inherit pub_methods_classvsg_1_1Input"><td class="mdescLeft">&#160;</td><td class="mdescRight">read a value as a type, then cast it to another type <br /></td></tr>
 <tr class="separator:a1a79f077b1e4dc0aa1ee75500a86a271 inherit pub_methods_classvsg_1_1Input"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6d9b30bc8830ce4a9d63f64fc1e058f inherit pub_methods_classvsg_1_1Input"><td class="memItemLeft" align="right" valign="top"><a id="aa6d9b30bc8830ce4a9d63f64fc1e058f"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>version_less</b> (uint32_t major, uint32_t minor, uint32_t patch, uint32_t soversion=0) const</td></tr>
@@ -370,7 +383,7 @@ ObjectIDMap&#160;</td><td class="memItemRight" valign="bottom"><b>objectIDMap</b
 <tr class="separator:a5724afab546663b973c0172138bf4b62 inherit pub_attribs_classvsg_1_1Input"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1Input.html">vsg::Input</a> subclass that implements reading from a binary input stream. Used by <a class="el" href="classvsg_1_1VSG.html" title="ReaderWriter for reading and writing native VSG ascii and binary files.">VSG</a> <a class="el" href="classvsg_1_1ReaderWriter.html" title="Base class from providing support for reading and/or writing various file formats and IO protocols.">ReaderWriter</a> when reading native .vsgb binary files. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1Input.html">vsg::Input</a> subclass that implements reading from a binary input stream. Used by <a class="el" href="classvsg_1_1VSG.html" title="ReaderWriter for reading and writing native VSG ascii and binary files.">VSG</a> <a class="el" href="classvsg_1_1ReaderWriter.html" title="Base class for providing support for reading and/or writing various file formats and IO protocols.">ReaderWriter</a> when reading native .vsgb binary files. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/io/<a class="el" href="BinaryInput_8h_source.html">BinaryInput.h</a></li>
 </ul>

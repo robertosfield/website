@@ -1,5 +1,5 @@
 <map id="vsg::Image" name="vsg::Image">
-<area shape="rect" id="node1" title="Image class encapsulates VkImage and VkImageCreateInfo settings used to it up." alt="" coords="451,78,545,105"/>
+<area shape="rect" id="node1" title="Image class encapsulates VkImage and VkImageCreateInfo settings used to set it up." alt="" coords="451,78,545,105"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="155,5,311,47"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
 <area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="162,71,305,112"/>

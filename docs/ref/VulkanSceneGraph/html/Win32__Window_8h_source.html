@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -161,89 +161,126 @@ $(function() {
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span> (keyState[VK_CAPITAL] &amp; 0x01) modifierMask |= vsg::KeyModifier::MODKEY_CapsLock;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">if</span> (keyState[VK_NUMLOCK] &amp; 0x01) modifierMask |= vsg::KeyModifier::MODKEY_NumLock;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="comment">// This is the final keyModifier</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            keyModifier = <span class="keyword">static_cast&lt;</span>vsg::KeyModifier<span class="keyword">&gt;</span>(modifierMask);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">// The actual keystroke is what we get after the ::ToAscii call</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordtype">char</span> asciiKey[2];</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            int32_t numChars = ::ToAscii(<span class="keyword">static_cast&lt;</span>UINT<span class="keyword">&gt;</span>(wParam), (lParam &gt;&gt; 16) &amp; 0xff, keyState, <span class="keyword">reinterpret_cast&lt;</span>WORD*<span class="keyword">&gt;</span>(asciiKey), 0);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">if</span> (numChars == 1)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="comment">// it is indeed an ascii character. 0-127</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                modifiedKeySymbol = <span class="keyword">static_cast&lt;</span>vsg::KeySymbol<span class="keyword">&gt;</span>(asciiKey[0]);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="comment">// otherwise treat the modifiedKeySymbol as the same as the keySymbol.</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                modifiedKeySymbol = keySymbol;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        VirtualKeyToKeySymbolMap _vk2vsg;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    };</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    vsg::ButtonMask getButtonMask(WPARAM wParam)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keyword">auto</span> mask = (wParam &amp; MK_LBUTTON ? vsg::ButtonMask::BUTTON_MASK_1 : 0) | (wParam &amp; MK_MBUTTON ? vsg::ButtonMask::BUTTON_MASK_2 : 0) | (wParam &amp; MK_RBUTTON ? vsg::ButtonMask::BUTTON_MASK_3 : 0) |</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    (wParam &amp; MK_XBUTTON1 ? vsg::ButtonMask::BUTTON_MASK_4 : 0) | (wParam &amp; MK_XBUTTON2 ? vsg::ButtonMask::BUTTON_MASK_5 : 0);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>vsg::ButtonMask<span class="keyword">&gt;</span>(mask);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    uint32_t getButtonDownEventDetail(UINT buttonMsg)</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> buttonMsg == WM_LBUTTONDOWN ? 1 : (buttonMsg == WM_MBUTTONDOWN ? 2 : buttonMsg == WM_RBUTTONDOWN ? 3</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                                                                                                                : (buttonMsg == WM_XBUTTONDOWN ? 4 : 0)); <span class="comment">// need to determine x1, x2</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    uint32_t getButtonUpEventDetail(UINT buttonMsg)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">return</span> buttonMsg == WM_LBUTTONUP ? 1 : (buttonMsg == WM_MBUTTONUP ? 2 : buttonMsg == WM_RBUTTONUP ? 3</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                                                                                          : (buttonMsg == WM_XBUTTONUP ? 4 : 0));</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classvsgWin32_1_1Win32__Window.html">  135</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">vsg::Inherit</a>&lt;vsg::Window, Win32_Window&gt;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a>(<a class="code" href="classvsg_1_1ref__ptr.html">vsg::ref_ptr&lt;vsg::WindowTraits&gt;</a> traits);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a>(<span class="keyword">const</span> <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a> operator=(<span class="keyword">const</span> <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* instanceExtensionSurfaceName()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> VK_KHR_WIN32_SURFACE_EXTENSION_NAME; }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordtype">bool</span> valid()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> _window; }</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">bool</span> visible() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classvsgWin32_1_1Win32__Window.html#a00ef3717e80a8e6aa550b6592bbaed15">  149</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsgWin32_1_1Win32__Window.html#a00ef3717e80a8e6aa550b6592bbaed15">pollEvents</a>(vsg::UIEvents&amp; events) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordtype">void</span> resize() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keyword">operator</span> HWND() { <span class="keywordflow">return</span> _window; }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keyword">operator</span> <span class="keyword">const</span> HWND()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _window; }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        LRESULT handleWin32Messages(UINT msg, WPARAM wParam, LPARAM lParam);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keyword">virtual</span> ~Win32_Window();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">void</span> _initSurface() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        HWND _window;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">bool</span> _windowMapped = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">vsg::ref_ptr&lt;KeyboardMap&gt;</a> _keyboard;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    };</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="comment">// Check if the modifier keys are down (these are non-toggle keys, so the high-order bit is relevant!)</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="comment">// again, vsg only has a side-independent modifier</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">if</span> (keyState[VK_LSHIFT] &amp; 0x80) modifierMask |= vsg::KeyModifier::MODKEY_Shift;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">if</span> (keyState[VK_LSHIFT] &amp; 0x80) modifierMask |= vsg::KeyModifier::MODKEY_Shift;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">if</span> (keyState[VK_LCONTROL] &amp; 0x80) modifierMask |= vsg::KeyModifier::MODKEY_Control;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">if</span> (keyState[VK_RCONTROL] &amp; 0x80) modifierMask |= vsg::KeyModifier::MODKEY_Control;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">if</span> (keyState[VK_LMENU] &amp; 0x80) modifierMask |= vsg::KeyModifier::MODKEY_Alt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">if</span> (keyState[VK_LMENU] &amp; 0x80) modifierMask |= vsg::KeyModifier::MODKEY_Alt;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="comment">// This is the final keyModifier</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            keyModifier = <span class="keyword">static_cast&lt;</span>vsg::KeyModifier<span class="keyword">&gt;</span>(modifierMask);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">// The actual keystroke is what we get after the ::ToAscii call</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordtype">char</span> asciiKey[2];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            int32_t numChars = ::ToAscii(<span class="keyword">static_cast&lt;</span>UINT<span class="keyword">&gt;</span>(wParam), (lParam &gt;&gt; 16) &amp; 0xff, keyState, <span class="keyword">reinterpret_cast&lt;</span>WORD*<span class="keyword">&gt;</span>(asciiKey), 0);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">if</span> (numChars == 1)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="comment">// it is indeed an ascii character. 0-127</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                modifiedKeySymbol = <span class="keyword">static_cast&lt;</span>vsg::KeySymbol<span class="keyword">&gt;</span>(asciiKey[0]);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="comment">// otherwise treat the modifiedKeySymbol as the same as the keySymbol.</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                modifiedKeySymbol = keySymbol;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        VirtualKeyToKeySymbolMap _vk2vsg;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    };</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">inline</span> vsg::ButtonMask getButtonMask(WPARAM wParam)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">auto</span> mask = (wParam &amp; MK_LBUTTON ? vsg::ButtonMask::BUTTON_MASK_1 : 0) | (wParam &amp; MK_MBUTTON ? vsg::ButtonMask::BUTTON_MASK_2 : 0) | (wParam &amp; MK_RBUTTON ? vsg::ButtonMask::BUTTON_MASK_3 : 0) |</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    (wParam &amp; MK_XBUTTON1 ? vsg::ButtonMask::BUTTON_MASK_4 : 0) | (wParam &amp; MK_XBUTTON2 ? vsg::ButtonMask::BUTTON_MASK_5 : 0);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>vsg::ButtonMask<span class="keyword">&gt;</span>(mask);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">inline</span> uint32_t getButtonDownEventDetail(UINT buttonMsg, WORD wParamHi)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">switch</span> (buttonMsg)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">case</span> WM_LBUTTONDOWN: <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">case</span> WM_MBUTTONDOWN: <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">case</span> WM_RBUTTONDOWN: <span class="keywordflow">return</span> 3;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">case</span> WM_XBUTTONDOWN:</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">if</span> (wParamHi == XBUTTON1)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="keywordflow">return</span> 4;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wParamHi == XBUTTON2)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="keywordflow">return</span> 5;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">inline</span> uint32_t getButtonUpEventDetail(UINT buttonMsg, WORD wParamHi)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">switch</span> (buttonMsg)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">case</span> WM_LBUTTONUP: <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">case</span> WM_MBUTTONUP: <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">case</span> WM_RBUTTONUP: <span class="keywordflow">return</span> 3;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">case</span> WM_XBUTTONUP:</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">if</span> (wParamHi == XBUTTON1)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="keywordflow">return</span> 4;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wParamHi == XBUTTON2)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <span class="keywordflow">return</span> 5;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;} <span class="comment">// namespace vsgWin32</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;EVSG_type_name(<a class="code" href="classvsgWin32_1_1Win32__Window.html">vsgWin32::Win32_Window</a>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classvsgWin32_1_1Win32__Window.html">  170</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a> : <span class="keyword">public</span> <a class="code" href="classvsg_1_1Inherit.html">vsg::Inherit</a>&lt;vsg::Window, Win32_Window&gt;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a>(<a class="code" href="classvsg_1_1ref__ptr.html">vsg::ref_ptr&lt;vsg::WindowTraits&gt;</a> traits);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a>(<span class="keyword">const</span> <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a> operator=(<span class="keyword">const</span> <a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* instanceExtensionSurfaceName()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> VK_KHR_WIN32_SURFACE_EXTENSION_NAME; }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordtype">bool</span> valid()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> _window; }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordtype">bool</span> visible() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classvsgWin32_1_1Win32__Window.html#ae8c5c3295b5bf91c74d5a8b4e4075b52">  184</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classvsgWin32_1_1Win32__Window.html#ae8c5c3295b5bf91c74d5a8b4e4075b52">releaseWindow</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classvsgWin32_1_1Win32__Window.html#a00ef3717e80a8e6aa550b6592bbaed15">  186</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classvsgWin32_1_1Win32__Window.html#a00ef3717e80a8e6aa550b6592bbaed15">pollEvents</a>(vsg::UIEvents&amp; events) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordtype">void</span> resize() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keyword">operator</span> HWND()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _window; }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        LRESULT handleWin32Messages(UINT msg, WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsgWin32_1_1Win32__Window.html">Win32_Window</a>();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordtype">void</span> _initSurface() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        HWND _window;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordtype">bool</span> _windowMapped = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <a class="code" href="classvsg_1_1ref__ptr.html">vsg::ref_ptr&lt;KeyboardMap&gt;</a> _keyboard;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    };</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;} <span class="comment">// namespace vsgWin32</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;EVSG_type_name(<a class="code" href="classvsgWin32_1_1Win32__Window.html">vsgWin32::Win32_Window</a>);</div>
 <div class="ttc" id="aclassvsgWin32_1_1KeyboardMap_html"><div class="ttname"><a href="classvsgWin32_1_1KeyboardMap.html">vsgWin32::KeyboardMap</a></div><div class="ttdef"><b>Definition:</b> Win32_Window.h:33</div></div>
-<div class="ttc" id="aclassvsgWin32_1_1Win32__Window_html"><div class="ttname"><a href="classvsgWin32_1_1Win32__Window.html">vsgWin32::Win32_Window</a></div><div class="ttdoc">Win32_Window implements Win32 specific window creation, event handling and vulkan Surface setup.</div><div class="ttdef"><b>Definition:</b> Win32_Window.h:136</div></div>
-<div class="ttc" id="aclassvsgWin32_1_1Win32__Window_html_a00ef3717e80a8e6aa550b6592bbaed15"><div class="ttname"><a href="classvsgWin32_1_1Win32__Window.html#a00ef3717e80a8e6aa550b6592bbaed15">vsgWin32::Win32_Window::pollEvents</a></div><div class="ttdeci">bool pollEvents(vsg::UIEvents &amp;events) override</div><div class="ttdoc">get the list of events since the last poolEvents() call by splicing bufferEvents with polled windowin...</div></div>
+<div class="ttc" id="aclassvsgWin32_1_1Win32__Window_html"><div class="ttname"><a href="classvsgWin32_1_1Win32__Window.html">vsgWin32::Win32_Window</a></div><div class="ttdoc">Win32_Window implements Win32 specific window creation, event handling and vulkan Surface setup.</div><div class="ttdef"><b>Definition:</b> Win32_Window.h:171</div></div>
+<div class="ttc" id="aclassvsgWin32_1_1Win32__Window_html_a00ef3717e80a8e6aa550b6592bbaed15"><div class="ttname"><a href="classvsgWin32_1_1Win32__Window.html#a00ef3717e80a8e6aa550b6592bbaed15">vsgWin32::Win32_Window::pollEvents</a></div><div class="ttdeci">bool pollEvents(vsg::UIEvents &amp;events) override</div><div class="ttdoc">get the list of events since the last pollEvents() call by splicing bufferEvents with polled windowin...</div></div>
+<div class="ttc" id="aclassvsgWin32_1_1Win32__Window_html_ae8c5c3295b5bf91c74d5a8b4e4075b52"><div class="ttname"><a href="classvsgWin32_1_1Win32__Window.html#ae8c5c3295b5bf91c74d5a8b4e4075b52">vsgWin32::Win32_Window::releaseWindow</a></div><div class="ttdeci">void releaseWindow() override</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1Object_html"><div class="ttname"><a href="classvsg_1_1Object.html">vsg::Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:42</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr&lt; vsg::WindowTraits &gt;</a></div></div>

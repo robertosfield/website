@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -146,23 +146,21 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;DescriptorPool&gt;</a> _descriptorPool;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="classvsg_1_1ref__ptr.html">ref_ptr&lt;DescriptorSetLayout&gt;</a> _descriptorSetLayout;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            Descriptors _descriptors;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            DescriptorPoolSizes _descriptorPoolSizes;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        };</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1DescriptorSet.html">DescriptorSet</a>();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="structvsg_1_1vk__buffer.html">vk_buffer&lt;ref_ptr&lt;Implementation&gt;</a>&gt; _implementation;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    };</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1DescriptorSet.html">vsg::DescriptorSet</a>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1DescriptorSet_1_1Implementation.html">vsg::DescriptorSet::Implementation</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classvsg_1_1DescriptorSet.html">DescriptorSet</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="structvsg_1_1vk__buffer.html">vk_buffer&lt;ref_ptr&lt;Implementation&gt;</a>&gt; _implementation;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    };</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1DescriptorSet.html">vsg::DescriptorSet</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    VSG_type_name(<a class="code" href="classvsg_1_1DescriptorSet_1_1Implementation.html">vsg::DescriptorSet::Implementation</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">using</span> DescriptorSets = std::vector&lt;ref_ptr&lt;DescriptorSet&gt;&gt;;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">using</span> DescriptorSets = std::vector&lt;ref_ptr&lt;DescriptorSet&gt;&gt;;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;} <span class="comment">// namespace vsg</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} <span class="comment">// namespace vsg</span></div>
 <div class="ttc" id="aclassvsg_1_1Context_html"><div class="ttname"><a href="classvsg_1_1Context.html">vsg::Context</a></div><div class="ttdef"><b>Definition:</b> Context.h:67</div></div>
-<div class="ttc" id="aclassvsg_1_1DescriptorPool_html"><div class="ttname"><a href="classvsg_1_1DescriptorPool.html">vsg::DescriptorPool</a></div><div class="ttdoc">DesctiporPool encapsulates management of VkDescriptorPool.</div><div class="ttdef"><b>Definition:</b> DescriptorPool.h:22</div></div>
+<div class="ttc" id="aclassvsg_1_1DescriptorPool_html"><div class="ttname"><a href="classvsg_1_1DescriptorPool.html">vsg::DescriptorPool</a></div><div class="ttdoc">DescriptorPool encapsulates management of VkDescriptorPool.</div><div class="ttdef"><b>Definition:</b> DescriptorPool.h:22</div></div>
 <div class="ttc" id="aclassvsg_1_1DescriptorSetLayout_html"><div class="ttname"><a href="classvsg_1_1DescriptorSetLayout.html">vsg::DescriptorSetLayout</a></div><div class="ttdoc">DescriptorSetLayout encapsulates VkDescriptorSetLayout and VkDescriptorSetLayoutCreateInfo settings u...</div><div class="ttdef"><b>Definition:</b> DescriptorSetLayout.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1DescriptorSet_1_1Implementation_html"><div class="ttname"><a href="classvsg_1_1DescriptorSet_1_1Implementation.html">vsg::DescriptorSet::Implementation</a></div><div class="ttdef"><b>Definition:</b> DescriptorSet.h:65</div></div>
 <div class="ttc" id="aclassvsg_1_1DescriptorSet_html"><div class="ttname"><a href="classvsg_1_1DescriptorSet.html">vsg::DescriptorSet</a></div><div class="ttdoc">DescriptorSet encapsulates VkDescriptorSet and VkDescriptorSetAllocateInfo settings used to describe ...</div><div class="ttdef"><b>Definition:</b> DescriptorSet.h:26</div></div>
@@ -171,9 +169,9 @@ $(function() {
 <div class="ttc" id="aclassvsg_1_1DescriptorSet_html_acf3a32fb0d17aad791c524b29d6ea644"><div class="ttname"><a href="classvsg_1_1DescriptorSet.html#acf3a32fb0d17aad791c524b29d6ea644">vsg::DescriptorSet::compare</a></div><div class="ttdeci">int compare(const Object &amp;rhs_object) const override</div><div class="ttdoc">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal,...</div></div>
 <div class="ttc" id="aclassvsg_1_1Inherit_html"><div class="ttname"><a href="classvsg_1_1Inherit.html">vsg::Inherit</a></div><div class="ttdef"><b>Definition:</b> Inherit.h:28</div></div>
 <div class="ttc" id="aclassvsg_1_1Object_html"><div class="ttname"><a href="classvsg_1_1Object.html">vsg::Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:42</div></div>
-<div class="ttc" id="aclassvsg_1_1Visitor_html"><div class="ttname"><a href="classvsg_1_1Visitor.html">vsg::Visitor</a></div><div class="ttdef"><b>Definition:</b> Visitor.h:140</div></div>
+<div class="ttc" id="aclassvsg_1_1Visitor_html"><div class="ttname"><a href="classvsg_1_1Visitor.html">vsg::Visitor</a></div><div class="ttdef"><b>Definition:</b> Visitor.h:147</div></div>
 <div class="ttc" id="aclassvsg_1_1ref__ptr_html"><div class="ttname"><a href="classvsg_1_1ref__ptr.html">vsg::ref_ptr</a></div><div class="ttdef"><b>Definition:</b> ref_ptr.h:22</div></div>
-<div class="ttc" id="astructvsg_1_1vk__buffer_html"><div class="ttname"><a href="structvsg_1_1vk__buffer.html">vsg::vk_buffer</a></div><div class="ttdoc">vk_buffer that manages a single logical device support.</div><div class="ttdef"><b>Definition:</b> vk_buffer.h:28</div></div>
+<div class="ttc" id="astructvsg_1_1vk__buffer_html"><div class="ttname"><a href="structvsg_1_1vk__buffer.html">vsg::vk_buffer</a></div><div class="ttdoc">vk_buffer that manages a single logical device supported.</div><div class="ttdef"><b>Definition:</b> vk_buffer.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

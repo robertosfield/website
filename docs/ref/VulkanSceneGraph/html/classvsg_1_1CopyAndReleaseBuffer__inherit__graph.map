@@ -1,9 +1,11 @@
 <map id="vsg::CopyAndReleaseBuffer" name="vsg::CopyAndReleaseBuffer">
-<area shape="rect" id="node1" title="Deprecated &#45; use vsg::Data dataVariance and Data.dirty() to signal vsg::TransferData to transfer data..." alt="" coords="5,497,208,524"/>
-<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="11,408,202,449"/>
-<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class from encapsualting vkCmd* calls and associated settings." alt="" coords="47,333,167,360"/>
-<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="33,244,181,285"/>
-<area shape="rect" id="node5" href="$classvsg_1_1Node.html" title=" " alt="" coords="63,169,150,196"/>
-<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="29,80,185,121"/>
-<area shape="rect" id="node7" href="$classvsg_1_1Object.html" title=" " alt="" coords="59,5,154,32"/>
+<area shape="rect" id="node1" title="Deprecated &#45; use vsg::Data dataVariance and Data::dirty() to signal vsg::TransferTask to transfer dat..." alt="" coords="5,661,208,688"/>
+<area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="11,572,202,613"/>
+<area shape="rect" id="node3" href="$classvsg_1_1Command.html" title="Command base class for encapsulating vkCmd* calls and associated settings." alt="" coords="47,497,167,524"/>
+<area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="13,408,201,449"/>
+<area shape="rect" id="node5" href="$classvsg_1_1Compilable.html" title="Base class for encapsulating nodes that have Vulkan objects associated with them that will need compi..." alt="" coords="43,333,170,360"/>
+<area shape="rect" id="node6" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="33,244,181,285"/>
+<area shape="rect" id="node7" href="$classvsg_1_1Node.html" title=" " alt="" coords="63,169,150,196"/>
+<area shape="rect" id="node8" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="29,80,185,121"/>
+<area shape="rect" id="node9" href="$classvsg_1_1Object.html" title=" " alt="" coords="59,5,154,32"/>
 </map>

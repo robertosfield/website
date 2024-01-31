@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -158,6 +158,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (si
 <tr class="memitem:aa3f135f1f4ea93ece75b4cde463c3304"><td class="memItemLeft" align="right" valign="top"><a id="aa3f135f1f4ea93ece75b4cde463c3304"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const std::string *value)=0</td></tr>
 <tr class="separator:aa3f135f1f4ea93ece75b4cde463c3304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9d0c439e349371ca48ac4959be72a0"><td class="memItemLeft" align="right" valign="top"><a id="a6a9d0c439e349371ca48ac4959be72a0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const std::wstring *value)=0</td></tr>
+<tr class="separator:a6a9d0c439e349371ca48ac4959be72a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a240ce393dda1c21ffe0b829ac09da7d8"><td class="memItemLeft" align="right" valign="top"><a id="a240ce393dda1c21ffe0b829ac09da7d8"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const <a class="el" href="classvsg_1_1Path.html">Path</a> *value)=0</td></tr>
 <tr class="separator:a240ce393dda1c21ffe0b829ac09da7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,6 +253,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num
 <tr class="memitem:a0ab1e2e3f9aea992e81839ae6a64d9ff"><td class="memItemLeft" align="right" valign="top"><a id="a0ab1e2e3f9aea992e81839ae6a64d9ff"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const <a class="el" href="structvsg_1_1t__quat.html">dquat</a> *value)</td></tr>
 <tr class="separator:a0ab1e2e3f9aea992e81839ae6a64d9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a44214bfa944b0f6bf6ef38fea17ecc"><td class="memItemLeft" align="right" valign="top"><a id="a2a44214bfa944b0f6bf6ef38fea17ecc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const <a class="el" href="structvsg_1_1t__mat3.html">mat3</a> *value)</td></tr>
+<tr class="separator:a2a44214bfa944b0f6bf6ef38fea17ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390601b6f36cf3a81520e7e1ba8042e9"><td class="memItemLeft" align="right" valign="top"><a id="a390601b6f36cf3a81520e7e1ba8042e9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const <a class="el" href="structvsg_1_1t__mat3.html">dmat3</a> *value)</td></tr>
+<tr class="separator:a390601b6f36cf3a81520e7e1ba8042e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e294a358aad40bc80ccdfebdd18b329"><td class="memItemLeft" align="right" valign="top"><a id="a2e294a358aad40bc80ccdfebdd18b329"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (size_t num, const <a class="el" href="structvsg_1_1t__mat4.html">mat4</a> *value)</td></tr>
 <tr class="separator:a2e294a358aad40bc80ccdfebdd18b329"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -305,7 +314,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeObject</b> (cons
 <tr class="memitem:a2f43503d0d29bd9e200656f681ab7165"><td class="memTemplParams" colspan="2"><a id="a2f43503d0d29bd9e200656f681ab7165"></a>
 template&lt;typename W , typename T &gt; </td></tr>
 <tr class="memitem:a2f43503d0d29bd9e200656f681ab7165"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvsg_1_1Output.html#a2f43503d0d29bd9e200656f681ab7165">writeValue</a> (const char *propertyName, T value)</td></tr>
-<tr class="memdesc:a2f43503d0d29bd9e200656f681ab7165"><td class="mdescLeft">&#160;</td><td class="mdescRight">write a value casting it specified type i.e. output.write&lt;uint32_t&gt;("Value", value); <br /></td></tr>
+<tr class="memdesc:a2f43503d0d29bd9e200656f681ab7165"><td class="mdescLeft">&#160;</td><td class="mdescRight">write a value casting it to specified type i.e. output.write&lt;uint32_t&gt;("Value", value); <br /></td></tr>
 <tr class="separator:a2f43503d0d29bd9e200656f681ab7165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a103bc8f9eab5342dc87672d679242d40"><td class="memItemLeft" align="right" valign="top"><a id="a103bc8f9eab5342dc87672d679242d40"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>version_less</b> (uint32_t major, uint32_t minor, uint32_t patch, uint32_t soversion=0) const</td></tr>

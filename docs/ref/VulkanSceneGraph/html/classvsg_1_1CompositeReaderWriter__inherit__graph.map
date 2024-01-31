@@ -1,7 +1,7 @@
 <map id="vsg::CompositeReaderWriter" name="vsg::CompositeReaderWriter">
-<area shape="rect" id="node1" title="Class for managing a list of ReaderWriter, providing a single read/write call to invoke each RaderWri..." alt="" coords="5,333,215,360"/>
+<area shape="rect" id="node1" title="Class for managing a list of ReaderWriter, providing a single read/write call to invoke each ReaderWr..." alt="" coords="5,333,215,360"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="10,244,210,285"/>
-<area shape="rect" id="node3" href="$classvsg_1_1ReaderWriter.html" title="Base class from providing support for reading and/or writing various file formats and IO protocols." alt="" coords="41,169,179,196"/>
+<area shape="rect" id="node3" href="$classvsg_1_1ReaderWriter.html" title="Base class for providing support for reading and/or writing various file formats and IO protocols." alt="" coords="41,169,179,196"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="32,80,188,121"/>
 <area shape="rect" id="node5" href="$classvsg_1_1Object.html" title=" " alt="" coords="63,5,157,32"/>
 </map>

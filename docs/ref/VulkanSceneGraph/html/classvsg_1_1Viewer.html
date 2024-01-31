@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -124,6 +124,10 @@ Public Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Viewer.html#af84bd49b8f22d97f9304f29b35666727">addWindow</a> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Window.html">Window</a> &gt; window)</td></tr>
 <tr class="memdesc:af84bd49b8f22d97f9304f29b35666727"><td class="mdescLeft">&#160;</td><td class="mdescRight">add <a class="el" href="classvsg_1_1Window.html">Window</a> to <a class="el" href="classvsg_1_1Viewer.html">Viewer</a> <br /></td></tr>
 <tr class="separator:af84bd49b8f22d97f9304f29b35666727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7552889a7677039888d27cf75cd9798"><td class="memItemLeft" align="right" valign="top"><a id="ac7552889a7677039888d27cf75cd9798"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Viewer.html#ac7552889a7677039888d27cf75cd9798">removeWindow</a> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Window.html">Window</a> &gt; window)</td></tr>
+<tr class="memdesc:ac7552889a7677039888d27cf75cd9798"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove <a class="el" href="classvsg_1_1Window.html">Window</a> from <a class="el" href="classvsg_1_1Viewer.html">Viewer</a> <br /></td></tr>
+<tr class="separator:ac7552889a7677039888d27cf75cd9798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a737582588e0c9dfe597611df17c7a5f2"><td class="memItemLeft" align="right" valign="top"><a id="a737582588e0c9dfe597611df17c7a5f2"></a>
 Windows &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>windows</b> ()</td></tr>
 <tr class="separator:a737582588e0c9dfe597611df17c7a5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,12 +170,12 @@ const UIEvents &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Viewer.html#a9fd730066e8090b920147f8f1498084c">addEventHandler</a> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Visitor.html">Visitor</a> &gt; eventHandler)</td></tr>
 <tr class="memdesc:a9fd730066e8090b920147f8f1498084c"><td class="mdescLeft">&#160;</td><td class="mdescRight">add event handler <br /></td></tr>
 <tr class="separator:a9fd730066e8090b920147f8f1498084c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb39909d97146bccf1f7ebad75414699"><td class="memItemLeft" align="right" valign="top"><a id="aeb39909d97146bccf1f7ebad75414699"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addEventHandlers</b> (EventHandlers &amp;&amp;eventHandlers)</td></tr>
-<tr class="separator:aeb39909d97146bccf1f7ebad75414699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf9ec40aebeaeab9c408fd61dd209f11"><td class="memItemLeft" align="right" valign="top"><a id="acf9ec40aebeaeab9c408fd61dd209f11"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addEventHandlers</b> (const EventHandlers &amp;eventHandlers)</td></tr>
+<tr class="separator:acf9ec40aebeaeab9c408fd61dd209f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecff7843323333f696e80728ebe34776"><td class="memItemLeft" align="right" valign="top"><a id="aecff7843323333f696e80728ebe34776"></a>
 EventHandlers &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Viewer.html#aecff7843323333f696e80728ebe34776">getEventHandlers</a> ()</td></tr>
-<tr class="memdesc:aecff7843323333f696e80728ebe34776"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the const list of EventHandlers <br /></td></tr>
+<tr class="memdesc:aecff7843323333f696e80728ebe34776"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the list of EventHandlers <br /></td></tr>
 <tr class="separator:aecff7843323333f696e80728ebe34776"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06a8ceae7fdd2c02504537518ed6f5f0"><td class="memItemLeft" align="right" valign="top"><a id="a06a8ceae7fdd2c02504537518ed6f5f0"></a>
 const EventHandlers &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Viewer.html#a06a8ceae7fdd2c02504537518ed6f5f0">getEventHandlers</a> () const</td></tr>
@@ -185,7 +189,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aa4e03467793b5c458074761a4b89fe2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a161789a4d88c23e879421de5ef8fb70d"><td class="memItemLeft" align="right" valign="top"><a id="a161789a4d88c23e879421de5ef8fb70d"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Viewer.html#a161789a4d88c23e879421de5ef8fb70d">handleEvents</a> ()</td></tr>
-<tr class="memdesc:a161789a4d88c23e879421de5ef8fb70d"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass the Events into the any register EventHandlers <br /></td></tr>
+<tr class="memdesc:a161789a4d88c23e879421de5ef8fb70d"><td class="mdescLeft">&#160;</td><td class="mdescRight">pass the Events into any registered EventHandlers <br /></td></tr>
 <tr class="separator:a161789a4d88c23e879421de5ef8fb70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cbc64494d3810bde59924214e9d8254"><td class="memItemLeft" align="right" valign="top"><a id="a4cbc64494d3810bde59924214e9d8254"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>compile</b> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ResourceHints.html">ResourceHints</a> &gt; hints={})</td></tr>
@@ -195,10 +199,12 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>acquireNextFr
 <tr class="separator:a82ae1f98fd4955ec9377ac9494c5fa55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f997ed06500ba1ac5acca8642877994"><td class="memItemLeft" align="right" valign="top">virtual VkResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Viewer.html#a2f997ed06500ba1ac5acca8642877994">waitForFences</a> (size_t relativeFrameIndex, uint64_t timeout)</td></tr>
 <tr class="separator:a2f997ed06500ba1ac5acca8642877994"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65e3cf2f3b7de451c1577686bdb9a02c"><td class="memItemLeft" align="right" valign="top"><a id="a65e3cf2f3b7de451c1577686bdb9a02c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Viewer.html#a65e3cf2f3b7de451c1577686bdb9a02c">assignRecordAndSubmitTaskAndPresentation</a> (CommandGraphs commandGraphs)</td></tr>
-<tr class="memdesc:a65e3cf2f3b7de451c1577686bdb9a02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a <a class="el" href="classvsg_1_1RecordAndSubmitTask.html" title="RecordAndSubmitTask manages the recording of it&#39;s list of CommanGraph to CommandBuffer which are then...">RecordAndSubmitTask</a> configured to manage specified commandGraphs and assign it to the viewer. <br /></td></tr>
+<tr class="memitem:a65e3cf2f3b7de451c1577686bdb9a02c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Viewer.html#a65e3cf2f3b7de451c1577686bdb9a02c">assignRecordAndSubmitTaskAndPresentation</a> (CommandGraphs commandGraphs)</td></tr>
 <tr class="separator:a65e3cf2f3b7de451c1577686bdb9a02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e35d1e6eb65e2da62e4f75eef0a4dd"><td class="memItemLeft" align="right" valign="top"><a id="a15e35d1e6eb65e2da62e4f75eef0a4dd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Viewer.html#a15e35d1e6eb65e2da62e4f75eef0a4dd">addRecordAndSubmitTaskAndPresentation</a> (CommandGraphs commandGraphs)</td></tr>
+<tr class="memdesc:a15e35d1e6eb65e2da62e4f75eef0a4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add command graphs creating RecordAndSubmitTask/Presentation objects where appropriate. <br /></td></tr>
+<tr class="separator:a15e35d1e6eb65e2da62e4f75eef0a4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eaeb18b45a780f730881257d2cac774"><td class="memItemLeft" align="right" valign="top"><a id="a8eaeb18b45a780f730881257d2cac774"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setupThreading</b> ()</td></tr>
 <tr class="separator:a8eaeb18b45a780f730881257d2cac774"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -293,7 +299,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -362,7 +368,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5b5d116a8b2e9bf4a549f95b149f54c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8a0d06a13c783f443e2a1fd2a95cc83"><td class="memItemLeft" align="right" valign="top"><a id="af8a0d06a13c783f443e2a1fd2a95cc83"></a>
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1CompileManager.html">CompileManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Viewer.html#af8a0d06a13c783f443e2a1fd2a95cc83">compileManager</a></td></tr>
-<tr class="memdesc:af8a0d06a13c783f443e2a1fd2a95cc83"><td class="mdescLeft">&#160;</td><td class="mdescRight">compile manager provides thread safe support for compiling subgraph <br /></td></tr>
+<tr class="memdesc:af8a0d06a13c783f443e2a1fd2a95cc83"><td class="mdescLeft">&#160;</td><td class="mdescRight">compile manager provides thread safe support for compiling subgraphs <br /></td></tr>
 <tr class="separator:af8a0d06a13c783f443e2a1fd2a95cc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad690beba0e5c9bf1da31f24b2239869c"><td class="memItemLeft" align="right" valign="top"><a id="ad690beba0e5c9bf1da31f24b2239869c"></a>
 RecordAndSubmitTasks&#160;</td><td class="memItemRight" valign="bottom"><b>recordAndSubmitTasks</b></td></tr>
@@ -463,7 +469,34 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>convenience method for advancing to the next frame. Check active status, return false if viewer no longer active. lf still active poll for pending events and place them in the Events list and advance to the next frame, update generate <a class="el" href="classvsg_1_1FrameStamp.html" title="FrameStamp represents the time and frame count of a specific frame.">FrameStamp</a> to signify the advancement to a new frame and return true. </p>
+<p>Convenience method for advancing to the next frame. Check active status, return false if viewer no longer active. If still active, poll for pending events and place them in the Events list and advance to the next frame, generate updated <a class="el" href="classvsg_1_1FrameStamp.html" title="FrameStamp represents the time and frame count of a specific frame.">FrameStamp</a> to signify the advancement to a new frame and return true. </p>
+
+</div>
+</div>
+<a id="a65e3cf2f3b7de451c1577686bdb9a02c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e3cf2f3b7de451c1577686bdb9a02c">&#9670;&nbsp;</a></span>assignRecordAndSubmitTaskAndPresentation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void vsg::Viewer::assignRecordAndSubmitTaskAndPresentation </td>
+          <td>(</td>
+          <td class="paramtype">CommandGraphs&#160;</td>
+          <td class="paramname"><em>commandGraphs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create <a class="el" href="classvsg_1_1RecordAndSubmitTask.html" title="RecordAndSubmitTask manages the recording of its list of CommandGraph to CommandBuffer which are then...">RecordAndSubmitTask</a> and <a class="el" href="classvsg_1_1Presentation.html" title="Presentation provides support for presenting swapchains associated with windows.">Presentation</a> objects configured to manage specified commandGraphs and assign them to the viewer. Replace any prexisting setup. </p>
 
 </div>
 </div>
@@ -500,7 +533,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>call vkWaitForFence on the fences associated with previous frames <a class="el" href="classvsg_1_1RecordAndSubmitTask.html" title="RecordAndSubmitTask manages the recording of it&#39;s list of CommanGraph to CommandBuffer which are then...">RecordAndSubmitTask</a>, a relativeFrameIndex of 1 is the previous frame, 2 is two frames ago. timeout is in nanoseconds. </p>
+<p>call vkWaitForFence on the fences associated with previous frames <a class="el" href="classvsg_1_1RecordAndSubmitTask.html" title="RecordAndSubmitTask manages the recording of its list of CommandGraph to CommandBuffer which are then...">RecordAndSubmitTask</a>, a relativeFrameIndex of 1 is the previous frame, 2 is two frames ago. timeout is in nanoseconds. </p>
 
 </div>
 </div>

@@ -1,5 +1,5 @@
 <map id="vsg::PositionArrayState" name="vsg::PositionArrayState">
-<area shape="rect" id="node1" title="PositionArrayState is ArrayState subclass for mapping vertex array data for instanced geometries." alt="" coords="15,408,189,435"/>
+<area shape="rect" id="node1" title="PositionArrayState is an ArrayState subclass for mapping vertex array data for instanced geometries." alt="" coords="15,408,189,435"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="11,319,193,360"/>
 <area shape="rect" id="node3" href="$classvsg_1_1ArrayState.html" title=" " alt="" coords="41,244,163,271"/>
 <area shape="rect" id="node4" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="5,155,199,196"/>

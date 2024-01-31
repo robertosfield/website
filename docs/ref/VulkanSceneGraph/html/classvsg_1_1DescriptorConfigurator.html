@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classvsg_1_1DescriptorConfigurator.html" title="DescriptorConfigurator utility provides a means of setting up descriptors using ShaderSet as a guide ...">DescriptorConfigurator</a> utility provides a means of setting up descriptors using <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> as a guide for required layouts/bindings.  
+<p><a class="el" href="classvsg_1_1DescriptorConfigurator.html" title="DescriptorConfigurator utility provides a means of setting up descriptors using ShaderSet as a guide ...">DescriptorConfigurator</a> utility provides a means of setting up descriptors using <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> as a guide for required layouts/bindings.  
  <a href="classvsg_1_1DescriptorConfigurator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="GraphicsPipelineConfigurator_8h_source.html">GraphicsPipelineConfigurator.h</a>&gt;</code></p>
@@ -95,11 +95,10 @@ Collaboration diagram for vsg::DescriptorConfigurator:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1DescriptorConfigurator__coll__graph.png" border="0" usemap="#avsg_1_1DescriptorConfigurator_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1DescriptorConfigurator_coll__map" id="avsg_1_1DescriptorConfigurator_coll__map">
-<area shape="rect" title="DescriptorConfigurator utility provides a means of setting up descriptors using ShaderSet as a guide ..." alt="" coords="476,78,676,105"/>
-<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,337,47"/>
-<area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="172,71,315,112"/>
-<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="172,136,315,177"/>
+<area shape="rect" title="DescriptorConfigurator utility provides a means of setting up descriptors using ShaderSet as a guide ..." alt="" coords="141,185,341,212"/>
+<area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="5,81,193,123"/>
+<area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="52,5,147,32"/>
+<area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="217,81,360,123"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -108,15 +107,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ad1602c48c122b9a4b8fbace7b671eb"><td class="memItemLeft" align="right" valign="top"><a id="a8ad1602c48c122b9a4b8fbace7b671eb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DescriptorConfigurator</b> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ShaderSet.html">ShaderSet</a> &gt; in_shaderSet={})</td></tr>
 <tr class="separator:a8ad1602c48c122b9a4b8fbace7b671eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc61e56d5889c27bc050c04f1943a3a9"><td class="memItemLeft" align="right" valign="top"><a id="acc61e56d5889c27bc050c04f1943a3a9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>assignTexture</b> (const std::string &amp;name, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt; textureData={}, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Sampler.html">Sampler</a> &gt; sampler={})</td></tr>
-<tr class="separator:acc61e56d5889c27bc050c04f1943a3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed0ed246c94f35ecf1f8091c27a0af70"><td class="memItemLeft" align="right" valign="top"><a id="aed0ed246c94f35ecf1f8091c27a0af70"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>assignUniform</b> (const std::string &amp;name, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt; data={})</td></tr>
-<tr class="separator:aed0ed246c94f35ecf1f8091c27a0af70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d75ceeaabe931570d8f72f3e8310aa0"><td class="memItemLeft" align="right" valign="top"><a id="a0d75ceeaabe931570d8f72f3e8310aa0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
-<tr class="separator:a0d75ceeaabe931570d8f72f3e8310aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ccc236ee50f216c1cbbbc292ea8d462"><td class="memItemLeft" align="right" valign="top"><a id="a3ccc236ee50f216c1cbbbc292ea8d462"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1DescriptorConfigurator.html#a3ccc236ee50f216c1cbbbc292ea8d462">compare</a> (const <a class="el" href="classvsg_1_1Object.html">Object</a> &amp;rhs) const override</td></tr>
+<tr class="memdesc:a3ccc236ee50f216c1cbbbc292ea8d462"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal, return 1 if rhs is greater, <br /></td></tr>
+<tr class="separator:a3ccc236ee50f216c1cbbbc292ea8d462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae50debb8a12f7f5a3f02422ff7543c2a"><td class="memItemLeft" align="right" valign="top"><a id="ae50debb8a12f7f5a3f02422ff7543c2a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
+<tr class="separator:ae50debb8a12f7f5a3f02422ff7543c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad995541fb524822efb9940b88deee25a"><td class="memItemLeft" align="right" valign="top"><a id="ad995541fb524822efb9940b88deee25a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>enableTexture</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:ad995541fb524822efb9940b88deee25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956b7790775a65457fbec79cb815c9fc"><td class="memItemLeft" align="right" valign="top"><a id="a956b7790775a65457fbec79cb815c9fc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>assignTexture</b> (const std::string &amp;name, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt; textureData={}, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Sampler.html">Sampler</a> &gt; sampler={}, uint32_t dstArrayElement=0)</td></tr>
+<tr class="separator:a956b7790775a65457fbec79cb815c9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9abb49107fdd9d3abc303ffa49bcacc"><td class="memItemLeft" align="right" valign="top"><a id="af9abb49107fdd9d3abc303ffa49bcacc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>assignTexture</b> (const std::string &amp;name, const ImageInfoList &amp;imageInfoList, uint32_t dstArrayElement=0)</td></tr>
+<tr class="separator:af9abb49107fdd9d3abc303ffa49bcacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3906a390c61aeadb806eade555a7e1"><td class="memItemLeft" align="right" valign="top"><a id="a0e3906a390c61aeadb806eade555a7e1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>enableDescriptor</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:a0e3906a390c61aeadb806eade555a7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac09a5ef3051e97124393ad9f7f1b48f4"><td class="memItemLeft" align="right" valign="top"><a id="ac09a5ef3051e97124393ad9f7f1b48f4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>assignDescriptor</b> (const std::string &amp;name, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt; data={}, uint32_t dstArrayElement=0)</td></tr>
+<tr class="separator:ac09a5ef3051e97124393ad9f7f1b48f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a283d0cf79ab8fd6c16f4628f3f4988"><td class="memItemLeft" align="right" valign="top"><a id="a8a283d0cf79ab8fd6c16f4628f3f4988"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>assignDescriptor</b> (const std::string &amp;name, const BufferInfoList &amp;bufferInfoList, uint32_t dstArrayElement=0)</td></tr>
+<tr class="separator:a8a283d0cf79ab8fd6c16f4628f3f4988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf58619fb64d98ca4f9610e79c2f2d40"><td class="memItemLeft" align="right" valign="top"><a id="adf58619fb64d98ca4f9610e79c2f2d40"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>enableUniform</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:adf58619fb64d98ca4f9610e79c2f2d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0052e4ca19d3dccd7d38eb3249fd1c1"><td class="memItemLeft" align="right" valign="top"><a id="aa0052e4ca19d3dccd7d38eb3249fd1c1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>assignUniform</b> (const std::string &amp;name, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt; data={}, uint32_t dstArrayElement=0)</td></tr>
+<tr class="separator:aa0052e4ca19d3dccd7d38eb3249fd1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c4adda9b3bd2eaad774f2388791853"><td class="memItemLeft" align="right" valign="top"><a id="a41c4adda9b3bd2eaad774f2388791853"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>assignUniform</b> (const std::string &amp;name, const BufferInfoList &amp;bufferInfoList, uint32_t dstArrayElement=0)</td></tr>
+<tr class="separator:a41c4adda9b3bd2eaad774f2388791853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e3d54dcd76cc0fed59041262430f0c"><td class="memItemLeft" align="right" valign="top"><a id="a78e3d54dcd76cc0fed59041262430f0c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>assignDescriptor</b> (uint32_t set, uint32_t binding, VkDescriptorType descriptorType, uint32_t descriptorCount, VkShaderStageFlags stageFlags, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Descriptor.html">Descriptor</a> &gt; descriptor)</td></tr>
+<tr class="separator:a78e3d54dcd76cc0fed59041262430f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b3c60fe76858ab677e2a4e70877a4a"><td class="memItemLeft" align="right" valign="top"><a id="a05b3c60fe76858ab677e2a4e70877a4a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1DescriptorConfigurator.html#a05b3c60fe76858ab677e2a4e70877a4a">assignDefaults</a> (const std::set&lt; uint32_t &gt; &amp;inheritedSets={})</td></tr>
+<tr class="memdesc:a05b3c60fe76858ab677e2a4e70877a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">call after all the textures/uniforms have been explictly assigned to add in textures/uniforms descriptors that are enabled by default (define == ""). <br /></td></tr>
+<tr class="separator:a05b3c60fe76858ab677e2a4e70877a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvsg_1_1Inherit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvsg_1_1Inherit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvsg_1_1Inherit.html">vsg::Inherit&lt; Object, DescriptorConfigurator &gt;</a></td></tr>
 <tr class="memitem:a24550cd9c037afd7d161ff391b1ceac7 inherit pub_methods_classvsg_1_1Inherit"><td class="memItemLeft" align="right" valign="top"><a id="a24550cd9c037afd7d161ff391b1ceac7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Inherit</b> (Args &amp;&amp;... args)</td></tr>
@@ -192,7 +223,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -264,18 +295,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>blending</b> = false<
 <tr class="memitem:a07fcd6b3af7d25aeb3540820bf84cd76"><td class="memItemLeft" align="right" valign="top"><a id="a07fcd6b3af7d25aeb3540820bf84cd76"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>two_sided</b> = false</td></tr>
 <tr class="separator:a07fcd6b3af7d25aeb3540820bf84cd76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba004f55d7fa96fa539ba7b4ce8d86f4"><td class="memItemLeft" align="right" valign="top"><a id="aba004f55d7fa96fa539ba7b4ce8d86f4"></a>
-Descriptors&#160;</td><td class="memItemRight" valign="bottom"><b>descriptors</b></td></tr>
-<tr class="separator:aba004f55d7fa96fa539ba7b4ce8d86f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74777644df5c143be1ec9823edd26f20"><td class="memItemLeft" align="right" valign="top"><a id="a74777644df5c143be1ec9823edd26f20"></a>
+std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>assigned</b></td></tr>
+<tr class="separator:a74777644df5c143be1ec9823edd26f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a3778579d77e4d6419374b2d9b0d746"><td class="memItemLeft" align="right" valign="top"><a id="a2a3778579d77e4d6419374b2d9b0d746"></a>
 std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>defines</b></td></tr>
 <tr class="separator:a2a3778579d77e4d6419374b2d9b0d746"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf66b4a6a95ff983bdebdc14cb26cae7"><td class="memItemLeft" align="right" valign="top"><a id="aaf66b4a6a95ff983bdebdc14cb26cae7"></a>
-DescriptorSetLayoutBindings&#160;</td><td class="memItemRight" valign="bottom"><b>descriptorBindings</b></td></tr>
-<tr class="separator:aaf66b4a6a95ff983bdebdc14cb26cae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c9151637dc30436bbea8d459d3cfca2"><td class="memItemLeft" align="right" valign="top"><a id="a1c9151637dc30436bbea8d459d3cfca2"></a>
-<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1DescriptorSet.html">DescriptorSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>descriptorSet</b></td></tr>
-<tr class="separator:a1c9151637dc30436bbea8d459d3cfca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad261cc44b3a08e3b6f9c05d466dc4be4"><td class="memItemLeft" align="right" valign="top"><a id="ad261cc44b3a08e3b6f9c05d466dc4be4"></a>
+std::vector&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1DescriptorSet.html">DescriptorSet</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>descriptorSets</b></td></tr>
+<tr class="separator:ad261cc44b3a08e3b6f9c05d466dc4be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -309,7 +337,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1DescriptorConfigurator.html" title="DescriptorConfigurator utility provides a means of setting up descriptors using ShaderSet as a guide ...">DescriptorConfigurator</a> utility provides a means of setting up descriptors using <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> as a guide for required layouts/bindings. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1DescriptorConfigurator.html" title="DescriptorConfigurator utility provides a means of setting up descriptors using ShaderSet as a guide ...">DescriptorConfigurator</a> utility provides a means of setting up descriptors using <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> as a guide for required layouts/bindings. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/utils/<a class="el" href="GraphicsPipelineConfigurator_8h_source.html">GraphicsPipelineConfigurator.h</a></li>
 </ul>

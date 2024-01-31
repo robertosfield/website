@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -77,7 +77,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> provides collection of shader related settings to provide a form of shader introspection.  
+<p><a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> provides a collection of shader related settings to provide a form of shader introspection.  
  <a href="classvsg_1_1ShaderSet.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ShaderSet_8h_source.html">ShaderSet.h</a>&gt;</code></p>
@@ -86,7 +86,7 @@ Inheritance diagram for vsg::ShaderSet:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1ShaderSet__inherit__graph.png" border="0" usemap="#avsg_1_1ShaderSet_inherit__map" alt="Inheritance graph"/></div>
 <map name="avsg_1_1ShaderSet_inherit__map" id="avsg_1_1ShaderSet_inherit__map">
-<area shape="rect" title="ShaderSet provides collection of shader related settings to provide a form of shader introspection." alt="" coords="24,169,143,196"/>
+<area shape="rect" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection." alt="" coords="24,169,143,196"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="5,80,161,121"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="36,5,131,32"/>
 </map>
@@ -96,10 +96,10 @@ Collaboration diagram for vsg::ShaderSet:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1ShaderSet__coll__graph.png" border="0" usemap="#avsg_1_1ShaderSet_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1ShaderSet_coll__map" id="avsg_1_1ShaderSet_coll__map">
-<area shape="rect" title="ShaderSet provides collection of shader related settings to provide a form of shader introspection." alt="" coords="608,98,727,125"/>
+<area shape="rect" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection." alt="" coords="619,98,737,125"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="246,5,402,47"/>
 <area shape="rect" href="classvsg_1_1Object.html" title=" " alt="" coords="29,13,124,39"/>
-<area shape="rect" href="structvsg_1_1UniformBinding.html" title=" " alt="" coords="247,71,401,98"/>
+<area shape="rect" href="structvsg_1_1DescriptorBinding.html" title=" " alt="" coords="239,71,409,98"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="5,87,148,128"/>
 <area shape="rect" href="structvsg_1_1AttributeBinding.html" title=" " alt="" coords="245,122,403,149"/>
 <area shape="rect" href="classvsg_1_1ref__ptr.html" title=" " alt="" coords="229,173,419,215"/>
@@ -111,34 +111,43 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acc7b08c044bc07244421d342420e6002"><td class="memItemLeft" align="right" valign="top"><a id="acc7b08c044bc07244421d342420e6002"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ShaderSet</b> (const ShaderStages &amp;in_stages, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ShaderCompileSettings.html">ShaderCompileSettings</a> &gt; in_hints={})</td></tr>
 <tr class="separator:acc7b08c044bc07244421d342420e6002"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7213149ea199a8674f2b711263824312"><td class="memItemLeft" align="right" valign="top"><a id="a7213149ea199a8674f2b711263824312"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a7213149ea199a8674f2b711263824312">addAttributeBinding</a> (std::string name, std::string define, uint32_t location, VkFormat format, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt; data)</td></tr>
-<tr class="memdesc:a7213149ea199a8674f2b711263824312"><td class="mdescLeft">&#160;</td><td class="mdescRight">add an attribute binding, Not thread safe, should only be called when initially setting up the <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> <br /></td></tr>
-<tr class="separator:a7213149ea199a8674f2b711263824312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae51da6420a1f9da3281f05d8b41e925e"><td class="memItemLeft" align="right" valign="top"><a id="ae51da6420a1f9da3281f05d8b41e925e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#ae51da6420a1f9da3281f05d8b41e925e">addUniformBinding</a> (std::string name, std::string define, uint32_t set, uint32_t binding, VkDescriptorType descriptorType, uint32_t descriptorCount, VkShaderStageFlags stageFlags, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt; data)</td></tr>
-<tr class="memdesc:ae51da6420a1f9da3281f05d8b41e925e"><td class="mdescLeft">&#160;</td><td class="mdescRight">add an uniform binding. Not thread safe, should only be called when initially setting up the <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> <br /></td></tr>
-<tr class="separator:ae51da6420a1f9da3281f05d8b41e925e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20d0d31e8ef4308d119e3ed93fbee9ad"><td class="memItemLeft" align="right" valign="top"><a id="a20d0d31e8ef4308d119e3ed93fbee9ad"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a20d0d31e8ef4308d119e3ed93fbee9ad">addPushConstantRange</a> (std::string name, std::string define, VkShaderStageFlags stageFlags, uint32_t offset, uint32_t size)</td></tr>
-<tr class="memdesc:a20d0d31e8ef4308d119e3ed93fbee9ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">add an uniform binding. Not thread safe, should only be called when initially setting up the <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> <br /></td></tr>
-<tr class="separator:a20d0d31e8ef4308d119e3ed93fbee9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f0fdb501bc3d2b2d995bdb83ee6d47"><td class="memItemLeft" align="right" valign="top"><a id="ae0f0fdb501bc3d2b2d995bdb83ee6d47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#ae0f0fdb501bc3d2b2d995bdb83ee6d47">addAttributeBinding</a> (const std::string &amp;name, const std::string &amp;define, uint32_t location, VkFormat format, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt; data)</td></tr>
+<tr class="memdesc:ae0f0fdb501bc3d2b2d995bdb83ee6d47"><td class="mdescLeft">&#160;</td><td class="mdescRight">add an attribute binding, Not thread safe, should only be called when initially setting up the <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> <br /></td></tr>
+<tr class="separator:ae0f0fdb501bc3d2b2d995bdb83ee6d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9da5a09c4a61057944b295e94c2e966e"><td class="memItemLeft" align="right" valign="top"><a id="a9da5a09c4a61057944b295e94c2e966e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a9da5a09c4a61057944b295e94c2e966e">addDescriptorBinding</a> (const std::string &amp;name, const std::string &amp;define, uint32_t set, uint32_t binding, VkDescriptorType descriptorType, uint32_t descriptorCount, VkShaderStageFlags stageFlags, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt; data)</td></tr>
+<tr class="memdesc:a9da5a09c4a61057944b295e94c2e966e"><td class="mdescLeft">&#160;</td><td class="mdescRight">add an uniform binding. Not thread safe, should only be called when initially setting up the <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> <br /></td></tr>
+<tr class="separator:a9da5a09c4a61057944b295e94c2e966e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab245b4e72336293a184fe005b44c3b3c"><td class="memItemLeft" align="right" valign="top"><a id="ab245b4e72336293a184fe005b44c3b3c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addUniformBinding</b> (const std::string &amp;name, const std::string &amp;define, uint32_t set, uint32_t binding, VkDescriptorType descriptorType, uint32_t descriptorCount, VkShaderStageFlags stageFlags, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Data.html">Data</a> &gt; data)</td></tr>
+<tr class="separator:ab245b4e72336293a184fe005b44c3b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ec2490a4b30d2e686fd9255ed457719"><td class="memItemLeft" align="right" valign="top"><a id="a6ec2490a4b30d2e686fd9255ed457719"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a6ec2490a4b30d2e686fd9255ed457719">addPushConstantRange</a> (const std::string &amp;name, const std::string &amp;define, VkShaderStageFlags stageFlags, uint32_t offset, uint32_t size)</td></tr>
+<tr class="memdesc:a6ec2490a4b30d2e686fd9255ed457719"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a push constant range. Not thread safe, should only be called when initially setting up the <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> <br /></td></tr>
+<tr class="separator:a6ec2490a4b30d2e686fd9255ed457719"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad784e3e6a49f62b741db8b311a4f67b5"><td class="memItemLeft" align="right" valign="top"><a id="ad784e3e6a49f62b741db8b311a4f67b5"></a>
 <a class="el" href="structvsg_1_1AttributeBinding.html">AttributeBinding</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#ad784e3e6a49f62b741db8b311a4f67b5">getAttributeBinding</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:ad784e3e6a49f62b741db8b311a4f67b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the <a class="el" href="structvsg_1_1AttributeBinding.html">AttributeBinding</a> associated with name <br /></td></tr>
 <tr class="separator:ad784e3e6a49f62b741db8b311a4f67b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0156741ed53b3cd898f71a8dfce31105"><td class="memItemLeft" align="right" valign="top"><a id="a0156741ed53b3cd898f71a8dfce31105"></a>
-<a class="el" href="structvsg_1_1UniformBinding.html">UniformBinding</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a0156741ed53b3cd898f71a8dfce31105">getUniformBinding</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a0156741ed53b3cd898f71a8dfce31105"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the <a class="el" href="structvsg_1_1UniformBinding.html">UniformBinding</a> associated with name <br /></td></tr>
-<tr class="separator:a0156741ed53b3cd898f71a8dfce31105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af56274d75a4ba647d87afffebd77678c"><td class="memItemLeft" align="right" valign="top"><a id="af56274d75a4ba647d87afffebd77678c"></a>
 const <a class="el" href="structvsg_1_1AttributeBinding.html">AttributeBinding</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#af56274d75a4ba647d87afffebd77678c">getAttributeBinding</a> (const std::string &amp;name) const</td></tr>
 <tr class="memdesc:af56274d75a4ba647d87afffebd77678c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the const <a class="el" href="structvsg_1_1AttributeBinding.html">AttributeBinding</a> associated with name <br /></td></tr>
 <tr class="separator:af56274d75a4ba647d87afffebd77678c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad352216241459f5d8548c98a86938128"><td class="memItemLeft" align="right" valign="top"><a id="ad352216241459f5d8548c98a86938128"></a>
-const <a class="el" href="structvsg_1_1UniformBinding.html">UniformBinding</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#ad352216241459f5d8548c98a86938128">getUniformBinding</a> (const std::string &amp;name) const</td></tr>
-<tr class="memdesc:ad352216241459f5d8548c98a86938128"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the const <a class="el" href="structvsg_1_1UniformBinding.html">UniformBinding</a> associated with name <br /></td></tr>
-<tr class="separator:ad352216241459f5d8548c98a86938128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66978200ce7dd7b1b5c23433b1e62b51"><td class="memItemLeft" align="right" valign="top"><a id="a66978200ce7dd7b1b5c23433b1e62b51"></a>
+<a class="el" href="structvsg_1_1DescriptorBinding.html">DescriptorBinding</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a66978200ce7dd7b1b5c23433b1e62b51">getDescriptorBinding</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a66978200ce7dd7b1b5c23433b1e62b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the <a class="el" href="structvsg_1_1DescriptorBinding.html">DescriptorBinding</a> associated with name <br /></td></tr>
+<tr class="separator:a66978200ce7dd7b1b5c23433b1e62b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30aa6b7efe4540ce647e498e227fe3bd"><td class="memItemLeft" align="right" valign="top"><a id="a30aa6b7efe4540ce647e498e227fe3bd"></a>
+const <a class="el" href="structvsg_1_1DescriptorBinding.html">DescriptorBinding</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a30aa6b7efe4540ce647e498e227fe3bd">getDescriptorBinding</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:a30aa6b7efe4540ce647e498e227fe3bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the const <a class="el" href="structvsg_1_1DescriptorBinding.html">DescriptorBinding</a> associated with name <br /></td></tr>
+<tr class="separator:a30aa6b7efe4540ce647e498e227fe3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ef8a5f1c201db8ac840deb77e3e159"><td class="memItemLeft" align="right" valign="top"><a id="a56ef8a5f1c201db8ac840deb77e3e159"></a>
+<a class="el" href="structvsg_1_1DescriptorBinding.html">DescriptorBinding</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getUniformBinding</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:a56ef8a5f1c201db8ac840deb77e3e159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0fc276579cc0df84b83638640a2e806"><td class="memItemLeft" align="right" valign="top"><a id="ae0fc276579cc0df84b83638640a2e806"></a>
+const <a class="el" href="structvsg_1_1DescriptorBinding.html">DescriptorBinding</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getUnifomrBinding</b> (const std::string &amp;name) const</td></tr>
+<tr class="separator:ae0fc276579cc0df84b83638640a2e806"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac079bfb2ab240f619f646631c8c2495a"><td class="memItemLeft" align="right" valign="top"><a id="ac079bfb2ab240f619f646631c8c2495a"></a>
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ArrayState.html">ArrayState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#ac079bfb2ab240f619f646631c8c2495a">getSuitableArrayState</a> (const std::set&lt; std::string &gt; &amp;defines) const</td></tr>
 <tr class="memdesc:ac079bfb2ab240f619f646631c8c2495a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the first <a class="el" href="classvsg_1_1ArrayState.html">ArrayState</a> that has matches with defines in the specified list of defines. <br /></td></tr>
@@ -147,6 +156,28 @@ const <a class="el" href="structvsg_1_1UniformBinding.html">UniformBinding</a> &
 ShaderStages&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a89dd8a813214db1360baf94164ad007a">getShaderStages</a> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ShaderCompileSettings.html">ShaderCompileSettings</a> &gt; scs={})</td></tr>
 <tr class="memdesc:a89dd8a813214db1360baf94164ad007a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the ShaderStages variant that uses specified <a class="el" href="classvsg_1_1ShaderCompileSettings.html">ShaderCompileSettings</a>. <br /></td></tr>
 <tr class="separator:a89dd8a813214db1360baf94164ad007a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06b9391f9d0511ac9a0ce21e37cbe261"><td class="memItemLeft" align="right" valign="top"><a id="a06b9391f9d0511ac9a0ce21e37cbe261"></a>
+std::pair&lt; uint32_t, uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a06b9391f9d0511ac9a0ce21e37cbe261">descriptorSetRange</a> () const</td></tr>
+<tr class="memdesc:a06b9391f9d0511ac9a0ce21e37cbe261"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the &lt;minimum_set, maximum_set+1&gt; range of set numbers encompassing DescriptorBindings <br /></td></tr>
+<tr class="separator:a06b9391f9d0511ac9a0ce21e37cbe261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f98e8ec68f7b19311ec4b1cd3ba3d0"><td class="memItemLeft" align="right" valign="top"><a id="a42f98e8ec68f7b19311ec4b1cd3ba3d0"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a42f98e8ec68f7b19311ec4b1cd3ba3d0">compatibleDescriptorSetLayout</a> (const <a class="el" href="classvsg_1_1DescriptorSetLayout.html">DescriptorSetLayout</a> &amp;dsl, const std::set&lt; std::string &gt; &amp;defines, uint32_t set) const</td></tr>
+<tr class="memdesc:a42f98e8ec68f7b19311ec4b1cd3ba3d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true of specified descriptor set layout is compatible with what is required for this <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> <br /></td></tr>
+<tr class="separator:a42f98e8ec68f7b19311ec4b1cd3ba3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8504ef04b27a859c5c68e5de288e778b"><td class="memItemLeft" align="right" valign="top"><a id="a8504ef04b27a859c5c68e5de288e778b"></a>
+virtual <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1DescriptorSetLayout.html">DescriptorSetLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a8504ef04b27a859c5c68e5de288e778b">createDescriptorSetLayout</a> (const std::set&lt; std::string &gt; &amp;defines, uint32_t set) const</td></tr>
+<tr class="memdesc:a8504ef04b27a859c5c68e5de288e778b"><td class="mdescLeft">&#160;</td><td class="mdescRight">create the descriptor set layout. <br /></td></tr>
+<tr class="separator:a8504ef04b27a859c5c68e5de288e778b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b94c5b9e33c3cecc121511da964425"><td class="memItemLeft" align="right" valign="top"><a id="ad8b94c5b9e33c3cecc121511da964425"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#ad8b94c5b9e33c3cecc121511da964425">compatiblePipelineLayout</a> (const <a class="el" href="classvsg_1_1PipelineLayout.html">PipelineLayout</a> &amp;layout, const std::set&lt; std::string &gt; &amp;defines) const</td></tr>
+<tr class="memdesc:ad8b94c5b9e33c3cecc121511da964425"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true of specified pipline layout is compatible with what is required for this <a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> <br /></td></tr>
+<tr class="separator:ad8b94c5b9e33c3cecc121511da964425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63d9a71c7bea63858f0a08b00483ebe"><td class="memItemLeft" align="right" valign="top"><a id="aa63d9a71c7bea63858f0a08b00483ebe"></a>
+<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1PipelineLayout.html">PipelineLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#aa63d9a71c7bea63858f0a08b00483ebe">createPipelineLayout</a> (const std::set&lt; std::string &gt; &amp;defines)</td></tr>
+<tr class="memdesc:aa63d9a71c7bea63858f0a08b00483ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">create the pipeline layout for all descriptor sets enabled by specified defines or required by default. <br /></td></tr>
+<tr class="separator:aa63d9a71c7bea63858f0a08b00483ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548a29d305f75852949efb8b181d86e5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1PipelineLayout.html">PipelineLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a548a29d305f75852949efb8b181d86e5">createPipelineLayout</a> (const std::set&lt; std::string &gt; &amp;defines, std::pair&lt; uint32_t, uint32_t &gt; range) const</td></tr>
+<tr class="separator:a548a29d305f75852949efb8b181d86e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d6362a7cc258d03603a46982c833a70"><td class="memItemLeft" align="right" valign="top"><a id="a3d6362a7cc258d03603a46982c833a70"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a3d6362a7cc258d03603a46982c833a70">compare</a> (const <a class="el" href="classvsg_1_1Object.html">Object</a> &amp;rhs) const override</td></tr>
 <tr class="memdesc:a3d6362a7cc258d03603a46982c833a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare two objects, return -1 if this object is less than rhs, return 0 if it's equal, return 1 if rhs is greater, <br /></td></tr>
@@ -226,7 +257,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -291,14 +322,14 @@ const <a class="el" href="classvsg_1_1Auxiliary.html">Auxiliary</a> *&#160;</td>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aaa2d6c58656ccfcfb7eb740bc90d54e1"><td class="memItemLeft" align="right" valign="top"><a id="aaa2d6c58656ccfcfb7eb740bc90d54e1"></a>
 ShaderStages&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#aaa2d6c58656ccfcfb7eb740bc90d54e1">stages</a></td></tr>
-<tr class="memdesc:aaa2d6c58656ccfcfb7eb740bc90d54e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">base ShaderStages that other variants as based on. <br /></td></tr>
+<tr class="memdesc:aaa2d6c58656ccfcfb7eb740bc90d54e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">base ShaderStages that other variants are based on. <br /></td></tr>
 <tr class="separator:aaa2d6c58656ccfcfb7eb740bc90d54e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d7e7859df19c33eb05ea8ec68aec5c7"><td class="memItemLeft" align="right" valign="top"><a id="a2d7e7859df19c33eb05ea8ec68aec5c7"></a>
 std::vector&lt; <a class="el" href="structvsg_1_1AttributeBinding.html">AttributeBinding</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>attributeBindings</b></td></tr>
 <tr class="separator:a2d7e7859df19c33eb05ea8ec68aec5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ec415f2dbdab893a6dbc9e8dcc97867"><td class="memItemLeft" align="right" valign="top"><a id="a4ec415f2dbdab893a6dbc9e8dcc97867"></a>
-std::vector&lt; <a class="el" href="structvsg_1_1UniformBinding.html">UniformBinding</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>uniformBindings</b></td></tr>
-<tr class="separator:a4ec415f2dbdab893a6dbc9e8dcc97867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1efc37388920379ab16ddf3e0c93302f"><td class="memItemLeft" align="right" valign="top"><a id="a1efc37388920379ab16ddf3e0c93302f"></a>
+std::vector&lt; <a class="el" href="structvsg_1_1DescriptorBinding.html">DescriptorBinding</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>descriptorBindings</b></td></tr>
+<tr class="separator:a1efc37388920379ab16ddf3e0c93302f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2a79ec7a6b35102fb68a3837f76c344"><td class="memItemLeft" align="right" valign="top"><a id="af2a79ec7a6b35102fb68a3837f76c344"></a>
 std::vector&lt; <a class="el" href="structvsg_1_1PushConstantRange.html">PushConstantRange</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pushConstantRanges</b></td></tr>
 <tr class="separator:af2a79ec7a6b35102fb68a3837f76c344"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -311,6 +342,9 @@ std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"
 <tr class="memitem:a3ec34772f00cde90f83c20ad5b815f47"><td class="memItemLeft" align="right" valign="top"><a id="a3ec34772f00cde90f83c20ad5b815f47"></a>
 GraphicsPipelineStates&#160;</td><td class="memItemRight" valign="bottom"><b>defaultGraphicsPipelineStates</b></td></tr>
 <tr class="separator:a3ec34772f00cde90f83c20ad5b815f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aae68eb88e966bfc00a6cb4e039a698"><td class="memItemLeft" align="right" valign="top"><a id="a7aae68eb88e966bfc00a6cb4e039a698"></a>
+std::vector&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="structvsg_1_1CustomDescriptorSetBinding.html">CustomDescriptorSetBinding</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>customDescriptorSetBindings</b></td></tr>
+<tr class="separator:a7aae68eb88e966bfc00a6cb4e039a698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a867ee2fb0cffdaa84758d74e80f6919e"><td class="memItemLeft" align="right" valign="top"><a id="a867ee2fb0cffdaa84758d74e80f6919e"></a>
 <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1ShaderCompileSettings.html">ShaderCompileSettings</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>defaultShaderHints</b></td></tr>
 <tr class="separator:a867ee2fb0cffdaa84758d74e80f6919e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -320,7 +354,7 @@ std::map&lt; <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a c
 <tr class="separator:ad4b30d5def2c18959f19b0352da2ff72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e73f94c44d9fcbee11597e06cb47243"><td class="memItemLeft" align="right" valign="top"><a id="a1e73f94c44d9fcbee11597e06cb47243"></a>
 std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1ShaderSet.html#a1e73f94c44d9fcbee11597e06cb47243">mutex</a></td></tr>
-<tr class="memdesc:a1e73f94c44d9fcbee11597e06cb47243"><td class="mdescLeft">&#160;</td><td class="mdescRight">mutex used be getShaderStages(..) so ensure the variants map can be used from multiple threads. <br /></td></tr>
+<tr class="memdesc:a1e73f94c44d9fcbee11597e06cb47243"><td class="mdescLeft">&#160;</td><td class="mdescRight">mutex used by getShaderStages(..) to ensure the variants map can be used from multiple threads. <br /></td></tr>
 <tr class="separator:a1e73f94c44d9fcbee11597e06cb47243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -328,9 +362,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a6ea70ff574c874442e9a7efdaf5b0cd2"><td class="memItemLeft" align="right" valign="top"><a id="a6ea70ff574c874442e9a7efdaf5b0cd2"></a>
 <a class="el" href="structvsg_1_1AttributeBinding.html">AttributeBinding</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_nullAttributeBinding</b></td></tr>
 <tr class="separator:a6ea70ff574c874442e9a7efdaf5b0cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d2b4dbbf000d8525f1ea1ed6f5ddcab"><td class="memItemLeft" align="right" valign="top"><a id="a2d2b4dbbf000d8525f1ea1ed6f5ddcab"></a>
-<a class="el" href="structvsg_1_1UniformBinding.html">UniformBinding</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_nullUniformBinding</b></td></tr>
-<tr class="separator:a2d2b4dbbf000d8525f1ea1ed6f5ddcab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37cef72f7cf94691971633d26f097e44"><td class="memItemLeft" align="right" valign="top"><a id="a37cef72f7cf94691971633d26f097e44"></a>
+<a class="el" href="structvsg_1_1DescriptorBinding.html">DescriptorBinding</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_nullDescriptorBinding</b></td></tr>
+<tr class="separator:a37cef72f7cf94691971633d26f097e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -364,8 +398,47 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> provides collection of shader related settings to provide a form of shader introspection. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p><a class="el" href="classvsg_1_1ShaderSet.html" title="ShaderSet provides a collection of shader related settings to provide a form of shader introspection.">ShaderSet</a> provides a collection of shader related settings to provide a form of shader introspection. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a548a29d305f75852949efb8b181d86e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548a29d305f75852949efb8b181d86e5">&#9670;&nbsp;</a></span>createPipelineLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt;<a class="el" href="classvsg_1_1PipelineLayout.html">PipelineLayout</a>&gt; vsg::ShaderSet::createPipelineLayout </td>
+          <td>(</td>
+          <td class="paramtype">const std::set&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>defines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::pair&lt; uint32_t, uint32_t &gt;&#160;</td>
+          <td class="paramname"><em>range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>create pipeline layout for specified range &lt;minimum_set, maximum_set+1&gt; of descriptor sets that are enabled by specified defines or required by default.</p>
+<p>Note: the underlying Vulkan call vkCreatePipelineLayout assumes that the array of descriptor sets starts with set 0. Therefore the minimum_set argument should be 0 unless you really know what you're doing. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/vsg/utils/<a class="el" href="ShaderSet_8h_source.html">ShaderSet.h</a></li>
 </ul>
 </div><!-- contents -->

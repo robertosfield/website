@@ -1,5 +1,5 @@
 <map id="vsg::Framebuffer" name="vsg::Framebuffer">
-<area shape="rect" id="node1" title="Framebuffer encapsulates vkFramebuffer used a rendering target associated with Window or for render t..." alt="" coords="436,78,568,105"/>
+<area shape="rect" id="node1" title="Framebuffer encapsulates VkFramebuffer, used as a rendering target associated with a Window or for re..." alt="" coords="436,78,568,105"/>
 <area shape="rect" id="node2" href="$classvsg_1_1Inherit.html" title=" " alt="" coords="149,5,305,47"/>
 <area shape="rect" id="node3" href="$classvsg_1_1Object.html" title=" " alt="" coords="5,13,100,39"/>
 <area shape="rect" id="node4" href="$classvsg_1_1ref__ptr.html" title=" " alt="" coords="156,71,299,112"/>

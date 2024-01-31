@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">vsg
-   &#160;<span id="projectnumber">1.0.4</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">VulkanSceneGraph library</div>
   </td>
@@ -77,7 +77,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classvsg_1_1View.html" title="View class is Group class that pairs a Camera that defines the view with a subgraph that defines the ...">View</a> class is <a class="el" href="classvsg_1_1Group.html" title="Group node provides a list of children.">Group</a> class that pairs a <a class="el" href="classvsg_1_1Camera.html">Camera</a> that defines the view with a subgraph that defines the scene that is being viewed/rendered.  
+<p><a class="el" href="classvsg_1_1View.html" title="View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen...">View</a> is a <a class="el" href="classvsg_1_1Group.html" title="Group node provides a list of children.">Group</a> class that pairs a <a class="el" href="classvsg_1_1Camera.html">Camera</a> that defines the view with a subgraph that defines the scene that is being viewed/rendered.  
  <a href="classvsg_1_1View.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="View_8h_source.html">View.h</a>&gt;</code></p>
@@ -86,7 +86,7 @@ Inheritance diagram for vsg::View:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1View__inherit__graph.png" border="0" usemap="#avsg_1_1View_inherit__map" alt="Inheritance graph"/></div>
 <map name="avsg_1_1View_inherit__map" id="avsg_1_1View_inherit__map">
-<area shape="rect" title="View class is Group class that pairs a Camera that defines the view with a subgraph that defines the ..." alt="" coords="41,497,126,524"/>
+<area shape="rect" title="View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen..." alt="" coords="41,497,126,524"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="7,408,160,449"/>
 <area shape="rect" href="classvsg_1_1Group.html" title="Group node provides a list of children." alt="" coords="37,333,129,360"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="9,244,157,285"/>
@@ -100,7 +100,7 @@ Collaboration diagram for vsg::View:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvsg_1_1View__coll__graph.png" border="0" usemap="#avsg_1_1View_coll__map" alt="Collaboration graph"/></div>
 <map name="avsg_1_1View_coll__map" id="avsg_1_1View_coll__map">
-<area shape="rect" title="View class is Group class that pairs a Camera that defines the view with a subgraph that defines the ..." alt="" coords="1193,78,1279,105"/>
+<area shape="rect" title="View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen..." alt="" coords="1193,78,1279,105"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="840,5,993,47"/>
 <area shape="rect" href="classvsg_1_1Group.html" title="Group node provides a list of children." alt="" coords="688,13,780,39"/>
 <area shape="rect" href="classvsg_1_1Inherit.html" title=" " alt="" coords="491,5,639,47"/>
@@ -114,9 +114,15 @@ Collaboration diagram for vsg::View:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4970a8a9f163541393bade54bc8b46b9"><td class="memItemLeft" align="right" valign="top"><a id="a4970a8a9f163541393bade54bc8b46b9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>View</b> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Camera.html">Camera</a> &gt; in_camera, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Node.html">Node</a> &gt; in_scenegraph={})</td></tr>
-<tr class="separator:a4970a8a9f163541393bade54bc8b46b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d6bb6b886894006d92f20b588e3af3"><td class="memItemLeft" align="right" valign="top"><a id="a32d6bb6b886894006d92f20b588e3af3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>View</b> (ViewFeatures in_features=RECORD_ALL)</td></tr>
+<tr class="separator:a32d6bb6b886894006d92f20b588e3af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75e3d5227d6561a31b0aac6201dbc0cb"><td class="memItemLeft" align="right" valign="top"><a id="a75e3d5227d6561a31b0aac6201dbc0cb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>View</b> (const <a class="el" href="classvsg_1_1View.html">View</a> &amp;view)</td></tr>
+<tr class="separator:a75e3d5227d6561a31b0aac6201dbc0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94873befedea7ace8b721a468ab7c413"><td class="memItemLeft" align="right" valign="top"><a id="a94873befedea7ace8b721a468ab7c413"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>View</b> (<a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Camera.html">Camera</a> &gt; in_camera, <a class="el" href="classvsg_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classvsg_1_1Node.html">Node</a> &gt; in_scenegraph={}, ViewFeatures in_features=RECORD_ALL)</td></tr>
+<tr class="separator:a94873befedea7ace8b721a468ab7c413"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04a1bc4c97951399fb4a379f0bd6bb8c"><td class="memItemLeft" align="right" valign="top"><a id="a04a1bc4c97951399fb4a379f0bd6bb8c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class="el" href="classvsg_1_1Visitor.html">Visitor</a> &amp;visitor) override</td></tr>
 <tr class="separator:a04a1bc4c97951399fb4a379f0bd6bb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +132,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class=
 <tr class="memitem:a1f5c8bd279a516fec5649fac2cf74f14"><td class="memItemLeft" align="right" valign="top"><a id="a1f5c8bd279a516fec5649fac2cf74f14"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>accept</b> (<a class="el" href="classvsg_1_1RecordTraversal.html">RecordTraversal</a> &amp;visitor) const override</td></tr>
 <tr class="separator:a1f5c8bd279a516fec5649fac2cf74f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51d4fd4683511c15383b004f131ce38c"><td class="memItemLeft" align="right" valign="top"><a id="a51d4fd4683511c15383b004f131ce38c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1View.html#a51d4fd4683511c15383b004f131ce38c">share</a> (const <a class="el" href="classvsg_1_1View.html">View</a> &amp;view)</td></tr>
+<tr class="memdesc:a51d4fd4683511c15383b004f131ce38c"><td class="mdescLeft">&#160;</td><td class="mdescRight">share the specified view's viewID, mask, camera <a class="el" href="classvsg_1_1ViewportState.html" title="ViewportState encapsulates VkPipelineViewportStateCreateInfo settings passed when setting up Graphics...">ViewportState</a>, with this <a class="el" href="classvsg_1_1View.html" title="View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen...">View</a> <br /></td></tr>
+<tr class="separator:a51d4fd4683511c15383b004f131ce38c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvsg_1_1Inherit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvsg_1_1Inherit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvsg_1_1Inherit.html">vsg::Inherit&lt; Group, View &gt;</a></td></tr>
 <tr class="memitem:a24550cd9c037afd7d161ff391b1ceac7 inherit pub_methods_classvsg_1_1Inherit"><td class="memItemLeft" align="right" valign="top"><a id="a24550cd9c037afd7d161ff391b1ceac7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Inherit</b> (Args &amp;&amp;... args)</td></tr>
@@ -244,7 +254,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>referenceCoun
 <tr class="separator:acc18793feb5354aca03337bd0e3e3406 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memItemLeft" align="right" valign="top"><a id="a46d37a7ad1c175336d3ca405cd4d0f73"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1Object.html#a46d37a7ad1c175336d3ca405cd4d0f73">setValue</a> (const std::string &amp;key, const char *value)</td></tr>
-<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing c strings <br /></td></tr>
+<tr class="memdesc:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">specialization of setValue to handle passing C strings <br /></td></tr>
 <tr class="separator:a46d37a7ad1c175336d3ca405cd4d0f73 inherit pub_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a337c963f7157412e94b5b20dbd0fb8e4 inherit pub_methods_classvsg_1_1Object"><td class="memTemplParams" colspan="2"><a id="a337c963f7157412e94b5b20dbd0fb8e4"></a>
 template&lt;typename T &gt; </td></tr>
@@ -368,8 +378,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:afa81164c675d90f3695194199a67b158"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa0cc4fb17f916261b8dfaf248b0a622"><td class="memItemLeft" align="right" valign="top"><a id="aaa0cc4fb17f916261b8dfaf248b0a622"></a>
 const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1View.html#aaa0cc4fb17f916261b8dfaf248b0a622">viewID</a> = 0</td></tr>
-<tr class="memdesc:aaa0cc4fb17f916261b8dfaf248b0a622"><td class="mdescLeft">&#160;</td><td class="mdescRight">viewID is automatically assigned in <a class="el" href="classvsg_1_1View.html" title="View class is Group class that pairs a Camera that defines the view with a subgraph that defines the ...">View</a> constructor <br /></td></tr>
+<tr class="memdesc:aaa0cc4fb17f916261b8dfaf248b0a622"><td class="mdescLeft">&#160;</td><td class="mdescRight">viewID is automatically assigned in <a class="el" href="classvsg_1_1View.html" title="View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen...">View</a> constructor <br /></td></tr>
 <tr class="separator:aaa0cc4fb17f916261b8dfaf248b0a622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a930611a8bde8fe2a15c9c72aceeae48c"><td class="memItemLeft" align="right" valign="top"><a id="a930611a8bde8fe2a15c9c72aceeae48c"></a>
+ViewFeatures&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1View.html#a930611a8bde8fe2a15c9c72aceeae48c">features</a></td></tr>
+<tr class="memdesc:a930611a8bde8fe2a15c9c72aceeae48c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hints for how <a class="el" href="classvsg_1_1ViewDependentState.html">ViewDependentState</a> features should be handled. <br /></td></tr>
+<tr class="separator:a930611a8bde8fe2a15c9c72aceeae48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac0b9dd1718188c70244e2a66ca8cc9e"><td class="memItemLeft" align="right" valign="top">Mask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvsg_1_1View.html#aac0b9dd1718188c70244e2a66ca8cc9e">mask</a> = MASK_ALL</td></tr>
 <tr class="separator:aac0b9dd1718188c70244e2a66ca8cc9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf9775914ca22d29df1b30d33541c451"><td class="memItemLeft" align="right" valign="top"><a id="adf9775914ca22d29df1b30d33541c451"></a>
@@ -404,7 +418,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
 <tr class="separator:a6e38eeef0064e1bfa84ad776f5f2f31a inherit pro_methods_classvsg_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classvsg_1_1View.html" title="View class is Group class that pairs a Camera that defines the view with a subgraph that defines the ...">View</a> class is <a class="el" href="classvsg_1_1Group.html" title="Group node provides a list of children.">Group</a> class that pairs a <a class="el" href="classvsg_1_1Camera.html">Camera</a> that defines the view with a subgraph that defines the scene that is being viewed/rendered. </p>
+<div class="textblock"><p><a class="el" href="classvsg_1_1View.html" title="View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen...">View</a> is a <a class="el" href="classvsg_1_1Group.html" title="Group node provides a list of children.">Group</a> class that pairs a <a class="el" href="classvsg_1_1Camera.html">Camera</a> that defines the view with a subgraph that defines the scene that is being viewed/rendered. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="aac0b9dd1718188c70244e2a66ca8cc9e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac0b9dd1718188c70244e2a66ca8cc9e">&#9670;&nbsp;</a></span>mask</h2>
@@ -417,7 +431,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAuxiliary</b> (<a 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>mask that controls traversal of the <a class="el" href="classvsg_1_1View.html" title="View class is Group class that pairs a Camera that defines the view with a subgraph that defines the ...">View</a>'s subgraph <a class="el" href="classvsg_1_1View.html" title="View class is Group class that pairs a Camera that defines the view with a subgraph that defines the ...">View</a> is visited if the (visitor.traversalMask &amp; view.mask) != 0, and when it is visited the visitor.traversalMask is &amp;'ed with the mask to give the traversalMask to use in the subgraph. </p>
+<p>mask that controls traversal of the <a class="el" href="classvsg_1_1View.html" title="View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen...">View</a>'s subgraph <a class="el" href="classvsg_1_1View.html" title="View is a Group class that pairs a Camera that defines the view with a subgraph that defines the scen...">View</a> is visited if the (visitor.traversalMask &amp; view.mask) != 0, and when it is visited the visitor.traversalMask is &amp;'ed with the mask to give the traversalMask to use in the subgraph. </p>
 
 </div>
 </div>
