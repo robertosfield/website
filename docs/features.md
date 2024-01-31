@@ -4,7 +4,6 @@ title: Features
 permalink: /features/
 ---
 
-## Features
 The VulkanSceneGraph project is comprised of the main VulkanSceneGraph library (provided by this repo) and a collection of optional libraries, each in their own dedicated repositories hosted alongside each other on [https://github.com/vsg-dev](https://github.com/vsg-dev), that provide additional features and example programs and templates for your own VulkanSceneGraph projects.
 
 ### Features provided by the core VulkanSceneGraph library are:
@@ -24,3 +23,4 @@ The VulkanSceneGraph project is comprised of the main VulkanSceneGraph library (
 * Support for double matrices in Camera and Transform class providing support for large database coordinate systems such as whole earth/GIS rendering whilst minimizing precision issues.
 * Modern CMake build system that provides config installation alongside binaries making it easier to find and use all the appropriate build options for using the VulkanSceneGraph in your own projects.
 * Minimal and complete approach to design - the whole VulkanSceneGraph interface and implementation, providing all the above functionality, takes 60 thousand lines of C++ code, compared to over 58 thousand for GLM headers, or vulkan.hpp (C++ wrapper for Vulkan) at over 94 thousand lines of code.  The VulkanSceneGraph replaces both and provides much more functionality besides.
+* Extensible instrumentation system that enalbes users to implement custom instrumentatiop of low level scene graph work, or leverage off the shelf implementations for annotating Vulkan command buffer submissions, useful for use with [RenderDoc](https://renderdoc.org/) and Vulkan API debug output, or integaration [Tracy](https://github.com/wolfpld/tracy) frame profiler.
