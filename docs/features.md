@@ -17,6 +17,8 @@ The VulkanSceneGraph project is comprised of the main VulkanSceneGraph library (
 * GLSL shader compilation to SPIR-V, using compiled in [glslang](https://github.com/vsg-dev/glslang), so users don't need to convert offline and can leverage #pragma(tic) shader composition.
 * Class design focused on performance of scene graph operations by minimizing CPU bottlenecks: optimizing data density, layout, cache coherency and minimizing branching leading to better utilization of modern CPU and memory architectures. Traversals through to IO operations can be up to 10 times faster than with the OpenSceneGraph.
 * Optimized scene graph performance has been essential for making the most of the performance that Vulkan itself provides over OpenGL/DirectX, benchmarks on large databases show 3 to 20 X performance improvements over OpenSceneGraph/OpenGL.
+* Support for Cascaded Shadow Maps.
+* Rigid Body and Skinnning Animation.
 * Multi-threading support at the viewer level, file loading and database paging.
 * Flexible Viewer architecture built around Vulkan command recording and queue submission.
 * Native windowing and event support under Windows, Linux, Android, macOS and iOS.
